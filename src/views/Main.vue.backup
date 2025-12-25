@@ -1,0 +1,225 @@
+<script setup lang="ts">
+
+import HeroSection from '@/components/sections/HeroSection.vue';
+import AboutSection from '@/components/sections/AboutSection.vue';
+import StatsSection from '@/components/sections/StatsSection.vue';
+import ExperienceSection from '@/components/sections/ExperienceSection.vue';
+import EducationSection from '@/components/sections/EducationSection.vue';
+import SkillsSection from '@/components/sections/SkillsSection.vue';
+import ProjectsSection from '@/components/sections/ProjectsSection.vue';
+import ContactForm from '@/components/sections/ContactForm.vue';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
+
+</script>
+<template>
+    <div>
+        <!-- Hero Section -->
+        <HeroSection />
+
+        <!-- Section À propos -->
+        <AboutSection />
+
+        <!-- Section Statistiques -->
+        <StatsSection />
+
+        <v-divider></v-divider>
+
+        <!-- Section Expérience -->
+        <ExperienceSection />
+
+        <v-divider></v-divider>
+
+        <!-- Section Formation -->
+        <EducationSection />
+
+        <v-divider></v-divider>
+
+        <!-- Section Compétences -->
+        <SkillsSection />
+
+        <v-divider></v-divider>
+
+        <!-- Section Projets -->
+        <ProjectsSection />
+
+        <v-divider></v-divider>
+
+        <!-- Section Contact -->
+        <v-container id="contact" fluid class="pa-5 py-10">
+            <v-row justify="center" align="center">
+                <v-col cols="12">
+                    <v-row class="d-flex justify-center pa-5">
+                        <h1 class="text-center mb-5 text-h2 font-weight-bold gradient-text">{{ t('views.main.contact.title') }}</h1>
+                    </v-row>
+                    <v-row justify="center" class="mb-5">
+                        <v-col cols="12" class="text-center">
+                            <p class="text-h6">{{ t('views.main.contact.description') }}</p>
+                            <a href="mailto:contact@florent-dubut.fr" class="text-green-lighten-1 text-h6">
+                                contact@florent-dubut.fr
+                            </a>
+                        </v-col>
+                    </v-row>
+                    <v-row justify="center">
+                        <v-col cols="12" md="8" lg="6">
+                            <ContactForm />
+                        </v-col>
+                    </v-row>
+                </v-col>
+            </v-row>
+        </v-container>
+    </div>
+</template>
+        <v-container id="experience" fluid class="pa-5 py-10">
+            <v-row justify="center" align="center">
+                <v-card class="w-100 h-100" variant="text">
+                    <v-row class="d-flex justify-center pa-10">
+                        <h1 class="text-center mb-5">{{ t('views.main.professionalExperience.title') }}</h1>
+                    </v-row>
+                    <v-row class="d-flex justify-center">
+                        <v-timeline align="center" class="ma-7" side="end">
+
+                            <!-- Orange Business - Stage -->
+                            <v-timeline-item :key="5" dot-color="green-lighten-1" size="small">
+                                <template v-slot:opposite>
+                                    <div class="pt-1 headline font-weight-bold text-green-lighten-1">{{
+                                        t('views.main.professionalExperience.first.date') }}</div>
+                                </template>
+                                <v-card class="w-100 h-100 pa-5" elevation="5">
+                                    <h2 class="mt-n1 headline font-weight-light mb-4 text-green-lighten-1">
+                                        {{ t('views.main.professionalExperience.first.title') }}
+                                    </h2>
+                                    <h5 class="mb-5">{{ t('views.main.professionalExperience.first.company') }}</h5>
+                                    <div>
+                                        {{ t('views.main.professionalExperience.first.content') }}
+                                    </div>
+                                </v-card>
+                            </v-timeline-item>
+
+                            <!-- Orange Business - Développeur CDD -->
+                            <v-timeline-item :key="4" dot-color="green-lighten-1" size="small">
+                            <template v-slot:opposite>
+                                <div class="pt-1 headline font-weight-bold text-green-lighten-1">{{
+                                    t('views.main.professionalExperience.second.date') }}</div>
+                            </template>
+                            <v-card class="w-100 h-100 pa-5" elevation="5">
+                                <h2 class="mt-n1 headline font-weight-light mb-4 text-green-lighten-1">
+                                    {{ t('views.main.professionalExperience.second.title') }}
+                                </h2>
+                                <h5 class="mb-5">{{ t('views.main.professionalExperience.second.company') }}</h5>
+                                <div>{{ t('views.main.professionalExperience.second.content') }}</div>
+                            </v-card>
+                        </v-timeline-item>
+
+                        <!-- Orange Business - Consultant alternant -->
+                        <v-timeline-item :key="3" dot-color="green-lighten-1" size="small">
+                            <template v-slot:opposite>
+                                <div class="pt-1 headline font-weight-bold text-green-lighten-1">{{
+                                    t('views.main.professionalExperience.third.date') }}</div>
+                            </template>
+                            <v-card class="w-100 h-100 pa-5" elevation="5">
+                                <h2 class="mt-n1 headline font-weight-light mb-4 text-green-lighten-1">
+                                    {{ t('views.main.professionalExperience.third.title') }}
+                                </h2>
+                                <h5 class="mb-5">{{ t('views.main.professionalExperience.third.company') }}</h5>
+                                <div>{{ t('views.main.professionalExperience.third.content') }}</div>
+                            </v-card>
+                        </v-timeline-item>
+                    </v-timeline>
+                </v-row>
+            </v-card>
+        </v-row>
+    </v-container>
+
+    <v-divider></v-divider>
+
+    <!-- Section Formation -->
+    <v-container id="education" fluid class="pa-5 py-10">
+        <v-row justify="center" align="center">
+            <v-card class="w-100 h-100" variant="text">
+                <v-row class="d-flex justify-center pa-10">
+                    <h1 class="text-center mb-5">{{ t('views.main.education.title') }}</h1>
+                </v-row>
+                <v-row class="d-flex justify-center">
+                    <v-timeline align="center" class="ma-7">
+                        <v-timeline-item :key="1" dot-color="green-lighten-1" size="small">
+                            <template v-slot:opposite>
+                                <div :class="`pt-1 headline font-weight-bold text-green-lighten-1`"
+                                    v-text="'2021 - 2024'"></div>
+                            </template>
+                            <v-card class="w-100 h-100 pa-5" elevation="5">
+                                <h2 :class="`mt-n1 headline font-weight-light mb-4 text-green-lighten-1`">
+                                    {{ t('views.main.education.first.title') }}
+                                </h2>
+                                <h5 class="mb-5">{{ t('views.main.education.first.school') }}</h5>
+                                <p>{{ t('views.main.education.first.content1') }}</p>
+                                <br>
+                                <p>{{ t('views.main.education.first.content2') }}</p>
+                                <br>
+                                <p>{{ t('views.main.education.first.content3') }}</p>
+                                <br>
+                                <p>{{ t('views.main.education.first.content4') }}</p>
+                            </v-card>
+                        </v-timeline-item>
+                        <v-timeline-item :key="2" dot-color="green-lighten-1" size="small">
+                            <template v-slot:opposite>
+                                <div class="pt-1 headline font-weight-bold text-green-lighten-1">{{
+                                    t('views.main.education.second.date') }}</div>
+                            </template>
+
+                            <v-card class="w-100 h-100 pa-5" elevation="5">
+                                <h2 class="mt-n1 headline font-weight-light mb-4 text-green-lighten-1">
+                                    {{ t('views.main.education.second.title') }}
+                                </h2>
+                                <h5 class="mb-5">
+                                    {{ t('views.main.education.second.school') }}
+                                </h5>
+
+                                <p>{{ t('views.main.education.second.content') }}</p>
+                            </v-card>
+                        </v-timeline-item>
+                    </v-timeline>
+                </v-row>
+            </v-card>
+        </v-row>
+    </v-container>
+
+    <v-divider></v-divider>
+
+    <!-- Section Compétences -->
+    <SkillsSection />
+
+    <v-divider></v-divider>
+
+    <!-- Section Projets -->
+    <ProjectsSection />
+
+    <v-divider></v-divider>
+
+    <!-- Section Contact -->
+    <v-container id="contact" fluid class="pa-5 py-10">
+        <v-row justify="center" align="center">
+            <v-col cols="12">
+                <v-row class="d-flex justify-center pa-5">
+                    <h1 class="text-center mb-5">{{ t('views.main.contact.title') }}</h1>
+                </v-row>
+                <v-row justify="center" class="mb-5">
+                    <v-col cols="12" class="text-center">
+                        <p class="text-h6">{{ t('views.main.contact.description') }}</p>
+                        <a href="mailto:contact@florent-dubut.fr" class="text-green-lighten-1 text-h6">
+                            contact@florent-dubut.fr
+                        </a>
+                    </v-col>
+                </v-row>
+                <v-row justify="center">
+                    <v-col cols="12" md="8" lg="6">
+                        <ContactForm />
+                    </v-col>
+                </v-row>
+            </v-col>
+        </v-row>
+    </v-container>
+</v-container>
+</div>
+</template>

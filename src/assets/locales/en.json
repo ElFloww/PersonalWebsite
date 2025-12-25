@@ -1,0 +1,144 @@
+{
+    "components": {
+      "shared": {
+        "icons": {
+          "en": {
+            "alt": "English"
+          },
+          "fr": {
+            "alt": "French"
+          }
+        },
+        "footer": {
+          "github": "GitHub",
+          "linkedin": "LinkedIn",
+          "mastodon": "Mastodon",
+          "email": "Email"
+        },
+        "appBar": {
+          "about": "About",
+          "experience": "Experience",
+          "education": "Education",
+          "skills": "Skills",
+          "projects": "Projects",
+          "contact": "Contact"
+        }
+      }
+    },
+    "views": {
+      "main": {
+        "profil": {
+          "title": "Florent Dubut",
+          "yearsOld": "years old",
+          "description": "Full Stack Developer"
+        },
+        "presentation": {
+          "title": "👋 Hi, I'm Florent",
+          "firstParagraph": "Originally from Provence, I'm currently studying in Amiens. Passionate about software development, I've always been fascinated by computers and the endless possibilities they offer.",
+          "secondParagraph": "I am currently a Master's student in Computer Science with a specialization in Cloud Computing and Mobility. My background has allowed me to acquire solid skills in application development, software architecture, and project management. I'm always looking for new challenges and opportunities to put my skills into practice and learn new technologies.",
+          "thirdParagraph": "Outside of tech, I'm passionate about swimming, running, video games, cinema, and even Lego — I enjoy a bit of everything and I'm pretty easy to please!",
+          "interestsTitle": "Interests",
+          "interests": {
+            "swimming": "Swimming",
+            "running": "Running",
+            "cycling": "Cycling",
+            "videoGames": "Video Games",
+            "lego": "Lego"
+          }
+        },
+        "professionalExperience": {
+          "title": "💼 Professional Experience",
+          "first": {
+            "date": "April 2023 - May 2023",
+            "title": "Developer (Internship)",
+            "company": "Orange Business – Amiens, Hauts-de-France, France",
+            "content": "Internship as part of the 2nd year of my BUT in Computer Science. Used Microsoft .Net Core technologies (C#, ASP). Developed a clean architecture API as part of an internal project."
+          },
+          "second": {
+            "date": "June 2023 - August 2023",
+            "title": "Developer (Internship)",
+            "company": "Orange Business – Amiens, Hauts-de-France, France",
+            "content": "Developer using Microsoft .Net Core technologies (C#, ASP). Contract following the previous internship. Developed a clean architecture API and a back office as part of an internal project."
+          },
+          "third": {
+            "date": "September 2023 - Present",
+            "title": "Consultant (Work-Study)",
+            "company": "Orange Business – Amiens, Hauts-de-France, France",
+            "content": "Work-study program as part of my 3rd year of BUT and my Master's degree in Computer Science. Consultant working with Microsoft and JS technologies. Developed APIs using ASP.NET with clean architecture. Front-end development mainly in TypeScript using Vue.js and Angular."
+          }
+        },
+        "education": {
+          "title": "🎓 Education",
+          "sectionTitle": "Academic Path",
+          "sectionDescription": "Degrees and diplomas obtained",
+          "viewProgram": "View program",
+          "modulesAndSkills": "Modules and skills",
+          "close": "Close",
+          "first": {
+            "date": "2021 - 2023",
+            "title": "Bachelor in Computer Science",
+            "school": "Université de Picardie Jules Verne – Amiens, Hauts-de-France, France",
+            "content1": "During the first two years of my BUT in Computer Science at IUT Amiens, I acquired essential foundations in algorithms, object-oriented programming, databases, and software design and architecture.",
+            "content2": "In the third year, which I completed as part of a work-study program in the 'Application Development: design, development, validation' track, I deepened my skills in software development, project management, as well as testing and validation in a professional setting.",
+            "content3": "From a technical perspective, my education enabled me to master several programming languages such as Java, Python, C, C++, C#, and PHP, and gain strong experience in application design and development.",
+            "content4": "Alongside my studies, I was actively involved in student life as a member of the IUT Amiens Council. I regularly attended meetings, represented the student body, and contributed to improving study conditions and shaping the institution's academic direction."
+          },
+          "second": {
+            "date": "2023 - 2025",
+            "title": "Master’s in Computer Science: Cloud Computing and Mobility",
+            "school": "INSSET – Université de Picardie Jules Verne, Saint-Quentin, Hauts-de-France, France",
+            "content": "This Master’s program aims to provide in-depth understanding and training in cutting-edge Cloud technologies. Key competencies include Cloud architecture, service virtualization, and mastering DevOps culture and its practical implementation."
+          }
+        },
+        "contact": {
+          "title": "✉️ Contact",
+          "description": "You can contact me by email at the following address:"
+        },
+        "contactForm": {
+          "title": "Send me a message",
+          "name": "Name",
+          "email": "Email",
+          "subject": "Subject",
+          "message": "Message",
+          "send": "Send",
+          "reset": "Reset",
+          "nameRequired": "Name is required",
+          "nameMinLength": "Name must be at least 2 characters",
+          "emailRequired": "Email is required",
+          "emailInvalid": "Email must be valid",
+          "subjectRequired": "Subject is required",
+          "messageRequired": "Message is required",
+          "messageMinLength": "Message must be at least 10 characters",
+          "successMessage": "Message sent successfully! I will reply soon.",
+          "errorMessage": "Error sending message. Please try again."
+        },
+        "skills": {
+          "title": "💻 Technical Skills",
+          "sectionTitle": "Technical Skills",
+          "sectionDescription": "Mastered technologies and tools",
+          "languages": "Languages",
+          "frontend": "Frontend",
+          "backend": "Backend",
+          "database": "Databases",
+          "tools": "Tools & DevOps",
+          "cloud": "Cloud"
+        },
+        "stats": {
+          "years": "Years",
+          "experience": "of experience",
+          "projects": "Projects",
+          "completed": "completed",
+          "technologies": "Technologies",
+          "mastered": "mastered"
+        },
+        "projects": {
+          "title": "🚀 Projects",
+          "sectionTitle": "My Projects",
+          "sectionDescription": "Developed projects and applications",
+          "viewProject": "View project",
+          "sourceCode": "Source code"
+        }
+      }
+    }
+  }
+  

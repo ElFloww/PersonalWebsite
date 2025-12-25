@@ -1,0 +1,147 @@
+{
+    "components": {
+        "shared": {
+            "icons": {
+                "en": {
+                    "alt": "Anglais"
+                },
+                "fr": {
+                    "alt": "Français"
+                }
+            },
+            "footer": {
+                "github": "GitHub",
+                "linkedin": "LinkedIn",
+                "email": "Email"
+            },
+            "appBar": {
+                "about": "À propos",
+                "experience": "Expérience",
+                "education": "Formation",
+                "skills": "Compétences",
+                "projects": "Projets",
+                "contact": "Contact"
+            }
+        }
+    },
+    "views": {
+        "main":{
+            "profil": {
+                "title": "Florent Dubut",
+                "yearsOld": "ans",
+                "description": "Développeur Full Stack"
+            },
+            "presentation": {
+                "title": "👋 Bonjour, moi c'est Florent",
+                "firstParagraph": "Originaire de Provence, je poursuis actuellement mes études à Amiens. Passionné par le développement logiciel, j'ai toujours été admiratif des ordinateurs et des possibilités infinies qu'ils offrent.",
+                "secondParagraph": "Je suis actuellement étudiant en Master Informatique avec une spécialisation en Cloud Computing et Mobilité. Mon parcours m'a permis d'acquérir des compétences solides en développement d'applications, en architecture logicielle et en gestion de projet. Je suis toujours à la recherche de nouveaux défis et d'opportunités pour mettre en pratique mes compétences et apprendre de nouvelles technologies.",
+                "thirdParagraph": "En dehors de l'informatique, je suis un passionné de natation, running, jeux vidéo, cinéma, et même de Lego — j'aime un peu de tout et je suis plutôt facile à satisfaire !",
+                "interestsTitle": "Centres d'intérêt",
+                "interests": {
+                    "swimming": "Natation",
+                    "running": "Running",
+                    "cycling": "Cyclisme",
+                    "videoGames": "Jeux vidéo",
+                    "lego": "Lego"
+                }
+            },
+            "professionalExperience": {
+                "title": "💼 Expériences professionnelles",
+                "sectionTitle": "Expériences Professionnelles",
+                "sectionDescription": "Mon parcours professionnel et mes missions",
+                "learnMore": "En savoir plus",
+                "missionsAndAchievements": "Missions et réalisations",
+                "close": "Fermer",
+                "first":{
+                    "date": "avril 2023 - mai 2023",
+                    "title": "Développeur (Stage)",
+                    "company": "Orange Business – Amiens, Hauts-de-France, France",
+                    "content": "Stage dans le cadre du BUT 2 Informatique. Utilisation des technologies Microsoft .Net Core (C#, ASP). Développement d'une API en clean architecture dans le cadre d'un projet interne."
+                },
+                "second": {
+                    "date": "juin 2023 - août 2023",
+                    "title": "Développeur (Stage)",
+                    "company": "Orange Business – Amiens, Hauts-de-France, France",
+                    "content": "Développeur sur les technologies Microsoft .Net Core (C#, ASP). Contrat suite au stage précédement réalisé Développement d'une API en clean architecture ainsi d'un backoffice dans le cadre d'un projet interne"
+                },
+                "third": {
+                    "date": "septembre 2023 - aujourd'hui",
+                    "title": "Consultant (Alternance)",
+                    "company": "Orange Business – Amiens, Hauts-de-France, France",
+                    "content": "Alternance dans le cadre de mon BUT 3 ainsi que mon Master informatique. Consultant sur les technologies Microsoft et JS. Développement d'APIs en ASP.NET clean architecture. Développement d'applications front principalement en TypeScript sur les frameworks Vue.js et Angular"
+                }
+            },
+            "education": {
+                "title": "🎓 Education",
+                "sectionTitle": "Parcours Académique",
+                "sectionDescription": "Formations et diplômes obtenus",
+                "viewProgram": "Voir le programme",
+                "modulesAndSkills": "Modules et compétences",
+                "close": "Fermer",
+                "first": {
+                    "date": "2021 - 2023",
+                    "title": "BUT Informatique",
+                    "school": "Université de Picardie Jules Verne – Amiens, Hauts-de-France, France",
+                    "content1":"Lors de mes deux premières années de BUT Informatique à l’IUT d’Amiens, j’ai acquis les bases essentielles en algorithmique, en programmation orientée objet, en base de données ainsi qu’en conception et architecture logicielle.",
+                    "content2": "En troisième année, que j’ai effectuée en alternance dans le parcours \"Réalisation d'applications : conception, développement, validation\", j’ai approfondi mes compétences en développement logiciel, en gestion de projet, ainsi qu’en tests et validation, dans un cadre professionnel.",
+                    "content3": "Sur le plan technique, ma formation m’a permis de maîtriser plusieurs langages de programmation tels que Java, Python, C, C++, C# et PHP, et d’acquérir une solide expérience en conception et développement d'applications.",
+                    "content4": "Parallèlement à ma formation, je me suis engagé dans la vie étudiante en tant que membre du Conseil de l’IUT d’Amiens. J’ai participé activement aux réunions du conseil, représentant les étudiants et contribuant à l’amélioration des conditions d’études ainsi qu’à aux orientations pédagogiques de l’établissement."
+                },
+                "second": {
+                    "date": "2023 - 2025",
+                    "title": "Master en informatique : Cloud Computing and Mobility",
+                    "school": "INSSET – Université de Picardie Jules Verne, Saint-Quentin, Hauts-de-France, France",
+                    "content": "Master ayant vocation à comprendre les enjeux et être formé sur les technologies Cloud d’avenir. Les compétences visées sont : L’architecture Cloud, la virtualisation des services et l'apprentissage de la culture DevOps et sa mise en application."
+                }
+            },
+            "contact": {
+                "title": "✉️ Contact",
+                "description": "Vous pouvez me contacter par email à l'adresse suivante :"
+            },
+            "contactForm": {
+                "title": "Envoyez-moi un message",
+                "name": "Nom",
+                "email": "Email",
+                "subject": "Sujet",
+                "message": "Message",
+                "send": "Envoyer",
+                "reset": "Réinitialiser",
+                "nameRequired": "Le nom est requis",
+                "nameMinLength": "Le nom doit contenir au moins 2 caractères",
+                "emailRequired": "L'email est requis",
+                "emailInvalid": "L'email doit être valide",
+                "subjectRequired": "Le sujet est requis",
+                "messageRequired": "Le message est requis",
+                "messageMinLength": "Le message doit contenir au moins 10 caractères",
+                "successMessage": "Message envoyé avec succès ! Je vous répondrai bientôt.",
+                "errorMessage": "Erreur lors de l'envoi du message. Veuillez réessayer."
+            },
+            "skills": {
+                "title": "💻 Compétences techniques",
+                "sectionTitle": "Compétences Techniques",
+                "sectionDescription": "Technologies et outils maîtrisés",
+                "languages": "Langages",
+                "frontend": "Frontend",
+                "backend": "Backend",
+                "database": "Bases de données",
+                "tools": "Outils & DevOps",
+                "cloud": "Cloud"
+            },
+            "stats": {
+                "years": "Années",
+                "experience": "d'expérience",
+                "projects": "Projets",
+                "completed": "réalisés",
+                "technologies": "Technologies",
+                "mastered": "maîtrisées"
+            },
+            "projects": {
+                "title": "🚀 Projets",
+                "sectionTitle": "Mes Réalisations",
+                "sectionDescription": "Projets et applications développés",
+                "viewProject": "Voir le projet",
+                "sourceCode": "Code source"
+            }
+        }
+    }
+}
