@@ -29,20 +29,35 @@
             "profil": {
                 "title": "Florent Dubut",
                 "yearsOld": "ans",
-                "description": "Développeur Full Stack"
+                "description": "Développeur Backend .NET | C#"
             },
             "presentation": {
                 "title": "👋 Bonjour, moi c'est Florent",
-                "firstParagraph": "Originaire de Provence, je poursuis actuellement mes études à Amiens. Passionné par le développement logiciel, j'ai toujours été admiratif des ordinateurs et des possibilités infinies qu'ils offrent.",
-                "secondParagraph": "Je suis actuellement étudiant en Master Informatique avec une spécialisation en Cloud Computing et Mobilité. Mon parcours m'a permis d'acquérir des compétences solides en développement d'applications, en architecture logicielle et en gestion de projet. Je suis toujours à la recherche de nouveaux défis et d'opportunités pour mettre en pratique mes compétences et apprendre de nouvelles technologies.",
-                "thirdParagraph": "En dehors de l'informatique, je suis un passionné de natation, running, jeux vidéo, cinéma, et même de Lego — j'aime un peu de tout et je suis plutôt facile à satisfaire !",
-                "interestsTitle": "Centres d'intérêt",
+                "subtitle": "Développeur Backend .NET passionné — en recherche de CDI en Provence",
+                "firstParagraph": "Natif de Nogent-le-Rotrou, j'ai grandi dans le calme du Perche, entre nature et curiosité technologique. Tout a basculé vers mes 14 ans en découvrant la programmation Python — une vraie révélation. La spécialité NSI au lycée n'a fait qu'amplifier cette passion, et mes études à Amiens — un BUT Informatique puis un Master CCM à Saint-Quentin — ont solidifié les bases d'un savoir-faire que j'affine chaque jour chez Orange Business.",
+                "secondParagraph": "Je suis développeur Backend spécialisé en .NET & C#. Mon terrain de jeu : des APIs RESTful propres, une clean architecture rigoureuse, SQL Server, et des injections de dépendances bien pensées. Je fais aussi du front en Vue.js — ce qui me donne une précieuse double vision et me permet de documenter mes APIs avec soin, sachant exactement ce dont un développeur front a besoin. Mais c'est côté backend que je m'épanouis vraiment.",
+                "philosophyTitle": "Mon approche",
+                "philosophyText": "Avant de taper la moindre ligne de code, je m'assure d'avoir parfaitement compris le besoin métier et l'objectif final. Je commence par concevoir l'architecture de la base de données et les contrats d'API, puis je développe brique par brique, avec un code propre, testable et maintenable. Face à un bug, pas de pansement — je remonte à la source, je corrige la faille et, si besoin, j'écris un test pour ne plus jamais y revenir.",
+                "valuesTitle": "Mes valeurs",
+                "values": {
+                    "knowledgeSharing": "Partage de connaissances & code reviews bienveillantes",
+                    "documentation": "Documentation soignée (Swagger, README) pour faciliter la vie des équipes",
+                    "pragmatism": "Rigueur et pragmatisme dans chaque ligne de code",
+                    "continuousImprovement": "Amélioration continue — techniquement et humainement"
+                },
+                "goalTitle": "Mon objectif",
+                "goalText": "Je cherche activement un CDI en Provence pour me rapprocher de ma famille. Rigoureux, sérieux, et convaincu qu'on travaille mieux dans la bonne humeur, j'apporte autant à l'équipe humainement que techniquement.",
+                "goalCTA": "Ouvert aux opportunités en Provence",
+                "passionsText": "Le sport d'endurance — natation en compétition, running, vélo — m'a appris la discipline et la persévérance, exactement ce qu'il faut pour mener un projet sur la durée. Les jeux de gestion m'ont initié à l'optimisation de systèmes logiques... et la cuisine, la musique et la lecture de livres de développement personnel nourrissent le reste.",
+                "interestsTitle": "Passions & centres d'intérêt",
                 "interests": {
                     "swimming": "Natation",
                     "running": "Running",
-                    "cycling": "Cyclisme",
+                    "cycling": "Vélo",
                     "videoGames": "Jeux vidéo",
-                    "lego": "Lego"
+                    "reading": "Lecture",
+                    "cooking": "Cuisine",
+                    "music": "Musique"
                 }
             },
             "professionalExperience": {

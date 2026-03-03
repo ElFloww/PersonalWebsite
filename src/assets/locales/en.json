@@ -30,20 +30,35 @@
         "profil": {
           "title": "Florent Dubut",
           "yearsOld": "years old",
-          "description": "Full Stack Developer"
+          "description": "Backend Developer .NET | C#"
         },
         "presentation": {
           "title": "👋 Hi, I'm Florent",
-          "firstParagraph": "Originally from Provence, I'm currently studying in Amiens. Passionate about software development, I've always been fascinated by computers and the endless possibilities they offer.",
-          "secondParagraph": "I am currently a Master's student in Computer Science with a specialization in Cloud Computing and Mobility. My background has allowed me to acquire solid skills in application development, software architecture, and project management. I'm always looking for new challenges and opportunities to put my skills into practice and learn new technologies.",
-          "thirdParagraph": "Outside of tech, I'm passionate about swimming, running, video games, cinema, and even Lego — I enjoy a bit of everything and I'm pretty easy to please!",
-          "interestsTitle": "Interests",
+          "subtitle": "Passionate Backend .NET Developer — looking for a permanent position in Provence",
+          "firstParagraph": "Born in Nogent-le-Rotrou in the heart of the Perche natural park, I grew up surrounded by nature — and a growing curiosity for technology. It all started at 14, when I discovered Python programming: an instant passion. My computer science elective in high school deepened it, and my studies in Amiens — a Bachelor's in Computer Science, then a Master's in CCM at Saint-Quentin — gave me the solid foundations I keep refining every day at Orange Business.",
+          "secondParagraph": "I'm a Backend Developer specialized in .NET & C#. My playground: clean RESTful APIs, solid clean architecture, SQL Server, and well-thought-out dependency injection. I also do front-end work with Vue.js — which gives me a valuable dual perspective and lets me document my APIs with care, knowing exactly what a frontend developer needs. But backend is where I truly thrive.",
+          "philosophyTitle": "My approach",
+          "philosophyText": "Before writing a single line of code, I make sure I fully understand the business need and the end goal. I start by designing the database architecture and API contracts, then build brick by brick, keeping code clean, testable, and maintainable. When a bug hits, no band-aids — I trace it to the root, fix the flaw, and write a test to make sure it never comes back.",
+          "valuesTitle": "My values",
+          "values": {
+            "knowledgeSharing": "Knowledge sharing & constructive code reviews",
+            "documentation": "Careful documentation (Swagger, README) to make life easier for all teams",
+            "pragmatism": "Rigour and pragmatism in every line of code",
+            "continuousImprovement": "Continuous improvement — technically and personally"
+          },
+          "goalTitle": "My goal",
+          "goalText": "I'm actively looking for a permanent position in Provence to be closer to my family. Rigorous, serious, and convinced that good work happens in good spirits, I bring as much to the team on the human side as on the technical one.",
+          "goalCTA": "Open to opportunities in Provence",
+          "passionsText": "Endurance sports — competitive swimming, running, cycling — have taught me discipline and perseverance, exactly what it takes to carry a long project through. Management games have trained me to optimize systems and think long-term... and cooking, music, and personal development books fuel the rest.",
+          "interestsTitle": "Passions & interests",
           "interests": {
             "swimming": "Swimming",
             "running": "Running",
             "cycling": "Cycling",
             "videoGames": "Video Games",
-            "lego": "Lego"
+            "reading": "Reading",
+            "cooking": "Cooking",
+            "music": "Music"
           }
         },
         "professionalExperience": {
