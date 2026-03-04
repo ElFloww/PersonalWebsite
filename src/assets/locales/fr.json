@@ -1,162 +1,185 @@
-{
-    "components": {
-        "shared": {
-            "icons": {
-                "en": {
-                    "alt": "Anglais"
-                },
-                "fr": {
-                    "alt": "Français"
-                }
-            },
-            "footer": {
-                "github": "GitHub",
-                "linkedin": "LinkedIn",
-                "email": "Email"
-            },
-            "appBar": {
-                "about": "À propos",
-                "experience": "Expérience",
-                "education": "Formation",
-                "skills": "Compétences",
-                "projects": "Projets",
-                "contact": "Contact"
-            }
+﻿{
+  "components": {
+    "shared": {
+      "icons": {
+        "en": {
+          "alt": "Anglais"
+        },
+        "fr": {
+          "alt": "Français"
         }
-    },
-    "views": {
-        "main":{
-            "profil": {
-                "title": "Florent Dubut",
-                "yearsOld": "ans",
-                "description": "Développeur Backend .NET | C#"
-            },
-            "presentation": {
-                "title": "👋 Bonjour, moi c'est Florent",
-                "subtitle": "Développeur Backend .NET passionné — en recherche de CDI en Provence",
-                "firstParagraph": "Natif de Nogent-le-Rotrou, j'ai grandi dans le calme du Perche, entre nature et curiosité technologique. Tout a basculé vers mes 14 ans en découvrant la programmation Python — une vraie révélation. La spécialité NSI au lycée n'a fait qu'amplifier cette passion, et mes études à Amiens — un BUT Informatique puis un Master CCM à Saint-Quentin — ont solidifié les bases d'un savoir-faire que j'affine chaque jour chez Orange Business.",
-                "secondParagraph": "Je suis développeur Backend spécialisé en .NET & C#. Mon terrain de jeu : des APIs RESTful propres, une clean architecture rigoureuse, SQL Server, et des injections de dépendances bien pensées. Je fais aussi du front en Vue.js — ce qui me donne une précieuse double vision et me permet de documenter mes APIs avec soin, sachant exactement ce dont un développeur front a besoin. Mais c'est côté backend que je m'épanouis vraiment.",
-                "philosophyTitle": "Mon approche",
-                "philosophyText": "Avant de taper la moindre ligne de code, je m'assure d'avoir parfaitement compris le besoin métier et l'objectif final. Je commence par concevoir l'architecture de la base de données et les contrats d'API, puis je développe brique par brique, avec un code propre, testable et maintenable. Face à un bug, pas de pansement — je remonte à la source, je corrige la faille et, si besoin, j'écris un test pour ne plus jamais y revenir.",
-                "valuesTitle": "Mes valeurs",
-                "values": {
-                    "knowledgeSharing": "Partage de connaissances & code reviews bienveillantes",
-                    "documentation": "Documentation soignée (Swagger, README) pour faciliter la vie des équipes",
-                    "pragmatism": "Rigueur et pragmatisme dans chaque ligne de code",
-                    "continuousImprovement": "Amélioration continue — techniquement et humainement"
-                },
-                "goalTitle": "Mon objectif",
-                "goalText": "Je cherche activement un CDI en Provence pour me rapprocher de ma famille. Rigoureux, sérieux, et convaincu qu'on travaille mieux dans la bonne humeur, j'apporte autant à l'équipe humainement que techniquement.",
-                "goalCTA": "Ouvert aux opportunités en Provence",
-                "passionsText": "Le sport d'endurance — natation en compétition, running, vélo — m'a appris la discipline et la persévérance, exactement ce qu'il faut pour mener un projet sur la durée. Les jeux de gestion m'ont initié à l'optimisation de systèmes logiques... et la cuisine, la musique et la lecture de livres de développement personnel nourrissent le reste.",
-                "interestsTitle": "Passions & centres d'intérêt",
-                "interests": {
-                    "swimming": "Natation",
-                    "running": "Running",
-                    "cycling": "Vélo",
-                    "videoGames": "Jeux vidéo",
-                    "reading": "Lecture",
-                    "cooking": "Cuisine",
-                    "music": "Musique"
-                }
-            },
-            "professionalExperience": {
-                "title": "💼 Expériences professionnelles",
-                "sectionTitle": "Expériences Professionnelles",
-                "sectionDescription": "Mon parcours professionnel et mes missions",
-                "learnMore": "En savoir plus",
-                "missionsAndAchievements": "Missions et réalisations",
-                "close": "Fermer",
-                "first":{
-                    "date": "avril 2023 - mai 2023",
-                    "title": "Développeur (Stage)",
-                    "company": "Orange Business – Amiens, Hauts-de-France, France",
-                    "content": "Stage dans le cadre du BUT 2 Informatique. Utilisation des technologies Microsoft .Net Core (C#, ASP). Développement d'une API en clean architecture dans le cadre d'un projet interne."
-                },
-                "second": {
-                    "date": "juin 2023 - août 2023",
-                    "title": "Développeur (Stage)",
-                    "company": "Orange Business – Amiens, Hauts-de-France, France",
-                    "content": "Développeur sur les technologies Microsoft .Net Core (C#, ASP). Contrat suite au stage précédement réalisé Développement d'une API en clean architecture ainsi d'un backoffice dans le cadre d'un projet interne"
-                },
-                "third": {
-                    "date": "septembre 2023 - aujourd'hui",
-                    "title": "Consultant (Alternance)",
-                    "company": "Orange Business – Amiens, Hauts-de-France, France",
-                    "content": "Alternance dans le cadre de mon BUT 3 ainsi que mon Master informatique. Consultant sur les technologies Microsoft et JS. Développement d'APIs en ASP.NET clean architecture. Développement d'applications front principalement en TypeScript sur les frameworks Vue.js et Angular"
-                }
-            },
-            "education": {
-                "title": "🎓 Education",
-                "sectionTitle": "Parcours Académique",
-                "sectionDescription": "Formations et diplômes obtenus",
-                "viewProgram": "Voir le programme",
-                "modulesAndSkills": "Modules et compétences",
-                "close": "Fermer",
-                "first": {
-                    "date": "2021 - 2023",
-                    "title": "BUT Informatique",
-                    "school": "Université de Picardie Jules Verne – Amiens, Hauts-de-France, France",
-                    "content1":"Lors de mes deux premières années de BUT Informatique à l’IUT d’Amiens, j’ai acquis les bases essentielles en algorithmique, en programmation orientée objet, en base de données ainsi qu’en conception et architecture logicielle.",
-                    "content2": "En troisième année, que j’ai effectuée en alternance dans le parcours \"Réalisation d'applications : conception, développement, validation\", j’ai approfondi mes compétences en développement logiciel, en gestion de projet, ainsi qu’en tests et validation, dans un cadre professionnel.",
-                    "content3": "Sur le plan technique, ma formation m’a permis de maîtriser plusieurs langages de programmation tels que Java, Python, C, C++, C# et PHP, et d’acquérir une solide expérience en conception et développement d'applications.",
-                    "content4": "Parallèlement à ma formation, je me suis engagé dans la vie étudiante en tant que membre du Conseil de l’IUT d’Amiens. J’ai participé activement aux réunions du conseil, représentant les étudiants et contribuant à l’amélioration des conditions d’études ainsi qu’à aux orientations pédagogiques de l’établissement."
-                },
-                "second": {
-                    "date": "2023 - 2025",
-                    "title": "Master en informatique : Cloud Computing and Mobility",
-                    "school": "INSSET – Université de Picardie Jules Verne, Saint-Quentin, Hauts-de-France, France",
-                    "content": "Master ayant vocation à comprendre les enjeux et être formé sur les technologies Cloud d’avenir. Les compétences visées sont : L’architecture Cloud, la virtualisation des services et l'apprentissage de la culture DevOps et sa mise en application."
-                }
-            },
-            "contact": {
-                "title": "✉️ Contact",
-                "description": "Vous pouvez me contacter par email à l'adresse suivante :"
-            },
-            "contactForm": {
-                "title": "Envoyez-moi un message",
-                "name": "Nom",
-                "email": "Email",
-                "subject": "Sujet",
-                "message": "Message",
-                "send": "Envoyer",
-                "reset": "Réinitialiser",
-                "nameRequired": "Le nom est requis",
-                "nameMinLength": "Le nom doit contenir au moins 2 caractères",
-                "emailRequired": "L'email est requis",
-                "emailInvalid": "L'email doit être valide",
-                "subjectRequired": "Le sujet est requis",
-                "messageRequired": "Le message est requis",
-                "messageMinLength": "Le message doit contenir au moins 10 caractères",
-                "successMessage": "Message envoyé avec succès ! Je vous répondrai bientôt.",
-                "errorMessage": "Erreur lors de l'envoi du message. Veuillez réessayer."
-            },
-            "skills": {
-                "title": "💻 Compétences techniques",
-                "sectionTitle": "Compétences Techniques",
-                "sectionDescription": "Technologies et outils maîtrisés",
-                "languages": "Langages",
-                "frontend": "Frontend",
-                "backend": "Backend",
-                "database": "Bases de données",
-                "tools": "Outils & DevOps",
-                "cloud": "Cloud"
-            },
-            "stats": {
-                "years": "Années",
-                "experience": "d'expérience",
-                "projects": "Projets",
-                "completed": "réalisés",
-                "technologies": "Technologies",
-                "mastered": "maîtrisées"
-            },
-            "projects": {
-                "title": "🚀 Projets",
-                "sectionTitle": "Mes Réalisations",
-                "sectionDescription": "Projets et applications développés",
-                "viewProject": "Voir le projet",
-                "sourceCode": "Code source"
-            }
-        }
+      },
+      "footer": {
+        "github": "GitHub",
+        "linkedin": "LinkedIn",
+        "email": "Email"
+      },
+      "appBar": {
+        "about": "À propos",
+        "experience": "Expérience",
+        "education": "Formation",
+        "skills": "Compétences",
+        "projects": "Projets",
+        "contact": "Contact"
+      }
     }
+  },
+  "views": {
+    "main": {
+      "profil": {
+        "title": "Florent Dubut",
+        "yearsOld": "ans",
+        "description": "Développeur Backend .NET | C#"
+      },
+      "presentation": {
+        "title": "👋 Bonjour, moi c'est Florent",
+        "subtitle": "Développeur Backend .NET",
+        "seekingJobBanner": "🟢 Disponible en CDI dès septembre 2026 — Marseille · Aix-en-Provence · Toulon",
+        "locationBadge": "📍 Actuellement à Amiens — Retour en Provence en septembre 2026",
+        "firstParagraph1": "Originaire de Nogent-le-Rotrou, au cœur du Perche normand, j'ai grandi entouré de nature et d'une curiosité grandissante pour la technologie.",
+        "firstParagraph2": "Tout a commencé vers 14 ans avec la découverte de Python : une vraie révélation. La spécialité NSI au lycée n'a fait qu'amplifier cette passion.",
+        "firstParagraph3": "J'ai ensuite construit mes bases à Amiens avec un BUT Informatique à l'IUT, avant de pousser plus loin avec un Master Cloud Computing & Mobility à l'INSSET de Saint-Quentin — une formation exigeante que j'ai vécu pleinement en alternance chez Orange Business.",
+        "secondParagraph": "Je suis développeur Backend spécialisé en .NET & C#. Mon terrain de jeu : des APIs RESTful propres, une clean architecture rigoureuse, SQL Server, et des injections de dépendances bien pensées. Je fais aussi du front en Vue.js — ce qui me donne une double vision utile pour documenter mes APIs avec précision. Mais c'est côté backend que je m'épanouis vraiment.",
+        "philosophyTitle": "Mon approche",
+        "philosophyText": "Avant de taper la moindre ligne de code, je m'assure d'avoir parfaitement compris le besoin métier et l'objectif final. Je conçois d'abord l'architecture de la base de données et les contrats d'API, puis je développe brique par brique avec un code propre, testable et maintenable. Face à un bug, pas de pansement — je remonte à la source, je corrige la faille et j'écris un test pour ne plus jamais y revenir.",
+        "valuesTitle": "Ce qui me guide",
+        "values": {
+          "knowledgeSharing": "Partage de connaissances & code reviews bienveillantes — progresser ensemble",
+          "documentation": "Documentation soignée (Swagger, README) pour faciliter la vie de toute l'équipe",
+          "pragmatism": "Rigueur & pragmatisme : comprendre avant de coder, corriger à la source",
+          "continuousImprovement": "Amélioration continue — techniquement et humainement, sans jamais se satisfaire du statu quo"
+        },
+        "goalTitle": "Mon objectif",
+        "goalText": "À la fin de mes études, en septembre 2026, je rentre en Provence — ma famille y est, et c'est là que j'envisage de construire la suite de ma carrière. Je cherche un CDI dans le développement logiciel à Marseille, Aix-en-Provence ou Toulon, idéalement orienté backend, au sein d'une équipe où la qualité du code et la bonne entente comptent autant que la technique.",
+        "goalCTA": "CDI à Marseille · Aix-en-Provence · Toulon — dès sept. 2026",
+        "interestsTitle": "Passions & centres d'intérêt",
+        "passions": {
+          "sport": {
+            "title": "Sport",
+            "description": "Natation, running, vélo, randonnée... — le sport d'endurance m'a appris la discipline et la persévérance, deux qualités aussi indispensables sur un trail que sur un projet ambitieux."
+          },
+          "videoGames": {
+            "title": "Jeux vidéo",
+            "description": "Fan de jeux de gestion et de stratégie — Transport Fever, Cities Skylines, Minecraft... Une façon de penser en termes de systèmes, d'optimisation et d'effets à long terme."
+          },
+          "reading": {
+            "title": "Lecture",
+            "description": "Développement personnel, un peu de romans... Toujours en quête de nouveaux angles de vue et de méthodes pour progresser, aussi bien dans le travail que dans la vie."
+          },
+          "cooking": {
+            "title": "Cuisine",
+            "description": "Cuisiner, c'est créer. Un peu de technique, beaucoup d'improvisation — et le plaisir de partager le résultat avec des proches (et en passant de bien manger)."
+          },
+          "music": {
+            "title": "Musique",
+            "description": "Ma playlist tourne autour des classiques français et des vieilles âmes : Dalida, Joe Dassin, Christophe... Des voix et des mélodies qui ont quelque chose d'inépuisable. La musique, c'est mon meilleur mode de déconnexion."
+          }
+        }
+      },
+      "professionalExperience": {
+        "title": "💼 Expériences professionnelles",
+        "sectionTitle": "Expériences Professionnelles",
+        "sectionDescription": "Mon parcours professionnel et mes missions",
+        "learnMore": "En savoir plus",
+        "missionsAndAchievements": "Missions et réalisations",
+        "close": "Fermer",
+        "first": {
+          "date": "avril 2023 - mai 2023",
+          "title": "Développeur — Stage",
+          "company": "Orange Business — Amiens, Hauts-de-France",
+          "shortDesc": "Premier contact avec le monde professionnel .NET chez Orange Business.",
+          "content": "Stage de fin de 2ème année de BUT Informatique. Intégré dans une équipe de consultants, j'ai découvert l'univers .NET Core en conditions réelles : développement d'une API REST en C# suivant les principes de la clean architecture dans le cadre d'un projet interne.",
+          "tech": ".NET Core · C# · ASP.NET · Clean Architecture · Git"
+        },
+        "second": {
+          "date": "juin 2023 - août 2023",
+          "title": "Développeur — Stage prolongé",
+          "company": "Orange Business — Amiens, Hauts-de-France",
+          "shortDesc": "Suite directe du stage de printemps — montée en responsabilité.",
+          "content": "Contrat signé dans la foulée du premier stage. J'ai poursuivi et étendu le projet initial en développant une nouvelle API en clean architecture ainsi qu'un backoffice web de gestion interne. Montée en compétences sur les tests unitaires et la documentation technique.",
+          "tech": ".NET Core · C# · ASP.NET · xUnit · Swagger · Git · Azure DevOps"
+        },
+        "third": {
+          "date": "septembre 2023 - aujourd'hui",
+          "title": "Consultant — Alternance",
+          "company": "Orange Business — Amiens, Hauts-de-France",
+          "shortDesc": "Alternance dans le cadre du BUT 3 et du Master CCM — consultant full-stack .NET & JS.",
+          "content": "Consultant sur les technologies Microsoft et JavaScript au sein d'une équipe Agile. Développement et maintenance d'APIs REST en ASP.NET Core (clean architecture, CQRS), développement front-end avec Vue.js 3 et Angular sur des applications métier internes. CI/CD via Azure DevOps, participation active aux cérémonies Scrum et aux revues de code.",
+          "tech": "ASP.NET Core · C# · Vue.js 3 · Angular · TypeScript · SQL Server · Azure DevOps · Docker"
+        }
+      },
+      "education": {
+        "title": "🎓 Education",
+        "sectionTitle": "Parcours Académique",
+        "sectionDescription": "Formations, diplômes et engagements",
+        "viewProgram": "Voir le programme",
+        "modulesAndSkills": "Modules et compétences",
+        "close": "Fermer",
+        "first": {
+          "date": "2021 - 2024",
+          "title": "BUT Informatique",
+          "school": "IUT de l'Université de Picardie Jules Verne — Amiens",
+          "parcours": "Parcours : Réalisation d'applications — conception, développement, validation",
+          "content1": "Trois années de formation universitaire technologique. Les deux premières années couvrent les fondations : algorithmique, POO, bases de données, architecture logicielle et développement web. La troisième année, en alternance chez Orange Business, confronte aux réalités du métier : gestion de projet, tests et validation.",
+          "content2": "Langages pratiqués : Java, Python, C, C++, C#, PHP. Conception rigoureuse (UML, MCD, design patterns) et fort intérêt pour la qualité logicielle.",
+          "content3": "Élu représentant étudiant au Conseil de l'IUT d'Amiens : participation aux réunions, défense des intérêts des étudiants, contribution aux orientations pédagogiques.",
+          "content4": ""
+        },
+        "second": {
+          "date": "2023 - 2025",
+          "title": "Master — Cloud Computing and Mobility",
+          "school": "INSSET — Université de Picardie Jules Verne, Saint-Quentin",
+          "content": "Formation orientée vers les architectures Cloud et les pratiques DevOps. Architecture microservices, containerisation (Docker, Kubernetes), Cloud providers (Azure, AWS, GCP), développement mobile (iOS & Android) et intégration continue. Réalisé en alternance chez Orange Business."
+        }
+      },
+      "contact": {
+        "title": "✉️ Contact",
+        "description": "Vous pouvez me contacter par email à l'adresse suivante :"
+      },
+      "contactForm": {
+        "title": "Envoyez-moi un message",
+        "name": "Nom",
+        "email": "Email",
+        "subject": "Sujet",
+        "message": "Message",
+        "send": "Envoyer",
+        "reset": "Réinitialiser",
+        "nameRequired": "Le nom est requis",
+        "nameMinLength": "Le nom doit contenir au moins 2 caractères",
+        "emailRequired": "L'email est requis",
+        "emailInvalid": "L'email doit être valide",
+        "subjectRequired": "Le sujet est requis",
+        "messageRequired": "Le message est requis",
+        "messageMinLength": "Le message doit contenir au moins 10 caractères",
+        "successMessage": "Message envoyé avec succès ! Je vous répondrai bientôt.",
+        "errorMessage": "Erreur lors de l'envoi du message. Veuillez réessayer."
+      },
+      "skills": {
+        "title": "💻 Compétences techniques",
+        "sectionTitle": "Compétences Techniques",
+        "sectionDescription": "Technologies et outils maîtrisés",
+        "languages": "Langages",
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "database": "Bases de données",
+        "tools": "Outils & DevOps",
+        "cloud": "Cloud"
+      },
+      "stats": {
+        "years": "Années",
+        "experience": "d'expérience",
+        "projects": "Projets",
+        "completed": "réalisés",
+        "technologies": "Technologies",
+        "mastered": "maîtrisées"
+      },
+      "projects": {
+        "title": "🚀 Projets",
+        "sectionTitle": "Mes Réalisations",
+        "sectionDescription": "Projets et applications développés",
+        "viewProject": "Voir le projet",
+        "sourceCode": "Code source"
+      }
+    }
+  }
 }

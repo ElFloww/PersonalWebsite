@@ -1,159 +1,184 @@
-{
-    "components": {
-      "shared": {
-        "icons": {
-          "en": {
-            "alt": "English"
-          },
-          "fr": {
-            "alt": "French"
-          }
+﻿{
+  "components": {
+    "shared": {
+      "icons": {
+        "en": {
+          "alt": "English"
         },
-        "footer": {
-          "github": "GitHub",
-          "linkedin": "LinkedIn",
-          "mastodon": "Mastodon",
-          "email": "Email"
-        },
-        "appBar": {
-          "about": "About",
-          "experience": "Experience",
-          "education": "Education",
-          "skills": "Skills",
-          "projects": "Projects",
-          "contact": "Contact"
+        "fr": {
+          "alt": "French"
         }
+      },
+      "footer": {
+        "github": "GitHub",
+        "linkedin": "LinkedIn",
+        "mastodon": "Mastodon",
+        "email": "Email"
+      },
+      "appBar": {
+        "about": "About",
+        "experience": "Experience",
+        "education": "Education",
+        "skills": "Skills",
+        "projects": "Projects",
+        "contact": "Contact"
       }
-    },
-    "views": {
-      "main": {
-        "profil": {
-          "title": "Florent Dubut",
-          "yearsOld": "years old",
-          "description": "Backend Developer .NET | C#"
+    }
+  },
+  "views": {
+    "main": {
+      "profil": {
+        "title": "Florent Dubut",
+        "yearsOld": "years old",
+        "description": "Backend Developer .NET | C#"
+      },
+      "presentation": {
+        "title": "👋 Hi, I'm Florent",
+        "subtitle": "Backend .NET Developer — future Provençal seeking a permanent position",
+        "seekingJobBanner": "🟢 Available for a permanent position from September 2026 — Marseille · Aix-en-Provence · Toulon",
+        "locationBadge": "📍 Currently in Amiens — Moving to Provence in September 2026",
+        "firstParagraph": "Originally from Nogent-le-Rotrou, in the heart of the Perche region of Normandy, I grew up surrounded by nature and a growing curiosity for technology. It all started at 14 when I discovered Python programming — an instant passion. My computer science elective in high school deepened it, and my studies in Amiens — a Bachelor's in Computer Science at the IUT, then a Master's in Cloud Computing & Mobility at INSSET in Saint-Quentin — gave me solid technical foundations I keep refining every day as an apprentice at Orange Business.",
+        "secondParagraph": "I'm a Backend Developer specialized in .NET & C#. My playground: clean RESTful APIs, solid clean architecture, SQL Server, and well-thought-out dependency injection. I also do front-end work with Vue.js — which gives me a useful dual perspective for documenting my APIs precisely. But backend is where I truly thrive.",
+        "philosophyTitle": "My approach",
+        "philosophyText": "Before writing a single line of code, I make sure I fully understand the business need and the end goal. I start by designing the database architecture and API contracts, then build brick by brick, keeping code clean, testable, and maintainable. When a bug hits, no band-aids — I trace it to the root, fix the flaw, and write a test to make sure it never comes back.",
+        "valuesTitle": "What drives me",
+        "values": {
+          "knowledgeSharing": "Knowledge sharing & constructive code reviews — growing together",
+          "documentation": "Careful documentation (Swagger, README) to make life easier for the whole team",
+          "pragmatism": "Rigour & pragmatism: understand before coding, fix issues at the source",
+          "continuousImprovement": "Continuous improvement — technically and personally, never settling for the status quo"
         },
-        "presentation": {
-          "title": "👋 Hi, I'm Florent",
-          "subtitle": "Passionate Backend .NET Developer — looking for a permanent position in Provence",
-          "firstParagraph": "Born in Nogent-le-Rotrou in the heart of the Perche natural park, I grew up surrounded by nature — and a growing curiosity for technology. It all started at 14, when I discovered Python programming: an instant passion. My computer science elective in high school deepened it, and my studies in Amiens — a Bachelor's in Computer Science, then a Master's in CCM at Saint-Quentin — gave me the solid foundations I keep refining every day at Orange Business.",
-          "secondParagraph": "I'm a Backend Developer specialized in .NET & C#. My playground: clean RESTful APIs, solid clean architecture, SQL Server, and well-thought-out dependency injection. I also do front-end work with Vue.js — which gives me a valuable dual perspective and lets me document my APIs with care, knowing exactly what a frontend developer needs. But backend is where I truly thrive.",
-          "philosophyTitle": "My approach",
-          "philosophyText": "Before writing a single line of code, I make sure I fully understand the business need and the end goal. I start by designing the database architecture and API contracts, then build brick by brick, keeping code clean, testable, and maintainable. When a bug hits, no band-aids — I trace it to the root, fix the flaw, and write a test to make sure it never comes back.",
-          "valuesTitle": "My values",
-          "values": {
-            "knowledgeSharing": "Knowledge sharing & constructive code reviews",
-            "documentation": "Careful documentation (Swagger, README) to make life easier for all teams",
-            "pragmatism": "Rigour and pragmatism in every line of code",
-            "continuousImprovement": "Continuous improvement — technically and personally"
+        "goalTitle": "My goal",
+        "goalText": "At the end of my studies, in September 2026, I'm moving to Provence — my family is there, and that's where I want to build the next chapter of my career. I'm looking for a permanent position in software development in Marseille, Aix-en-Provence or Toulon, ideally backend-focused, within a team where code quality and good atmosphere matter as much as technical skills.",
+        "goalCTA": "Permanent role in Marseille · Aix-en-Provence · Toulon — from Sept. 2026",
+        "interestsTitle": "Passions & interests",
+        "passions": {
+          "sport": {
+            "title": "Sport",
+            "description": "Running, cycling, hiking — endurance sports have taught me discipline and perseverance, qualities just as essential on a trail as on an ambitious project."
           },
-          "goalTitle": "My goal",
-          "goalText": "I'm actively looking for a permanent position in Provence to be closer to my family. Rigorous, serious, and convinced that good work happens in good spirits, I bring as much to the team on the human side as on the technical one.",
-          "goalCTA": "Open to opportunities in Provence",
-          "passionsText": "Endurance sports — competitive swimming, running, cycling — have taught me discipline and perseverance, exactly what it takes to carry a long project through. Management games have trained me to optimize systems and think long-term... and cooking, music, and personal development books fuel the rest.",
-          "interestsTitle": "Passions & interests",
-          "interests": {
-            "swimming": "Swimming",
-            "running": "Running",
-            "cycling": "Cycling",
-            "videoGames": "Video Games",
-            "reading": "Reading",
-            "cooking": "Cooking",
-            "music": "Music"
+          "videoGames": {
+            "title": "Video Games",
+            "description": "Big fan of management and strategy games — Cities Skylines, Football Manager, Civilization... A way of thinking in terms of systems, optimization and long-term consequences."
+          },
+          "reading": {
+            "title": "Reading",
+            "description": "Personal development, entrepreneurship, psychology... Always looking for new perspectives and methods to improve, both professionally and personally."
+          },
+          "cooking": {
+            "title": "Cooking",
+            "description": "Cooking is creating. A bit of technique, a lot of improvisation — and the pleasure of sharing the result with the people around you."
+          },
+          "music": {
+            "title": "Music",
+            "description": "I escape into classics from the 60s through the 90s — Beatles, Bowie, Queen, Dire Straits, Pink Floyd — as well as today's music. Music is my best way to disconnect."
           }
-        },
-        "professionalExperience": {
-          "title": "💼 Professional Experience",
-          "first": {
-            "date": "April 2023 - May 2023",
-            "title": "Developer (Internship)",
-            "company": "Orange Business – Amiens, Hauts-de-France, France",
-            "content": "Internship as part of the 2nd year of my BUT in Computer Science. Used Microsoft .Net Core technologies (C#, ASP). Developed a clean architecture API as part of an internal project."
-          },
-          "second": {
-            "date": "June 2023 - August 2023",
-            "title": "Developer (Internship)",
-            "company": "Orange Business – Amiens, Hauts-de-France, France",
-            "content": "Developer using Microsoft .Net Core technologies (C#, ASP). Contract following the previous internship. Developed a clean architecture API and a back office as part of an internal project."
-          },
-          "third": {
-            "date": "September 2023 - Present",
-            "title": "Consultant (Work-Study)",
-            "company": "Orange Business – Amiens, Hauts-de-France, France",
-            "content": "Work-study program as part of my 3rd year of BUT and my Master's degree in Computer Science. Consultant working with Microsoft and JS technologies. Developed APIs using ASP.NET with clean architecture. Front-end development mainly in TypeScript using Vue.js and Angular."
-          }
-        },
-        "education": {
-          "title": "🎓 Education",
-          "sectionTitle": "Academic Path",
-          "sectionDescription": "Degrees and diplomas obtained",
-          "viewProgram": "View program",
-          "modulesAndSkills": "Modules and skills",
-          "close": "Close",
-          "first": {
-            "date": "2021 - 2023",
-            "title": "Bachelor in Computer Science",
-            "school": "Université de Picardie Jules Verne – Amiens, Hauts-de-France, France",
-            "content1": "During the first two years of my BUT in Computer Science at IUT Amiens, I acquired essential foundations in algorithms, object-oriented programming, databases, and software design and architecture.",
-            "content2": "In the third year, which I completed as part of a work-study program in the 'Application Development: design, development, validation' track, I deepened my skills in software development, project management, as well as testing and validation in a professional setting.",
-            "content3": "From a technical perspective, my education enabled me to master several programming languages such as Java, Python, C, C++, C#, and PHP, and gain strong experience in application design and development.",
-            "content4": "Alongside my studies, I was actively involved in student life as a member of the IUT Amiens Council. I regularly attended meetings, represented the student body, and contributed to improving study conditions and shaping the institution's academic direction."
-          },
-          "second": {
-            "date": "2023 - 2025",
-            "title": "Master’s in Computer Science: Cloud Computing and Mobility",
-            "school": "INSSET – Université de Picardie Jules Verne, Saint-Quentin, Hauts-de-France, France",
-            "content": "This Master’s program aims to provide in-depth understanding and training in cutting-edge Cloud technologies. Key competencies include Cloud architecture, service virtualization, and mastering DevOps culture and its practical implementation."
-          }
-        },
-        "contact": {
-          "title": "✉️ Contact",
-          "description": "You can contact me by email at the following address:"
-        },
-        "contactForm": {
-          "title": "Send me a message",
-          "name": "Name",
-          "email": "Email",
-          "subject": "Subject",
-          "message": "Message",
-          "send": "Send",
-          "reset": "Reset",
-          "nameRequired": "Name is required",
-          "nameMinLength": "Name must be at least 2 characters",
-          "emailRequired": "Email is required",
-          "emailInvalid": "Email must be valid",
-          "subjectRequired": "Subject is required",
-          "messageRequired": "Message is required",
-          "messageMinLength": "Message must be at least 10 characters",
-          "successMessage": "Message sent successfully! I will reply soon.",
-          "errorMessage": "Error sending message. Please try again."
-        },
-        "skills": {
-          "title": "💻 Technical Skills",
-          "sectionTitle": "Technical Skills",
-          "sectionDescription": "Mastered technologies and tools",
-          "languages": "Languages",
-          "frontend": "Frontend",
-          "backend": "Backend",
-          "database": "Databases",
-          "tools": "Tools & DevOps",
-          "cloud": "Cloud"
-        },
-        "stats": {
-          "years": "Years",
-          "experience": "of experience",
-          "projects": "Projects",
-          "completed": "completed",
-          "technologies": "Technologies",
-          "mastered": "mastered"
-        },
-        "projects": {
-          "title": "🚀 Projects",
-          "sectionTitle": "My Projects",
-          "sectionDescription": "Developed projects and applications",
-          "viewProject": "View project",
-          "sourceCode": "Source code"
         }
+      },
+      "professionalExperience": {
+        "title": "💼 Professional Experience",
+        "sectionTitle": "Professional Experience",
+        "sectionDescription": "My career path and missions",
+        "learnMore": "Learn more",
+        "missionsAndAchievements": "Missions & achievements",
+        "close": "Close",
+        "first": {
+          "date": "April 2023 - May 2023",
+          "title": "Developer — Internship",
+          "company": "Orange Business — Amiens, Hauts-de-France",
+          "shortDesc": "First professional experience with .NET at Orange Business.",
+          "content": "End-of-year internship during my 2nd year of BUT in Computer Science. Integrated into a team of consultants, I discovered the .NET Core world in real conditions: developed a REST API in C# following clean architecture principles as part of an internal project.",
+          "tech": ".NET Core · C# · ASP.NET · Clean Architecture · Git"
+        },
+        "second": {
+          "date": "June 2023 - August 2023",
+          "title": "Developer — Extended Internship",
+          "company": "Orange Business — Amiens, Hauts-de-France",
+          "shortDesc": "Direct follow-up to the spring internship — increased responsibilities.",
+          "content": "Contract signed right after the first internship. I continued and extended the initial project by developing a new clean architecture API and an internal web back office. Skill development in unit testing and technical documentation.",
+          "tech": ".NET Core · C# · ASP.NET · xUnit · Swagger · Git · Azure DevOps"
+        },
+        "third": {
+          "date": "September 2023 - Present",
+          "title": "Consultant — Apprenticeship",
+          "company": "Orange Business — Amiens, Hauts-de-France",
+          "shortDesc": "Apprenticeship as part of Year 3 BUT and Master CCM — full-stack .NET & JS consultant.",
+          "content": "Consultant on Microsoft and JavaScript technologies within an Agile team. Development and maintenance of REST APIs in ASP.NET Core (clean architecture, CQRS), front-end development with Vue.js 3 and Angular on internal business applications. CI/CD via Azure DevOps, active participation in Scrum ceremonies and code reviews.",
+          "tech": "ASP.NET Core · C# · Vue.js 3 · Angular · TypeScript · SQL Server · Azure DevOps · Docker"
+        }
+      },
+      "education": {
+        "title": "🎓 Education",
+        "sectionTitle": "Academic Path",
+        "sectionDescription": "Degrees, diplomas and commitments",
+        "viewProgram": "View program",
+        "modulesAndSkills": "Modules and skills",
+        "close": "Close",
+        "first": {
+          "date": "2021 - 2024",
+          "title": "Bachelor in Computer Science (BUT)",
+          "school": "IUT — Université de Picardie Jules Verne, Amiens",
+          "parcours": "Track: Application Development — design, development, validation",
+          "content1": "Three years of intensive university technology training. The first two years built the foundations: algorithms, object-oriented programming, databases, software architecture and web development. The third year, completed as an apprentice at Orange Business, immersed me in real-world conditions: project management, testing and validation.",
+          "content2": "Languages mastered: Java, Python, C, C++, C#, PHP. Rigorous approach to software design (UML, ERD, design patterns) and a strong focus on code quality.",
+          "content3": "Elected student representative on the IUT Amiens Council: attended meetings, represented student interests, and contributed to the institution's academic direction.",
+          "content4": ""
+        },
+        "second": {
+          "date": "2023 - 2025",
+          "title": "Master's — Cloud Computing and Mobility",
+          "school": "INSSET — Université de Picardie Jules Verne, Saint-Quentin",
+          "content": "Advanced program focused on Cloud architectures and DevOps practices. Topics include microservices architecture, containerization (Docker, Kubernetes), major Cloud providers (Azure, AWS, GCP), mobile development (iOS & Android) and continuous integration. Completed as an apprentice at Orange Business."
+        }
+      },
+      "contact": {
+        "title": "✉️ Contact",
+        "description": "You can contact me by email at the following address:"
+      },
+      "contactForm": {
+        "title": "Send me a message",
+        "name": "Name",
+        "email": "Email",
+        "subject": "Subject",
+        "message": "Message",
+        "send": "Send",
+        "reset": "Reset",
+        "nameRequired": "Name is required",
+        "nameMinLength": "Name must be at least 2 characters",
+        "emailRequired": "Email is required",
+        "emailInvalid": "Email must be valid",
+        "subjectRequired": "Subject is required",
+        "messageRequired": "Message is required",
+        "messageMinLength": "Message must be at least 10 characters",
+        "successMessage": "Message sent successfully! I will reply soon.",
+        "errorMessage": "Error sending message. Please try again."
+      },
+      "skills": {
+        "title": "💻 Technical Skills",
+        "sectionTitle": "Technical Skills",
+        "sectionDescription": "Mastered technologies and tools",
+        "languages": "Languages",
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "database": "Databases",
+        "tools": "Tools & DevOps",
+        "cloud": "Cloud"
+      },
+      "stats": {
+        "years": "Years",
+        "experience": "of experience",
+        "projects": "Projects",
+        "completed": "completed",
+        "technologies": "Technologies",
+        "mastered": "mastered"
+      },
+      "projects": {
+        "title": "🚀 Projects",
+        "sectionTitle": "My Projects",
+        "sectionDescription": "Developed projects and applications",
+        "viewProject": "View project",
+        "sourceCode": "Source code"
       }
     }
   }
-  
+}
