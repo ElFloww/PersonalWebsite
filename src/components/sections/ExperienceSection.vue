@@ -111,7 +111,7 @@ const showDetails = (exp: Experience) => {
               class="experience-header"
               :style="{ background: exp.gradient }"
             >
-              <div v-if="exp.logo" class="company-logo-wrapper mb-3">
+              <div v-if="exp.logo" class="company-logo-wrapper mb-3 bg-transparent">
                 <img
                   :src="exp.logo"
                   :alt="
