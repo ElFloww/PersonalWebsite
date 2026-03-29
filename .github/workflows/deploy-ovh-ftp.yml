@@ -3,7 +3,7 @@ name: Build and Deploy to OVH (FTP)
 on:
   push:
     branches:
-      - develop
+      - release
   workflow_dispatch:
 
 concurrency:
