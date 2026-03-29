@@ -1,0 +1,331 @@
+﻿{
+  "components": {
+    "shared": {
+      "icons": {
+        "en": {
+          "alt": "English"
+        },
+        "fr": {
+          "alt": "French"
+        }
+      },
+      "footer": {
+        "github": "GitHub",
+        "linkedin": "LinkedIn",
+        "mastodon": "Mastodon",
+        "email": "Email"
+      },
+      "appBar": {
+        "about": "About",
+        "experience": "Experience",
+        "education": "Education",
+        "skills": "Skills",
+        "projects": "Projects",
+        "contact": "Contact"
+      }
+    }
+  },
+  "views": {
+    "main": {
+      "profil": {
+        "title": "Florent Dubut",
+        "yearsOld": "years old",
+        "description": "Backend Developer .NET | C#"
+      },
+      "presentation": {
+        "title": "👋 Hi, I'm Florent",
+        "subtitle": "Backend .NET Developer — future Provençal seeking a permanent position",
+        "seekingJobBanner": "🟢 Available for a permanent position from September 2026 — Marseille · Aix-en-Provence · Toulon",
+        "locationBadge": "Currently in Amiens — Moving to Provence in September 2026",
+        "firstParagraph1": "Originally from Nogent-le-Rotrou, in the heart of Normandy's Perche region, I grew up surrounded by nature and a growing curiosity for technology.",
+        "firstParagraph2": "It all started at age 14 with the discovery of Python — a true revelation. The Computer Science elective in high school only amplified that passion.",
+        "firstParagraph3": "I then built my foundation in Amiens with a Bachelor's degree in Computer Science at the IUT, before going further with a Master's in Cloud Computing & Mobility at INSSET in Saint-Quentin — a demanding program that I fully embraced as an apprentice at Orange Business.",
+        "secondParagraph": "I'm a Backend Developer specialized in .NET & C#. My playground: clean RESTful APIs, solid clean architecture, SQL Server, and well-thought-out dependency injection. I also do front-end work with Vue.js — which gives me a useful dual perspective for documenting my APIs precisely. But backend is where I truly thrive.",
+        "philosophyTitle": "My approach",
+        "philosophyText": "Before writing a single line of code, I make sure I fully understand the business need and the end goal. I start by designing the database architecture and API contracts, then build brick by brick, keeping code clean, testable, and maintainable. When a bug hits, no band-aids — I trace it to the root, fix the flaw, and write a test to make sure it never comes back.",
+        "valuesTitle": "What drives me",
+        "values": {
+          "knowledgeSharing": "Knowledge sharing & kind code reviews to progress together",
+          "documentation": "Careful documentation (Swagger, README) to make work and maintenance easier",
+          "pragmatism": "Rigor & pragmatism: understand before coding, fix at the source",
+          "continuousImprovement": "Continuous improvement — technically and humanly"
+        },
+        "goalTitle": "My goal",
+        "goalText": "At the end of my studies, in September 2026, I'm moving to Provence — my family is there, and that's where I want to build the next chapter of my career. I'm looking for a permanent position in software development in Marseille, Aix-en-Provence or Toulon, ideally backend-focused, within a team where code quality and good atmosphere matter as much as technical skills.",
+        "goalCTA": "Permanent role in Marseille · Aix-en-Provence · Toulon — from Sept. 2026",
+        "interestsTitle": "Passions & interests",
+        "passions": {
+          "sport": {
+            "title": "Sport",
+            "description": "Running, cycling, hiking — endurance sports have taught me discipline and perseverance, qualities just as essential on a trail as on an ambitious project."
+          },
+          "videoGames": {
+            "title": "Video Games",
+            "description": "Big fan of management and strategy games — Cities Skylines, Football Manager, Civilization... A way of thinking in terms of systems, optimization and long-term consequences."
+          },
+          "reading": {
+            "title": "Reading",
+            "description": "Personal development, entrepreneurship, psychology... Always looking for new perspectives and methods to improve, both professionally and personally."
+          },
+          "cooking": {
+            "title": "Cooking",
+            "description": "Cooking is creating. A bit of technique, a lot of improvisation — and the pleasure of sharing the result with the people around you."
+          },
+          "music": {
+            "title": "Music",
+            "description": "I escape into classics from the 60s through the 90s — Beatles, Bowie, Queen, Dire Straits, Pink Floyd — as well as today's music. Music is my best way to disconnect."
+          }
+        }
+      },
+      "professionalExperience": {
+        "title": "💼 Professional Experience",
+        "sectionTitle": "Professional Experience",
+        "sectionDescription": "My career path and missions",
+        "learnMore": "Learn more",
+        "missionsAndAchievements": "Missions & achievements",
+        "close": "Close",
+        "first": {
+          "date": "April 2023 - May 2023",
+          "title": "Full-Stack .NET / Vue.js Developer — Internship",
+          "company": "Orange Business — Amiens",
+          "shortDesc": "Immersion with the Microsoft development team for my first steps in professional software development.",
+          "content": "End-of-year internship during my 2nd year of BUT in Computer Science. Immersion with the Microsoft development team for my first professional steps. Deep dive into object-oriented programming and the modern .NET ecosystem. Integrated into a team of consultants, I discovered the .NET Core world in real conditions.",
+          "tech": "C# · ASP.NET Core (.NET 6) · Vue.js · Vuetify · AngularJS · SQL Server · Entity Framework Core · Dependency Injection · AutoMapper"
+        },
+        "second": {
+          "date": "June 2023 - August 2023",
+          "title": "Back-end .NET API Developer — Fixed-term Contract",
+          "company": "Orange Business — Amiens",
+          "shortDesc": "Direct follow-up to the spring internship to accelerate Traducto project development.",
+          "content": "Following my internship, I was hired on a fixed-term contract to accelerate the Traducto project development and strengthen the technical quality of the solution. I continued and extended the initial project by developing a new clean architecture API and an web back office. Strong skill development in software quality culture.",
+          "tech": "C# · ASP.NET Core (.NET 6) · Clean Architecture · CQRS (MediatR) · xUnit · FluentValidation · Azure DevOps · Swagger"
+        },
+        "third": {
+          "date": "September 2023 - Present",
+          "title": "Full-Stack .NET & TypeScript Consultant — Apprenticeship",
+          "company": "Orange Business — Amiens",
+          "shortDesc": "Consultant apprentice taking ownership of complete projects with increased responsibility.",
+          "content": "Evolution to an apprentice consultant position. Taking ownership of complete projects and increasing responsibility for architecture and deployments. Consultant on Microsoft and JavaScript technologies within an Agile team. Development and maintenance of REST APIs in ASP.NET Core (clean architecture, CQRS), front-end development with Vue.js 3 and Angular on business applications.",
+          "tech": "C# · ASP.NET Core (.NET 6/.NET 8) · Angular · Vue.js 3 · TypeScript · SQL Server · Entity Framework Core · REST / SOAP APIs · Whisper AI API · Docker · Azure DevOps · Agile (Scrum)"
+        }
+      },
+      "education": {
+        "title": "🎓 Education",
+        "sectionTitle": "Academic Path",
+        "sectionDescription": "Degrees, diplomas and commitments",
+        "viewProgram": "View program",
+        "modulesAndSkills": "Modules and skills",
+        "close": "Close",
+        "first": {
+          "date": "2021 - 2024",
+          "title": "Bachelor in Computer Science (BUT)",
+          "school": "IUT — Université de Picardie Jules Verne, Amiens",
+          "parcours": "Track: Application Development — design, development, validation",
+          "content1": "Intensive three-year university technology program covering the complete software development lifecycle. The first two years focused on technical foundations (algorithms, OOP, databases, software architecture), followed by a third year as an apprentice at Orange Business.",
+          "content2": "Rigorous mastery of algorithms, object-oriented programming (C#, Java, Python, C++, PHP), software design (UML, ERD, design patterns) and application of best practices. Strong emphasis on code quality through writing unit and integration tests. Solid fundamentals in networking (TCP/IP) and Linux server administration.",
+          "content3": "Elected student representative on the IUT Amiens Council. Active participation in council meetings, representation of student interests, and contribution to academic direction. Development of strong communication, leadership, and decision-making process skills.",
+          "content4": ""
+        },
+        "second": {
+          "date": "2023 - 2025",
+          "title": "Master's — Cloud Computing and Mobility",
+          "school": "INSSET — Université de Picardie Jules Verne, Saint-Quentin",
+          "content": "Advanced Bac+5 program focused on Cloud architectures, DevOps practices, and distributed systems, completed as an apprentice at Orange Business.",
+          "content1": "Advanced Bac+5 program in Cloud architectures, DevOps, and distributed systems. Rigorous and modern curriculum aligned with current industry challenges. Completed as an apprentice at Orange Business, it combines solid theoretical teaching with immediate practical application to develop engineers capable of designing and deploying scalable and resilient Cloud infrastructures.",
+          "content2": "In-depth specialization in Cloud infrastructure (IaaS/PaaS) across Azure, AWS, and Google Cloud environments. Mastery of Infrastructure as Code (Terraform, ARM Templates), advanced containerization and orchestration with Docker and Kubernetes (Swarm, K8s), and Cloud-native and microservices architecture design. Learning of Cloud network architecture, virtualization, and advanced DevOps practices with complex CI/CD pipelines and automation.",
+          "content3": "Development of SaaS-mode applications, creation of cross-platform and native mobile applications (iOS, Android) connected to the Cloud, Big Data and Cloud Data Management, Cloud environment security and audit, Internet of Things (IoT), and Artificial Intelligence integration. Final project: designing and developing a competitive trivia game (Tuuuur) applying Cloud architectural principles."
+        }
+      },
+      "contact": {
+        "title": "✉️ Contact",
+        "description": "You can contact me by email at the following address:",
+        "downloadCv": "Download my resume"
+      },
+      "contactForm": {
+        "title": "Send me a message",
+        "name": "Name",
+        "email": "Email",
+        "subject": "Subject",
+        "message": "Message",
+        "send": "Send",
+        "reset": "Reset",
+        "nameRequired": "Name is required",
+        "nameMinLength": "Name must be at least 2 characters",
+        "emailRequired": "Email is required",
+        "emailInvalid": "Email must be valid",
+        "subjectRequired": "Subject is required",
+        "messageRequired": "Message is required",
+        "messageMinLength": "Message must be at least 10 characters",
+        "successMessage": "Message sent successfully! I will reply soon.",
+        "errorMessage": "Error sending message. Please try again."
+      },
+      "skills": {
+        "title": "💻 Technical Skills",
+        "sectionTitle": "Technical Skills",
+        "sectionDescription": "Mastered technologies and tools",
+        "introduction": "Through my expertise, I design and develop custom web applications and digital tools, aligned with user needs and business objectives, with scalable, automated, maintainable and high-performance architecture.",
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "database": "Databases",
+        "devops": "DevOps & Infrastructure",
+        "tools": "Other tools"
+      },
+      "stats": {
+        "years": "Years",
+        "experience": "of experience",
+        "projects": "Projects",
+        "completed": "completed",
+        "technologies": "Technologies",
+        "mastered": "mastered"
+      },
+      "projects": {
+        "title": "🚀 Projects",
+        "sectionTitle": "My Projects",
+        "sectionDescription": "Developed projects and applications",
+        "viewProject": "View project",
+        "sourceCode": "Source code",
+        "details": "Details",
+        "contextTitle": "Context",
+        "conceptTitle": "Concept",
+        "missionsTitle": "My Missions & Technical Achievements",
+        "challengesTitle": "Challenges Faced & Learnings",
+        "technologiesTitle": "Technologies & Tools",
+        "close": "Close",
+        "code": "Code",
+        "visit": "Visit",
+        "items": {
+          "tuuuur": {
+            "title": "Tuuuur",
+            "shortDescription": "Cross-Platform Quiz Application (Web & Mobile) - Master's Cloud Computing project.",
+            "description": "Tuuuur is a cross-platform quiz application designed to combine entertainment, learning, and competition with multiplayer rooms and competitive duels.",
+            "period": "2025 - 2026",
+            "context": "Thematic project completed as part of the Master's program in Cloud Computing & Mobility (UPJV). Team: project carried out by 3 members with Gael Grosset and Killian Lefrancois.",
+            "roles": "Project Lead, Designer, Cloud Architect (GCP) and Back-End / Database Developer.",
+            "concept": "Tuuuur offers multiplayer rooms (generated via QR code), competitive 1v1 duels (with health points and multipliers), and a solo training mode.",
+            "missions": {
+              "projectManagement": {
+                "heading": "Project Management & Design (Project Lead)",
+                "items": [
+                  "Led the team, distributed tasks, and managed the project end-to-end using Agile practices (Scrum sprints)",
+                  "Wrote the specifications and designed the technical architecture"
+                ]
+              },
+              "backend": {
+                "heading": "Back-End Architecture (C# .NET)",
+                "items": [
+                  "Designed and developed a robust REST API based on Clean Architecture principles",
+                  "Ensured modular code for long-term maintainability"
+                ]
+              },
+              "realtime": {
+                "heading": "Real-Time Synchronization (SignalR)",
+                "items": [
+                  "Implemented WebSockets via SignalR to provide low-latency bidirectional communication",
+                  "Synchronized quiz questions for all players in the same room in real time",
+                  "Handled 1v1 match interactions in real time"
+                ]
+              },
+              "database": {
+                "heading": "Databases (SQL Server & Redis)",
+                "items": [
+                  "Designed and managed SQL Server persistence for complex data (user profiles, history, Elo ranking)",
+                  "Integrated Redis for caching and ultra-fast matchmaking optimization",
+                  "Stored active sessions for better resilience"
+                ]
+              },
+              "cloud": {
+                "heading": "Cloud & DevOps Architecture (GCP & Terraform)",
+                "items": [
+                  "Designed a scalable infrastructure on Google Cloud Platform (GCP)",
+                  "Fully automated deployments using Infrastructure as Code (IaC) with Terraform",
+                  "Ensured security and reproducibility across environments"
+                ]
+              }
+            },
+            "challenges": {
+              "algorithmic": {
+                "heading": "Algorithms & Fairness",
+                "items": [
+                  "Built business logic to match themes fairly between players",
+                  "Implemented the survival system (decreasing health points)",
+                  "Implemented an Elo-based ranking algorithm for dynamic user ranking"
+                ]
+              },
+              "performance": {
+                "heading": "Performance",
+                "items": [
+                  "Ensured the API and databases (SQL + Redis) can handle many simultaneous connections",
+                  "Guaranteed synchronization consistency between web and mobile applications"
+                ]
+              }
+            }
+          },
+          "kairos": {
+            "title": "Kairos",
+            "shortDescription": "Schedule Management Application - Final-year SAE 6 project.",
+            "description": "Kairos is a complete application (Web and Mobile) dedicated to managing university schedules, developed as a final-year project.",
+            "period": "2023 - 2024",
+            "context": "Final-year project (SAE 6) focused on continuous improvement of an existing application, carried out within the Computer Science department of IUT Amiens. Team: project delivered by 4 collaborators (with Gael Grosset, Killian Lefrancois and Enzo Pinchon).",
+            "roles": "Project Lead, Database Designer, API Developer and Real Data Integration Engineer.",
+            "concept": "The goal of this final development phase (SAE 6) was to deliver critical improvements to the existing product: API hardening, user experience optimization, and full codebase refactoring to ensure long-term sustainability.",
+            "missions": {
+              "projectManagement": {
+                "heading": "Project Leadership & Management",
+                "items": [
+                  "Coordinated the team to overcome initial project challenges",
+                  "Established open communication to adapt to different apprenticeship schedules and keep productivity high"
+                ]
+              },
+              "database": {
+                "heading": "Design & Database",
+                "items": [
+                  "Updated and corrected the conceptual data model (MCD)",
+                  "Performed deep database table refactoring to improve maintainability",
+                  "Data engineering: created, formatted, and injected real datasets based on actual IUT Amiens schedules"
+                ]
+              },
+              "backend": {
+                "heading": "API Development (Back-End)",
+                "items": [
+                  "Developed and secured the API with decorators validating request authenticity",
+                  "Handled error cases thoroughly (missing token, unauthorized access, expired or invalid token)",
+                  "Cleaned up code and renamed functions to reduce complexity"
+                ]
+              },
+              "frontend": {
+                "heading": "Front-End Development",
+                "items": [
+                  "Provided targeted support on the Web front-end to ensure smooth API integration",
+                  "Fixed specific bugs and improved user experience flow"
+                ]
+              }
+            },
+            "challenges": {
+              "reliability": {
+                "heading": "Reliability & Testing",
+                "items": [
+                  "Ran extensive tests to ensure final product reliability after large-scale refactoring"
+                ]
+              },
+              "teamwork": {
+                "heading": "Team Cohesion",
+                "items": [
+                  "Maintained balance between project requirements and professional responsibilities",
+                  "Turned initial concerns into strong collective motivation"
+                ]
+              }
+            }
+          },
+          "portfolio": {
+            "title": "Personal Portfolio",
+            "shortDescription": "Personal website built with Vue.js and Vuetify, showcasing my background, skills, and projects.",
+            "description": "Personal website built with Vue.js and Vuetify, showcasing my background, skills, and projects. This is the very same site I am currently developing."
+          }
+        }
+      }
+    }
+  },
+  "routes": {
+    "main": "Home"
+  }
+}

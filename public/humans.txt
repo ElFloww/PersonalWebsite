@@ -1,0 +1,15 @@
+/* TEAM */
+  Name: Florent Dubut
+  Site: https://florent-dubut.fr
+  Twitter: @florentdubut
+  Location: France
+
+/* SITE */
+  Last update: 2026/03/29
+  Standards: HTML5, CSS3, Vue.js, TypeScript
+  Components: Vuetify, Vue Router
+  Built with: Vite
+  Hosting: 
+  Analytics: 
+
+/* THANKS */

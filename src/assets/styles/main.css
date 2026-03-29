@@ -1,0 +1,295 @@
+/* Animations et transitions globales */
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+/* Animations simplifiées - pas de montée/descente */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.v-card {
+    animation: fadeIn 0.5s ease-out;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hover effect simple pour les cartes - juste élévation */
+/* .v-card:hover:not(.no-hover) {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(129, 199, 132, 0.2) !important;
+} */
+
+/* Amélioration des boutons */
+.v-btn {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* .v-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.v-btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.v-btn:hover:not(:disabled) {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(129, 199, 132, 0.4);
+} */
+
+/* Timeline responsive */
+@media (max-width: 960px) {
+    .v-timeline {
+        padding: 0 !important;
+    }
+    
+    .v-avatar {
+        width: 200px !important;
+        height: 200px !important;
+    }
+}
+
+/* Amélioration de la lisibilité */
+p {
+    line-height: 1.7;
+}
+
+/* Transitions fluides pour les couleurs */
+a {
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+/* AppBar shadow au scroll */
+.v-app-bar {
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.v-app-bar.elevated {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Progress bars animation */
+.v-progress-linear {
+    transition: all 0.5s ease;
+}
+
+.v-progress-linear:hover {
+    transform: scaleY(1.2);
+}
+
+/* Chip hover effect */
+.v-chip {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* .v-chip:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+} */
+
+/* Avatar animation */
+.v-avatar {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    box-shadow: 0 8px 32px rgba(129, 199, 132, 0.3);
+}
+
+.v-avatar::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 3px solid #81c784;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.v-avatar:hover {
+    /* Animation removed */
+}
+
+.v-avatar:hover::after {
+    /* Animation removed */
+}
+
+/* Timeline items animation */
+.v-timeline-item {
+    animation: fadeInLeft 0.6s ease-out;
+}
+
+.v-timeline-item:nth-child(even) {
+    animation: fadeInRight 0.6s ease-out;
+}
+
+/* Gradient backgrounds */
+.gradient-bg {
+    background: linear-gradient(-45deg, #81c784, #66bb6a, #4caf50, #43a047);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+
+.gradient-text {
+    background: linear-gradient(120deg, #81c784, #43a047);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 3s ease infinite;
+    background-size: 200% 200%;
+}
+
+/* Glassmorphism effect */
+.glass-card {
+    background: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(129, 199, 132, 0.2);
+}
+
+/* Neon glow effect */
+.neon-glow {
+    box-shadow: 0 0 20px rgba(129, 199, 132, 0.5),
+                0 0 40px rgba(129, 199, 132, 0.3),
+                0 0 60px rgba(129, 199, 132, 0.1);
+}
+
+/* Floating animation removed */
+.floating {
+    /* Animation removed */
+}
+
+/* Shimmer effect */
+.shimmer {
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(129, 199, 132, 0.3) 50%, 
+        transparent 100%);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+}
+
+/* Form fields focus effect */
+.v-text-field:focus-within,
+.v-textarea:focus-within {
+    transform: translateY(-2px);
+    transition: transform 0.2s ease;
+}
+
+/* Icons rotation on hover */
+.v-icon {
+    transition: transform 0.3s ease;
+}
+
+.v-btn:hover .v-icon {
+    transform: rotate(5deg);
+}
+
+/* Smooth transitions for containers */
+.v-container {
+    transition: opacity 0.3s ease;
+}
+
+/* Footer hover effects */
+.v-footer .v-btn:hover {
+    transform: translateY(-3px);
+}
+
+/* Loading animation */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.loading {
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Divider styling */
+.v-divider {
+    opacity: 0.3;
+}
+
+/* Scroll to top button animation */
+.v-fab {
+    animation: fadeInUp 0.4s ease-out;
+}
+
