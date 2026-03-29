@@ -4,7 +4,7 @@ import fr from '@/assets/locales/fr.json'
 
 export const i18n = createI18n({
 	legacy: false,
-	locale: 'fr',
-	fallbackLocale: 'fr',
+	locale: 'en',
+	fallbackLocale: 'en',
 	messages: { fr, en },
 })

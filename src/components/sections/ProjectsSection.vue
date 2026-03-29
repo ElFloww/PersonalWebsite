@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 import tuuuurImage from '@/assets/images/tuuuur.png';
 import kairosImage from '@/assets/images/kairos.png';
 import tuuuurLogo from '@/assets/images/tuuuur_logo.png';
 import kairosLogo from '@/assets/images/kairos_logo.png';
 
-const { t } = useI18n();
+const { t, locale } = useI18n();
 
 interface ProjectDetail {
     heading: string;
@@ -36,163 +36,166 @@ interface Project {
     challenges?: ProjectDetail[];
 }
 
-const projects: Project[] = [
-{
-        title: 'Tuuuur',
-        shortDescription: 'Application de Quiz Multiplateforme (Web & Mobile) - Projet Master Cloud Computing.',
-        description: 'Tuuuur est une application de quiz multiplateforme pensée pour combiner divertissement, apprentissage et compétition avec des salons multijoueurs et du duel compétitif.',
-        period: '2025 - 2026',
-        contexte: 'Projet thématique réalisé dans le cadre du Master Cloud Computing & Mobility (UPJV). Équipe : Projet réalisé à 3 avec Gaël Grosset et Killian Lefrancois.',
-        roles: 'Chef de projet, Concepteur, Architecte Cloud (GCP) et Développeur Back-End / BDD.',
-        concept: 'Tuuuur propose des salons multijoueurs (générés par QR Code), du duel compétitif en 1v1 (avec points de vie et multiplicateurs), ainsi qu\'un mode solo d\'entraînement.',
-        technologies: ['C#', '.NET Core', 'Vue.js', 'Flutter', 'SignalR', 'SQL Server', 'Redis', 'GCP', 'Terraform'],
-        image: 'tuuuur',
-        logo: 'tuuuur',
-        logoZoom: 1,
-        link: 'https://tuuuur.florent-dubut.fr/',
-        github: 'https://github.com/TuuuurProject',
-        color: 'deep-orange',
-        colorHex: '#ff7043',
-        gradient: 'linear-gradient(135deg, #ff7043 0%, #ff5722 100%)',
-        icon: 'mdi-puzzle-multiple',
-        missions: [
-            {
-                heading: 'Pilotage & Conception (Chef de Projet)',
-                items: [
-                    'Animation de l\'équipe, distribution des tâches et pilotage global du projet en méthode Agile (sprints Scrum)',
-                    'Rédaction du cahier des charges et modélisation technique de l\'architecture'
-                ]
-            },
-            {
-                heading: 'Architecture Back-End (C# .NET)',
-                items: [
-                    'Conception et développement d\'une API REST robuste basée sur les principes de la Clean Architecture',
-                    'Garantie de la modularité du code pour une maintenance optimale'
-                ]
-            },
-            {
-                heading: 'Synchronisation Temps Réel (SignalR)',
-                items: [
-                    'Mise en place de WebSockets via SignalR pour assurer une communication bidirectionnelle à très faible latence',
-                    'Synchronisation des questions pour tous les joueurs d\'un salon simultanément',
-                    'Gestion des affrontements 1v1 en temps réel'
-                ]
-            },
-            {
-                heading: 'Bases de Données (SQL Server & Redis)',
-                items: [
-                    'Modélisation et gestion de SQL Server pour la persistance des données complexes (profils utilisateurs, historiques, calcul du classement Elo)',
-                    'Intégration de Redis pour la gestion du cache et l\'optimisation du système de matchmaking ultra-rapide',
-                    'Stockage des sessions en cours pour une résilience optimale'
-                ]
-            },
-            {
-                heading: 'Architecture Cloud & DevOps (GCP & Terraform)',
-                items: [
-                    'Conception d\'une infrastructure scalable sur Google Cloud Platform (GCP)',
-                    'Automatisation complète des déploiements grâce à l\'Infrastructure as Code (IaC) avec Terraform',
-                    'Garantie de la sécurité et de la reproductibilité des environnements'
-                ]
-            }
-        ],
-        challenges: [
-            {
-                heading: 'Algorithmique & Équité',
-                items: [
-                    'Développement de la logique métier gérant le "matching" des thèmes entre joueurs',
-                    'Implémentation du système de survie (points de vie dégressifs)',
-                    'Implémentation de l\'algorithme d\'Elo pour classer dynamiquement les utilisateurs'
-                ]
-            },
-            {
-                heading: 'Performance',
-                items: [
-                    'Assurer que l\'API et les bases de données (SQL + Redis) supportent la charge de multiples connexions simultanées',
-                    'Garantir la désynchronisation entre les applications web et mobiles'
-                ]
-            }
-        ]
-    },
-    {
-        title: 'Kairos',
-        shortDescription: 'Application de Gestion d\'Emploi du Temps - Projet de fin d\'études SAE 6.',
-        description: 'Kairos est une application complète (Web et Mobile) dédiée à la gestion des emplois du temps universitaires, développée comme projet de fin d\'études.',
-        period: '2023 - 2024',
-        contexte: 'Projet de fin d\'études (SAE 6) d\'amélioration continue d\'une application existante, réalisé au sein du département Informatique de l\'IUT d\'Amiens. Équipe : Projet réalisé à 4 collaborateurs (avec Gaël Grosset, Killian Lefrancois et Enzo Pinchon).',
-        roles: 'Chef de projet, Concepteur de bases de données, Développeur API et intégrateur de données réelles.',
-        concept: 'L\'objectif de cette ultime phase de développement (SAE 6) était d\'apporter des améliorations critiques à l\'existant : sécurisation de l\'API, optimisation de l\'expérience utilisateur et refactoring complet du code pour garantir la pérennité du logiciel.',
-        technologies: ['TypeScript', 'Vue.js', 'Flutter', 'Node.js', 'PostgreSQL', 'JWT'],
-        image: 'kairos',
-        logo: 'kairos',
-        logoZoom: 2,
-        link: 'http://kairos.florent-dubut.fr/',
-        github: 'https://github.com/SAE5-Kairos',
-        color: 'blue',
-        colorHex: '#42a5f5',
-        gradient: 'linear-gradient(135deg, #42a5f5 0%, #1e88e5 100%)',
-        icon: 'mdi-calendar-clock',
-        missions: [
-            {
-                heading: 'Pilotage & Gestion de Projet',
-                items: [
-                    'Coordination de l\'équipe pour surmonter les défis initiaux',
-                    'Mise en place d\'une communication ouverte pour s\'adapter à nos différents environnements de travail (alternance) et maintenir la productivité'
-                ]
-            },
-            {
-                heading: 'Conception & Base de Données',
-                items: [
-                    'Mise à jour et correction du Modèle Conceptuel de Données (MCD)',
-                    'Refactoring en profondeur des tables de la base de données pour améliorer la maintenabilité',
-                    'Data Engineering : Création, formatage et injection de jeux de données réelles basés sur les véritables plannings de l\'IUT d\'Amiens'
-                ]
-            },
-            {
-                heading: 'Développement API (Back-End)',
-                items: [
-                    'Développement et sécurisation de l\'API via l\'implémentation de décorateurs vérifiant l\'authenticité des requêtes',
-                    'Gestion minutieuse des erreurs (absence de token, non-autorisation, token expiré ou erroné)',
-                    'Nettoyage du code et modification des noms de fonctions pour réduire la complexité'
-                ]
-            },
-            {
-                heading: 'Développement Front-End',
-                items: [
-                    'Appui ponctuel sur la partie Front-End Web pour assurer la liaison avec l\'API',
-                    'Résolution de bugs spécifiques et fluidification de l\'expérience utilisateur'
-                ]
-            }
-        ],
-        challenges: [
-            {
-                heading: 'Fiabilité & Tests',
-                items: [
-                    'Réalisation de nombreux tests pour garantir le bon fonctionnement final du produit après le refactoring massif'
-                ]
-            },
-            {
-                heading: 'Cohésion d\'équipe',
-                items: [
-                    'Maintien d\'un équilibre entre les exigences du projet et nos vies professionnelles',
-                    'Transformation de nos inquiétudes initiales en une forte motivation collective'
-                ]
-            }
-        ]
-    },
+const projects = computed<Project[]>(() => {
+    void locale.value;
 
+    return [
         {
-        title: 'Portfolio Personnel',
-        shortDescription: 'Site web personnel développé avec Vue.js et Vuetify, présentant mon parcours, mes compétences et mes projets.',
-        description: 'Site web personnel développé avec Vue.js et Vuetify, présentant mon parcours, mes compétences et mes projets. C\'est le même site que je développe en ce moment.',
-        technologies: ['Vue.js', 'Vuetify', 'TypeScript', 'Vite'],
-        github: 'https://github.com/florentdubut/florent-dubut.fr',
-        link: 'https://florent-dubut.fr',
-        color: 'green-lighten-1',
-        colorHex: '#81c784',
-        gradient: 'linear-gradient(135deg, #81c784 0%, #66bb6a 100%)',
-        icon: 'mdi-web'
-    }
-];
+            title: t('views.main.projects.items.tuuuur.title'),
+            shortDescription: t('views.main.projects.items.tuuuur.shortDescription'),
+            description: t('views.main.projects.items.tuuuur.description'),
+            period: t('views.main.projects.items.tuuuur.period'),
+            contexte: t('views.main.projects.items.tuuuur.context'),
+            roles: t('views.main.projects.items.tuuuur.roles'),
+            concept: t('views.main.projects.items.tuuuur.concept'),
+            technologies: ['C#', '.NET Core', 'Vue.js', 'Flutter', 'SignalR', 'SQL Server', 'Redis', 'GCP', 'Terraform'],
+            image: 'tuuuur',
+            logo: 'tuuuur',
+            logoZoom: 1,
+            link: 'https://tuuuur.florent-dubut.fr/',
+            github: 'https://github.com/TuuuurProject',
+            color: 'deep-orange',
+            colorHex: '#ff7043',
+            gradient: 'linear-gradient(135deg, #ff7043 0%, #ff5722 100%)',
+            icon: 'mdi-puzzle-multiple',
+            missions: [
+                {
+                    heading: t('views.main.projects.items.tuuuur.missions.projectManagement.heading'),
+                    items: [
+                        t('views.main.projects.items.tuuuur.missions.projectManagement.items.0'),
+                        t('views.main.projects.items.tuuuur.missions.projectManagement.items.1')
+                    ]
+                },
+                {
+                    heading: t('views.main.projects.items.tuuuur.missions.backend.heading'),
+                    items: [
+                        t('views.main.projects.items.tuuuur.missions.backend.items.0'),
+                        t('views.main.projects.items.tuuuur.missions.backend.items.1')
+                    ]
+                },
+                {
+                    heading: t('views.main.projects.items.tuuuur.missions.realtime.heading'),
+                    items: [
+                        t('views.main.projects.items.tuuuur.missions.realtime.items.0'),
+                        t('views.main.projects.items.tuuuur.missions.realtime.items.1'),
+                        t('views.main.projects.items.tuuuur.missions.realtime.items.2')
+                    ]
+                },
+                {
+                    heading: t('views.main.projects.items.tuuuur.missions.database.heading'),
+                    items: [
+                        t('views.main.projects.items.tuuuur.missions.database.items.0'),
+                        t('views.main.projects.items.tuuuur.missions.database.items.1'),
+                        t('views.main.projects.items.tuuuur.missions.database.items.2')
+                    ]
+                },
+                {
+                    heading: t('views.main.projects.items.tuuuur.missions.cloud.heading'),
+                    items: [
+                        t('views.main.projects.items.tuuuur.missions.cloud.items.0'),
+                        t('views.main.projects.items.tuuuur.missions.cloud.items.1'),
+                        t('views.main.projects.items.tuuuur.missions.cloud.items.2')
+                    ]
+                }
+            ],
+            challenges: [
+                {
+                    heading: t('views.main.projects.items.tuuuur.challenges.algorithmic.heading'),
+                    items: [
+                        t('views.main.projects.items.tuuuur.challenges.algorithmic.items.0'),
+                        t('views.main.projects.items.tuuuur.challenges.algorithmic.items.1'),
+                        t('views.main.projects.items.tuuuur.challenges.algorithmic.items.2')
+                    ]
+                },
+                {
+                    heading: t('views.main.projects.items.tuuuur.challenges.performance.heading'),
+                    items: [
+                        t('views.main.projects.items.tuuuur.challenges.performance.items.0'),
+                        t('views.main.projects.items.tuuuur.challenges.performance.items.1')
+                    ]
+                }
+            ]
+        },
+        {
+            title: t('views.main.projects.items.kairos.title'),
+            shortDescription: t('views.main.projects.items.kairos.shortDescription'),
+            description: t('views.main.projects.items.kairos.description'),
+            period: t('views.main.projects.items.kairos.period'),
+            contexte: t('views.main.projects.items.kairos.context'),
+            roles: t('views.main.projects.items.kairos.roles'),
+            concept: t('views.main.projects.items.kairos.concept'),
+            technologies: ['TypeScript', 'Vue.js', 'Flutter', 'Node.js', 'PostgreSQL', 'JWT'],
+            image: 'kairos',
+            logo: 'kairos',
+            logoZoom: 2,
+            link: 'http://kairos.florent-dubut.fr/',
+            github: 'https://github.com/SAE5-Kairos',
+            color: 'blue',
+            colorHex: '#42a5f5',
+            gradient: 'linear-gradient(135deg, #42a5f5 0%, #1e88e5 100%)',
+            icon: 'mdi-calendar-clock',
+            missions: [
+                {
+                    heading: t('views.main.projects.items.kairos.missions.projectManagement.heading'),
+                    items: [
+                        t('views.main.projects.items.kairos.missions.projectManagement.items.0'),
+                        t('views.main.projects.items.kairos.missions.projectManagement.items.1')
+                    ]
+                },
+                {
+                    heading: t('views.main.projects.items.kairos.missions.database.heading'),
+                    items: [
+                        t('views.main.projects.items.kairos.missions.database.items.0'),
+                        t('views.main.projects.items.kairos.missions.database.items.1'),
+                        t('views.main.projects.items.kairos.missions.database.items.2')
+                    ]
+                },
+                {
+                    heading: t('views.main.projects.items.kairos.missions.backend.heading'),
+                    items: [
+                        t('views.main.projects.items.kairos.missions.backend.items.0'),
+                        t('views.main.projects.items.kairos.missions.backend.items.1'),
+                        t('views.main.projects.items.kairos.missions.backend.items.2')
+                    ]
+                },
+                {
+                    heading: t('views.main.projects.items.kairos.missions.frontend.heading'),
+                    items: [
+                        t('views.main.projects.items.kairos.missions.frontend.items.0'),
+                        t('views.main.projects.items.kairos.missions.frontend.items.1')
+                    ]
+                }
+            ],
+            challenges: [
+                {
+                    heading: t('views.main.projects.items.kairos.challenges.reliability.heading'),
+                    items: [
+                        t('views.main.projects.items.kairos.challenges.reliability.items.0')
+                    ]
+                },
+                {
+                    heading: t('views.main.projects.items.kairos.challenges.teamwork.heading'),
+                    items: [
+                        t('views.main.projects.items.kairos.challenges.teamwork.items.0'),
+                        t('views.main.projects.items.kairos.challenges.teamwork.items.1')
+                    ]
+                }
+            ]
+        },
+        {
+            title: t('views.main.projects.items.portfolio.title'),
+            shortDescription: t('views.main.projects.items.portfolio.shortDescription'),
+            description: t('views.main.projects.items.portfolio.description'),
+            technologies: ['Vue.js', 'Vuetify', 'TypeScript', 'Vite'],
+            github: 'https://github.com/florentdubut/florent-dubut.fr',
+            link: 'https://florent-dubut.fr',
+            color: 'green-lighten-1',
+            colorHex: '#81c784',
+            gradient: 'linear-gradient(135deg, #81c784 0%, #66bb6a 100%)',
+            icon: 'mdi-web'
+        }
+    ];
+});
 
 const openLink = (url: string) => {
     window.open(url, '_blank', 'noopener,noreferrer');
@@ -273,14 +276,12 @@ const openProjectDetail = (project: Project) => {
                                     }"
                                 >
                             </div>
-                            <div class="project-number">#{{ index + 1 }}</div>
                             <div v-if="project.period" class="project-period">{{ project.period }}</div>
                         </div>
                         
                         <!-- Icon section (fallback for projects without image) -->
                         <div v-else class="project-icon-section" :style="{ background: project.gradient }">
                             <v-icon :icon="project.icon" size="64" color="white"></v-icon>
-                            <div class="project-number">#{{ index + 1 }}</div>
                             <div v-if="project.period" class="project-period">{{ project.period }}</div>
                         </div>
 
@@ -321,7 +322,7 @@ const openProjectDetail = (project: Project) => {
                                 prepend-icon="mdi-information"
                                 @click.stop="selectedProject = project; showDetailDialog = true"
                             >
-                                Détails
+                                {{ t('views.main.projects.details') }}
                             </v-btn>
                             <v-spacer></v-spacer>
                             <v-btn
@@ -355,79 +356,143 @@ const openProjectDetail = (project: Project) => {
         <!-- Detail Dialog -->
         <v-dialog 
             v-model="showDetailDialog" 
-            max-width="900px" 
+            max-width="1000px" 
             scrollable
             persistent
+            transition="dialog-transition"
         >
-            <v-card v-if="selectedProject" color="white">
+            <v-card v-if="selectedProject" color="white" class="project-detail-modal">
+                <!-- Header with gradient background -->
                 <div class="project-detail-header" :style="{ background: selectedProject.gradient }">
-                    <div class="d-flex justify-space-between align-start px-6 pt-6">
-                        <div class="flex-grow-1">
-                            <h2 class="text-h4 text-white font-weight-bold">
-                                {{ selectedProject.title }}
-                            </h2>
+                    <button 
+                        class="close-btn"
+                        @click="showDetailDialog = false"
+                    >
+                        ✕
+                    </button>
+                    
+                    <div class="header-content">
+                        <div class="header-top">
+                            <div class="header-title-section">
+                                <h2 class="project-title">
+                                    {{ selectedProject.title }}
+                                </h2>
+                                <div v-if="selectedProject.period" class="header-period">
+                                    <v-icon icon="mdi-calendar-range" size="18" class="mr-2"></v-icon>
+                                    <span class="period-text">{{ selectedProject.period }}</span>
+                                </div>
+                            </div>
                         </div>
-                        <v-btn 
-                            icon="mdi-close" 
-                            color="white"
-                            variant="text"
-                            @click="showDetailDialog = false"
-                        ></v-btn>
+
+                        <div class="header-bottom">
+                        </div>
                     </div>
-                    <p v-if="selectedProject.period" class="period-badge">{{ selectedProject.period }}</p>
                 </div>
 
                 <v-card-text class="pa-8">
+                    <!-- Project logo section -->
+                    <div v-if="selectedProject.logo" class="project-logo-section-inline mb-6">
+                        <img 
+                            :src="getProjectLogo(selectedProject.logo)" 
+                            :alt="`${selectedProject.title} logo`"
+                            class="project-logo-display"
+                            :style="{
+                                transform: `scale(${selectedProject.logoZoom || 1})`
+                            }"
+                        >
+                    </div>
+
+                    <!-- Short description -->
+                    <div class=" mb-6">
+                        <p class="text-body-1 font-weight-medium" style="line-height: 1.8; color: rgba(0,0,0,0.8);">
+                            {{ selectedProject.description }}
+                        </p>
+                    </div>
+
+                    <v-divider class="my-6 opacity-30"></v-divider>
+
                     <!-- Contexte -->
-                    <div v-if="selectedProject.contexte" class="mb-8">
-                        <h3 class="text-h6 font-weight-bold mb-3">📋 Contexte</h3>
-                        <p class="text-body-2" style="line-height: 1.8;">{{ selectedProject.contexte }}</p>
+                    <div v-if="selectedProject.contexte" class="mb-6">
+                        <div class="d-flex align-center mb-3">
+                            <v-icon icon="mdi-information" :color="selectedProject.color" class="mr-2"></v-icon>
+                            <h3 class="text-h6 font-weight-bold mb-0">{{ t('views.main.projects.contextTitle') }}</h3>
+                        </div>
+                        <p class="text-body-2 ml-8" style="line-height: 1.8;">{{ selectedProject.contexte }}</p>
                     </div>
 
                     <!-- Concept -->
-                    <div v-if="selectedProject.concept" class="mb-8">
-                        <h3 class="text-h6 font-weight-bold mb-3">💡 Le Concept</h3>
-                        <p class="text-body-2" style="line-height: 1.8;">{{ selectedProject.concept }}</p>
+                    <div v-if="selectedProject.concept" class="mb-6">
+                        <div class="d-flex align-center mb-3">
+                            <v-icon icon="mdi-lightbulb-on" :color="selectedProject.color" class="mr-2"></v-icon>
+                            <h3 class="text-h6 font-weight-bold mb-0">{{ t('views.main.projects.conceptTitle') }}</h3>
+                        </div>
+                        <p class="text-body-2 ml-8" style="line-height: 1.8;">{{ selectedProject.concept }}</p>
                     </div>
 
-                    <!-- Missions -->
-                    <div v-if="selectedProject.missions" class="mb-8">
-                        <h3 class="text-h6 font-weight-bold mb-4">🎯 Mes Missions & Réalisations Techniques</h3>
-                        <div v-for="(mission, idx) in selectedProject.missions" :key="idx" class="mb-4">
-                            <h4 class="font-weight-bold mb-2 text-grey-darken-1">{{ mission.heading }}</h4>
-                            <ul class="ml-4">
-                                <li v-for="(item, itemIdx) in mission.items" :key="itemIdx" class="text-body-2 mb-1">
-                                    {{ item }}
-                                </li>
-                            </ul>
+                    <v-divider v-if="selectedProject.missions || selectedProject.challenges" class="my-6 opacity-30"></v-divider>
+
+                    <!-- Missions & Challenges -->
+                    <div v-if="selectedProject.missions || selectedProject.challenges" class="detail-sections mb-6">
+                        <!-- Missions -->
+                        <div v-if="selectedProject.missions" class="mb-4">
+                            <div class="d-flex align-center mb-4">
+                                <v-icon icon="mdi-target" :color="selectedProject.color" class="mr-3"></v-icon>
+                                <h3 class="text-h6 font-weight-bold mb-0">{{ t('views.main.projects.missionsTitle') }}</h3>
+                            </div>
+                            <div class="pl-6">
+                                <div v-for="(mission, idx) in selectedProject.missions" :key="idx" class="mb-4">
+                                    <div class="d-flex align-center mb-2">
+                                        <div class="mission-marker" :style="{ backgroundColor: selectedProject.colorHex }"></div>
+                                        <h4 class="font-weight-bold mb-0">{{ mission.heading }}</h4>
+                                    </div>
+                                    <ul class="ml-7">
+                                        <li v-for="(item, itemIdx) in mission.items" :key="itemIdx" class="text-body-2 mb-2">
+                                            {{ item }}
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Challenges -->
+                        <div v-if="selectedProject.challenges">
+                            <div class="d-flex align-center mb-4">
+                                <v-icon icon="mdi-rocket" :color="selectedProject.color" class="mr-3"></v-icon>
+                                <h3 class="text-h6 font-weight-bold mb-0">{{ t('views.main.projects.challengesTitle') }}</h3>
+                            </div>
+                            <div class="pl-6">
+                                <div v-for="(challenge, idx) in selectedProject.challenges" :key="idx" class="mb-4">
+                                    <div class="d-flex align-center mb-2">
+                                        <div class="challenge-marker" :style="{ backgroundColor: selectedProject.colorHex }"></div>
+                                        <h4 class="font-weight-bold mb-0">{{ challenge.heading }}</h4>
+                                    </div>
+                                    <ul class="ml-7">
+                                        <li v-for="(item, itemIdx) in challenge.items" :key="itemIdx" class="text-body-2 mb-2">
+                                            {{ item }}
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Challenges -->
-                    <div v-if="selectedProject.challenges" class="mb-8">
-                        <h3 class="text-h6 font-weight-bold mb-4">🚀 Défis Relevés & Enseignements</h3>
-                        <div v-for="(challenge, idx) in selectedProject.challenges" :key="idx" class="mb-4">
-                            <h4 class="font-weight-bold mb-2 text-grey-darken-1">{{ challenge.heading }}</h4>
-                            <ul class="ml-4">
-                                <li v-for="(item, itemIdx) in challenge.items" :key="itemIdx" class="text-body-2 mb-1">
-                                    {{ item }}
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                    <v-divider class="my-6 opacity-30"></v-divider>
 
                     <!-- Technologies -->
-                    <div class="mb-8">
-                        <h3 class="text-h6 font-weight-bold mb-3">🛠️ Technologies</h3>
-                        <div>
+                    <div class="tech-section">
+                        <div class="d-flex align-center mb-4">
+                            <v-icon icon="mdi-tools" :color="selectedProject.color" class="mr-2"></v-icon>
+                            <h3 class="text-h6 font-weight-bold mb-0">{{ t('views.main.projects.technologiesTitle') }}</h3>
+                        </div>
+                        <div class="tech-chips-container">
                             <v-chip
                                 v-for="tech in selectedProject.technologies"
                                 :key="tech"
                                 size="small"
                                 :color="selectedProject.color"
-                                variant="flat"
+                                variant="outlined"
                                 class="mr-2 mb-2"
-                                text-color="white"
+                                :text-color="selectedProject.color"
                             >
                                 {{ tech }}
                             </v-chip>
@@ -435,17 +500,13 @@ const openProjectDetail = (project: Project) => {
                     </div>
                 </v-card-text>
 
-                <v-card-actions class="pa-6">
-                    <v-spacer></v-spacer>
+                <!-- Actions footer -->
+                <v-card-actions class="pa-6 d-flex justify-end gap-2 border-t">
                     <v-btn
-                        v-if="selectedProject.link"
-                        :color="selectedProject.color"
-                        variant="flat"
-                        prepend-icon="mdi-open-in-new"
-                        @click="openLink(selectedProject.link!)"
-                        class="mr-2"
+                        variant="text"
+                        @click="showDetailDialog = false"
                     >
-                        Visiter
+                        {{ t('views.main.projects.close') }}
                     </v-btn>
                     <v-btn
                         v-if="selectedProject.github"
@@ -453,16 +514,17 @@ const openProjectDetail = (project: Project) => {
                         variant="outlined"
                         prepend-icon="mdi-github"
                         @click="openLink(selectedProject.github!)"
-                        class="mr-2"
                     >
-                        GitHub
+                        {{ t('views.main.projects.code') }}
                     </v-btn>
                     <v-btn
+                        v-if="selectedProject.link"
                         :color="selectedProject.color"
-                        variant="text"
-                        @click="showDetailDialog = false"
+                        variant="flat"
+                        prepend-icon="mdi-open-in-new"
+                        @click="openLink(selectedProject.link!)"
                     >
-                        Fermer
+                        {{ t('views.main.projects.visit') }}
                     </v-btn>
                 </v-card-actions>
             </v-card>
@@ -611,24 +673,235 @@ const openProjectDetail = (project: Project) => {
 }
 
 .project-detail-header {
-    padding: 2rem;
+    padding: 3rem 2.5rem;
     position: relative;
     color: white;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
 }
 
-.period-badge {
+.project-detail-header::before {
+    content: '';
     position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: white;
+    top: 0;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 100% 0%, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.close-btn {
+    position: absolute;
+    top: 50%;
+    right: 1.5rem;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.close-btn:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+}
+
+.header-top {
+    margin-bottom: 0;
+}
+
+.header-title-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+    width: 100%;
+    flex-wrap: nowrap;
+}
+
+.project-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 0;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: -0.5px;
+    white-space: nowrap;
+}
+
+.header-period {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    color: white;
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    white-space: nowrap;
+    font-size: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.period-text {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.header-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+    padding-top: 0;
+}
+
+.header-roles {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+    flex: 1;
+    letter-spacing: 0.3px;
+}
+
+.header-period {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
     font-size: 0.875rem;
     font-weight: 600;
-    margin: 0;
-    color: rgba(0, 0, 0, 0.8);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    white-space: nowrap;
+}
+
+.period-chip {
+    background: rgba(255, 255, 255, 0.25) !important;
+    backdrop-filter: blur(10px);
+    border: 1.5px solid rgba(255, 255, 255, 0.5) !important;
+    color: white !important;
+    font-weight: 600;
+}
+
+.project-logo-section {
+    width: 100%;
+    padding: 3rem 2.5rem;
+    background: linear-gradient(135deg, #f5f5f5 0%, #fafafa 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 280px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.project-logo-section-inline {
+    width: 100%;
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-logo-display {
+    max-width: 240px;
+    max-height: 240px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.1));
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-logo-section:hover .project-logo-display {
+    filter: drop-shadow(0 12px 32px rgba(0, 0, 0, 0.15));
+    transform: translateY(-4px);
+}
+
+.description-section {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.01) 100%);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid currentColor;
+}
+
+.info-section {
+    padding: 0;
+}
+
+.detail-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.detail-block {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    padding: 1.25rem;
+    background: white;
+}
+
+.mission-item,
+.challenge-item {
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.02);
+    border-radius: 8px;
+    border-left: 3px solid currentColor;
+}
+
+.mission-marker,
+.challenge-marker {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 0.75rem;
+}
+
+.tech-section {
+    padding: 0;
+}
+
+.tech-chips-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+:deep(.tech-chips-container .v-chip) {
+    border-width: 2px;
+    font-weight: 500;
+}
+
+.border-t {
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.gap-2 {
+    gap: 0.5rem;
+}
+
+.gap-3 {
+    gap: 1rem;
 }
 
 ul {
@@ -647,6 +920,16 @@ li:before {
     left: 0;
     color: currentColor;
     opacity: 0.6;
+}
+
+.project-detail-modal {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2) !important;
+}
+
+:deep(.project-detail-modal .v-card-text) {
+    background: #fafafa;
 }
 
 @media (max-width: 960px) {

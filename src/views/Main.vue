@@ -66,6 +66,20 @@ const { t } = useI18n();
                                 <v-icon icon="mdi-email" class="mr-2"></v-icon>
                                 contact@florent-dubut.fr
                             </a>
+                            <div class="mt-6">
+                                <v-btn
+                                    color="green-lighten-1"
+                                    size="large"
+                                    variant="flat"
+                                    prepend-icon="mdi-file-download-outline"
+                                    href="/files/cv-florent-dubut.pdf"
+                                    download="CV-Florent-Dubut.pdf"
+                                    target="_blank"
+                                    rel="noopener"
+                                >
+                                    {{ t('views.main.contact.downloadCv') }}
+                                </v-btn>
+                            </div>
                         </v-col>
                     </v-row>
                     <v-row justify="center">

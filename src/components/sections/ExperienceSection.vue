@@ -66,7 +66,7 @@ const experiences: Experience[] = [
       },
     ],
     details: [
-      "Finalisation et déploiement d'applications internes (migration vers .NET 8)",
+      "Finalisation et déploiement d'applications (migration vers .NET 8)",
       "Conception complète d'applications métier : modélisation de bases de données, spécifications techniques, développement complet (back-end .NET 8, front Angular/Vue.js) et intégration d'APIs",
       "Création d'outils innovants avec intégration d'intelligence artificielle (OpenAI Whisper)",
       "Modernisation d'applications legacy : refonte d'architecture, réécriture avec technologies modernes, modules d'import/export Excel et logiques complexes",
@@ -121,7 +121,7 @@ const experiences: Experience[] = [
       "Documentation technique complète avec Swagger / OpenAPI",
       "Gestion de version et pipelines CI/CD via Git et Azure DevOps",
       "Revues de code actives avec l'équipe pour améliorer la maintenabilité",
-      "Développement du backoffice web de gestion interne",
+      "Développement du backoffice web de gestion",
     ],
   },
   {
@@ -164,7 +164,7 @@ const experiences: Experience[] = [
       },
     ],
     details: [
-      "Initialisation d'une application interne d'optimisation de l'internationalisation. Développement complet d'une API REST (.NET 6) et du backoffice en Vue.js (Vuetify)",
+      "Initialisation d'une application d'optimisation de l'internationalisation. Développement complet d'une API REST (.NET 6) et du backoffice en Vue.js (Vuetify)",
       "Montée en compétences en bonnes pratiques d'architecture (Clean Architecture) et industrialisation du code (Git, Pipelines, Revues de code)",
       "Apprentissage de l'écosystème .NET Core et maîtrise de la programmation orientée objet",
       "Utilisation de patterns modernes et intégration dans une équipe Agile",

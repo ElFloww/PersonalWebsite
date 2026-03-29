@@ -97,7 +97,7 @@
           "title": "Back-end .NET API Developer — Fixed-term Contract",
           "company": "Orange Business — Amiens",
           "shortDesc": "Direct follow-up to the spring internship to accelerate Traducto project development.",
-          "content": "Following my internship, I was hired on a fixed-term contract to accelerate the Traducto project development and strengthen the technical quality of the solution. I continued and extended the initial project by developing a new clean architecture API and an internal web back office. Strong skill development in software quality culture.",
+          "content": "Following my internship, I was hired on a fixed-term contract to accelerate the Traducto project development and strengthen the technical quality of the solution. I continued and extended the initial project by developing a new clean architecture API and an web back office. Strong skill development in software quality culture.",
           "tech": "C# · ASP.NET Core (.NET 6) · Clean Architecture · CQRS (MediatR) · xUnit · FluentValidation · Azure DevOps · Swagger"
         },
         "third": {
@@ -105,7 +105,7 @@
           "title": "Full-Stack .NET & TypeScript Consultant — Apprenticeship",
           "company": "Orange Business — Amiens",
           "shortDesc": "Consultant apprentice taking ownership of complete projects with increased responsibility.",
-          "content": "Evolution to an apprentice consultant position. Taking ownership of complete projects and increasing responsibility for architecture and deployments. Consultant on Microsoft and JavaScript technologies within an Agile team. Development and maintenance of REST APIs in ASP.NET Core (clean architecture, CQRS), front-end development with Vue.js 3 and Angular on internal business applications.",
+          "content": "Evolution to an apprentice consultant position. Taking ownership of complete projects and increasing responsibility for architecture and deployments. Consultant on Microsoft and JavaScript technologies within an Agile team. Development and maintenance of REST APIs in ASP.NET Core (clean architecture, CQRS), front-end development with Vue.js 3 and Angular on business applications.",
           "tech": "C# · ASP.NET Core (.NET 6/.NET 8) · Angular · Vue.js 3 · TypeScript · SQL Server · Entity Framework Core · REST / SOAP APIs · Whisper AI API · Docker · Azure DevOps · Agile (Scrum)"
         }
       },
@@ -138,7 +138,8 @@
       },
       "contact": {
         "title": "✉️ Contact",
-        "description": "You can contact me by email at the following address:"
+        "description": "You can contact me by email at the following address:",
+        "downloadCv": "Download my resume"
       },
       "contactForm": {
         "title": "Send me a message",
@@ -182,7 +183,145 @@
         "sectionTitle": "My Projects",
         "sectionDescription": "Developed projects and applications",
         "viewProject": "View project",
-        "sourceCode": "Source code"
+        "sourceCode": "Source code",
+        "details": "Details",
+        "contextTitle": "Context",
+        "conceptTitle": "Concept",
+        "missionsTitle": "My Missions & Technical Achievements",
+        "challengesTitle": "Challenges Faced & Learnings",
+        "technologiesTitle": "Technologies & Tools",
+        "close": "Close",
+        "code": "Code",
+        "visit": "Visit",
+        "items": {
+          "tuuuur": {
+            "title": "Tuuuur",
+            "shortDescription": "Cross-Platform Quiz Application (Web & Mobile) - Master's Cloud Computing project.",
+            "description": "Tuuuur is a cross-platform quiz application designed to combine entertainment, learning, and competition with multiplayer rooms and competitive duels.",
+            "period": "2025 - 2026",
+            "context": "Thematic project completed as part of the Master's program in Cloud Computing & Mobility (UPJV). Team: project carried out by 3 members with Gael Grosset and Killian Lefrancois.",
+            "roles": "Project Lead, Designer, Cloud Architect (GCP) and Back-End / Database Developer.",
+            "concept": "Tuuuur offers multiplayer rooms (generated via QR code), competitive 1v1 duels (with health points and multipliers), and a solo training mode.",
+            "missions": {
+              "projectManagement": {
+                "heading": "Project Management & Design (Project Lead)",
+                "items": [
+                  "Led the team, distributed tasks, and managed the project end-to-end using Agile practices (Scrum sprints)",
+                  "Wrote the specifications and designed the technical architecture"
+                ]
+              },
+              "backend": {
+                "heading": "Back-End Architecture (C# .NET)",
+                "items": [
+                  "Designed and developed a robust REST API based on Clean Architecture principles",
+                  "Ensured modular code for long-term maintainability"
+                ]
+              },
+              "realtime": {
+                "heading": "Real-Time Synchronization (SignalR)",
+                "items": [
+                  "Implemented WebSockets via SignalR to provide low-latency bidirectional communication",
+                  "Synchronized quiz questions for all players in the same room in real time",
+                  "Handled 1v1 match interactions in real time"
+                ]
+              },
+              "database": {
+                "heading": "Databases (SQL Server & Redis)",
+                "items": [
+                  "Designed and managed SQL Server persistence for complex data (user profiles, history, Elo ranking)",
+                  "Integrated Redis for caching and ultra-fast matchmaking optimization",
+                  "Stored active sessions for better resilience"
+                ]
+              },
+              "cloud": {
+                "heading": "Cloud & DevOps Architecture (GCP & Terraform)",
+                "items": [
+                  "Designed a scalable infrastructure on Google Cloud Platform (GCP)",
+                  "Fully automated deployments using Infrastructure as Code (IaC) with Terraform",
+                  "Ensured security and reproducibility across environments"
+                ]
+              }
+            },
+            "challenges": {
+              "algorithmic": {
+                "heading": "Algorithms & Fairness",
+                "items": [
+                  "Built business logic to match themes fairly between players",
+                  "Implemented the survival system (decreasing health points)",
+                  "Implemented an Elo-based ranking algorithm for dynamic user ranking"
+                ]
+              },
+              "performance": {
+                "heading": "Performance",
+                "items": [
+                  "Ensured the API and databases (SQL + Redis) can handle many simultaneous connections",
+                  "Guaranteed synchronization consistency between web and mobile applications"
+                ]
+              }
+            }
+          },
+          "kairos": {
+            "title": "Kairos",
+            "shortDescription": "Schedule Management Application - Final-year SAE 6 project.",
+            "description": "Kairos is a complete application (Web and Mobile) dedicated to managing university schedules, developed as a final-year project.",
+            "period": "2023 - 2024",
+            "context": "Final-year project (SAE 6) focused on continuous improvement of an existing application, carried out within the Computer Science department of IUT Amiens. Team: project delivered by 4 collaborators (with Gael Grosset, Killian Lefrancois and Enzo Pinchon).",
+            "roles": "Project Lead, Database Designer, API Developer and Real Data Integration Engineer.",
+            "concept": "The goal of this final development phase (SAE 6) was to deliver critical improvements to the existing product: API hardening, user experience optimization, and full codebase refactoring to ensure long-term sustainability.",
+            "missions": {
+              "projectManagement": {
+                "heading": "Project Leadership & Management",
+                "items": [
+                  "Coordinated the team to overcome initial project challenges",
+                  "Established open communication to adapt to different apprenticeship schedules and keep productivity high"
+                ]
+              },
+              "database": {
+                "heading": "Design & Database",
+                "items": [
+                  "Updated and corrected the conceptual data model (MCD)",
+                  "Performed deep database table refactoring to improve maintainability",
+                  "Data engineering: created, formatted, and injected real datasets based on actual IUT Amiens schedules"
+                ]
+              },
+              "backend": {
+                "heading": "API Development (Back-End)",
+                "items": [
+                  "Developed and secured the API with decorators validating request authenticity",
+                  "Handled error cases thoroughly (missing token, unauthorized access, expired or invalid token)",
+                  "Cleaned up code and renamed functions to reduce complexity"
+                ]
+              },
+              "frontend": {
+                "heading": "Front-End Development",
+                "items": [
+                  "Provided targeted support on the Web front-end to ensure smooth API integration",
+                  "Fixed specific bugs and improved user experience flow"
+                ]
+              }
+            },
+            "challenges": {
+              "reliability": {
+                "heading": "Reliability & Testing",
+                "items": [
+                  "Ran extensive tests to ensure final product reliability after large-scale refactoring"
+                ]
+              },
+              "teamwork": {
+                "heading": "Team Cohesion",
+                "items": [
+                  "Maintained balance between project requirements and professional responsibilities",
+                  "Turned initial concerns into strong collective motivation"
+                ]
+              }
+            }
+          },
+          "portfolio": {
+            "title": "Personal Portfolio",
+            "shortDescription": "Personal website built with Vue.js and Vuetify, showcasing my background, skills, and projects.",
+            "description": "Personal website built with Vue.js and Vuetify, showcasing my background, skills, and projects. This is the very same site I am currently developing."
+          }
+        }
       }
     }
   },

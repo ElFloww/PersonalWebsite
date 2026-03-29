@@ -96,7 +96,7 @@
           "title": "Développeur Back-end API .NET — CDD",
           "company": "Orange Business — Amiens",
           "shortDesc": "Suite directe du stage pour accélérer le développement du projet Traducto.",
-          "content": "Suite à mon stage, prolongement en CDD pour accélérer le développement du projet Traducto et renforcer la qualité technique de la solution. J'ai poursuivi et étendu le projet initial en développant une nouvelle API en clean architecture ainsi qu'un backoffice web de gestion interne. Forte montée en compétences sur la culture de la qualité logicielle.",
+          "content": "Suite à mon stage, prolongement en CDD pour accélérer le développement du projet Traducto et renforcer la qualité technique de la solution. J'ai poursuivi et étendu le projet initial en développant une nouvelle API en clean architecture ainsi qu'un backoffice web de gestion. Forte montée en compétences sur la culture de la qualité logicielle.",
           "tech": "C# · ASP.NET Core (.NET 6) · Clean Architecture · CQRS (MediatR) · xUnit · FluentValidation · Azure DevOps · Swagger"
         },
         "third": {
@@ -104,7 +104,7 @@
           "title": "Consultant .NET & TypeScript Full-Stack — Alternance",
           "company": "Orange Business — Amiens",
           "shortDesc": "Consultant alternant avec prise en charge de projets complets et montée en responsabilité.",
-          "content": "Évolution vers un poste de consultant alternant. Prise en charge de projets complets et montée en responsabilité sur l'architecture et les déploiements. Consultant sur les technologies Microsoft et JavaScript au sein d'une équipe Agile. Développement et maintenance d'APIs REST en ASP.NET Core (clean architecture, CQRS), développement front-end avec Vue.js 3 et Angular sur des applications métier internes.",
+          "content": "Évolution vers un poste de consultant alternant. Prise en charge de projets complets et montée en responsabilité sur l'architecture et les déploiements. Consultant sur les technologies Microsoft et JavaScript au sein d'une équipe Agile. Développement et maintenance d'APIs REST en ASP.NET Core (clean architecture, CQRS), développement front-end avec Vue.js 3 et Angular sur des applications métier.",
           "tech": "C# · ASP.NET Core (.NET 6/.NET 8) · Angular · Vue.js 3 · TypeScript · SQL Server · Entity Framework Core · API REST / SOAP · API Whisper (IA) · Docker · Azure DevOps · Méthode Agile (Scrum)"
         }
       },
@@ -136,7 +136,8 @@
       },
       "contact": {
         "title": "✉️ Contact",
-        "description": "Vous pouvez me contacter par email à l'adresse suivante :"
+        "description": "Vous pouvez me contacter par email à l'adresse suivante :",
+        "downloadCv": "Télécharger mon CV"
       },
       "contactForm": {
         "title": "Envoyez-moi un message",
@@ -180,7 +181,145 @@
         "sectionTitle": "Mes Réalisations",
         "sectionDescription": "Projets et applications développés",
         "viewProject": "Voir le projet",
-        "sourceCode": "Code source"
+        "sourceCode": "Code source",
+        "details": "Détails",
+        "contextTitle": "Contexte",
+        "conceptTitle": "Le Concept",
+        "missionsTitle": "Mes Missions & Réalisations Techniques",
+        "challengesTitle": "Défis Relevés & Enseignements",
+        "technologiesTitle": "Technologies & Outils",
+        "close": "Fermer",
+        "code": "Code",
+        "visit": "Visiter",
+        "items": {
+          "tuuuur": {
+            "title": "Tuuuur",
+            "shortDescription": "Application de Quiz Multiplateforme (Web & Mobile) - Projet Master Cloud Computing.",
+            "description": "Tuuuur est une application de quiz multiplateforme pensée pour combiner divertissement, apprentissage et compétition avec des salons multijoueurs et du duel compétitif.",
+            "period": "2025 - 2026",
+            "context": "Projet thématique réalisé dans le cadre du Master Cloud Computing & Mobility (UPJV). Équipe : Projet réalisé à 3 avec Gaël Grosset et Killian Lefrancois.",
+            "roles": "Chef de projet, Concepteur, Architecte Cloud (GCP) et Développeur Back-End / BDD.",
+            "concept": "Tuuuur propose des salons multijoueurs (générés par QR Code), du duel compétitif en 1v1 (avec points de vie et multiplicateurs), ainsi qu'un mode solo d'entraînement.",
+            "missions": {
+              "projectManagement": {
+                "heading": "Pilotage & Conception (Chef de Projet)",
+                "items": [
+                  "Animation de l'équipe, distribution des tâches et pilotage global du projet en méthode Agile (sprints Scrum)",
+                  "Rédaction du cahier des charges et modélisation technique de l'architecture"
+                ]
+              },
+              "backend": {
+                "heading": "Architecture Back-End (C# .NET)",
+                "items": [
+                  "Conception et développement d'une API REST robuste basée sur les principes de la Clean Architecture",
+                  "Garantie de la modularité du code pour une maintenance optimale"
+                ]
+              },
+              "realtime": {
+                "heading": "Synchronisation Temps Réel (SignalR)",
+                "items": [
+                  "Mise en place de WebSockets via SignalR pour assurer une communication bidirectionnelle à très faible latence",
+                  "Synchronisation des questions pour tous les joueurs d'un salon simultanément",
+                  "Gestion des affrontements 1v1 en temps réel"
+                ]
+              },
+              "database": {
+                "heading": "Bases de Données (SQL Server & Redis)",
+                "items": [
+                  "Modélisation et gestion de SQL Server pour la persistance des données complexes (profils utilisateurs, historiques, calcul du classement Elo)",
+                  "Intégration de Redis pour la gestion du cache et l'optimisation du système de matchmaking ultra-rapide",
+                  "Stockage des sessions en cours pour une résilience optimale"
+                ]
+              },
+              "cloud": {
+                "heading": "Architecture Cloud & DevOps (GCP & Terraform)",
+                "items": [
+                  "Conception d'une infrastructure scalable sur Google Cloud Platform (GCP)",
+                  "Automatisation complète des déploiements grâce à l'Infrastructure as Code (IaC) avec Terraform",
+                  "Garantie de la sécurité et de la reproductibilité des environnements"
+                ]
+              }
+            },
+            "challenges": {
+              "algorithmic": {
+                "heading": "Algorithmique & Équité",
+                "items": [
+                  "Développement de la logique métier gérant le \"matching\" des thèmes entre joueurs",
+                  "Implémentation du système de survie (points de vie dégressifs)",
+                  "Implémentation de l'algorithme d'Elo pour classer dynamiquement les utilisateurs"
+                ]
+              },
+              "performance": {
+                "heading": "Performance",
+                "items": [
+                  "Assurer que l'API et les bases de données (SQL + Redis) supportent la charge de multiples connexions simultanées",
+                  "Garantir la désynchronisation entre les applications web et mobiles"
+                ]
+              }
+            }
+          },
+          "kairos": {
+            "title": "Kairos",
+            "shortDescription": "Application de Gestion d'Emploi du Temps - Projet de fin d'études SAE 6.",
+            "description": "Kairos est une application complète (Web et Mobile) dédiée à la gestion des emplois du temps universitaires, développée comme projet de fin d'études.",
+            "period": "2023 - 2024",
+            "context": "Projet de fin d'études (SAE 6) d'amélioration continue d'une application existante, réalisé au sein du département Informatique de l'IUT d'Amiens. Équipe : Projet réalisé à 4 collaborateurs (avec Gaël Grosset, Killian Lefrancois et Enzo Pinchon).",
+            "roles": "Chef de projet, Concepteur de bases de données, Développeur API et intégrateur de données réelles.",
+            "concept": "L'objectif de cette ultime phase de développement (SAE 6) était d'apporter des améliorations critiques à l'existant : sécurisation de l'API, optimisation de l'expérience utilisateur et refactoring complet du code pour garantir la pérennité du logiciel.",
+            "missions": {
+              "projectManagement": {
+                "heading": "Pilotage & Gestion de Projet",
+                "items": [
+                  "Coordination de l'équipe pour surmonter les défis initiaux",
+                  "Mise en place d'une communication ouverte pour s'adapter à nos différents environnements de travail (alternance) et maintenir la productivité"
+                ]
+              },
+              "database": {
+                "heading": "Conception & Base de Données",
+                "items": [
+                  "Mise à jour et correction du Modèle Conceptuel de Données (MCD)",
+                  "Refactoring en profondeur des tables de la base de données pour améliorer la maintenabilité",
+                  "Data Engineering : Création, formatage et injection de jeux de données réelles basés sur les véritables plannings de l'IUT d'Amiens"
+                ]
+              },
+              "backend": {
+                "heading": "Développement API (Back-End)",
+                "items": [
+                  "Développement et sécurisation de l'API via l'implémentation de décorateurs vérifiant l'authenticité des requêtes",
+                  "Gestion minutieuse des erreurs (absence de token, non-autorisation, token expiré ou erroné)",
+                  "Nettoyage du code et modification des noms de fonctions pour réduire la complexité"
+                ]
+              },
+              "frontend": {
+                "heading": "Développement Front-End",
+                "items": [
+                  "Appui ponctuel sur la partie Front-End Web pour assurer la liaison avec l'API",
+                  "Résolution de bugs spécifiques et fluidification de l'expérience utilisateur"
+                ]
+              }
+            },
+            "challenges": {
+              "reliability": {
+                "heading": "Fiabilité & Tests",
+                "items": [
+                  "Réalisation de nombreux tests pour garantir le bon fonctionnement final du produit après le refactoring massif"
+                ]
+              },
+              "teamwork": {
+                "heading": "Cohésion d'équipe",
+                "items": [
+                  "Maintien d'un équilibre entre les exigences du projet et nos vies professionnelles",
+                  "Transformation de nos inquiétudes initiales en une forte motivation collective"
+                ]
+              }
+            }
+          },
+          "portfolio": {
+            "title": "Portfolio Personnel",
+            "shortDescription": "Site web personnel développé avec Vue.js et Vuetify, présentant mon parcours, mes compétences et mes projets.",
+            "description": "Site web personnel développé avec Vue.js et Vuetify, présentant mon parcours, mes compétences et mes projets. C'est le même site que je développe en ce moment."
+          }
+        }
       }
     }
   },
