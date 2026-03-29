@@ -35,7 +35,7 @@
         "title": "👋 Bonjour, moi c'est Florent",
         "subtitle": "Développeur Backend .NET",
         "seekingJobBanner": "🟢 Disponible en CDI dès septembre 2026 — Marseille · Aix-en-Provence · Toulon",
-        "locationBadge": "📍 Actuellement à Amiens — Retour en Provence en septembre 2026",
+        "locationBadge": "Actuellement à Amiens — Retour en Provence en septembre 2026",
         "firstParagraph1": "Originaire de Nogent-le-Rotrou, au cœur du Perche normand, j'ai grandi entouré de nature et d'une curiosité grandissante pour la technologie.",
         "firstParagraph2": "Tout a commencé vers 14 ans avec la découverte de Python : une vraie révélation. La spécialité NSI au lycée n'a fait qu'amplifier cette passion.",
         "firstParagraph3": "J'ai ensuite construit mes bases à Amiens avec un BUT Informatique à l'IUT, avant de pousser plus loin avec un Master Cloud Computing & Mobility à l'INSSET de Saint-Quentin — une formation exigeante que j'ai vécu pleinement en alternance chez Orange Business.",
@@ -44,10 +44,10 @@
         "philosophyText": "Avant de taper la moindre ligne de code, je m'assure d'avoir parfaitement compris le besoin métier et l'objectif final. Je conçois d'abord l'architecture de la base de données et les contrats d'API, puis je développe brique par brique avec un code propre, testable et maintenable. Face à un bug, pas de pansement — je remonte à la source, je corrige la faille et j'écris un test pour ne plus jamais y revenir.",
         "valuesTitle": "Ce qui me guide",
         "values": {
-          "knowledgeSharing": "Partage de connaissances & code reviews bienveillantes — progresser ensemble",
-          "documentation": "Documentation soignée (Swagger, README) pour faciliter la vie de toute l'équipe",
+          "knowledgeSharing": "Partage de connaissances & code reviews bienveillantes pour progresser",
+          "documentation": "Documentation soignée (Swagger, README) pour faciliter le travail et la maintenance",
           "pragmatism": "Rigueur & pragmatisme : comprendre avant de coder, corriger à la source",
-          "continuousImprovement": "Amélioration continue — techniquement et humainement, sans jamais se satisfaire du statu quo"
+          "continuousImprovement": "Amélioration continue — techniquement et humainement"
         },
         "goalTitle": "Mon objectif",
         "goalText": "À la fin de mes études, en septembre 2026, je rentre en Provence — ma famille y est, et c'est là que j'envisage de construire la suite de ma carrière. Je cherche un CDI dans le développement logiciel à Marseille, Aix-en-Provence ou Toulon, idéalement orienté backend, au sein d'une équipe où la qualité du code et la bonne entente comptent autant que la technique.",
@@ -85,27 +85,27 @@
         "close": "Fermer",
         "first": {
           "date": "avril 2023 - mai 2023",
-          "title": "Développeur — Stage",
-          "company": "Orange Business — Amiens, Hauts-de-France",
-          "shortDesc": "Premier contact avec le monde professionnel .NET chez Orange Business.",
-          "content": "Stage de fin de 2ème année de BUT Informatique. Intégré dans une équipe de consultants, j'ai découvert l'univers .NET Core en conditions réelles : développement d'une API REST en C# suivant les principes de la clean architecture dans le cadre d'un projet interne.",
-          "tech": ".NET Core · C# · ASP.NET · Clean Architecture · Git"
+          "title": "Développeur Full-Stack .NET / Vue.js — Stage",
+          "company": "Orange Business — Amiens",
+          "shortDesc": "Immersion dans l'équipe de développement Microsoft pour mes premiers pas en entreprise.",
+          "content": "Stage de fin de 2ème année de BUT Informatique. Immersion dans l'équipe de développement Microsoft pour mes premiers pas en entreprise. Découverte approfondie de la programmation orientée objet et de l'écosystème .NET moderne. Intégré dans une équipe de consultants, j'ai découvert l'univers .NET Core en conditions réelles.",
+          "tech": "C# · ASP.NET Core (.NET 6) · Vue.js · Vuetify · AngularJS · SQL Server · Entity Framework Core · Injection de dépendances · AutoMapper"
         },
         "second": {
           "date": "juin 2023 - août 2023",
-          "title": "Développeur — Stage prolongé",
-          "company": "Orange Business — Amiens, Hauts-de-France",
-          "shortDesc": "Suite directe du stage de printemps — montée en responsabilité.",
-          "content": "Contrat signé dans la foulée du premier stage. J'ai poursuivi et étendu le projet initial en développant une nouvelle API en clean architecture ainsi qu'un backoffice web de gestion interne. Montée en compétences sur les tests unitaires et la documentation technique.",
-          "tech": ".NET Core · C# · ASP.NET · xUnit · Swagger · Git · Azure DevOps"
+          "title": "Développeur Back-end API .NET — CDD",
+          "company": "Orange Business — Amiens",
+          "shortDesc": "Suite directe du stage pour accélérer le développement du projet Traducto.",
+          "content": "Suite à mon stage, prolongement en CDD pour accélérer le développement du projet Traducto et renforcer la qualité technique de la solution. J'ai poursuivi et étendu le projet initial en développant une nouvelle API en clean architecture ainsi qu'un backoffice web de gestion interne. Forte montée en compétences sur la culture de la qualité logicielle.",
+          "tech": "C# · ASP.NET Core (.NET 6) · Clean Architecture · CQRS (MediatR) · xUnit · FluentValidation · Azure DevOps · Swagger"
         },
         "third": {
           "date": "septembre 2023 - aujourd'hui",
-          "title": "Consultant — Alternance",
-          "company": "Orange Business — Amiens, Hauts-de-France",
-          "shortDesc": "Alternance dans le cadre du BUT 3 et du Master CCM — consultant full-stack .NET & JS.",
-          "content": "Consultant sur les technologies Microsoft et JavaScript au sein d'une équipe Agile. Développement et maintenance d'APIs REST en ASP.NET Core (clean architecture, CQRS), développement front-end avec Vue.js 3 et Angular sur des applications métier internes. CI/CD via Azure DevOps, participation active aux cérémonies Scrum et aux revues de code.",
-          "tech": "ASP.NET Core · C# · Vue.js 3 · Angular · TypeScript · SQL Server · Azure DevOps · Docker"
+          "title": "Consultant .NET & TypeScript Full-Stack — Alternance",
+          "company": "Orange Business — Amiens",
+          "shortDesc": "Consultant alternant avec prise en charge de projets complets et montée en responsabilité.",
+          "content": "Évolution vers un poste de consultant alternant. Prise en charge de projets complets et montée en responsabilité sur l'architecture et les déploiements. Consultant sur les technologies Microsoft et JavaScript au sein d'une équipe Agile. Développement et maintenance d'APIs REST en ASP.NET Core (clean architecture, CQRS), développement front-end avec Vue.js 3 et Angular sur des applications métier internes.",
+          "tech": "C# · ASP.NET Core (.NET 6/.NET 8) · Angular · Vue.js 3 · TypeScript · SQL Server · Entity Framework Core · API REST / SOAP · API Whisper (IA) · Docker · Azure DevOps · Méthode Agile (Scrum)"
         }
       },
       "education": {
@@ -120,16 +120,18 @@
           "title": "BUT Informatique",
           "school": "IUT de l'Université de Picardie Jules Verne — Amiens",
           "parcours": "Parcours : Réalisation d'applications — conception, développement, validation",
-          "content1": "Trois années de formation universitaire technologique. Les deux premières années couvrent les fondations : algorithmique, POO, bases de données, architecture logicielle et développement web. La troisième année, en alternance chez Orange Business, confronte aux réalités du métier : gestion de projet, tests et validation.",
-          "content2": "Langages pratiqués : Java, Python, C, C++, C#, PHP. Conception rigoureuse (UML, MCD, design patterns) et fort intérêt pour la qualité logicielle.",
-          "content3": "Élu représentant étudiant au Conseil de l'IUT d'Amiens : participation aux réunions, défense des intérêts des étudiants, contribution aux orientations pédagogiques.",
-          "content4": ""
+          "content1": "Formation universitaire technologique intensive sur 3 ans couvrant l'ensemble du cycle de vie du développement logiciel. Les deux premières années axées sur les fondations techniques (algorithmique, POO, bases de données, architecture logicielle), suivies d'une 3ème année en alternance chez Orange Business.",
+          "content2": "Maîtrise rigoureuse de l'algorithmique, de la programmation orientée objet (C#, Java, Python, C++, PHP), de la conception logicielle (UML, MCD, design patterns) et application des bonnes pratiques. Forte sensibilisation à la qualité logicielle avec écriture de tests unitaires et d'intégration. Bases solides en réseaux (TCP/IP) et administration de serveurs Linux.",
+          "content3": "Élu représentant étudiant au Conseil de l'IUT d'Amiens. Participation active aux réunions, défense des intérêts des étudiants et contribution aux orientations pédagogiques. Développement de fortes compétences en communication, leadership et navigation dans les processus décisionnels."
         },
         "second": {
           "date": "2023 - 2025",
           "title": "Master — Cloud Computing and Mobility",
           "school": "INSSET — Université de Picardie Jules Verne, Saint-Quentin",
-          "content": "Formation orientée vers les architectures Cloud et les pratiques DevOps. Architecture microservices, containerisation (Docker, Kubernetes), Cloud providers (Azure, AWS, GCP), développement mobile (iOS & Android) et intégration continue. Réalisé en alternance chez Orange Business."
+          "content": "Formation de pointe de niveau Bac+5 orientée sur les architectures Cloud, l'écosystème DevOps et les systèmes distribués, réalisée en alternance chez Orange Business.",
+          "content1": "Formation de pointe Bac+5 en architectures Cloud, DevOps et systèmes distribués. Programme moderne et exigeant, aligné sur les défis industriels actuels. Réalisée en alternance chez Orange Business, elle conjugue enseignements rigoureux et pratique immédiate pour former des ingénieurs capables de concevoir et déployer des infrastructures Cloud scalables et résilientes.",
+          "content2": "Spécialisation approfondie dans les infrastructures Cloud (IaaS/PaaS) sur les environnements Azure, AWS et Google Cloud. Maîtrise de l'Infrastructure as Code (Terraform, ARM Templates), de la containerisation et orchestration avancée avec Docker et Kubernetes (Swarm, K8s), et conception d'architectures Cloud-native et microservices. Apprentissage de l'architecture réseau Cloud, de la virtualisation, et des pratiques DevOps avancées avec pipelines CI/CD complexes et automation.",
+          "content3": "Développement d'applications en mode SaaS, création d'applications mobiles cross-platform et natives (iOS, Android) connectées au Cloud, gestion des bases de données Big Data, Cloud Data Management, sécurité et audit des environnements Cloud, Internet of Things (IoT) et intégration de l'Intelligence Artificielle. Projet de fin d'année : conception et développement d'un jeu de culture générale compétitif (Tuuuur) appliquant les principes architecturaux Cloud."
         }
       },
       "contact": {
@@ -158,12 +160,12 @@
         "title": "💻 Compétences techniques",
         "sectionTitle": "Compétences Techniques",
         "sectionDescription": "Technologies et outils maîtrisés",
-        "languages": "Langages",
+        "introduction": "Grâce à mes compétences, je conçois et développe des applications web et des outils digitaux sur mesure, alignés sur les besoins des utilisateurs et les objectifs des entreprises, avec une architecture évolutive, automatisée, maintenable et performante.",
         "frontend": "Frontend",
         "backend": "Backend",
         "database": "Bases de données",
-        "tools": "Outils & DevOps",
-        "cloud": "Cloud"
+        "devops": "DevOps & Infrastructure",
+        "tools": "Autres outils"
       },
       "stats": {
         "years": "Années",
@@ -181,5 +183,8 @@
         "sourceCode": "Code source"
       }
     }
+  },
+  "routes": {
+    "main": "Accueil"
   }
 }

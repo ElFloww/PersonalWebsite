@@ -72,10 +72,10 @@ html {
 }
 
 /* Hover effect simple pour les cartes - juste élévation */
-.v-card:hover:not(.no-hover) {
+/* .v-card:hover:not(.no-hover) {
     transform: translateY(-5px);
     box-shadow: 0 12px 24px rgba(129, 199, 132, 0.2) !important;
-}
+} */
 
 /* Amélioration des boutons */
 .v-btn {
@@ -84,7 +84,7 @@ html {
     overflow: hidden;
 }
 
-.v-btn::before {
+/* .v-btn::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -105,7 +105,7 @@ html {
 .v-btn:hover:not(:disabled) {
     transform: translateY(-3px) scale(1.05);
     box-shadow: 0 10px 25px rgba(129, 199, 132, 0.4);
-}
+} */
 
 /* Timeline responsive */
 @media (max-width: 960px) {
@@ -156,10 +156,10 @@ a:hover {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.v-chip:hover {
+/* .v-chip:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+} */
 
 /* Avatar animation */
 .v-avatar {

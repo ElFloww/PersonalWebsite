@@ -24,21 +24,27 @@ const educations: Education[] = [
     gradient: "linear-gradient(135deg, #81c784 0%, #66bb6a 100%)",
     logo: inssetLogo,
     highlights: [
-      "Architecture Cloud (Azure, AWS, GCP)",
-      "Containerisation : Docker & Kubernetes",
-      "CI/CD & culture DevOps",
-      "Développement mobile (iOS & Android)",
-      "Réalisé en alternance chez Orange Business",
+      "Spécialisation Cloud & Microservices",
+      "Architecture & Infrastructure pratiques",
+      "DevOps & Stratégies déploiement",
+      "Développement mobile & SaaS",
+      "Réalisé en alternance Orange Business",
     ],
     modules: [
-      "Architecture microservices et patterns Cloud-native",
-      "Infrastructure as Code (Terraform, ARM Templates)",
-      "Containerisation et orchestration (Docker, Kubernetes)",
-      "Intégration et déploiement continus (Azure DevOps, GitLab CI)",
-      "Cloud providers : Microsoft Azure, AWS, GCP",
-      "Développement mobile cross-platform (iOS & Android)",
-      "Sécurité des applications Cloud",
-      "Mémoire de fin d'études en architecture microservices",
+      "Infrastructures Cloud (IaaS/PaaS) : déploiement et administration sur Azure, AWS et Google Cloud",
+      "Architecture réseau Cloud : design, optimisation et bonnes pratiques sur GCP et AWS",
+      "Infrastructure as Code : Terraform, ARM Templates, virtualisation et provisioning automatisé",
+      "Containerisation & orchestration : Docker, Kubernetes (Swarm, K8s) et patterns Cloud-native",
+      "DevOps & Culture : pipelines CI/CD complexes, Azure DevOps, GitLab CI, déploiements automatisés et monitoring",
+      "Architecture microservices : conception d'architectures distribuées et événementielles",
+      "Internet of Things (IoT) : connectivité, protocoles et intégration des appareils au Cloud",
+      "Virtualisation : hyperviseurs, machines virtuelles et abstraction des ressources",
+      "CI/CD avancés : pipelines complexes, Azure DevOps, GitLab CI et déploiements automatisés",
+      "Développement mobile : applications cross-platform et natives (iOS, Android) connectées au Cloud",
+      "Sécurité du Cloud : audit des environnements, gestion des secrets, compliance",
+      "Big Data & Cloud Data Management : gestion des données distribuées",
+      "Intelligence Artificielle intégrée : intégration services IA à l'échelle Cloud",
+      "Projet de fin d'année Tuuuur : jeu de culture générale compétitif (développement, architecture, gameplay)",
     ],
   },
   {
@@ -49,22 +55,24 @@ const educations: Education[] = [
     logo: upjvLogo,
     highlights: [
       "Parcours : Réalisation d'applications",
-      "3ème année en alternance chez Orange Business",
-      "Élu au Conseil de l'IUT d'Amiens",
-      "Java, Python, C#, PHP, C/C++",
-      "Algorithmique, BDD, Architecture logicielle",
+      "3ème année en alternance Orange Business",
+      "Élu représentant étudiant",
+      "Fondations solides & architectures",
+      "Cycle de vie logiciel complet",
     ],
     modules: [
-      "Algorithmique et structures de données",
-      "Programmation orientée objet (Java, C#, Python)",
-      "Bases de données relationnelles (SQL, PostgreSQL) et NoSQL",
-      "Conception logicielle : UML, MCD, design patterns",
-      "Développement web fullstack (HTML, CSS, JS, PHP)",
-      "Gestion de projets en méthode Agile (Scrum)",
-      "Tests unitaires et d'intégration",
-      "Réseaux et systèmes (Linux, TCP/IP)",
-      "Stage + alternance chez Orange Business",
-      "Représentant étudiant au Conseil de l'IUT",
+      "Algorithmique & structures de données : maîtrise rigoureuse des fondations",
+      "Programmation orientée objet : Java, Python, C#, C++, PHP avec applications réelles",
+      "Conception logicielle : UML, MCD, design patterns et bonnes pratiques architecture",
+      "Bases de données relationnelles : SQL Server, PostgreSQL et transactions",
+      "Bases de données NoSQL : concepts et implémentations modernes",
+      "Développement web fullstack : HTML, CSS, JavaScript, PHP et frameworks",
+      "Développement logiciel lourd : applications desktop et systèmes",
+      "Qualité logicielle : tests unitaires, tests d'intégration, couverture de code",
+      "Gestion de projets Agile : Scrum, sprints et méthodologies itératives",
+      "Réseaux & systèmes : TCP/IP, administration Linux, bases d'infrastructure",
+      "Stage alternance Orange Business : immersion professionnelle et mise en pratique",
+      "Engagement étudiant : représentant étudiant au Conseil de l'IUT, leadership et défense des intérêts",
     ],
   },
 ];
@@ -134,7 +142,7 @@ const showDetails = (edu: Education) => {
                 <v-icon icon="mdi-calendar" start size="small"></v-icon>
                 {{ t(`views.main.education.${edu.key}.date`) }}
               </v-chip>
-              <div v-if="edu.logo" class="school-logo-wrapper mt-2">
+              <div v-if="edu.logo" class="mt-2">
                 <img
                   :src="edu.logo"
                   :alt="t(`views.main.education.${edu.key}.school`)"
@@ -258,8 +266,14 @@ const showDetails = (edu: Education) => {
             </p>
           </div>
           <div v-else class="mb-4">
+            <p class="text-body-2 mb-3" style="line-height: 1.8">
+              {{ t("views.main.education.second.content1") }}
+            </p>
+            <p class="text-body-2 mb-3" style="line-height: 1.8">
+              {{ t("views.main.education.second.content2") }}
+            </p>
             <p class="text-body-2" style="line-height: 1.8">
-              {{ t("views.main.education.second.content") }}
+              {{ t("views.main.education.second.content3") }}
             </p>
           </div>
 
@@ -299,7 +313,7 @@ const showDetails = (edu: Education) => {
         <v-card-actions class="pa-6">
           <v-spacer></v-spacer>
           <v-btn
-            color="green-lighten-1"
+            :color="selectedEducation.color"
             variant="flat"
             @click="dialog = false"
             prepend-icon="mdi-close"
@@ -333,18 +347,12 @@ const showDetails = (edu: Education) => {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  transition: all 0.3s ease;
   animation: fadeIn 0.6s ease-out backwards;
   border: 2px solid transparent;
   display: flex;
   flex-direction: column;
 }
 
-.education-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 32px rgba(129, 199, 132, 0.25) !important;
-  border-color: rgba(129, 199, 132, 0.3);
-}
 
 .education-header {
   padding: 1.5rem;
@@ -366,8 +374,8 @@ const showDetails = (edu: Education) => {
 }
 
 .edu-school-logo {
-  max-height: 28px;
-  max-width: 110px;
+  max-height: 40px;
+  max-width: 120px;
   object-fit: contain;
 }
 

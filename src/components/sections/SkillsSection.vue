@@ -5,7 +5,6 @@ const { t } = useI18n();
 
 interface Skill {
   name: string;
-  level: "primary" | "secondary" | "tertiary";
   icon?: string;
 }
 
@@ -19,47 +18,29 @@ interface SkillCategory {
 
 const skillCategories: SkillCategory[] = [
   {
-    title: "backend",
-    icon: "mdi-server",
-    color: "green-lighten-1",
-    gradient: "linear-gradient(135deg, #81c784 0%, #66bb6a 100%)",
-    skills: [
-      { name: "ASP.NET Core", level: "primary", icon: "mdi-dot-net" },
-      { name: "C#", level: "primary", icon: "mdi-language-csharp" },
-      { name: "Clean Architecture", level: "primary" },
-      { name: "Entity Framework", level: "primary", icon: "mdi-database-cog" },
-      { name: "Node.js", level: "secondary", icon: "mdi-nodejs" },
-      { name: "Express", level: "secondary" },
-      { name: "REST API", level: "primary" },
-    ],
-  },
-  {
     title: "frontend",
     icon: "mdi-monitor",
     color: "blue-lighten-1",
     gradient: "linear-gradient(135deg, #42a5f5 0%, #1e88e5 100%)",
     skills: [
-      { name: "Vue.js 3", level: "primary", icon: "mdi-vuejs" },
-      { name: "TypeScript", level: "primary", icon: "mdi-language-typescript" },
-      { name: "Angular", level: "primary", icon: "mdi-angular" },
-      { name: "Vuetify", level: "primary" },
-      { name: "HTML / CSS", level: "primary", icon: "mdi-language-html5" },
-      { name: "JavaScript", level: "primary", icon: "mdi-language-javascript" },
-      { name: "React", level: "tertiary", icon: "mdi-react" },
+      { name: "Vue.js 3", icon: "mdi-vuejs" },
+      { name: "TypeScript", icon: "mdi-language-typescript" },
+      { name: "Angular", icon: "mdi-angular" },
+      // { name: "React", icon: "mdi-react" },
+      { name: "Vuetify", icon: "mdi-vuetify" },
+      { name: "HTML / CSS", icon: "mdi-language-html5" },
+      { name: "JavaScript", icon: "mdi-language-javascript" },
     ],
   },
   {
-    title: "languages",
-    icon: "mdi-xml",
-    color: "purple-lighten-1",
-    gradient: "linear-gradient(135deg, #ab47bc 0%, #8e24aa 100%)",
+    title: "backend",
+    icon: "mdi-server",
+    color: "green-lighten-1",
+    gradient: "linear-gradient(135deg, #81c784 0%, #66bb6a 100%)",
     skills: [
-      { name: "C# / .NET", level: "primary", icon: "mdi-language-csharp" },
-      { name: "TypeScript", level: "primary", icon: "mdi-language-typescript" },
-      { name: "Python", level: "secondary", icon: "mdi-language-python" },
-      { name: "Java", level: "secondary", icon: "mdi-language-java" },
-      { name: "C / C++", level: "secondary", icon: "mdi-language-cpp" },
-      { name: "PHP", level: "tertiary", icon: "mdi-language-php" },
+      { name: "ASP.NET Core", icon: "mdi-dot-net" },
+      { name: "C#", icon: "mdi-language-csharp" },
+      { name: "Node.js", icon: "mdi-nodejs" },
     ],
   },
   {
@@ -68,66 +49,50 @@ const skillCategories: SkillCategory[] = [
     color: "orange-lighten-1",
     gradient: "linear-gradient(135deg, #ff9800 0%, #f57c00 100%)",
     skills: [
-      { name: "SQL Server", level: "primary" },
-      { name: "PostgreSQL", level: "primary", icon: "mdi-database" },
-      { name: "MySQL", level: "secondary", icon: "mdi-database" },
-      { name: "MongoDB", level: "secondary", icon: "mdi-database" },
-      { name: "Redis", level: "tertiary", icon: "mdi-database" },
+      { name: "SQL Server", icon: "mdi-database" },
+      { name: "PostgreSQL", icon: "mdi-database" },
+      { name: "MySQL", icon: "mdi-database" },
+      { name: "MongoDB", icon: "mdi-database" },
+      { name: "Redis", icon: "mdi-database" },
+    ],
+  },
+  {
+    title: "devops",
+    icon: "mdi-hammer-wrench",
+    color: "teal-lighten-1",
+    gradient: "linear-gradient(135deg, #26a69a 0%, #00897b 100%)",
+    skills: [
+      { name: "Git", icon: "mdi-git" },
+      { name: "Azure DevOps", icon: "mdi-microsoft-azure-devops" },
+      { name: "Docker", icon: "mdi-docker" },
+      { name: "Kubernetes", icon: "mdi-kubernetes" },
+      { name: "CI/CD", icon: "mdi-autorenew" },
+      { name: "Azure", icon: "mdi-microsoft-azure" },
+      { name: "AWS", icon: "mdi-aws" },
+      { name: "GCP", icon: "mdi-google-cloud" },
     ],
   },
   {
     title: "tools",
     icon: "mdi-tools",
-    color: "teal-lighten-1",
-    gradient: "linear-gradient(135deg, #26a69a 0%, #00897b 100%)",
+    color: "purple-lighten-1",
+    gradient: "linear-gradient(135deg, #ab47bc 0%, #8e24aa 100%)",
     skills: [
-      { name: "Git", level: "primary", icon: "mdi-git" },
-      {
-        name: "Azure DevOps",
-        level: "primary",
-        icon: "mdi-microsoft-azure-devops",
-      },
-      { name: "Docker", level: "secondary", icon: "mdi-docker" },
-      { name: "Swagger / OpenAPI", level: "primary" },
-      { name: "CI/CD", level: "secondary" },
-      { name: "Kubernetes", level: "tertiary", icon: "mdi-kubernetes" },
-      { name: "Scrum / Agile", level: "secondary" },
-    ],
-  },
-  {
-    title: "cloud",
-    icon: "mdi-cloud",
-    color: "indigo-lighten-1",
-    gradient: "linear-gradient(135deg, #5c6bc0 0%, #3949ab 100%)",
-    skills: [
-      {
-        name: "Microsoft Azure",
-        level: "primary",
-        icon: "mdi-microsoft-azure",
-      },
-      { name: "AWS", level: "tertiary", icon: "mdi-aws" },
-      { name: "GCP", level: "tertiary" },
-      { name: "Microservices", level: "secondary" },
-      { name: "Containerisation", level: "secondary" },
+      { name: "Swagger / OpenAPI", icon: "mdi-api" },
+      { name: "REST API", icon: "mdi-api" },
+      { name: "Entity Framework", icon: "mdi-database-cog" },
+      { name: "Microservices", icon: "mdi-layers" },
+      { name: "WebSocket / SignalR", icon: "mdi-signal" },
     ],
   },
 ];
-
-const chipVariant = (level: string): "flat" | "tonal" | "outlined" => {
-  if (level === "primary") return "flat";
-  if (level === "secondary") return "tonal";
-  return "outlined";
-};
-
-const chipSize = (level: string): "default" | "small" => {
-  return level === "tertiary" ? "small" : "default";
-};
 </script>
 
 <template>
   <v-container id="skills" fluid class="skills-section py-16">
-    <v-row justify="center" class="mb-12">
-      <v-col cols="12" class="text-center">
+    <!-- Section Titre et Introduction -->
+    <v-row justify="center" class="mb-16">
+      <v-col cols="12" md="10" lg="8" class="text-center">
         <div class="title-container">
           <v-icon
             icon="mdi-code-tags"
@@ -135,85 +100,77 @@ const chipSize = (level: string): "default" | "small" => {
             color="green-lighten-1"
             class="mb-4"
           ></v-icon>
-          <h1 class="text-h2 font-weight-bold mb-3">
+          <h1 class="text-h2 font-weight-bold mb-4">
             {{ t("views.main.skills.sectionTitle") }}
           </h1>
-          <p class="text-h6 text-grey-darken-1">
-            {{ t("views.main.skills.sectionDescription") }}
+          
+          <!-- Texte d'introduction inspirant -->
+          <p class="introduction-text text-body1 text-grey-darken-1 mb-6 font-weight-500">
+            {{ t("views.main.skills.introduction") }}
           </p>
-        </div>
-        <v-divider
-          class="mx-auto my-4"
-          color="green-lighten-1"
-          :thickness="4"
-          width="100"
-          style="border-radius: 4px"
-        ></v-divider>
-        <!-- Légende -->
-        <div class="d-flex justify-center align-center ga-4 flex-wrap mt-4">
-          <div class="d-flex align-center ga-2">
-            <v-chip color="green-lighten-1" variant="flat" size="small"
-              >Primaire</v-chip
-            >
-            <span class="text-caption text-medium-emphasis">Maîtrisé</span>
-          </div>
-          <div class="d-flex align-center ga-2">
-            <v-chip color="green-lighten-1" variant="tonal" size="small"
-              >Secondaire</v-chip
-            >
-            <span class="text-caption text-medium-emphasis">Pratiqué</span>
-          </div>
-          <div class="d-flex align-center ga-2">
-            <v-chip color="green-lighten-1" variant="outlined" size="small"
-              >Notions</v-chip
-            >
-            <span class="text-caption text-medium-emphasis">Explorée</span>
-          </div>
+
+          <v-divider
+            class="mx-auto my-6"
+            color="green-lighten-1"
+            :thickness="4"
+            width="100"
+            style="border-radius: 4px"
+          ></v-divider>
         </div>
       </v-col>
     </v-row>
 
-    <v-row class="px-5">
-      <v-col
-        v-for="(category, idx) in skillCategories"
-        :key="category.title"
-        cols="12"
-        md="6"
-        lg="4"
-      >
-        <v-card
-          elevation="6"
-          class="skill-category-card h-100"
-          :style="{ animationDelay: `${idx * 0.1}s` }"
+    <!-- Sections par catégories -->
+    <v-row class="px-4 px-sm-8">
+      <v-col cols="12" class="mb-12">
+        <div
+          v-for="(category, idx) in skillCategories"
+          :key="category.title"
+          class="mb-12"
+          :style="{ 
+            animation: `slideUp 0.6s ease-out backwards`,
+            animationDelay: `${idx * 0.1}s`
+          }"
         >
-          <!-- En-tête catégorie -->
-          <div
-            class="category-header"
-            :style="{ background: category.gradient }"
-          >
-            <v-icon :icon="category.icon" size="36" color="white"></v-icon>
-            <h3 class="text-h6 font-weight-bold mt-2" style="color: white">
-              {{ t(`views.main.skills.${category.title}`) }}
-            </h3>
+          <!-- Titre catégorie -->
+          <div class="category-title-section mb-6">
+            <div class="category-title-wrapper">
+              <v-icon 
+                :icon="category.icon" 
+                :color="category.color"
+                size="32"
+                class="mr-3"
+              ></v-icon>
+              <h2 class="text-h5 font-weight-bold">
+                {{ t(`views.main.skills.${category.title}`) }}
+              </h2>
+            </div>
+            <v-divider :color="category.color" class="mt-3 mx-auto" style="max-width: 300px;"></v-divider>
           </div>
 
-          <!-- Chips de compétences -->
-          <v-card-text class="pa-5">
-            <div class="d-flex flex-wrap ga-2">
-              <v-chip
-                v-for="skill in category.skills"
-                :key="skill.name"
-                :color="category.color"
-                :variant="chipVariant(skill.level)"
-                :size="chipSize(skill.level)"
-                class="skill-chip"
-              >
-                <v-icon v-if="skill.icon" :icon="skill.icon" start size="14" />
-                {{ skill.name }}
-              </v-chip>
+          <!-- Liste des technologies -->
+          <div class="skills-list-wrapper">
+            <div
+              v-for="(skill, itemIdx) in category.skills"
+              :key="skill.name"
+              class="skill-item-simple"
+              :style="{ 
+                animation: `slideIn 0.4s ease-out backwards`,
+                animationDelay: `${itemIdx * 0.05}s`
+              }"
+            >
+              <div class="skill-icon-box" v-if="skill.icon">
+                <v-icon 
+                  :icon="skill.icon"
+                  :color="category.color"
+                  size="36"
+                ></v-icon>
+              </div>
+              <div v-else class="skill-icon-placeholder"></div>
+              <p class="skill-label">{{ skill.name }}</p>
             </div>
-          </v-card-text>
-        </v-card>
+          </div>
+        </div>
       </v-col>
     </v-row>
   </v-container>
@@ -230,29 +187,153 @@ const chipSize = (level: string): "default" | "small" => {
   z-index: 1;
 }
 
-.skill-category-card {
-  overflow: hidden;
-  transition: all 0.3s ease;
-  animation: fadeIn 0.6s ease-out backwards;
-  border: 2px solid transparent;
+.introduction-text {
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  letter-spacing: 0.3px;
 }
 
-.skill-category-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(129, 199, 132, 0.2) !important;
-  border-color: rgba(129, 199, 132, 0.25);
+.category-title-section {
+  animation: fadeIn 0.6s ease-out;
 }
 
-.category-header {
-  padding: 1.5rem;
+.category-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+}
+
+.skills-list-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 16px 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-item-simple {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
   text-align: center;
+  transition: all 0.3s ease;
 }
 
-.skill-chip {
-  transition: transform 0.2s ease;
+/* .skill-item-simple:hover {
+  transform: translateY(-8px);
+} */
+
+.skill-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, rgba(129, 199, 132, 0.08) 0%, rgba(102, 187, 106, 0.08) 100%);
+  border-radius: 12px;
+  transition: all 0.3s ease;
 }
 
-.skill-chip:hover {
-  transform: translateY(-2px);
+.skill-item-simple:hover .skill-icon-box {
+  background: linear-gradient(135deg, rgba(129, 199, 132, 0.16) 0%, rgba(102, 187, 106, 0.16) 100%);
+  box-shadow: 0 8px 16px rgba(129, 199, 132, 0.12);
+  transform: scale(1.08);
+}
+
+.skill-icon-placeholder {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, rgba(129, 199, 132, 0.06) 0%, rgba(102, 187, 106, 0.06) 100%);
+  border-radius: 12px;
+}
+
+.skill-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+  word-break: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skills-list-wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 16px;
+  }
+
+  .skill-icon-box {
+    width: 50px;
+    height: 50px;
+  }
+
+  .skill-label {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .introduction-text {
+    font-size: 0.95rem;
+  }
+
+  .skills-list-wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    gap: 12px;
+  }
+
+  .skill-icon-box {
+    width: 45px;
+    height: 45px;
+  }
 }
 </style>

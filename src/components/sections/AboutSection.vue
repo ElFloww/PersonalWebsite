@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { useI18n } from "vue-i18n";
-import photoProfil from "@/assets/images/photo_profil.jpg";
+import photoProfil from "@/assets/images/photo_profil.png";
 
 const { t } = useI18n();
 
 // 🔁 Mettre à false pour masquer la bannière "en recherche d'emploi"
-const seekingJob = true;
+const seekingJob = false;
 
 const birthDate = new Date("2003-01-27");
 
@@ -24,9 +24,9 @@ const age = computed(() => {
 const passions = [
   { icon: "mdi-run-fast", key: "sport", color: "orange" },
   { icon: "mdi-controller", key: "videoGames", color: "purple" },
-  { icon: "mdi-book-open-variant", key: "reading", color: "brown" },
   { icon: "mdi-pot-steam", key: "cooking", color: "red" },
   { icon: "mdi-music-note-eighth", key: "music", color: "pink" },
+  // { icon: "mdi-book-open-variant", key: "reading", color: "brown" },
 ];
 
 const values = [
@@ -195,7 +195,7 @@ const values = [
             </div>
 
             <!-- Approche / Philosophie -->
-            <v-alert
+            <!-- <v-alert
               variant="tonal"
               color="green-lighten-1"
               class="mt-2"
@@ -208,7 +208,7 @@ const values = [
               <div style="line-height: 1.75">
                 {{ t("views.main.presentation.philosophyText") }}
               </div>
-            </v-alert>
+            </v-alert> -->
           </v-card-text>
         </v-card>
       </v-col>
@@ -217,7 +217,7 @@ const values = [
     <!-- Ligne 2 : Valeurs + Objectif CDI Provence -->
     <v-row justify="center" class="mb-4">
       <!-- Valeurs -->
-      <v-col cols="12" md="6">
+      <v-col cols="12" md="5">
         <v-card elevation="4" class="pa-6 glass-card h-100">
           <h3 class="text-h6 font-weight-bold mb-4 text-green-lighten-1">
             <v-icon icon="mdi-star-circle-outline" class="mr-2" />
@@ -244,7 +244,7 @@ const values = [
       </v-col>
 
       <!-- Objectif CDI -->
-      <v-col cols="12" md="6">
+      <v-col cols="12" md="5">
         <v-card
           elevation="4"
           class="pa-6 goal-card h-100"
@@ -343,10 +343,10 @@ const values = [
     box-shadow 0.3s ease;
 }
 
-.profile-avatar:hover {
+/* .profile-avatar:hover {
   transform: scale(1.03);
   box-shadow: 0 12px 40px rgba(100, 200, 100, 0.4);
-}
+} */
 
 .seeking-banner {
   border-radius: 12px;
@@ -358,10 +358,10 @@ const values = [
   transition: all 0.2s ease;
 }
 
-.value-item:hover {
+/* .value-item:hover {
   background: rgba(129, 199, 132, 0.08);
   border-color: rgba(129, 199, 132, 0.3);
-}
+} */
 
 .goal-card {
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -373,11 +373,11 @@ const values = [
   transition: all 0.25s ease;
 }
 
-.passion-card:hover {
+/* .passion-card:hover {
   background: rgba(0, 0, 0, 0.04);
   border-color: rgba(0, 0, 0, 0.12);
   transform: translateY(-2px);
-}
+} */
 
 .passion-icon-bg {
   flex-shrink: 0;
