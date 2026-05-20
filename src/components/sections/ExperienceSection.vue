@@ -10,7 +10,6 @@ interface Experience {
   color: string;
   gradient: string;
   logo?: string;
-  details: string[];
   contractType: "Stage" | "CDD" | "Alternance";
   contractIcon: string;
   technologies: {
@@ -19,6 +18,13 @@ interface Experience {
     tools: string[];
   }[];
 }
+
+const getExperienceDetails = (experienceKey: string): string[] => {
+  const detailsKey = `views.main.professionalExperience.${experienceKey}.details`;
+  const details = t(detailsKey);
+  // If t() returns the key itself, it means the translation doesn't exist, so return empty array
+  return typeof details === "string" && !Array.isArray(details) ? [] : (details as string[]);
+};
 
 const experiences: Experience[] = [
   {
@@ -65,16 +71,6 @@ const experiences: Experience[] = [
         tools: ["Agile", "Scrum", "Revues de code"],
       },
     ],
-    details: [
-      "Finalisation et déploiement d'applications (migration vers .NET 8)",
-      "Conception complète d'applications métier : modélisation de bases de données, spécifications techniques, développement complet (back-end .NET 8, front Angular/Vue.js) et intégration d'APIs",
-      "Création d'outils innovants avec intégration d'intelligence artificielle (OpenAI Whisper)",
-      "Modernisation d'applications legacy : refonte d'architecture, réécriture avec technologies modernes, modules d'import/export Excel et logiques complexes",
-      "Maintenance évolutive et refactoring de code sur applications critiques",
-      "Participation active aux rituels Agile (Daily, Weekly, revues de code)",
-      "Mise en place et maintenance de pipelines CI/CD via Azure DevOps",
-      "Accompagnement et mentorat d'autres développeurs",
-    ],
   },
   {
     key: "second",
@@ -115,14 +111,6 @@ const experiences: Experience[] = [
         tools: ["Git", "Azure DevOps"],
       },
     ],
-    details: [
-      "Développement d'API en Clean Architecture avec technologies modernes (ASP.NET Core .NET 6, C#, MediatR)",
-      "Assurance qualité logicielle : tests unitaires et d'intégration (xUnit) avec objectif de 80% de couverture, réduction du code dupliqué et élimination proactive des code smells",
-      "Documentation technique complète avec Swagger / OpenAPI",
-      "Gestion de version et pipelines CI/CD via Git et Azure DevOps",
-      "Revues de code actives avec l'équipe pour améliorer la maintenabilité",
-      "Développement du backoffice web de gestion",
-    ],
   },
   {
     contractType: "Stage",
@@ -162,12 +150,6 @@ const experiences: Experience[] = [
         icon: "mdi-git",
         tools: ["Git"],
       },
-    ],
-    details: [
-      "Initialisation d'une application d'optimisation de l'internationalisation. Développement complet d'une API REST (.NET 6) et du backoffice en Vue.js (Vuetify)",
-      "Montée en compétences en bonnes pratiques d'architecture (Clean Architecture) et industrialisation du code (Git, Pipelines, Revues de code)",
-      "Apprentissage de l'écosystème .NET Core et maîtrise de la programmation orientée objet",
-      "Utilisation de patterns modernes et intégration dans une équipe Agile",
     ],
   },
 ];
@@ -425,7 +407,7 @@ const showDetails = (exp: Experience) => {
             </h3>
             <v-list density="compact" bg-color="transparent" class="mission-list">
               <v-list-item
-                v-for="(detail, idx) in selectedExperience.details"
+                v-for="(detail, idx) in getExperienceDetails(selectedExperience.key)"
                 :key="idx"
                 class="px-0 mb-3 pb-2"
               >
