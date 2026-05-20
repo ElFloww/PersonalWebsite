@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, computed } from "vue";
 import { useI18n } from "vue-i18n";
 import upjvLogo from "@/assets/images/logo_upjv.png";
 import inssetLogo from "@/assets/images/logo_insset.png";
@@ -12,8 +12,6 @@ interface Education {
   color: string;
   gradient: string;
   logo?: string;
-  highlights: string[];
-  modules: string[];
 }
 
 const educations: Education[] = [
@@ -23,29 +21,6 @@ const educations: Education[] = [
     color: "green-lighten-1",
     gradient: "linear-gradient(135deg, #81c784 0%, #66bb6a 100%)",
     logo: inssetLogo,
-    highlights: [
-      "Spécialisation Cloud & Microservices",
-      "Architecture & Infrastructure pratiques",
-      "DevOps & Stratégies déploiement",
-      "Développement mobile & SaaS",
-      "Réalisé en alternance Orange Business",
-    ],
-    modules: [
-      "Infrastructures Cloud (IaaS/PaaS) : déploiement et administration sur Azure, AWS et Google Cloud",
-      "Architecture réseau Cloud : design, optimisation et bonnes pratiques sur GCP et AWS",
-      "Infrastructure as Code : Terraform, ARM Templates, virtualisation et provisioning automatisé",
-      "Containerisation & orchestration : Docker, Kubernetes (Swarm, K8s) et patterns Cloud-native",
-      "DevOps & Culture : pipelines CI/CD complexes, Azure DevOps, GitLab CI, déploiements automatisés et monitoring",
-      "Architecture microservices : conception d'architectures distribuées et événementielles",
-      "Internet of Things (IoT) : connectivité, protocoles et intégration des appareils au Cloud",
-      "Virtualisation : hyperviseurs, machines virtuelles et abstraction des ressources",
-      "CI/CD avancés : pipelines complexes, Azure DevOps, GitLab CI et déploiements automatisés",
-      "Développement mobile : applications cross-platform et natives (iOS, Android) connectées au Cloud",
-      "Sécurité du Cloud : audit des environnements, gestion des secrets, compliance",
-      "Big Data & Cloud Data Management : gestion des données distribuées",
-      "Intelligence Artificielle intégrée : intégration services IA à l'échelle Cloud",
-      "Projet de fin d'année Tuuuur : jeu de culture générale compétitif (développement, architecture, gameplay)",
-    ],
   },
   {
     key: "first",
@@ -53,29 +28,20 @@ const educations: Education[] = [
     color: "blue-lighten-1",
     gradient: "linear-gradient(135deg, #42a5f5 0%, #1e88e5 100%)",
     logo: upjvLogo,
-    highlights: [
-      "Parcours : Réalisation d'applications",
-      "3ème année en alternance Orange Business",
-      "Élu représentant étudiant",
-      "Fondations solides & architectures",
-      "Cycle de vie logiciel complet",
-    ],
-    modules: [
-      "Algorithmique & structures de données : maîtrise rigoureuse des fondations",
-      "Programmation orientée objet : Java, Python, C#, C++, PHP avec applications réelles",
-      "Conception logicielle : UML, MCD, design patterns et bonnes pratiques architecture",
-      "Bases de données relationnelles : SQL Server, PostgreSQL et transactions",
-      "Bases de données NoSQL : concepts et implémentations modernes",
-      "Développement web fullstack : HTML, CSS, JavaScript, PHP et frameworks",
-      "Développement logiciel lourd : applications desktop et systèmes",
-      "Qualité logicielle : tests unitaires, tests d'intégration, couverture de code",
-      "Gestion de projets Agile : Scrum, sprints et méthodologies itératives",
-      "Réseaux & systèmes : TCP/IP, administration Linux, bases d'infrastructure",
-      "Stage alternance Orange Business : immersion professionnelle et mise en pratique",
-      "Engagement étudiant : représentant étudiant au Conseil de l'IUT, leadership et défense des intérêts",
-    ],
   },
 ];
+
+const getEducationHighlights = (educationKey: string): string[] => {
+  const highlightsKey = `views.main.education.${educationKey}.highlights`;
+  const highlights = t(highlightsKey);
+  return Array.isArray(highlights) ? highlights : [];
+};
+
+const getEducationModules = (educationKey: string): string[] => {
+  const modulesKey = `views.main.education.${educationKey}.modules`;
+  const modules = t(modulesKey);
+  return Array.isArray(modules) ? modules : [];
+};
 
 const selectedEducation = ref<Education | null>(null);
 const dialog = ref(false);
@@ -196,7 +162,7 @@ const showDetails = (edu: Education) => {
               <!-- Points clés -->
               <div class="d-flex flex-wrap ga-2">
                 <v-chip
-                  v-for="highlight in edu.highlights"
+                  v-for="highlight in getEducationHighlights(edu.key)"
                   :key="highlight"
                   :color="edu.color"
                   variant="outlined"
@@ -289,7 +255,7 @@ const showDetails = (edu: Education) => {
           </h3>
           <v-list density="compact" bg-color="transparent">
             <v-list-item
-              v-for="(module, idx) in selectedEducation.modules"
+              v-for="(module, idx) in getEducationModules(selectedEducation.key)"
               :key="idx"
               class="px-1 mb-1"
             >

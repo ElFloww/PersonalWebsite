@@ -13,7 +13,8 @@
         "github": "GitHub",
         "linkedin": "LinkedIn",
         "mastodon": "Mastodon",
-        "email": "Email"
+        "email": "Email",
+        "copyright": "© {year} - All rights reserved"
       },
       "appBar": {
         "about": "About",
@@ -90,7 +91,13 @@
           "company": "Orange Business — Amiens",
           "shortDesc": "Immersion with the Microsoft development team for my first steps in professional software development.",
           "content": "End-of-year internship during my 2nd year of BUT in Computer Science. Immersion with the Microsoft development team for my first professional steps. Deep dive into object-oriented programming and the modern .NET ecosystem. Integrated into a team of consultants, I discovered the .NET Core world in real conditions.",
-          "tech": "C# · ASP.NET Core (.NET 6) · Vue.js · Vuetify · AngularJS · SQL Server · Entity Framework Core · Dependency Injection · AutoMapper"
+          "tech": "C# · ASP.NET Core (.NET 6) · Vue.js · Vuetify · AngularJS · SQL Server · Entity Framework Core · Dependency Injection · AutoMapper",
+          "details": [
+            "Initialization of an internationalization optimization application. Full development of a REST API (.NET 6) and the back office in Vue.js (Vuetify)",
+            "Skill development in architectural best practices (Clean Architecture) and code industrialization (Git, Pipelines, Code reviews)",
+            "Learning the .NET Core ecosystem and mastering object-oriented programming",
+            "Use of modern patterns and integration into an Agile team"
+          ]
         },
         "second": {
           "date": "June 2023 - August 2023",
@@ -98,7 +105,15 @@
           "company": "Orange Business — Amiens",
           "shortDesc": "Direct follow-up to the spring internship to accelerate Traducto project development.",
           "content": "Following my internship, I was hired on a fixed-term contract to accelerate the Traducto project development and strengthen the technical quality of the solution. I continued and extended the initial project by developing a new clean architecture API and an web back office. Strong skill development in software quality culture.",
-          "tech": "C# · ASP.NET Core (.NET 6) · Clean Architecture · CQRS (MediatR) · xUnit · FluentValidation · Azure DevOps · Swagger"
+          "tech": "C# · ASP.NET Core (.NET 6) · Clean Architecture · CQRS (MediatR) · xUnit · FluentValidation · Azure DevOps · Swagger",
+          "details": [
+            "API development in Clean Architecture with modern technologies (ASP.NET Core .NET 6, C#, MediatR)",
+            "Software quality assurance: unit and integration tests (xUnit) with 80% coverage target, reduction of duplicate code and proactive elimination of code smells",
+            "Complete technical documentation with Swagger / OpenAPI",
+            "Version control and CI/CD pipelines via Git and Azure DevOps",
+            "Active code reviews with the team to improve maintainability",
+            "Development of the web management back office"
+          ]
         },
         "third": {
           "date": "September 2023 - Present",
@@ -106,7 +121,17 @@
           "company": "Orange Business — Amiens",
           "shortDesc": "Consultant apprentice taking ownership of complete projects with increased responsibility.",
           "content": "Evolution to an apprentice consultant position. Taking ownership of complete projects and increasing responsibility for architecture and deployments. Consultant on Microsoft and JavaScript technologies within an Agile team. Development and maintenance of REST APIs in ASP.NET Core (clean architecture, CQRS), front-end development with Vue.js 3 and Angular on business applications.",
-          "tech": "C# · ASP.NET Core (.NET 6/.NET 8) · Angular · Vue.js 3 · TypeScript · SQL Server · Entity Framework Core · REST / SOAP APIs · Whisper AI API · Docker · Azure DevOps · Agile (Scrum)"
+          "tech": "C# · ASP.NET Core (.NET 6/.NET 8) · Angular · Vue.js 3 · TypeScript · SQL Server · Entity Framework Core · REST / SOAP APIs · Whisper AI API · Docker · Azure DevOps · Agile (Scrum)",
+          "details": [
+            "Application finalization and deployment (migration to .NET 8)",
+            "Complete business application design: database modeling, technical specifications, full development (back-end .NET 8, front Angular/Vue.js) and APIs integration",
+            "Creation of innovative tools with artificial intelligence integration (OpenAI Whisper)",
+            "Modernization of legacy applications: architecture redesign, rewrite with modern technologies, Excel import/export modules and complex logic",
+            "Evolutionary maintenance and code refactoring on critical applications",
+            "Active participation in Agile ceremonies (Daily, Weekly, code reviews)",
+            "Implementation and maintenance of CI/CD pipelines via Azure DevOps",
+            "Mentoring and coaching of other developers"
+          ]
         }
       },
       "education": {
@@ -124,7 +149,28 @@
           "content1": "Intensive three-year university technology program covering the complete software development lifecycle. The first two years focused on technical foundations (algorithms, OOP, databases, software architecture), followed by a third year as an apprentice at Orange Business.",
           "content2": "Rigorous mastery of algorithms, object-oriented programming (C#, Java, Python, C++, PHP), software design (UML, ERD, design patterns) and application of best practices. Strong emphasis on code quality through writing unit and integration tests. Solid fundamentals in networking (TCP/IP) and Linux server administration.",
           "content3": "Elected student representative on the IUT Amiens Council. Active participation in council meetings, representation of student interests, and contribution to academic direction. Development of strong communication, leadership, and decision-making process skills.",
-          "content4": ""
+          "content4": "",
+          "highlights": [
+            "Track: Application Development",
+            "3rd year as apprentice at Orange Business",
+            "Elected student representative",
+            "Solid foundations & architectures",
+            "Complete software lifecycle"
+          ],
+          "modules": [
+            "Algorithms & data structures: rigorous mastery of foundations",
+            "Object-oriented programming: Java, Python, C#, C++, PHP with real applications",
+            "Software design: UML, ERD, design patterns and architectural best practices",
+            "Relational databases: SQL Server, PostgreSQL and transactions",
+            "NoSQL databases: concepts and modern implementations",
+            "Full-stack web development: HTML, CSS, JavaScript, PHP and frameworks",
+            "Heavy software development: desktop applications and systems",
+            "Software quality: unit tests, integration tests, code coverage",
+            "Agile project management: Scrum, sprints and iterative methodologies",
+            "Networks & systems: TCP/IP, Linux administration, infrastructure basics",
+            "Apprenticeship at Orange Business: professional immersion and practical application",
+            "Student engagement: student representative on the IUT Council, leadership and advocacy"
+          ]
         },
         "second": {
           "date": "2023 - 2025",
@@ -133,7 +179,30 @@
           "content": "Advanced Bac+5 program focused on Cloud architectures, DevOps practices, and distributed systems, completed as an apprentice at Orange Business.",
           "content1": "Advanced Bac+5 program in Cloud architectures, DevOps, and distributed systems. Rigorous and modern curriculum aligned with current industry challenges. Completed as an apprentice at Orange Business, it combines solid theoretical teaching with immediate practical application to develop engineers capable of designing and deploying scalable and resilient Cloud infrastructures.",
           "content2": "In-depth specialization in Cloud infrastructure (IaaS/PaaS) across Azure, AWS, and Google Cloud environments. Mastery of Infrastructure as Code (Terraform, ARM Templates), advanced containerization and orchestration with Docker and Kubernetes (Swarm, K8s), and Cloud-native and microservices architecture design. Learning of Cloud network architecture, virtualization, and advanced DevOps practices with complex CI/CD pipelines and automation.",
-          "content3": "Development of SaaS-mode applications, creation of cross-platform and native mobile applications (iOS, Android) connected to the Cloud, Big Data and Cloud Data Management, Cloud environment security and audit, Internet of Things (IoT), and Artificial Intelligence integration. Final project: designing and developing a competitive trivia game (Tuuuur) applying Cloud architectural principles."
+          "content3": "Development of SaaS-mode applications, creation of cross-platform and native mobile applications (iOS, Android) connected to the Cloud, Big Data and Cloud Data Management, Cloud environment security and audit, Internet of Things (IoT), and Artificial Intelligence integration. Final project: designing and developing a competitive trivia game (Tuuuur) applying Cloud architectural principles.",
+          "highlights": [
+            "Cloud & Microservices Specialization",
+            "Architecture & Infrastructure Hands-On",
+            "DevOps & Deployment Strategies",
+            "Mobile Development & SaaS",
+            "Completed as apprenticeship at Orange Business"
+          ],
+          "modules": [
+            "Cloud Infrastructures (IaaS/PaaS): deployment and administration on Azure, AWS and Google Cloud",
+            "Cloud Network Architecture: design, optimization and best practices on GCP and AWS",
+            "Infrastructure as Code: Terraform, ARM Templates, virtualization and automated provisioning",
+            "Containerization & Orchestration: Docker, Kubernetes (Swarm, K8s) and Cloud-native patterns",
+            "DevOps & Culture: complex CI/CD pipelines, Azure DevOps, GitLab CI, automated deployments and monitoring",
+            "Microservices Architecture: design of distributed and event-driven architectures",
+            "Internet of Things (IoT): connectivity, protocols and device integration to the Cloud",
+            "Virtualization: hypervisors, virtual machines and resource abstraction",
+            "Advanced CI/CD: complex pipelines, Azure DevOps, GitLab CI and automated deployments",
+            "Mobile Development: cross-platform and native applications (iOS, Android) connected to Cloud",
+            "Cloud Security: environment audit, secrets management, compliance",
+            "Big Data & Cloud Data Management: distributed data management",
+            "Integrated Artificial Intelligence: IA services integration at Cloud scale",
+            "End-of-year project Tuuuur: competitive trivia game (development, architecture, gameplay)"
+          ]
         }
       },
       "contact": {

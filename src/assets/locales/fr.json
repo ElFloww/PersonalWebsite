@@ -12,7 +12,9 @@
       "footer": {
         "github": "GitHub",
         "linkedin": "LinkedIn",
-        "email": "Email"
+        "mastodon": "Mastodon",
+        "email": "Email",
+        "copyright": "© {year} - Tous droits réservés"
       },
       "appBar": {
         "about": "À propos",
@@ -89,7 +91,13 @@
           "company": "Orange Business — Amiens",
           "shortDesc": "Immersion dans l'équipe de développement Microsoft pour mes premiers pas en entreprise.",
           "content": "Stage de fin de 2ème année de BUT Informatique. Immersion dans l'équipe de développement Microsoft pour mes premiers pas en entreprise. Découverte approfondie de la programmation orientée objet et de l'écosystème .NET moderne. Intégré dans une équipe de consultants, j'ai découvert l'univers .NET Core en conditions réelles.",
-          "tech": "C# · ASP.NET Core (.NET 6) · Vue.js · Vuetify · AngularJS · SQL Server · Entity Framework Core · Injection de dépendances · AutoMapper"
+          "tech": "C# · ASP.NET Core (.NET 6) · Vue.js · Vuetify · AngularJS · SQL Server · Entity Framework Core · Injection de dépendances · AutoMapper",
+          "details": [
+            "Initialisation d'une application d'optimisation de l'internationalisation. Développement complet d'une API REST (.NET 6) et du backoffice en Vue.js (Vuetify)",
+            "Montée en compétences en bonnes pratiques d'architecture (Clean Architecture) et industrialisation du code (Git, Pipelines, Revues de code)",
+            "Apprentissage de l'écosystème .NET Core et maîtrise de la programmation orientée objet",
+            "Utilisation de patterns modernes et intégration dans une équipe Agile"
+          ]
         },
         "second": {
           "date": "juin 2023 - août 2023",
@@ -97,7 +105,15 @@
           "company": "Orange Business — Amiens",
           "shortDesc": "Suite directe du stage pour accélérer le développement du projet Traducto.",
           "content": "Suite à mon stage, prolongement en CDD pour accélérer le développement du projet Traducto et renforcer la qualité technique de la solution. J'ai poursuivi et étendu le projet initial en développant une nouvelle API en clean architecture ainsi qu'un backoffice web de gestion. Forte montée en compétences sur la culture de la qualité logicielle.",
-          "tech": "C# · ASP.NET Core (.NET 6) · Clean Architecture · CQRS (MediatR) · xUnit · FluentValidation · Azure DevOps · Swagger"
+          "tech": "C# · ASP.NET Core (.NET 6) · Clean Architecture · CQRS (MediatR) · xUnit · FluentValidation · Azure DevOps · Swagger",
+          "details": [
+            "Développement d'API en Clean Architecture avec technologies modernes (ASP.NET Core .NET 6, C#, MediatR)",
+            "Assurance qualité logicielle : tests unitaires et d'intégration (xUnit) avec objectif de 80% de couverture, réduction du code dupliqué et élimination proactive des code smells",
+            "Documentation technique complète avec Swagger / OpenAPI",
+            "Gestion de version et pipelines CI/CD via Git et Azure DevOps",
+            "Revues de code actives avec l'équipe pour améliorer la maintenabilité",
+            "Développement du backoffice web de gestion"
+          ]
         },
         "third": {
           "date": "septembre 2023 - aujourd'hui",
@@ -105,7 +121,17 @@
           "company": "Orange Business — Amiens",
           "shortDesc": "Consultant alternant avec prise en charge de projets complets et montée en responsabilité.",
           "content": "Évolution vers un poste de consultant alternant. Prise en charge de projets complets et montée en responsabilité sur l'architecture et les déploiements. Consultant sur les technologies Microsoft et JavaScript au sein d'une équipe Agile. Développement et maintenance d'APIs REST en ASP.NET Core (clean architecture, CQRS), développement front-end avec Vue.js 3 et Angular sur des applications métier.",
-          "tech": "C# · ASP.NET Core (.NET 6/.NET 8) · Angular · Vue.js 3 · TypeScript · SQL Server · Entity Framework Core · API REST / SOAP · API Whisper (IA) · Docker · Azure DevOps · Méthode Agile (Scrum)"
+          "tech": "C# · ASP.NET Core (.NET 6/.NET 8) · Angular · Vue.js 3 · TypeScript · SQL Server · Entity Framework Core · API REST / SOAP · API Whisper (IA) · Docker · Azure DevOps · Méthode Agile (Scrum)",
+          "details": [
+            "Finalisation et déploiement d'applications (migration vers .NET 8)",
+            "Conception complète d'applications métier : modélisation de bases de données, spécifications techniques, développement complet (back-end .NET 8, front Angular/Vue.js) et intégration d'APIs",
+            "Création d'outils innovants avec intégration d'intelligence artificielle (OpenAI Whisper)",
+            "Modernisation d'applications legacy : refonte d'architecture, réécriture avec technologies modernes, modules d'import/export Excel et logiques complexes",
+            "Maintenance évolutive et refactoring de code sur applications critiques",
+            "Participation active aux rituels Agile (Daily, Weekly, revues de code)",
+            "Mise en place et maintenance de pipelines CI/CD via Azure DevOps",
+            "Accompagnement et mentorat d'autres développeurs"
+          ]
         }
       },
       "education": {
@@ -122,7 +148,29 @@
           "parcours": "Parcours : Réalisation d'applications — conception, développement, validation",
           "content1": "Formation universitaire technologique intensive sur 3 ans couvrant l'ensemble du cycle de vie du développement logiciel. Les deux premières années axées sur les fondations techniques (algorithmique, POO, bases de données, architecture logicielle), suivies d'une 3ème année en alternance chez Orange Business.",
           "content2": "Maîtrise rigoureuse de l'algorithmique, de la programmation orientée objet (C#, Java, Python, C++, PHP), de la conception logicielle (UML, MCD, design patterns) et application des bonnes pratiques. Forte sensibilisation à la qualité logicielle avec écriture de tests unitaires et d'intégration. Bases solides en réseaux (TCP/IP) et administration de serveurs Linux.",
-          "content3": "Élu représentant étudiant au Conseil de l'IUT d'Amiens. Participation active aux réunions, défense des intérêts des étudiants et contribution aux orientations pédagogiques. Développement de fortes compétences en communication, leadership et navigation dans les processus décisionnels."
+          "content3": "Élu représentant étudiant au Conseil de l'IUT d'Amiens. Participation active aux réunions, défense des intérêts des étudiants et contribution aux orientations pédagogiques. Développement de fortes compétences en communication, leadership et navigation dans les processus décisionnels.",
+          "content4": "",
+          "highlights": [
+            "Parcours : Réalisation d'applications",
+            "3ème année en alternance Orange Business",
+            "Élu représentant étudiant",
+            "Fondations solides & architectures",
+            "Cycle de vie logiciel complet"
+          ],
+          "modules": [
+            "Algorithmique & structures de données : maîtrise rigoureuse des fondations",
+            "Programmation orientée objet : Java, Python, C#, C++, PHP avec applications réelles",
+            "Conception logicielle : UML, MCD, design patterns et bonnes pratiques architecture",
+            "Bases de données relationnelles : SQL Server, PostgreSQL et transactions",
+            "Bases de données NoSQL : concepts et implémentations modernes",
+            "Développement web fullstack : HTML, CSS, JavaScript, PHP et frameworks",
+            "Développement logiciel lourd : applications desktop et systèmes",
+            "Qualité logicielle : tests unitaires, tests d'intégration, couverture de code",
+            "Gestion de projets Agile : Scrum, sprints et méthodologies itératives",
+            "Réseaux & systèmes : TCP/IP, administration Linux, bases d'infrastructure",
+            "Stage alternance Orange Business : immersion professionnelle et mise en pratique",
+            "Engagement étudiant : représentant étudiant au Conseil de l'IUT, leadership et défense des intérêts"
+          ]
         },
         "second": {
           "date": "2023 - 2025",
@@ -131,7 +179,30 @@
           "content": "Formation de pointe de niveau Bac+5 orientée sur les architectures Cloud, l'écosystème DevOps et les systèmes distribués, réalisée en alternance chez Orange Business.",
           "content1": "Formation de pointe Bac+5 en architectures Cloud, DevOps et systèmes distribués. Programme moderne et exigeant, aligné sur les défis industriels actuels. Réalisée en alternance chez Orange Business, elle conjugue enseignements rigoureux et pratique immédiate pour former des ingénieurs capables de concevoir et déployer des infrastructures Cloud scalables et résilientes.",
           "content2": "Spécialisation approfondie dans les infrastructures Cloud (IaaS/PaaS) sur les environnements Azure, AWS et Google Cloud. Maîtrise de l'Infrastructure as Code (Terraform, ARM Templates), de la containerisation et orchestration avancée avec Docker et Kubernetes (Swarm, K8s), et conception d'architectures Cloud-native et microservices. Apprentissage de l'architecture réseau Cloud, de la virtualisation, et des pratiques DevOps avancées avec pipelines CI/CD complexes et automation.",
-          "content3": "Développement d'applications en mode SaaS, création d'applications mobiles cross-platform et natives (iOS, Android) connectées au Cloud, gestion des bases de données Big Data, Cloud Data Management, sécurité et audit des environnements Cloud, Internet of Things (IoT) et intégration de l'Intelligence Artificielle. Projet de fin d'année : conception et développement d'un jeu de culture générale compétitif (Tuuuur) appliquant les principes architecturaux Cloud."
+          "content3": "Développement d'applications en mode SaaS, création d'applications mobiles cross-platform et natives (iOS, Android) connectées au Cloud, gestion des bases de données Big Data, Cloud Data Management, sécurité et audit des environnements Cloud, Internet of Things (IoT) et intégration de l'Intelligence Artificielle. Projet de fin d'année : conception et développement d'un jeu de culture générale compétitif (Tuuuur) appliquant les principes architecturaux Cloud.",
+          "highlights": [
+            "Spécialisation Cloud & Microservices",
+            "Architecture & Infrastructure pratiques",
+            "DevOps & Stratégies déploiement",
+            "Développement mobile & SaaS",
+            "Réalisé en alternance Orange Business"
+          ],
+          "modules": [
+            "Infrastructures Cloud (IaaS/PaaS) : déploiement et administration sur Azure, AWS et Google Cloud",
+            "Architecture réseau Cloud : design, optimisation et bonnes pratiques sur GCP et AWS",
+            "Infrastructure as Code : Terraform, ARM Templates, virtualisation et provisioning automatisé",
+            "Containerisation & orchestration : Docker, Kubernetes (Swarm, K8s) et patterns Cloud-native",
+            "DevOps & Culture : pipelines CI/CD complexes, Azure DevOps, GitLab CI, déploiements automatisés et monitoring",
+            "Architecture microservices : conception d'architectures distribuées et événementielles",
+            "Internet of Things (IoT) : connectivité, protocoles et intégration des appareils au Cloud",
+            "Virtualisation : hyperviseurs, machines virtuelles et abstraction des ressources",
+            "CI/CD avancés : pipelines complexes, Azure DevOps, GitLab CI et déploiements automatisés",
+            "Développement mobile : applications cross-platform et natives (iOS, Android) connectées au Cloud",
+            "Sécurité du Cloud : audit des environnements, gestion des secrets, compliance",
+            "Big Data & Cloud Data Management : gestion des données distribuées",
+            "Intelligence Artificielle intégrée : intégration services IA à l'échelle Cloud",
+            "Projet de fin d'année Tuuuur : jeu de culture générale compétitif (développement, architecture, gameplay)"
+          ]
         }
       },
       "contact": {
