@@ -1,6 +1,8 @@
 <script setup lang="ts">
-
+import { useI18n } from 'vue-i18n';
 import { URL_LINKEDIN, URL_GITHUB } from '@/core/types/contants/constants';
+
+const { t } = useI18n();
 
 const openInNewTab = (url: string): void => {
     window.open(url, '_blank', 'noopener,noreferrer')
@@ -19,7 +21,7 @@ const openInNewTab = (url: string): void => {
         <v-divider class="my-2" thickness="2" width="50"></v-divider>
 
         <div>
-            <strong>Florent Dubut © {{ new Date().getFullYear() }} - All rights reserved</strong>
+            <strong>Florent Dubut {{ t('components.shared.footer.copyright', { year: new Date().getFullYear() }) }}</strong>
         </div>
     </v-footer>
 </template>
