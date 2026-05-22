@@ -70,6 +70,7 @@ const skillCategories: SkillCategory[] = [
       { name: "Azure", icon: "mdi-microsoft-azure" },
       { name: "AWS", icon: "mdi-aws" },
       { name: "GCP", icon: "mdi-google-cloud" },
+      { name: "Terraform", icon: "mdi-terraform" },
     ],
   },
   {

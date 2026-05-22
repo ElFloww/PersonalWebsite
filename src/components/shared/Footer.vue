@@ -21,7 +21,7 @@ const openInNewTab = (url: string): void => {
         <v-divider class="my-2" thickness="2" width="50"></v-divider>
 
         <div>
-            <strong>Florent Dubut {{ t('components.shared.footer.copyright', { year: new Date().getFullYear() }) }}</strong>
+            <strong>{{ t('views.main.profil.title') }} {{ t('components.shared.footer.copyright', { year: new Date().getFullYear() }) }}</strong>
         </div>
     </v-footer>
 </template>

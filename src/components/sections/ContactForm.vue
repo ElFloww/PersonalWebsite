@@ -54,7 +54,7 @@ const submit = async () => {
                 from_email: form.value.email,
                 subject: form.value.subject,
                 message: form.value.message,
-                to_name: 'Florent Dubut'
+                to_name: t('views.main.profil.title')
             };
 
             await emailjs.send(

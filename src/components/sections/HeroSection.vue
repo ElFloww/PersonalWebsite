@@ -16,7 +16,7 @@ const scrollToSection = (sectionId: string) => {
         <v-row class="fill-height" align="center" justify="center">
             <v-col cols="12" class="text-center py-16">
                 <h1 class="text-h2 font-weight-bold mb-4 animate-title">
-                    <span class="gradient-text">Florent</span> Dubut
+                    <span class="gradient-text">{{ t('views.main.profil.title') }}</span>
                 </h1>
                 <h2 class="text-h4 font-weight-light mb-8 text-grey-darken-1 animate-subtitle">
                     {{ t('views.main.profil.description') }}

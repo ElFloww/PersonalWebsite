@@ -3,7 +3,7 @@ import { ref } from "vue";
 import { useI18n } from "vue-i18n";
 import orangeLogo from "@/assets/images/logo_orange.svg";
 
-const { t } = useI18n();
+const { t, tm } = useI18n();
 
 interface Experience {
   key: string;
@@ -21,9 +21,9 @@ interface Experience {
 
 const getExperienceDetails = (experienceKey: string): string[] => {
   const detailsKey = `views.main.professionalExperience.${experienceKey}.details`;
-  const details = t(detailsKey);
-  // If t() returns the key itself, it means the translation doesn't exist, so return empty array
-  return typeof details === "string" && !Array.isArray(details) ? [] : (details as string[]);
+  const details = tm(detailsKey);
+
+  return Array.isArray(details) ? (details as string[]) : [];
 };
 
 const experiences: Experience[] = [

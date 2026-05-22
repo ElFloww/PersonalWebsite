@@ -52,8 +52,8 @@ const values = [
 <template>
   <v-container id="about" fluid class="about-section py-16">
     <!-- Bannière recherche d'emploi -->
-    <v-row v-if="seekingJob" justify="center" class="mb-6">
-      <v-col cols="12" md="10">
+    <v-row v-if="true" justify="center" class="mb-6">
+      <v-col cols="12" md="6">
         <v-alert
           color="green-darken-2"
           variant="tonal"
@@ -65,20 +65,6 @@ const values = [
             <span class="font-weight-medium">{{
               t("views.main.presentation.seekingJobBanner")
             }}</span>
-            <div class="d-flex flex-wrap ga-1">
-              <v-chip color="green-darken-2" variant="flat" size="small">
-                <v-icon start size="small">mdi-map-marker</v-icon>
-                Marseille
-              </v-chip>
-              <v-chip color="green-darken-2" variant="flat" size="small">
-                <v-icon start size="small">mdi-map-marker</v-icon>
-                Aix-en-Provence
-              </v-chip>
-              <v-chip color="green-darken-2" variant="flat" size="small">
-                <v-icon start size="small">mdi-map-marker</v-icon>
-                Toulon
-              </v-chip>
-            </div>
           </div>
         </v-alert>
       </v-col>
@@ -144,7 +130,7 @@ const values = [
       </v-col>
 
       <!-- Paragraphes + Philosophie -->
-      <v-col cols="12" md="8">
+      <v-col cols="12" md="6">
         <v-card elevation="6" class="pa-8 glass-card mb-4">
           <v-card-text class="pa-0">
             <!-- Paragraphe 1 : Qui suis-je -->
@@ -193,80 +179,13 @@ const values = [
                 </p>
               </div>
             </div>
-
-            <!-- Approche / Philosophie -->
-            <!-- <v-alert
-              variant="tonal"
-              color="green-lighten-1"
-              class="mt-2"
-              icon="mdi-lightbulb-on-outline"
-              border="start"
-            >
-              <div class="font-weight-bold mb-1">
-                {{ t("views.main.presentation.philosophyTitle") }}
-              </div>
-              <div style="line-height: 1.75">
-                {{ t("views.main.presentation.philosophyText") }}
-              </div>
-            </v-alert> -->
           </v-card-text>
         </v-card>
       </v-col>
     </v-row>
 
     <!-- Ligne 2 : Valeurs + Objectif CDI Provence -->
-    <v-row justify="center" class="mb-4">
-      <!-- Valeurs -->
-      <v-col cols="12" md="5">
-        <v-card elevation="4" class="pa-6 glass-card h-100">
-          <h3 class="text-h6 font-weight-bold mb-4 text-green-lighten-1">
-            <v-icon icon="mdi-star-circle-outline" class="mr-2" />
-            {{ t("views.main.presentation.valuesTitle") }}
-          </h3>
-          <div class="d-flex flex-column ga-3">
-            <div
-              v-for="value in values"
-              :key="value.key"
-              class="value-item d-flex align-start ga-3 pa-3 rounded-lg"
-            >
-              <v-icon
-                :icon="value.icon"
-                :color="value.color"
-                size="20"
-                class="mt-1 flex-shrink-0"
-              />
-              <span class="text-body-2" style="line-height: 1.6">
-                {{ t(`views.main.presentation.values.${value.key}`) }}
-              </span>
-            </div>
-          </div>
-        </v-card>
-      </v-col>
-
-      <!-- Objectif CDI -->
-      <v-col cols="12" md="5">
-        <v-card
-          elevation="4"
-          class="pa-6 goal-card h-100"
-          color="green-darken-3"
-        >
-          <h3 class="text-h6 font-weight-bold mb-4" style="color: white">
-            <v-icon icon="mdi-map-marker-star-outline" class="mr-2" />
-            {{ t("views.main.presentation.goalTitle") }}
-          </h3>
-          <p
-            class="text-body-1 mb-5 text-justify"
-            style="line-height: 1.85; color: rgba(255, 255, 255, 0.92)"
-          >
-            {{ t("views.main.presentation.goalText") }}
-          </p>
-          <v-chip color="white" variant="outlined" size="large">
-            <v-icon start>mdi-briefcase-search-outline</v-icon>
-            {{ t("views.main.presentation.goalCTA") }}
-          </v-chip>
-        </v-card>
-      </v-col>
-    </v-row>
+    
 
     <!-- Ligne 3 : Passions -->
     <v-row justify="center">

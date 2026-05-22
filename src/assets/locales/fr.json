@@ -31,17 +31,17 @@
       "profil": {
         "title": "Florent Dubut",
         "yearsOld": "ans",
-        "description": "Développeur Backend .NET | C#"
+        "description": "Ingénieur logiciel | Backend .NET & DevOps"
       },
       "presentation": {
         "title": "👋 Bonjour, moi c'est Florent",
-        "subtitle": "Développeur Backend .NET",
-        "seekingJobBanner": "🟢 Disponible en CDI dès septembre 2026 — Marseille · Aix-en-Provence · Toulon",
-        "locationBadge": "Actuellement à Amiens — Retour en Provence en septembre 2026",
-        "firstParagraph1": "Originaire de Nogent-le-Rotrou, au cœur du Perche normand, j'ai grandi entouré de nature et d'une curiosité grandissante pour la technologie.",
-        "firstParagraph2": "Tout a commencé vers 14 ans avec la découverte de Python : une vraie révélation. La spécialité NSI au lycée n'a fait qu'amplifier cette passion.",
-        "firstParagraph3": "J'ai ensuite construit mes bases à Amiens avec un BUT Informatique à l'IUT, avant de pousser plus loin avec un Master Cloud Computing & Mobility à l'INSSET de Saint-Quentin — une formation exigeante que j'ai vécu pleinement en alternance chez Orange Business.",
-        "secondParagraph": "Je suis développeur Backend spécialisé en .NET & C#. Mon terrain de jeu : des APIs RESTful propres, une clean architecture rigoureuse, SQL Server, et des injections de dépendances bien pensées. Je fais aussi du front en Vue.js — ce qui me donne une double vision utile pour documenter mes APIs avec précision. Mais c'est côté backend que je m'épanouis vraiment.",
+        "subtitle": "Ingénieur logiciel spécialisé backend .NET et DevOps, avec un vrai goût pour l'architecture et l'automatisation.",
+        "seekingJobBanner": "🟢 CDI recherché en région PACA à partir de septembre 2026 — Toulon · Marseille · Aix-en-Provence",
+        "locationBadge": "Déménagement définitif à Toulon fin août 2026 pour raison familiale",
+        "firstParagraph1": "Passionné par l'architecture logicielle, je suis aujourd'hui ingénieur logiciel avec une forte dominante Backend (.NET/C#) et DevOps.",
+        "firstParagraph2": "J'ai construit mon socle technique à travers un BUT Informatique puis un Master Cloud Computing à l'INSSET, une formation entièrement réalisée en alternance chez Orange Business.",
+        "firstParagraph3": "Concevoir des APIs et des architectures propres est ce qui m'anime au quotidien.",
+        "secondParagraph": "J'aborde mes projets avec une vision complète du cycle de vie logiciel : du développement backend pur, jusqu'à l'automatisation des déploiements grâce à une bonne culture DevOps et Cloud (CI/CD, conteneurisation). Ma connaissance de Vue.js vient compléter cette approche en me donnant la vision globale nécessaire pour collaborer efficacement avec les équipes front.",
         "philosophyTitle": "Mon approche",
         "philosophyText": "Avant de taper la moindre ligne de code, je m'assure d'avoir parfaitement compris le besoin métier et l'objectif final. Je conçois d'abord l'architecture de la base de données et les contrats d'API, puis je développe brique par brique avec un code propre, testable et maintenable. Face à un bug, pas de pansement — je remonte à la source, je corrige la faille et j'écris un test pour ne plus jamais y revenir.",
         "valuesTitle": "Ce qui me guide",
@@ -51,9 +51,9 @@
           "pragmatism": "Rigueur & pragmatisme : comprendre avant de coder, corriger à la source",
           "continuousImprovement": "Amélioration continue — techniquement et humainement"
         },
-        "goalTitle": "Mon objectif",
-        "goalText": "À la fin de mes études, en septembre 2026, je rentre en Provence — ma famille y est, et c'est là que j'envisage de construire la suite de ma carrière. Je cherche un CDI dans le développement logiciel à Marseille, Aix-en-Provence ou Toulon, idéalement orienté backend, au sein d'une équipe où la qualité du code et la bonne entente comptent autant que la technique.",
-        "goalCTA": "CDI à Marseille · Aix-en-Provence · Toulon — dès sept. 2026",
+        "goalTitle": "Ce que je recherche",
+        "goalText": "À partir de septembre 2026, je recherche un CDI en région PACA, idéalement à Toulon, Marseille ou Aix-en-Provence. Je souhaite rejoindre une équipe qui valorise l'architecture logicielle, l'automatisation et la qualité de code, avec un vrai terrain de jeu backend .NET / DevOps.",
+        "goalCTA": "CDI en PACA — Toulon, Marseille, Aix-en-Provence — dès sept. 2026",
         "interestsTitle": "Passions & centres d'intérêt",
         "passions": {
           "sport": {
@@ -74,7 +74,7 @@
           },
           "music": {
             "title": "Musique",
-            "description": "Ma playlist tourne autour des classiques français et des vieilles âmes : Dalida, Joe Dassin, Christophe... Des voix et des mélodies qui ont quelque chose d'inépuisable. La musique, c'est mon meilleur mode de déconnexion."
+            "description": "J'écoute du rap comme Damso, mais aussi des sons latinos comme Bad Bunny et des classiques français comme Dalida, Joe Dassin ou Christophe, selon mes humeurs. La musique est mon meilleur mode de déconnexion."
           }
         }
       },
@@ -94,6 +94,7 @@
           "tech": "C# · ASP.NET Core (.NET 6) · Vue.js · Vuetify · AngularJS · SQL Server · Entity Framework Core · Injection de dépendances · AutoMapper",
           "details": [
             "Initialisation d'une application d'optimisation de l'internationalisation. Développement complet d'une API REST (.NET 6) et du backoffice en Vue.js (Vuetify)",
+            "Développement Full-Stack : création de fonctionnalités back-end et intégration d'interfaces front-end.",
             "Montée en compétences en bonnes pratiques d'architecture (Clean Architecture) et industrialisation du code (Git, Pipelines, Revues de code)",
             "Apprentissage de l'écosystème .NET Core et maîtrise de la programmation orientée objet",
             "Utilisation de patterns modernes et intégration dans une équipe Agile"
@@ -108,6 +109,7 @@
           "tech": "C# · ASP.NET Core (.NET 6) · Clean Architecture · CQRS (MediatR) · xUnit · FluentValidation · Azure DevOps · Swagger",
           "details": [
             "Développement d'API en Clean Architecture avec technologies modernes (ASP.NET Core .NET 6, C#, MediatR)",
+            "Développement Full-Stack : création de fonctionnalités back-end et intégration d'interfaces front-end.",
             "Assurance qualité logicielle : tests unitaires et d'intégration (xUnit) avec objectif de 80% de couverture, réduction du code dupliqué et élimination proactive des code smells",
             "Documentation technique complète avec Swagger / OpenAPI",
             "Gestion de version et pipelines CI/CD via Git et Azure DevOps",
@@ -173,7 +175,7 @@
           ]
         },
         "second": {
-          "date": "2023 - 2025",
+          "date": "2024 - 2026",
           "title": "Master — Cloud Computing and Mobility",
           "school": "INSSET — Université de Picardie Jules Verne, Saint-Quentin",
           "content": "Formation de pointe de niveau Bac+5 orientée sur les architectures Cloud, l'écosystème DevOps et les systèmes distribués, réalisée en alternance chez Orange Business.",

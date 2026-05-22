@@ -52,7 +52,7 @@ const experienceYears = Number.parseFloat(
   ).toFixed(0),
 );
 
-const targetValues = [experienceYears, 15, 25];
+const targetValues = [experienceYears, 5, 25];
 
 const animateValue = (
   index: number,
@@ -95,7 +95,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <v-container id="stats-section" fluid class="stats-section pa-0">
+  <v-container id="stats-section" fluid class="stats-section px-16">
     <div class="stats-wrapper py-16">
       <v-row justify="center" align="center">
         <v-col
