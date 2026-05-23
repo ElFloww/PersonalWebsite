@@ -14,11 +14,11 @@ interface ProjectDetail {
 }
 
 interface ProjectTechCategory {
-    title: string;
+    category: string;
     icon: string;
-    accent: string;
+    color: string;
     gradient: string;
-    skills: { name: string; icon: string }[];
+    tools: string[];
 }
 
 interface Project {
@@ -28,6 +28,7 @@ interface Project {
     period?: string;
     technologies: string[];
     techCategories?: ProjectTechCategory[];
+    additionalTechnologies?: string[];
     image?: string;
     logo?: string;
     logoZoom?: number;
@@ -59,48 +60,29 @@ const projects = computed<Project[]>(() => {
             concept: t('views.main.projects.items.tuuuur.concept'),
             technologies: ['C#', '.NET Core', 'Vue.js', 'Flutter', 'SignalR', 'SQL Server', 'Redis', 'GCP', 'Terraform'],
             techCategories: [
-                                {
-                    title: t('views.main.skills.devops'),
-                    icon: 'mdi-cloud-outline',
-                    accent: '#8E24AA',
-                    gradient: 'linear-gradient(135deg, #AB47BC 0%, #8E24AA 100%)',
-                    skills: [
-                        { name: 'GCP', icon: 'mdi-google-cloud' },
-                        { name: 'Terraform', icon: 'mdi-wrench-outline' }
-                    ]
+                {
+                    category: "Cloud Platforms",
+                    icon: "mdi-cloud-outline",
+                    color: "#1976D2",
+                    gradient: "linear-gradient(135deg, #2196F3 0%, #1565C0 100%)",
+                    tools: ["GCP"]
                 },
                 {
-                    title: t('views.main.skills.backend'),
-                    icon: 'mdi-code-braces',
-                    accent: '#FB8C00',
-                    gradient: 'linear-gradient(135deg, #FFA726 0%, #FB8C00 100%)',
-                    skills: [
-                        { name: 'C#', icon: 'mdi-language-csharp' },
-                        { name: '.NET Core', icon: 'mdi-dot-net' },
-                        { name: 'SignalR', icon: 'mdi-signal' }
-                    ]
+                    category: "DevOps & Automation",
+                    icon: "mdi-cog-sync",
+                    color: "#43A047",
+                    gradient: "linear-gradient(135deg, #66BB6A 0%, #388E3C 100%)",
+                    tools: ["Terraform"]
                 },
                 {
-                    title: t('views.main.skills.database'),
-                    icon: 'mdi-database',
-                    accent: '#43A047',
-                    gradient: 'linear-gradient(135deg, #66BB6A 0%, #388E3C 100%)',
-                    skills: [
-                        { name: 'SQL Server', icon: 'mdi-database' },
-                        { name: 'Redis', icon: 'mdi-database-outline' }
-                    ]
-                },
-                {
-                    title: t('views.main.skills.frontend'),
-                    icon: 'mdi-monitor-dashboard',
-                    accent: '#1976D2',
-                    gradient: 'linear-gradient(135deg, #42A5F5 0%, #1976D2 100%)',
-                    skills: [
-                        { name: 'Vue.js', icon: 'mdi-vuejs' },
-                        { name: 'Flutter', icon: 'mdi-cellphone' }
-                    ]
-                },
+                    category: "Programming & Scripting",
+                    icon: "mdi-code-braces",
+                    color: "#FB8C00",
+                    gradient: "linear-gradient(135deg, #FFA726 0%, #FB8C00 100%)",
+                    tools: ["C#", ".NET Core", "Vue.js", "Flutter"]
+                }
             ],
+            additionalTechnologies: ["SignalR", "SQL Server", "Redis"],
             image: 'tuuuur',
             logo: 'tuuuur',
             logoZoom: 1,
@@ -179,36 +161,14 @@ const projects = computed<Project[]>(() => {
             technologies: ['TypeScript', 'Vue.js', 'Flutter', 'Node.js', 'PostgreSQL', 'JWT'],
             techCategories: [
                 {
-                    title: t('views.main.skills.backend'),
-                    icon: 'mdi-code-braces',
-                    accent: '#FB8C00',
-                    gradient: 'linear-gradient(135deg, #FFA726 0%, #FB8C00 100%)',
-                    skills: [
-                        { name: 'Node.js', icon: 'mdi-nodejs' },
-                        { name: 'TypeScript', icon: 'mdi-language-typescript' },
-                        { name: 'JWT', icon: 'mdi-shield-key-outline' }
-                    ]
-                },
-                {
-                    title: t('views.main.skills.frontend'),
-                    icon: 'mdi-monitor-dashboard',
-                    accent: '#1976D2',
-                    gradient: 'linear-gradient(135deg, #42A5F5 0%, #1976D2 100%)',
-                    skills: [
-                        { name: 'Vue.js', icon: 'mdi-vuejs' },
-                        { name: 'Flutter', icon: 'mdi-cellphone' }
-                    ]
-                },
-                {
-                    title: t('views.main.skills.database'),
-                    icon: 'mdi-database',
-                    accent: '#43A047',
-                    gradient: 'linear-gradient(135deg, #66BB6A 0%, #388E3C 100%)',
-                    skills: [
-                        { name: 'PostgreSQL', icon: 'mdi-database' }
-                    ]
+                    category: "Programming & Scripting",
+                    icon: "mdi-code-braces",
+                    color: "#FB8C00",
+                    gradient: "linear-gradient(135deg, #FFA726 0%, #FB8C00 100%)",
+                    tools: ["TypeScript", "Node.js", "Vue.js", "Flutter"]
                 }
             ],
+            additionalTechnologies: ["PostgreSQL", "JWT"],
             image: 'kairos',
             logo: 'kairos',
             logoZoom: 2,
@@ -270,19 +230,14 @@ const projects = computed<Project[]>(() => {
             title: t('views.main.projects.items.portfolio.title'),
             shortDescription: t('views.main.projects.items.portfolio.shortDescription'),
             description: t('views.main.projects.items.portfolio.description'),
-            technologies: ['Vue.js', 'Vuetify', 'TypeScript', 'Vite'],
+            technologies: ['Vue.js 3', 'Vuetify 3', 'TypeScript', 'Vite'],
             techCategories: [
                 {
-                    title: t('views.main.skills.frontend'),
-                    icon: 'mdi-monitor-dashboard',
-                    accent: '#1976D2',
-                    gradient: 'linear-gradient(135deg, #42A5F5 0%, #1976D2 100%)',
-                    skills: [
-                        { name: 'Vue.js 3', icon: 'mdi-vuejs' },
-                        { name: 'Vuetify 3', icon: 'mdi-vuetify' },
-                        { name: 'TypeScript', icon: 'mdi-language-typescript' },
-                        { name: 'Vite', icon: 'mdi-lightning-bolt' }
-                    ]
+                    category: "Programming & Scripting",
+                    icon: "mdi-code-braces",
+                    color: "#FB8C00",
+                    gradient: "linear-gradient(135deg, #FFA726 0%, #FB8C00 100%)",
+                    tools: ["TypeScript", "Vue.js 3", "Vuetify 3", "Vite"]
                 }
             ],
             github: 'https://github.com/florentdubut/florent-dubut.fr',
@@ -543,7 +498,7 @@ const openProjectDetail = (project: Project) => {
                                 <div class="education-categories-grid">
                                     <v-card
                                         v-for="category in selectedProject.techCategories"
-                                        :key="category.title"
+                                        :key="category.category"
                                         class="technical-card mb-4"
                                         elevation="0"
                                     >
@@ -553,23 +508,41 @@ const openProjectDetail = (project: Project) => {
                                                     <div class="technical-icon" :style="{ background: category.gradient }">
                                                         <v-icon :icon="category.icon" size="20" color="white"></v-icon>
                                                     </div>
-                                                    <h4 class="text-subtitle-1 font-weight-bold ma-0">{{ category.title }}</h4>
+                                                    <h4 class="text-subtitle-1 font-weight-bold ma-0">{{ category.category }}</h4>
                                                 </div>
                                             </div>
                                             <div class="skills-mini-grid">
                                                 <v-sheet
-                                                    v-for="skill in category.skills"
-                                                    :key="skill.name"
+                                                    v-for="tool in category.tools"
+                                                    :key="tool"
                                                     class="skill-mini-card"
                                                     rounded="lg"
-                                                    :style="{ borderColor: category.accent }"
+                                                    :style="{ borderColor: category.color }"
                                                 >
-                                                    <v-icon :color="category.accent" :icon="skill.icon" size="18" class="mr-2"></v-icon>
-                                                    {{ skill.name }}
+                                                    <v-icon :color="category.color" icon="mdi-check-circle" size="18" class="mr-2"></v-icon>
+                                                    {{ tool }}
                                                 </v-sheet>
                                             </div>
                                         </v-card-text>
                                     </v-card>
+                                </div>
+                                
+                                <div v-if="selectedProject.additionalTechnologies && selectedProject.additionalTechnologies.length > 0" class="mt-6">
+                                    <h4 class="text-subtitle-1 font-weight-bold mb-3 d-flex align-center">
+                                        Additional Technologies
+                                    </h4>
+                                    <div class="additional-tech">
+                                        <v-chip
+                                            v-for="tech in selectedProject.additionalTechnologies"
+                                            :key="tech"
+                                            class="ma-1"
+                                            variant="outlined"
+                                            color="grey-darken-1"
+                                            size="small"
+                                        >
+                                            {{ tech }}
+                                        </v-chip>
+                                    </div>
                                 </div>
                             </section>
 
@@ -968,6 +941,19 @@ const openProjectDetail = (project: Project) => {
     align-items: center;
     justify-content: center;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.additional-tech {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+
+.additional-tech .v-chip {
+    border-radius: 999px;
+    background: rgba(245,245,245,0.8);
+    color: var(--ink);
 }
 
 .mission-marker,

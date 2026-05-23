@@ -22,6 +22,7 @@ interface Education {
   gradient: string;
   logo?: string;
   categories: EducationCategory[];
+  additionalTechnologies?: string[];
 }
 
 const educations: Education[] = [
@@ -33,12 +34,12 @@ const educations: Education[] = [
     logo: inssetLogo,
     categories: [
       {
-        titleFr: "Cloud & Infrastructures",
-        titleEn: "Cloud & Infrastructures",
+        titleFr: "Cloud Platforms",
+        titleEn: "Cloud Platforms",
         icon: "mdi-cloud-outline",
         accent: "#1976D2",
         gradient: "linear-gradient(135deg, #2196F3 0%, #1565C0 100%)",
-        skills: ["Azure", "AWS", "Google Cloud Platform (GCP)", "Infrastructure as Code (IaC)", "Terraform", "ARM Templates", "Virtualisation"]
+        skills: ["Azure", "AWS", "Google Cloud Platform (GCP)"]
       },
       {
         titleFr: "Containers & Orchestration",
@@ -46,24 +47,26 @@ const educations: Education[] = [
         icon: "mdi-kubernetes",
         accent: "#8E24AA",
         gradient: "linear-gradient(135deg, #AB47BC 0%, #8E24AA 100%)",
-        skills: ["Docker", "Kubernetes (K8s)", "Docker Swarm", "Architectures Microservices", "Cloud-native patterns"]
+        skills: ["Docker", "Kubernetes (K8s)", "Docker Swarm"]
       },
       {
-        titleFr: "DevOps & Automatisation",
+        titleFr: "DevOps & Automation",
         titleEn: "DevOps & Automation",
         icon: "mdi-cog-sync",
         accent: "#43A047",
         gradient: "linear-gradient(135deg, #66BB6A 0%, #388E3C 100%)",
-        skills: ["Azure DevOps", "GitLab CI", "Pipelines CI/CD", "Déploiements automatisés", "Monitoring"]
-      },
-      {
-        titleFr: "Architecture & Technologies",
-        titleEn: "Architecture & Technologies",
-        icon: "mdi-server-network",
-        accent: "#FB8C00",
-        gradient: "linear-gradient(135deg, #FFA726 0%, #FB8C00 100%)",
-        skills: ["Architectures événementielles", "Internet of Things (IoT)", "Big Data & Cloud Data Management", "Intelligence Artificielle", "Développement Mobile (iOS/Android)"]
+        skills: ["Azure DevOps", "GitLab CI", "Pipelines CI/CD", "Déploiements automatisés", "Monitoring", "Infrastructure as Code (IaC)", "Terraform", "ARM Templates"]
       }
+    ],
+    additionalTechnologies: [
+      "Architectures Microservices",
+      "Cloud-native patterns",
+      "Virtualisation",
+      "Architectures événementielles",
+      "Internet of Things (IoT)",
+      "Big Data & Cloud Data Management",
+      "Intelligence Artificielle",
+      "Développement Mobile (iOS/Android)"
     ]
   },
   {
@@ -74,37 +77,34 @@ const educations: Education[] = [
     logo: upjvLogo,
     categories: [
       {
-        titleFr: "Langages & Développement",
-        titleEn: "Languages & Development",
-        icon: "mdi-code-tags",
-        accent: "#1976D2",
-        gradient: "linear-gradient(135deg, #2196F3 0%, #1565C0 100%)",
+        titleFr: "Programming & Scripting",
+        titleEn: "Programming & Scripting",
+        icon: "mdi-code-braces",
+        accent: "#FB8C00",
+        gradient: "linear-gradient(135deg, #FFA726 0%, #FB8C00 100%)",
         skills: ["C#", "Java", "Python", "C++", "PHP", "JavaScript", "HTML/CSS"]
       },
       {
-        titleFr: "Conception & Architecture",
-        titleEn: "Design & Architecture",
-        icon: "mdi-drawing",
-        accent: "#8E24AA",
-        gradient: "linear-gradient(135deg, #AB47BC 0%, #8E24AA 100%)",
-        skills: ["Programmation Orientée Objet (POO)", "Design Patterns", "UML / MCD", "Architecture logicielle"]
-      },
-      {
-        titleFr: "Bases de données & Systèmes",
-        titleEn: "Databases & Systems",
-        icon: "mdi-database",
+        titleFr: "DevOps & Automation",
+        titleEn: "DevOps & Automation",
+        icon: "mdi-cog-sync",
         accent: "#43A047",
         gradient: "linear-gradient(135deg, #66BB6A 0%, #388E3C 100%)",
-        skills: ["SQL Server", "PostgreSQL", "NoSQL", "Administration Linux", "Réseaux TCP/IP"]
-      },
-      {
-        titleFr: "Méthodologie & Qualité",
-        titleEn: "Methodology & Quality",
-        icon: "mdi-check-decagram",
-        accent: "#FB8C00",
-        gradient: "linear-gradient(135deg, #FFA726 0%, #FB8C00 100%)",
-        skills: ["Méthode Agile (Scrum)", "Tests unitaires & d'intégration", "Couverture de code", "Git"]
+        skills: ["Administration Linux", "Git"]
       }
+    ],
+    additionalTechnologies: [
+      "Programmation Orientée Objet (POO)",
+      "Design Patterns",
+      "UML / MCD",
+      "Architecture logicielle",
+      "SQL Server",
+      "PostgreSQL",
+      "NoSQL",
+      "Réseaux TCP/IP",
+      "Méthode Agile (Scrum)",
+      "Tests unitaires & d'intégration",
+      "Couverture de code"
     ]
   },
 ];
@@ -348,6 +348,25 @@ const showDetails = (edu: Education) => {
                     </v-card-text>
                   </v-card>
                 </div>
+
+                <div v-if="selectedEducation.additionalTechnologies && selectedEducation.additionalTechnologies.length > 0" class="mt-6">
+                  <h4 class="text-subtitle-1 font-weight-bold mb-3 d-flex align-center">
+                    Additional Technologies
+                  </h4>
+                  <div class="additional-tech">
+                    <v-chip
+                      v-for="tech in selectedEducation.additionalTechnologies"
+                      :key="tech"
+                      class="ma-1"
+                      variant="outlined"
+                      color="grey-darken-1"
+                      size="small"
+                    >
+                      {{ tech }}
+                    </v-chip>
+                  </div>
+                </div>
+                
               </div>
             </section>
           </div>
@@ -654,6 +673,19 @@ const showDetails = (edu: Education) => {
   align-items: center;
   justify-content: center;
   box-shadow: 0 8px 16px rgba(15, 29, 20, 0.08);
+}
+
+.additional-tech {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+.additional-tech .v-chip {
+  border-radius: 999px;
+  background: rgba(245,245,245,0.8);
+  color: var(--ink);
 }
 
 @media (max-width: 960px) {

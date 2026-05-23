@@ -1,4 +1,4 @@
-﻿<script setup lang="ts">
+<script setup lang="ts">
 import { ref } from "vue";
 import { useI18n } from "vue-i18n";
 import orangeLogo from "@/assets/images/logo_orange.svg";
@@ -15,8 +15,11 @@ interface Experience {
   technologies: {
     category: string;
     icon: string;
+    color: string;
+    gradient: string;
     tools: string[];
   }[];
+  additionalTechnologies?: string[];
 }
 
 const getExperienceDetails = (experienceKey: string): string[] => {
@@ -35,41 +38,39 @@ const experiences: Experience[] = [
     logo: orangeLogo,
     technologies: [
       {
-        category: "Langages",
-        icon: "mdi-code-tags",
-        tools: ["C#", "TypeScript", "JavaScript"],
+        category: "Programming & Scripting",
+        icon: "mdi-code-braces",
+        color: "#FB8C00",
+        gradient: "linear-gradient(135deg, #FFA726 0%, #FB8C00 100%)",
+        tools: ["C#", "TypeScript", "JavaScript", "ASP.NET Core (.NET 6/.NET 8)", "Vue.js 3", "Angular", "Vuetify"],
       },
       {
-        category: "Backend",
-        icon: "mdi-server",
-        tools: ["ASP.NET Core (.NET 6/.NET 8)", "Entity Framework Core", "MediatR", "CQRS"],
+        category: "Containers & Orchestration",
+        icon: "mdi-kubernetes",
+        color: "#8E24AA",
+        gradient: "linear-gradient(135deg, #AB47BC 0%, #8E24AA 100%)",
+        tools: ["Docker"],
       },
       {
-        category: "Frontend",
-        icon: "mdi-palette",
-        tools: ["Vue.js 3", "Angular", "Vuetify"],
-      },
-      {
-        category: "Bases de données",
-        icon: "mdi-database",
-        tools: ["SQL Server", "Entity Framework Core"],
-      },
-      {
-        category: "APIs & Intégrations",
-        icon: "mdi-api",
-        tools: ["REST", "SOAP", "Whisper IA (OpenAI)"],
-      },
-      {
-        category: "DevOps",
-        icon: "mdi-docker",
-        tools: ["Docker", "Azure DevOps", "CI/CD", "Git"],
-      },
-      {
-        category: "Méthodologie",
-        icon: "mdi-chart-gantt",
-        tools: ["Agile", "Scrum", "Revues de code"],
+        category: "DevOps & Automation",
+        icon: "mdi-cog-sync",
+        color: "#43A047",
+        gradient: "linear-gradient(135deg, #66BB6A 0%, #388E3C 100%)",
+        tools: ["Azure DevOps", "CI/CD", "Git"],
       },
     ],
+    additionalTechnologies: [
+      "Entity Framework Core",
+      "MediatR",
+      "CQRS",
+      "SQL Server",
+      "REST",
+      "SOAP",
+      "Whisper IA (OpenAI)",
+      "Agile",
+      "Scrum",
+      "Revues de code"
+    ]
   },
   {
     key: "second",
@@ -80,36 +81,29 @@ const experiences: Experience[] = [
     logo: orangeLogo,
     technologies: [
       {
-        category: "Langages",
-        icon: "mdi-code-tags",
-        tools: ["C#"],
+        category: "Programming & Scripting",
+        icon: "mdi-code-braces",
+        color: "#FB8C00",
+        gradient: "linear-gradient(135deg, #FFA726 0%, #FB8C00 100%)",
+        tools: ["C#", "ASP.NET Core (.NET 6)"],
       },
       {
-        category: "Backend",
-        icon: "mdi-server",
-        tools: ["ASP.NET Core (.NET 6)", "Entity Framework Core", "Clean Architecture"],
-      },
-      {
-        category: "Tests & Qualité",
-        icon: "mdi-check-circle",
-        tools: ["xUnit", "FluentValidation", "MediatR"],
-      },
-      {
-        category: "Bases de données",
-        icon: "mdi-database",
-        tools: ["SQL Server"],
-      },
-      {
-        category: "Documentation",
-        icon: "mdi-file-document",
-        tools: ["Swagger / OpenAPI"],
-      },
-      {
-        category: "DevOps",
-        icon: "mdi-docker",
-        tools: ["Git", "Azure DevOps"],
+        category: "DevOps & Automation",
+        icon: "mdi-cog-sync",
+        color: "#43A047",
+        gradient: "linear-gradient(135deg, #66BB6A 0%, #388E3C 100%)",
+        tools: ["Azure DevOps", "Git"],
       },
     ],
+    additionalTechnologies: [
+      "Entity Framework Core",
+      "Clean Architecture",
+      "xUnit",
+      "FluentValidation",
+      "MediatR",
+      "SQL Server",
+      "Swagger / OpenAPI"
+    ]
   },
   {
     contractType: "Stage",
@@ -120,36 +114,27 @@ const experiences: Experience[] = [
     logo: orangeLogo,
     technologies: [
       {
-        category: "Langages",
-        icon: "mdi-code-tags",
-        tools: ["C#"],
+        category: "Programming & Scripting",
+        icon: "mdi-code-braces",
+        color: "#FB8C00",
+        gradient: "linear-gradient(135deg, #FFA726 0%, #FB8C00 100%)",
+        tools: ["C#", "ASP.NET Core (.NET 6)", "Vue.js", "Vuetify", "AngularJS"],
       },
       {
-        category: "Backend",
-        icon: "mdi-server",
-        tools: ["ASP.NET Core (.NET 6)", "Entity Framework Core"],
-      },
-      {
-        category: "Frontend",
-        icon: "mdi-palette",
-        tools: ["Vue.js", "Vuetify", "AngularJS"],
-      },
-      {
-        category: "Bases de données",
-        icon: "mdi-database",
-        tools: ["SQL Server"],
-      },
-      {
-        category: "Architecture",
-        icon: "mdi-blueprint",
-        tools: ["Clean Architecture", "Injection de dépendances", "AutoMapper"],
-      },
-      {
-        category: "Gestion de version",
-        icon: "mdi-git",
+        category: "DevOps & Automation",
+        icon: "mdi-cog-sync",
+        color: "#43A047",
+        gradient: "linear-gradient(135deg, #66BB6A 0%, #388E3C 100%)",
         tools: ["Git"],
       },
     ],
+    additionalTechnologies: [
+      "Entity Framework Core",
+      "SQL Server",
+      "Clean Architecture",
+      "Injection de dépendances",
+      "AutoMapper"
+    ]
   },
 ];
 
@@ -364,26 +349,53 @@ const showDetails = (exp: Experience) => {
                 Stack Technique
               </h3>
 
-              <div class="technologies-grid">
-                <div
-                  v-for="(techCategory, idx) in selectedExperience.technologies"
-                  :key="idx"
-                  class="tech-category-card"
+              <div class="education-categories-grid mt-4">
+                <v-card
+                  v-for="category in selectedExperience.technologies"
+                  :key="category.category"
+                  class="technical-card mb-4"
+                  elevation="0"
                 >
-                  <div class="tech-category-header">
-                    <v-icon :color="selectedExperience.color" :icon="techCategory.icon" size="18" class="mr-2"></v-icon>
-                    <span class="category-title font-weight-bold">{{ techCategory.category }}</span>
-                  </div>
-
-                  <div class="tech-mini-grid">
-                    <div
-                      v-for="tool in techCategory.tools"
-                      :key="tool"
-                      class="tech-mini-card"
-                    >
-                      {{ tool }}
+                  <v-card-text class="pa-4">
+                    <div class="technical-card-header mb-4">
+                      <div class="technical-title-wrap">
+                        <div class="technical-icon" :style="{ background: category.gradient }">
+                          <v-icon :icon="category.icon" size="20" color="white"></v-icon>
+                        </div>
+                        <h4 class="text-subtitle-1 font-weight-bold ma-0">{{ category.category }}</h4>
+                      </div>
                     </div>
-                  </div>
+                    <div class="skills-mini-grid">
+                      <v-sheet
+                        v-for="tool in category.tools"
+                        :key="tool"
+                        class="skill-mini-card"
+                        rounded="lg"
+                        :style="{ borderColor: category.color }"
+                      >
+                        <v-icon :color="category.color" icon="mdi-check-circle" size="18" class="mr-2"></v-icon>
+                        {{ tool }}
+                      </v-sheet>
+                    </div>
+                  </v-card-text>
+                </v-card>
+              </div>
+
+              <div v-if="selectedExperience.additionalTechnologies && selectedExperience.additionalTechnologies.length > 0" class="mt-6">
+                <h4 class="text-subtitle-1 font-weight-bold mb-3 d-flex align-center">
+                  Additional Technologies
+                </h4>
+                <div class="additional-tech">
+                  <v-chip
+                    v-for="tech in selectedExperience.additionalTechnologies"
+                    :key="tech"
+                    class="ma-1"
+                    variant="outlined"
+                    color="grey-darken-1"
+                    size="small"
+                  >
+                    {{ tech }}
+                  </v-chip>
                 </div>
               </div>
             </section>
@@ -635,54 +647,93 @@ const showDetails = (exp: Experience) => {
   color: var(--ink);
 }
 
-.technologies-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.85rem;
-}
-
-.tech-category-card {
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 0.85rem;
-}
-
-.tech-category-header {
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-  margin-bottom: 0.75rem;
-}
-
-.category-title {
-  color: var(--ink);
-  font-size: 0.92rem;
-}
-
-.tech-mini-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.5rem;
-}
-
-.tech-mini-card {
-  min-height: 40px;
-  padding: 0.45rem 0.65rem;
-  display: flex;
-  align-items: center;
-  border-radius: 10px;
-  background: linear-gradient(180deg, #ffffff 0%, #f8fcf8 100%);
-  border: 1px solid rgba(76, 175, 80, 0.08);
-  color: var(--ink);
-  font-size: 0.88rem;
-  font-weight: 600;
-}
-
 .dialog-actions {
   display: flex;
   justify-content: flex-end;
   gap: 0.5rem;
+}
+
+.education-categories-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.technical-card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.technical-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
+}
+
+.technical-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.technical-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.technical-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.skills-mini-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0.65rem;
+}
+
+.skill-mini-card {
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, #ffffff 0%, #f8fcf8 100%);
+  border-radius: 10px;
+  min-height: 48px;
+  height: auto;
+  padding: 0.55rem 0.7rem;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: var(--ink);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.25;
+}
+
+.skill-mini-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+}
+
+.additional-tech {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+.additional-tech .v-chip {
+  border-radius: 999px;
+  background: rgba(245,245,245,0.8);
+  color: var(--ink);
 }
 
 @keyframes fadeUp {
@@ -735,7 +786,7 @@ const showDetails = (exp: Experience) => {
     padding: 1rem;
   }
 
-  .tech-mini-grid {
+  .skills-mini-grid {
     grid-template-columns: 1fr;
   }
 }
