@@ -32,6 +32,7 @@ interface Project {
     image?: string;
     logo?: string;
     logoZoom?: number;
+    logoBackground?: string;
     link?: string;
     github?: string;
     color: string;
@@ -65,14 +66,14 @@ const projects = computed<Project[]>(() => {
                     icon: "mdi-cloud-outline",
                     color: "#1976D2",
                     gradient: "linear-gradient(135deg, #2196F3 0%, #1565C0 100%)",
-                    tools: ["GCP"]
+                    tools: ["Google Cloud Platform"]
                 },
                 {
                     category: "DevOps & Automation",
                     icon: "mdi-cog-sync",
                     color: "#43A047",
                     gradient: "linear-gradient(135deg, #66BB6A 0%, #388E3C 100%)",
-                    tools: ["Terraform"]
+                    tools: ["Terraform", "CI/CD", "GitHub Actions"]
                 },
                 {
                     category: "Programming & Scripting",
@@ -158,20 +159,28 @@ const projects = computed<Project[]>(() => {
             contexte: t('views.main.projects.items.kairos.context'),
             roles: t('views.main.projects.items.kairos.roles'),
             concept: t('views.main.projects.items.kairos.concept'),
-            technologies: ['TypeScript', 'Vue.js', 'Flutter', 'Node.js', 'PostgreSQL', 'JWT'],
+            technologies: ['Vue.js', 'JavaScript', 'Python', 'MariaDB', 'CI/CD'],
             techCategories: [
                 {
                     category: "Programming & Scripting",
                     icon: "mdi-code-braces",
                     color: "#FB8C00",
                     gradient: "linear-gradient(135deg, #FFA726 0%, #FB8C00 100%)",
-                    tools: ["TypeScript", "Node.js", "Vue.js", "Flutter"]
+                    tools: ["Vue.js", "JavaScript", "Python"]
+                },
+                {
+                    category: "DevOps & Automation",
+                    icon: "mdi-cog-sync",
+                    color: "#43A047",
+                    gradient: "linear-gradient(135deg, #66BB6A 0%, #388E3C 100%)",
+                    tools: ["CI/CD"]
                 }
             ],
-            additionalTechnologies: ["PostgreSQL", "JWT"],
+            additionalTechnologies: ["MariaDB"],
             image: 'kairos',
             logo: 'kairos',
             logoZoom: 2,
+            logoBackground: '#000000',
             link: 'http://kairos.florent-dubut.fr/',
             github: 'https://github.com/SAE5-Kairos',
             color: 'blue',
@@ -413,7 +422,7 @@ const openProjectDetail = (project: Project) => {
 
                 <div class="dialog-header">
                     <div class="dialog-header-main">
-                        <div class="project-logo-dialog" v-if="selectedProject.logo || selectedProject.icon" :style="selectedProject.logo ? {} : { background: selectedProject.gradient, border: 'none' }">
+                        <div class="project-logo-dialog" v-if="selectedProject.logo || selectedProject.icon" :style="selectedProject.logo ? { background: selectedProject.logoBackground || 'var(--surface)' } : { background: selectedProject.gradient, border: 'none' }">
                             <img
                                 v-if="selectedProject.logo"
                                 :src="getProjectLogo(selectedProject.logo)"
@@ -469,31 +478,29 @@ const openProjectDetail = (project: Project) => {
                                     <v-icon :color="selectedProject.color" icon="mdi-text-box-outline" class="mr-2"></v-icon>
                                     Description
                                 </h3>
-                                <div class="dialog-copy-stack">
-                                    <p class="panel-text">{{ selectedProject.description }}</p>
-                                </div>
-                            </section>
+                                <p class="panel-text">{{ selectedProject.description }}</p>
 
-                            <section v-if="selectedProject.contexte" class="dialog-panel mb-4">
-                                <h3 class="panel-title d-flex align-center mb-3">
-                                    <v-icon :color="selectedProject.color" icon="mdi-information-outline" class="mr-2"></v-icon>
-                                    {{ t('views.main.projects.contextTitle') }}
-                                </h3>
-                                <p class="panel-text">{{ selectedProject.contexte }}</p>
-                            </section>
+                                <template v-if="selectedProject.contexte">
+                                    <h3 class="panel-title d-flex align-center mt-6 mb-3">
+                                        <v-icon :color="selectedProject.color" icon="mdi-information-outline" class="mr-2"></v-icon>
+                                        {{ t('views.main.projects.contextTitle') }}
+                                    </h3>
+                                    <p class="panel-text">{{ selectedProject.contexte }}</p>
+                                </template>
 
-                            <section v-if="selectedProject.concept" class="dialog-panel mb-4">
-                                <h3 class="panel-title d-flex align-center mb-3">
-                                    <v-icon :color="selectedProject.color" icon="mdi-lightbulb-on-outline" class="mr-2"></v-icon>
-                                    {{ t('views.main.projects.conceptTitle') }}
-                                </h3>
-                                <p class="panel-text">{{ selectedProject.concept }}</p>
+                                <template v-if="selectedProject.concept">
+                                    <h3 class="panel-title d-flex align-center mt-6 mb-3">
+                                        <v-icon :color="selectedProject.color" icon="mdi-lightbulb-on-outline" class="mr-2"></v-icon>
+                                        {{ t('views.main.projects.conceptTitle') }}
+                                    </h3>
+                                    <p class="panel-text">{{ selectedProject.concept }}</p>
+                                </template>
                             </section>
 
                             <section v-if="selectedProject.techCategories" class="dialog-panel dialog-panel--soft">
                                 <h3 class="panel-title d-flex align-center mb-4">
-                                    <v-icon :color="selectedProject.color" icon="mdi-tools" class="mr-2"></v-icon>
-                                    {{ t('views.main.projects.technologiesTitle') }}
+                                    <v-icon :color="selectedProject.color" icon="mdi-code-tags" class="mr-2"></v-icon>
+                                    Stack Technique
                                 </h3>
                                 <div class="education-categories-grid">
                                     <v-card
@@ -545,11 +552,11 @@ const openProjectDetail = (project: Project) => {
                                     </div>
                                 </div>
                             </section>
-
+                            
                             <section v-else-if="selectedProject.technologies" class="dialog-panel dialog-panel--soft">
                                 <h3 class="panel-title d-flex align-center mb-4">
-                                    <v-icon :color="selectedProject.color" icon="mdi-tools" class="mr-2"></v-icon>
-                                    {{ t('views.main.projects.technologiesTitle') }}
+                                    <v-icon :color="selectedProject.color" icon="mdi-code-tags" class="mr-2"></v-icon>
+                                    Stack Technique
                                 </h3>
                                 <div class="skills-mini-grid">
                                     <v-sheet
@@ -567,44 +574,53 @@ const openProjectDetail = (project: Project) => {
                         </div>
 
                         <div v-if="selectedProject.missions || selectedProject.challenges" class="dialog-grid-right">
-                            <section v-if="selectedProject.missions" class="dialog-panel dialog-panel--soft mb-4">
-                                <h3 class="panel-title d-flex align-center mb-4">
-                                    <v-icon :color="selectedProject.color" icon="mdi-target" class="mr-2"></v-icon>
-                                    {{ t('views.main.projects.missionsTitle') }}
-                                </h3>
-                                <div class="dialog-copy-stack">
-                                    <div v-for="(mission, idx) in selectedProject.missions" :key="idx" class="mb-4">
-                                        <div class="d-flex align-center mb-2">
-                                            <div class="mission-marker" :style="{ backgroundColor: selectedProject.colorHex || selectedProject.color }"></div>
-                                            <h4 class="font-weight-bold text-subtitle-2 mb-0" style="color: var(--ink)">{{ mission.heading }}</h4>
+                            <section class="dialog-panel h-100">
+                                <template v-if="selectedProject.missions">
+                                    <h3 class="panel-title d-flex align-center mb-4">
+                                        <v-icon :color="selectedProject.color" icon="mdi-target" class="mr-2"></v-icon>
+                                        {{ t('views.main.projects.missionsTitle') }}
+                                    </h3>
+                                    <div class="dialog-copy-stack mb-6">
+                                        <div v-for="(mission, idx) in selectedProject.missions" :key="idx" class="mb-4">
+                                            <h4 class="font-weight-bold text-subtitle-2 mb-2 d-flex align-center" style="color: var(--ink)">
+                                                <v-icon :color="selectedProject.colorHex || selectedProject.color" icon="mdi-chevron-right-box" size="18" class="mr-2"></v-icon>
+                                                {{ mission.heading }}
+                                            </h4>
+                                            <v-list density="compact" bg-color="transparent" class="mission-list pa-0">
+                                                <v-list-item v-for="(item, itemIdx) in mission.items" :key="itemIdx" class="px-0 mb-2 pb-1">
+                                                    <template #prepend>
+                                                        <v-icon :color="selectedProject.colorHex || selectedProject.color" icon="mdi-arrow-right-circle" size="20" class="mr-3"></v-icon>
+                                                    </template>
+                                                    <v-list-item-title class="text-body-2 mission-text">{{ item }}</v-list-item-title>
+                                                </v-list-item>
+                                            </v-list>
                                         </div>
-                                        <ul class="ml-7">
-                                            <li v-for="(item, itemIdx) in mission.items" :key="itemIdx" class="panel-text mb-1">
-                                                {{ item }}
-                                            </li>
-                                        </ul>
                                     </div>
-                                </div>
-                            </section>
+                                </template>
 
-                            <section v-if="selectedProject.challenges" class="dialog-panel dialog-panel--soft">
-                                <h3 class="panel-title d-flex align-center mb-4">
-                                    <v-icon :color="selectedProject.color" icon="mdi-rocket-launch-outline" class="mr-2"></v-icon>
-                                    {{ t('views.main.projects.challengesTitle') }}
-                                </h3>
-                                <div class="dialog-copy-stack">
-                                    <div v-for="(challenge, idx) in selectedProject.challenges" :key="idx" class="mb-4">
-                                        <div class="d-flex align-center mb-2">
-                                            <div class="challenge-marker" :style="{ backgroundColor: selectedProject.colorHex || selectedProject.color }"></div>
-                                            <h4 class="font-weight-bold text-subtitle-2 mb-0" style="color: var(--ink)">{{ challenge.heading }}</h4>
+                                <template v-if="selectedProject.challenges">
+                                    <v-divider v-if="selectedProject.missions" class="mb-6"></v-divider>
+                                    <h3 class="panel-title d-flex align-center mb-4">
+                                        <v-icon :color="selectedProject.color" icon="mdi-rocket-launch-outline" class="mr-2"></v-icon>
+                                        {{ t('views.main.projects.challengesTitle') }}
+                                    </h3>
+                                    <div class="dialog-copy-stack">
+                                        <div v-for="(challenge, idx) in selectedProject.challenges" :key="idx" class="mb-4">
+                                            <h4 class="font-weight-bold text-subtitle-2 mb-2 d-flex align-center" style="color: var(--ink)">
+                                                <v-icon :color="selectedProject.colorHex || selectedProject.color" icon="mdi-alert-decagram-outline" size="18" class="mr-2"></v-icon>
+                                                {{ challenge.heading }}
+                                            </h4>
+                                            <v-list density="compact" bg-color="transparent" class="mission-list pa-0">
+                                                <v-list-item v-for="(item, itemIdx) in challenge.items" :key="itemIdx" class="px-0 mb-2 pb-1">
+                                                    <template #prepend>
+                                                        <v-icon :color="selectedProject.colorHex || selectedProject.color" icon="mdi-lightning-bolt-circle" size="20" class="mr-3"></v-icon>
+                                                    </template>
+                                                    <v-list-item-title class="text-body-2 mission-text">{{ item }}</v-list-item-title>
+                                                </v-list-item>
+                                            </v-list>
                                         </div>
-                                        <ul class="ml-7">
-                                            <li v-for="(item, itemIdx) in challenge.items" :key="itemIdx" class="panel-text mb-1">
-                                                {{ item }}
-                                            </li>
-                                        </ul>
                                     </div>
-                                </div>
+                                </template>
                             </section>
                         </div>
                     </div>
@@ -873,6 +889,25 @@ const openProjectDetail = (project: Project) => {
     gap: 0.8rem;
 }
 
+.mission-list {
+    border-radius: 8px;
+}
+
+.mission-list .v-list-item {
+    border-radius: 8px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.mission-list .v-list-item:last-child {
+    border-bottom: none;
+}
+
+.mission-text {
+    white-space: normal;
+    line-height: 1.65;
+    color: var(--ink);
+}
+
 .skills-mini-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
@@ -956,30 +991,10 @@ const openProjectDetail = (project: Project) => {
     color: var(--ink);
 }
 
-.mission-marker,
-.challenge-marker {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    flex-shrink: 0;
-}
-
-ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-li {
-    position: relative;
-    padding-left: 1rem;
-}
-
-li:before {
-    content: "▪";
-    position: absolute;
-    left: 0;
-    color: currentColor;
-    opacity: 0.6;
+.dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
 }
 
 @media (max-width: 960px) {

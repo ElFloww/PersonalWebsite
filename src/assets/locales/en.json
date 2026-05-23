@@ -389,7 +389,7 @@
           "portfolio": {
             "title": "Personal Portfolio",
             "shortDescription": "Personal website built with Vue.js and Vuetify, showcasing my background, skills, and projects.",
-            "description": "Personal website built with Vue.js and Vuetify, showcasing my background, skills, and projects. This is the very same site I am currently developing."
+            "description": "Personal website built with Vue.js and Vuetify, showcasing my background, skills, and projects."
           }
         }
       }
