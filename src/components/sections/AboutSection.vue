@@ -28,25 +28,6 @@ const passions = [
   { icon: "mdi-music-note-eighth", key: "music", color: "pink" },
   // { icon: "mdi-book-open-variant", key: "reading", color: "brown" },
 ];
-
-const values = [
-  {
-    icon: "mdi-share-variant",
-    key: "knowledgeSharing",
-    color: "green-lighten-1",
-  },
-  {
-    icon: "mdi-file-document-check",
-    key: "documentation",
-    color: "blue-lighten-2",
-  },
-  { icon: "mdi-magnify-scan", key: "pragmatism", color: "orange-lighten-2" },
-  {
-    icon: "mdi-refresh-circle",
-    key: "continuousImprovement",
-    color: "purple-lighten-2",
-  },
-];
 </script>
 
 <template>
@@ -122,27 +103,21 @@ const values = [
                 :image="photoProfil"
                 class="mb-6 profile-avatar"
               />
-              <div class="text-center">
-                <h2 class="text-h4 font-weight-bold mb-3">
+              <div class="text-center d-flex flex-column align-center ga-2">
+                <h2 class="text-h4 font-weight-bold mb-1">
                   {{ t("views.main.profil.title") }}
                 </h2>
-                <v-chip
-                  color="green-lighten-1"
-                  variant="flat"
-                  size="large"
-                  class="mb-3 d-flex justify-center mx-auto"
-                  style="width: fit-content"
-                >
-                  <v-icon start>mdi-cake-variant</v-icon>
-                  {{ age }} {{ t("views.main.profil.yearsOld") }}
-                </v-chip>
-                <div class="mb-3">
-                  <v-chip color="green-lighten-1" variant="outlined" size="large">
-                    <v-icon start>mdi-code-tags</v-icon>
-                    {{ t("views.main.profil.description") }}
+
+                <div class="d-flex flex-wrap justify-center ga-2">
+                  <v-chip
+                    color="green-lighten-1"
+                    variant="flat"
+                    size="small"
+                  >
+                    <v-icon start size="small">mdi-cake-variant</v-icon>
+                    {{ age }} {{ t("views.main.profil.yearsOld") }}
                   </v-chip>
-                </div>
-                <div>
+                  
                   <v-chip color="blue-grey" variant="tonal" size="small">
                     <v-icon start size="small">mdi-map-marker-outline</v-icon>
                     {{ t("views.main.presentation.locationBadge") }}
@@ -207,40 +182,12 @@ const values = [
           </v-col>
         </v-row>
 
-        <!-- Ligne 2 : Valeurs + Objectif CDI Provence -->
-        <v-row class="mb-6" align="stretch">
-          <!-- Valeurs -->
-          <v-col cols="12" md="6">
-            <v-card elevation="4" class="pa-6 glass-card h-100">
-              <h3 class="text-h6 font-weight-bold mb-4 text-green-lighten-1">
-                <v-icon icon="mdi-star-circle-outline" class="mr-2" />
-                {{ t("views.main.presentation.valuesTitle") }}
-              </h3>
-              <div class="d-flex flex-column ga-3">
-                <div
-                  v-for="value in values"
-                  :key="value.key"
-                  class="value-item d-flex align-start ga-3 pa-3 rounded-lg"
-                >
-                  <v-icon
-                    :icon="value.icon"
-                    :color="value.color"
-                    size="20"
-                    class="mt-1 flex-shrink-0"
-                  />
-                  <span class="text-body-2" style="line-height: 1.6">
-                    {{ t(`views.main.presentation.values.${value.key}`) }}
-                  </span>
-                </div>
-              </div>
-            </v-card>
-          </v-col>
-
-          <!-- Objectif CDI -->
-          <v-col cols="12" md="6">
+        <!-- Ligne 2 : Objectif CDI Provence -->
+        <v-row class="mb-6">
+          <v-col cols="12">
             <v-card
               elevation="4"
-              class="pa-6 goal-card h-100"
+              class="pa-6 goal-card"
               color="green-darken-3"
             >
               <h3 class="text-h6 font-weight-bold mb-4" style="color: white">
@@ -249,7 +196,7 @@ const values = [
               </h3>
               <p
                 class="text-body-1 mb-5 text-justify"
-                style="line-height: 1.85; color: rgba(255, 255, 255, 0.92)"
+                style="line-height: 1.85; color: rgba(255, 255, 255, 0.92); white-space: pre-line;"
               >
                 {{ t("views.main.presentation.goalText") }}
               </p>
@@ -262,7 +209,7 @@ const values = [
         </v-row>
 
         <!-- Ligne 3 : Passions -->
-        <v-row>
+        <v-row class="mb-6">
           <v-col cols="12">
             <v-card elevation="4" class="pa-6 glass-card">
               <h3 class="text-h6 font-weight-bold mb-5 text-green-lighten-1">

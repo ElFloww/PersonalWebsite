@@ -401,15 +401,6 @@ const showDetails = (exp: Experience) => {
             </section>
           </div>
         </v-card-text>
-
-        <v-divider></v-divider>
-
-        <v-card-actions class="dialog-actions pa-4 pa-sm-6">
-          <v-spacer></v-spacer>
-          <v-btn :color="selectedExperience.color" variant="flat" @click="dialog = false" prepend-icon="mdi-close">
-            {{ t("views.main.professionalExperience.close") }}
-          </v-btn>
-        </v-card-actions>
       </v-card>
     </v-dialog>
   </v-container>

@@ -23,7 +23,7 @@ const { t } = useI18n();
         <AboutSection />
 
         <!-- Section Statistiques -->
-        <StatsSection />
+        <!-- <StatsSection /> -->
 
         <v-divider :thickness="2" opacity="0.2"></v-divider>
 

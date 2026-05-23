@@ -95,7 +95,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <v-container id="stats-section" fluid class="stats-section py-16">
+  <v-container id="stats-section" fluid class="stats-section">
     <div class="stats-wrapper">
       <v-row justify="center" align="center">
         <v-col cols="12" md="10">

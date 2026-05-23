@@ -44,16 +44,9 @@
         "secondParagraph": "I'm a Backend Developer specialized in .NET & C#. My playground: clean RESTful APIs, solid clean architecture, SQL Server, and well-thought-out dependency injection. I also do front-end work with Vue.js — which gives me a useful dual perspective for documenting my APIs precisely. But backend is where I truly thrive.",
         "philosophyTitle": "My approach",
         "philosophyText": "Before writing a single line of code, I make sure I fully understand the business need and the end goal. I start by designing the database architecture and API contracts, then build brick by brick, keeping code clean, testable, and maintainable. When a bug hits, no band-aids — I trace it to the root, fix the flaw, and write a test to make sure it never comes back.",
-        "valuesTitle": "What drives me",
-        "values": {
-          "knowledgeSharing": "Knowledge sharing & kind code reviews to progress together",
-          "documentation": "Careful documentation (Swagger, README) to make work and maintenance easier",
-          "pragmatism": "Rigor & pragmatism: understand before coding, fix at the source",
-          "continuousImprovement": "Continuous improvement — technically and humanly"
-        },
-        "goalTitle": "My goal",
-        "goalText": "At the end of my studies, in September 2026, I'm moving to Provence — my family is there, and that's where I want to build the next chapter of my career. I'm looking for a permanent position in software development in Marseille, Aix-en-Provence or Toulon, ideally backend-focused, within a team where code quality and good atmosphere matter as much as technical skills.",
-        "goalCTA": "Permanent role in Marseille · Aix-en-Provence · Toulon — from Sept. 2026",
+        "goalTitle": "My objective",
+        "goalText": "Upon completing my Master's degree and work-study program in September 2026, I am relocating back to Provence to be closer to my family and build the next chapter of my career.\n\nHaving developed a strong expertise and passion for the Microsoft ecosystem and automation, I am actively seeking a permanent position as a .NET Developer or DevOps Engineer.\n\nMy goal is to join a challenging tech team in Toulon, Aix-en-Provence, or Marseille, where I can design robust backend architectures, streamline deployments via CI/CD, and contribute to ambitious projects where code quality is paramount.",
+        "goalCTA": "Seeking .NET / DevOps CDI (Toulon, Aix, Marseille) — from Sept. 2026",
         "interestsTitle": "Passions & interests",
         "passions": {
           "sport": {
