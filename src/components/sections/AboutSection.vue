@@ -67,7 +67,7 @@ const values = [
           <div class="d-flex flex-wrap ga-2 justify-center">
             <v-chip color="green-darken-1" variant="tonal" size="small">
               <v-icon start size="small">mdi-map-marker-outline</v-icon>
-              Marseille
+              Toulon
             </v-chip>
             <v-chip color="green-darken-1" variant="tonal" size="small">
               <v-icon start size="small">mdi-map-marker-outline</v-icon>
@@ -75,7 +75,7 @@ const values = [
             </v-chip>
             <v-chip color="green-darken-1" variant="tonal" size="small">
               <v-icon start size="small">mdi-map-marker-outline</v-icon>
-              Toulon
+              Marseille
             </v-chip>
           </div>
         </div>

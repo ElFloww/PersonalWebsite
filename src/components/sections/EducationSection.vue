@@ -4,7 +4,16 @@ import { useI18n } from "vue-i18n";
 import upjvLogo from "@/assets/images/logo_upjv.png";
 import inssetLogo from "@/assets/images/logo_insset.png";
 
-const { t, tm } = useI18n();
+const { t, tm, locale } = useI18n();
+
+interface EducationCategory {
+  titleFr: string;
+  titleEn: string;
+  icon: string;
+  accent?: string;
+  gradient?: string;
+  skills: string[];
+}
 
 interface Education {
   key: string;
@@ -12,6 +21,7 @@ interface Education {
   color: string;
   gradient: string;
   logo?: string;
+  categories: EducationCategory[];
 }
 
 const educations: Education[] = [
@@ -21,6 +31,40 @@ const educations: Education[] = [
     color: "green-lighten-1",
     gradient: "linear-gradient(135deg, #81c784 0%, #66bb6a 100%)",
     logo: inssetLogo,
+    categories: [
+      {
+        titleFr: "Cloud & Infrastructures",
+        titleEn: "Cloud & Infrastructures",
+        icon: "mdi-cloud-outline",
+        accent: "#1976D2",
+        gradient: "linear-gradient(135deg, #2196F3 0%, #1565C0 100%)",
+        skills: ["Azure", "AWS", "Google Cloud Platform (GCP)", "Infrastructure as Code (IaC)", "Terraform", "ARM Templates", "Virtualisation"]
+      },
+      {
+        titleFr: "Containers & Orchestration",
+        titleEn: "Containers & Orchestration",
+        icon: "mdi-kubernetes",
+        accent: "#8E24AA",
+        gradient: "linear-gradient(135deg, #AB47BC 0%, #8E24AA 100%)",
+        skills: ["Docker", "Kubernetes (K8s)", "Docker Swarm", "Architectures Microservices", "Cloud-native patterns"]
+      },
+      {
+        titleFr: "DevOps & Automatisation",
+        titleEn: "DevOps & Automation",
+        icon: "mdi-cog-sync",
+        accent: "#43A047",
+        gradient: "linear-gradient(135deg, #66BB6A 0%, #388E3C 100%)",
+        skills: ["Azure DevOps", "GitLab CI", "Pipelines CI/CD", "Déploiements automatisés", "Monitoring"]
+      },
+      {
+        titleFr: "Architecture & Technologies",
+        titleEn: "Architecture & Technologies",
+        icon: "mdi-server-network",
+        accent: "#FB8C00",
+        gradient: "linear-gradient(135deg, #FFA726 0%, #FB8C00 100%)",
+        skills: ["Architectures événementielles", "Internet of Things (IoT)", "Big Data & Cloud Data Management", "Intelligence Artificielle", "Développement Mobile (iOS/Android)"]
+      }
+    ]
   },
   {
     key: "first",
@@ -28,6 +72,40 @@ const educations: Education[] = [
     color: "blue-lighten-1",
     gradient: "linear-gradient(135deg, #42a5f5 0%, #1e88e5 100%)",
     logo: upjvLogo,
+    categories: [
+      {
+        titleFr: "Langages & Développement",
+        titleEn: "Languages & Development",
+        icon: "mdi-code-tags",
+        accent: "#1976D2",
+        gradient: "linear-gradient(135deg, #2196F3 0%, #1565C0 100%)",
+        skills: ["C#", "Java", "Python", "C++", "PHP", "JavaScript", "HTML/CSS"]
+      },
+      {
+        titleFr: "Conception & Architecture",
+        titleEn: "Design & Architecture",
+        icon: "mdi-drawing",
+        accent: "#8E24AA",
+        gradient: "linear-gradient(135deg, #AB47BC 0%, #8E24AA 100%)",
+        skills: ["Programmation Orientée Objet (POO)", "Design Patterns", "UML / MCD", "Architecture logicielle"]
+      },
+      {
+        titleFr: "Bases de données & Systèmes",
+        titleEn: "Databases & Systems",
+        icon: "mdi-database",
+        accent: "#43A047",
+        gradient: "linear-gradient(135deg, #66BB6A 0%, #388E3C 100%)",
+        skills: ["SQL Server", "PostgreSQL", "NoSQL", "Administration Linux", "Réseaux TCP/IP"]
+      },
+      {
+        titleFr: "Méthodologie & Qualité",
+        titleEn: "Methodology & Quality",
+        icon: "mdi-check-decagram",
+        accent: "#FB8C00",
+        gradient: "linear-gradient(135deg, #FFA726 0%, #FB8C00 100%)",
+        skills: ["Méthode Agile (Scrum)", "Tests unitaires & d'intégration", "Couverture de code", "Git"]
+      }
+    ]
   },
 ];
 
@@ -35,185 +113,6 @@ const getEducationHighlights = (educationKey: string): string[] => {
   const highlightsKey = `views.main.education.${educationKey}.highlights`;
   const highlights = tm(highlightsKey);
   return Array.isArray(highlights) ? (highlights as string[]) : [];
-};
-
-const getEducationModules = (educationKey: string): string[] => {
-  const modulesKey = `views.main.education.${educationKey}.modules`;
-  const modules = tm(modulesKey);
-  return Array.isArray(modules) ? (modules as string[]) : [];
-};
-
-interface Skill {
-  name: string;
-  icon?: string;
-}
-
-interface SkillCategory {
-  title: string;
-  icon: string;
-  featured?: boolean;
-  accent?: string;
-  gradient?: string;
-  chipColor?: string;
-  skills: Skill[];
-}
-
-const skillCategories: SkillCategory[] = [
-  {
-    title: "Cloud Platforms",
-    icon: "mdi-cloud-outline",
-    featured: true,
-    accent: "#1976D2",
-    gradient: "linear-gradient(135deg, #2196F3 0%, #1565C0 100%)",
-    chipColor: "blue-lighten-1",
-    skills: [
-      { name: "Google Cloud Platform", icon: "mdi-google-cloud" },
-      { name: "Amazon AWS", icon: "mdi-aws" },
-      { name: "Microsoft Azure", icon: "mdi-microsoft-azure" },
-    ],
-  },
-  {
-    title: "Containers & Orchestration",
-    icon: "mdi-kubernetes",
-    accent: "#8E24AA",
-    gradient: "linear-gradient(135deg, #AB47BC 0%, #8E24AA 100%)",
-    chipColor: "purple-lighten-1",
-    skills: [
-      { name: "Kubernetes", icon: "mdi-kubernetes" },
-      { name: "Docker", icon: "mdi-docker" },
-      { name: "Docker Swarm", icon: "mdi-docker" },
-      { name: "Microservices", icon: "mdi-layers" },
-    ],
-  },
-  {
-    title: "DevOps & Automation",
-    icon: "mdi-cog-sync",
-    featured: true,
-    accent: "#43A047",
-    gradient: "linear-gradient(135deg, #66BB6A 0%, #388E3C 100%)",
-    chipColor: "green-lighten-1",
-    skills: [
-      { name: "Terraform", icon: "mdi-wrench-outline" },
-      { name: "Terragrunt", icon: "mdi-file-tree" },
-      { name: "Linux", icon: "mdi-linux" },
-      { name: "Proxmox", icon: "mdi-server" },
-      { name: "Azure DevOps", icon: "mdi-microsoft-azure-devops" },
-      { name: "GitLab", icon: "mdi-gitlab" },
-      { name: "GitHub Actions", icon: "mdi-github" },
-    ],
-  },
-  {
-    title: "Programming & Scripting",
-    icon: "mdi-code-braces",
-    accent: "#FB8C00",
-    gradient: "linear-gradient(135deg, #FFA726 0%, #FB8C00 100%)",
-    chipColor: "orange-lighten-1",
-    skills: [
-      { name: "C#", icon: "mdi-language-csharp" },
-      { name: "ASP.NET Core", icon: "mdi-dot-net" },
-      { name: "Vue.js 3", icon: "mdi-vuejs" },
-      { name: "Vuetify", icon: "mdi-vuetify" },
-      { name: "TypeScript", icon: "mdi-language-typescript" },
-      { name: "Python", icon: "mdi-language-python" },
-      { name: "Bash", icon: "mdi-console" },
-    ],
-  }
-];
-
-const groupModulesByCategory = (educationKey: string) => {
-  const rawModules = getEducationModules(educationKey);
-
-  const splitIntoTokens = (text: string) => {
-    if (!text) return [] as string[];
-    // extract parenthesis content separately
-    const parenMatches = Array.from(text.matchAll(/\(([^)]+)\)/g)).map((m) => m[1]);
-    const base = text.replace(/\([^)]*\)/g, "");
-    const parts: string[] = [];
-    // split base on common separators
-    base
-      .split(/,|\/|;|—|\s-\s|\sand\s|\s&\s/i)
-      .map((p) => p.trim())
-      .forEach((p) => {
-        if (p) parts.push(p);
-      });
-
-    // split parenthesis contents too
-    parenMatches.forEach((p) => {
-      p
-        .split(/,|\/|;|\s&\s|\sand\s/i)
-        .map((s) => s.trim())
-        .forEach((s) => {
-          if (s) parts.push(s);
-        });
-    });
-
-    // further split items that have "(" or ":" or "—"
-    const tokens: string[] = [];
-    parts.forEach((p) => {
-      p
-        .split(/:|—|\(|\)/)
-        .map((x) => x.trim())
-        .forEach((x) => {
-          if (x) tokens.push(x);
-        });
-    });
-
-    // normalize and dedupe while preserving order
-    const seen = new Set<string>();
-    return tokens
-      .map((s) => s.replace(/\s+/g, " ").trim())
-      .filter((s) => {
-        const low = s.toLowerCase();
-        if (seen.has(low)) return false;
-        seen.add(low);
-        return true;
-      });
-  };
-
-  const categories = skillCategories.map((c) => ({ ...c, modules: [] as string[] }));
-  const other: string[] = [];
-
-  rawModules.forEach((raw) => {
-    const tokens = splitIntoTokens(raw);
-    tokens.forEach((token) => {
-      const m = token.toLowerCase();
-      let matched = false;
-
-      // Try exact/substring match against known skill names
-      for (const cat of categories) {
-        for (const s of cat.skills) {
-          const skillName = s.name.toLowerCase();
-          if (m === skillName || m.includes(skillName) || skillName.includes(m)) {
-            if (!cat.modules.includes(token)) cat.modules.push(token);
-            matched = true;
-            break;
-          }
-        }
-        if (matched) break;
-      }
-
-      // Fallback keyword heuristics for common terms
-      if (!matched) {
-        if (m.includes("docker") || m.includes("kubernetes") || m.includes("container") || m.includes("microservice") || m.includes("cloud-native") || m.includes("cloud native")) {
-          const cat = categories.find((c) => c.title.toLowerCase().includes("container")) || categories[0];
-          if (!cat.modules.includes(token)) cat.modules.push(token);
-          matched = true;
-        }
-      }
-
-      if (!matched) other.push(token);
-    });
-  });
-
-  const result = categories
-    .filter((c) => c.modules && c.modules.length > 0)
-    .map((c) => ({ title: c.title, icon: c.icon, gradient: c.gradient, modules: c.modules }));
-
-  if (other.length) {
-    result.push({ title: t("views.main.education.otherSkills") || "Other", icon: "mdi-dots-horizontal", gradient: selectedEducation.value?.gradient || "", modules: other });
-  }
-
-  return result;
 };
 
 const selectedEducation = ref<Education | null>(null);
@@ -266,7 +165,7 @@ const showDetails = (edu: Education) => {
               <v-icon :icon="edu.icon" size="22" color="white"></v-icon>
             </div>
 
-            <v-card class="path-card" elevation="0">
+            <v-card class="path-card" elevation="0" @click="showDetails(edu)" style="cursor: pointer;">
               <v-card-text class="pa-6">
                 <div class="path-top mb-4">
                   <v-chip :color="edu.color" variant="tonal" size="small">
@@ -419,30 +318,31 @@ const showDetails = (edu: Education) => {
               <div>
                 <div class="education-categories-grid">
                   <v-card
-                    v-for="category in groupModulesByCategory(selectedEducation.key)"
-                    :key="category.title"
-                    class="education-category-card"
+                    v-for="category in selectedEducation.categories"
+                    :key="category.titleFr"
+                    class="technical-card"
                     elevation="0"
                   >
-                    <v-card-text class="pa-4">
-                      <div class="technical-card-header mb-3">
+                    <v-card-text class="pa-6">
+                      <div class="technical-card-header mb-5">
                         <div class="technical-title-wrap">
                           <div class="technical-icon" :style="{ background: category.gradient || selectedEducation.gradient }">
-                            <v-icon :icon="category.icon" size="20" color="white"></v-icon>
+                            <v-icon :icon="category.icon" size="22" color="white"></v-icon>
                           </div>
-                          <h4 class="text-subtitle-1 font-weight-bold ma-0">{{ category.title }}</h4>
+                          <h4 class="text-h6 font-weight-bold ma-0">{{ locale === 'fr' ? category.titleFr : category.titleEn }}</h4>
                         </div>
                       </div>
 
                       <div class="skills-mini-grid">
                         <v-sheet
-                          v-for="mod in category.modules"
-                          :key="mod"
+                          v-for="skill in category.skills"
+                          :key="skill"
                           class="skill-mini-card"
                           rounded="lg"
+                          :style="{ borderColor: category.accent || 'var(--line)' }"
                         >
-                          <v-icon :color="selectedEducation.color" icon="mdi-check-circle" size="16" class="mr-2"></v-icon>
-                          {{ mod }}
+                          <v-icon :color="category.accent || selectedEducation.color" icon="mdi-check-circle" size="18" class="mr-2"></v-icon>
+                          {{ skill }}
                         </v-sheet>
                       </div>
                     </v-card-text>
@@ -452,15 +352,6 @@ const showDetails = (edu: Education) => {
             </section>
           </div>
         </v-card-text>
-
-        <v-divider></v-divider>
-
-        <v-card-actions class="dialog-actions pa-4 pa-sm-6">
-          <v-spacer></v-spacer>
-          <v-btn :color="selectedEducation.color" variant="flat" @click="dialog = false" prepend-icon="mdi-close">
-            {{ t("views.main.education.close") }}
-          </v-btn>
-        </v-card-actions>
       </v-card>
     </v-dialog>
   </v-container>
@@ -704,16 +595,17 @@ const showDetails = (edu: Education) => {
   border: 1px solid var(--line);
   background: linear-gradient(180deg, #ffffff 0%, #f8fcf8 100%);
   border-radius: 10px;
-  min-height: 40px;
-  padding: 0.5rem 0.65rem;
+  min-height: 48px;
+  height: auto;
+  padding: 0.55rem 0.7rem;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   font-weight: 600;
   color: var(--ink);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   white-space: normal;
   word-break: break-word;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
   line-height: 1.25;
 }
 
@@ -724,15 +616,44 @@ const showDetails = (edu: Education) => {
 
 .education-categories-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: 1fr;
   gap: 1rem;
 }
 
-.education-category-card {
+.technical-card {
   border: 1px solid var(--line);
-  border-radius: 12px;
+  border-radius: 14px;
   background: var(--surface);
   box-shadow: var(--shadow-soft);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.technical-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+}
+
+.technical-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.technical-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.technical-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 16px rgba(15, 29, 20, 0.08);
 }
 
 @media (max-width: 960px) {
@@ -749,6 +670,12 @@ const showDetails = (edu: Education) => {
     width: 26px;
     height: 26px;
     top: 1.35rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .education-categories-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -775,6 +702,14 @@ const showDetails = (edu: Education) => {
   }
 
   .modules-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .technical-card .v-card-text {
+    padding: 1rem !important;
+  }
+
+  .skills-mini-grid {
     grid-template-columns: 1fr;
   }
 }

@@ -36,7 +36,7 @@
       "presentation": {
         "title": "👋 Hi, I'm Florent",
         "subtitle": "Backend .NET Developer — future Provençal seeking a permanent position",
-        "seekingJobBanner": "🟢 Available for a permanent position from September 2026 — Marseille · Aix-en-Provence · Toulon",
+        "seekingJobBanner": "Available for a permanent position from September 2026 — Toulon · Aix-en-Provence · Marseille",
         "locationBadge": "Currently in Amiens — Moving to Provence in September 2026",
         "firstParagraph1": "Originally from Nogent-le-Rotrou, in the heart of Normandy's Perche region, I grew up surrounded by nature and a growing curiosity for technology.",
         "firstParagraph2": "It all started at age 14 with the discovery of Python — a true revelation. The Computer Science elective in high school only amplified that passion.",
@@ -140,6 +140,7 @@
         "sectionDescription": "Degrees, diplomas and commitments",
         "viewProgram": "View program",
         "modulesAndSkills": "Modules and skills",
+        "otherSkills": "Other skills",
         "close": "Close",
         "first": {
           "date": "2021 - 2024",

@@ -264,7 +264,7 @@ const additionalTechnologies = [
 
 .skills-mini-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 0.65rem;
 }
 
@@ -273,12 +273,17 @@ const additionalTechnologies = [
   background: linear-gradient(180deg, #ffffff 0%, #f8fcf8 100%);
   border-radius: 10px;
   min-height: 48px;
+  height: auto;
   padding: 0.55rem 0.7rem;
   display: flex;
   align-items: center;
   font-weight: 600;
   color: var(--ink);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.25;
 }
 
 .skill-mini-card:hover {

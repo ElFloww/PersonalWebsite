@@ -36,7 +36,7 @@
       "presentation": {
         "title": "👋 Bonjour, moi c'est Florent",
         "subtitle": "Développeur Backend .NET",
-        "seekingJobBanner": "🟢 Disponible en CDI dès septembre 2026 — Marseille · Aix-en-Provence · Toulon",
+        "seekingJobBanner": "Disponible en CDI dès septembre 2026 — Toulon · Aix-en-Provence · Marseille",
         "locationBadge": "Actuellement à Amiens — Retour en Provence en septembre 2026",
         "firstParagraph1": "Originaire de Nogent-le-Rotrou, au cœur du Perche normand, j'ai grandi entouré de nature et d'une curiosité grandissante pour la technologie.",
         "firstParagraph2": "Tout a commencé vers 14 ans avec la découverte de Python : une vraie révélation. La spécialité NSI au lycée n'a fait qu'amplifier cette passion.",
@@ -140,6 +140,7 @@
         "sectionDescription": "Formations, diplômes et engagements",
         "viewProgram": "Voir le programme",
         "modulesAndSkills": "Modules et compétences",
+        "otherSkills": "Autres compétences",
         "close": "Fermer",
         "first": {
           "date": "2021 - 2024",
