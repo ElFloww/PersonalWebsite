@@ -93,7 +93,7 @@ const resetForm = () => {
 </script>
 
 <template>
-    <v-card elevation="2" class="pa-6">
+    <v-card elevation="2" class="pa-6 contact-card">
         <v-card-title class="text-h5 mb-4">
             {{ t('views.main.contactForm.title') }}
         </v-card-title>
@@ -163,3 +163,25 @@ const resetForm = () => {
         </v-card-actions>
     </v-card>
 </template>
+
+<style scoped>
+.contact-card {
+    background: var(--surface);
+    border-radius: 12px;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid var(--line);
+}
+
+.contact-card .v-card-title {
+    color: var(--ink);
+}
+
+.contact-card .v-text-field,
+.contact-card .v-textarea {
+    --v-theme-primary: var(--accent);
+}
+
+.contact-card .v-btn {
+    --v-theme-primary: var(--accent);
+}
+</style>

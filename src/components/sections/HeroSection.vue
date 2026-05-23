@@ -64,95 +64,75 @@ const scrollToSection = (sectionId: string) => {
 
 <style scoped>
 .hero-section {
-    min-height: calc(100vh - 70px);
-    background: linear-gradient(135deg, #ffffff 0%, #e8f5e9 50%, #ffffff 100%);
+    min-height: calc(100vh - 72px);
+    background: linear-gradient(180deg, var(--surface) 0%, var(--accent-soft-2) 100%);
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
 }
 
 .hero-section::before {
     content: '';
     position: absolute;
-    top: -50%;
-    left: -20%;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(129, 199, 132, 0.15) 0%, transparent 70%);
+    top: -25%;
+    left: -10%;
+    width: 560px;
+    height: 560px;
+    background: radial-gradient(circle, rgba(74, 143, 104, 0.09) 0%, transparent 60%);
     border-radius: 50%;
 }
 
 .hero-section::after {
     content: '';
     position: absolute;
-    bottom: -50%;
-    right: -20%;
+    bottom: -28%;
+    right: -12%;
     width: 700px;
     height: 700px;
-    background: radial-gradient(circle, rgba(129, 199, 132, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(74, 143, 104, 0.06) 0%, transparent 60%);
     border-radius: 50%;
-}
-
-@keyframes slideInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideInUp {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 .animate-title {
-    animation: slideInDown 1s ease-out;
+    animation: fadeUp 0.9s ease-out;
     position: relative;
     z-index: 1;
+    color: var(--ink);
 }
 
 .animate-subtitle {
-    animation: slideInDown 1s ease-out 0.2s backwards;
+    animation: fadeUp 0.9s ease-out 0.16s backwards;
     position: relative;
     z-index: 1;
+    color: var(--ink-muted);
 }
 
 .animate-buttons {
-    animation: slideInUp 1s ease-out 0.4s backwards;
+    animation: fadeUp 0.9s ease-out 0.24s backwards;
     position: relative;
     z-index: 1;
 }
 
+.hero-section h1 .gradient-text {
+    background: linear-gradient(120deg, var(--accent-strong), var(--accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .v-btn {
-    position: relative;
-    overflow: hidden;
+    border-radius: 999px;
 }
 
-.v-btn::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.4);
-    transform: translate(-50%, -50%);
-    transition: width 0.6s, height 0.6s;
+.v-btn[variant="flat"] {
+    background: linear-gradient(90deg, var(--accent), var(--accent-strong));
+    color: white;
 }
 
-.v-btn:hover::after {
-    width: 400px;
-    height: 400px;
+.v-btn[variant="outlined"] {
+    border: 1.5px solid rgba(47, 109, 78, 0.08);
+    color: var(--ink);
 }
 
 .scroll-indicator {
@@ -162,11 +142,11 @@ const scrollToSection = (sectionId: string) => {
 
 @media (max-width: 600px) {
     .text-h2 {
-        font-size: 2.5rem !important;
+        font-size: 2.25rem !important;
     }
-    
+
     .text-h4 {
-        font-size: 1.5rem !important;
+        font-size: 1.15rem !important;
     }
 }
 </style>

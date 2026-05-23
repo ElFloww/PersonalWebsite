@@ -10,11 +10,11 @@ const openInNewTab = (url: string): void => {
 
 </script>
 <template>
-    <v-footer class="text-center d-flex flex-column ga-2 py-4" color="green-lighten-1">
+    <v-footer class="text-center d-flex flex-column ga-2 py-6 site-footer" color="transparent">
         <div class="d-flex ga-3">
-            <v-btn key="mdi-github" icon="mdi-github" density="comfortable" variant="text"
+            <v-btn key="mdi-github" icon="mdi-github" density="comfortable" variant="text" color="primary"
                 v-on:click="openInNewTab(URL_GITHUB)"></v-btn>
-            <v-btn key="mdi-linkedin" icon="mdi-linkedin" density="comfortable" variant="text"
+            <v-btn key="mdi-linkedin" icon="mdi-linkedin" density="comfortable" variant="text" color="primary"
                 v-on:click="openInNewTab(URL_LINKEDIN)"></v-btn>
         </div>
 

@@ -6,7 +6,7 @@ import photoProfil from "@/assets/images/photo_profil.png";
 const { t } = useI18n();
 
 // 🔁 Mettre à false pour masquer la bannière "en recherche d'emploi"
-const seekingJob = false;
+const seekingJob = true;
 
 const birthDate = new Date("2003-01-27");
 
@@ -327,7 +327,7 @@ const values = [
 
 <style scoped>
 .about-section {
-  background: white;
+  background: transparent;
   position: relative;
 }
 
@@ -337,47 +337,32 @@ const values = [
 }
 
 .profile-avatar {
-  box-shadow: 0 8px 32px rgba(100, 200, 100, 0.25);
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  border-radius: 18px;
 }
-
-/* .profile-avatar:hover {
-  transform: scale(1.03);
-  box-shadow: 0 12px 40px rgba(100, 200, 100, 0.4);
-} */
 
 .seeking-banner {
   border-radius: 12px;
 }
 
 .value-item {
-  background: rgba(0, 0, 0, 0.02);
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  transition: all 0.2s ease;
+  background: var(--surface-muted);
+  border: 1px solid var(--line);
+  transition: all 0.16s ease;
 }
 
-/* .value-item:hover {
-  background: rgba(129, 199, 132, 0.08);
-  border-color: rgba(129, 199, 132, 0.3);
-} */
-
 .goal-card {
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(180deg, var(--accent) 0%, var(--accent-strong) 100%);
+  color: white;
+  border: none;
 }
 
 .passion-card {
-  background: rgba(0, 0, 0, 0.02);
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  transition: all 0.25s ease;
+  background: var(--surface-muted);
+  border: 1px solid var(--line);
+  transition: all 0.22s ease;
 }
-
-/* .passion-card:hover {
-  background: rgba(0, 0, 0, 0.04);
-  border-color: rgba(0, 0, 0, 0.12);
-  transform: translateY(-2px);
-} */
 
 .passion-icon-bg {
   flex-shrink: 0;

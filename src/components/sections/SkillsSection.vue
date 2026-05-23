@@ -11,80 +11,89 @@ interface Skill {
 interface SkillCategory {
   title: string;
   icon: string;
-  color: string;
-  gradient: string;
+  featured?: boolean;
+  accent?: string;
+  gradient?: string;
+  chipColor?: string;
   skills: Skill[];
 }
 
 const skillCategories: SkillCategory[] = [
   {
-    title: "frontend",
-    icon: "mdi-monitor",
-    color: "blue-lighten-1",
-    gradient: "linear-gradient(135deg, #42a5f5 0%, #1e88e5 100%)",
+    title: "Cloud Platforms",
+    icon: "mdi-cloud-outline",
+    featured: true,
+    accent: "#1976D2",
+    gradient: "linear-gradient(135deg, #2196F3 0%, #1565C0 100%)",
+    chipColor: "blue-lighten-1",
     skills: [
-      { name: "Vue.js 3", icon: "mdi-vuejs" },
-      { name: "TypeScript", icon: "mdi-language-typescript" },
-      { name: "Angular", icon: "mdi-angular" },
-      // { name: "React", icon: "mdi-react" },
-      { name: "Vuetify", icon: "mdi-vuetify" },
-      { name: "HTML / CSS", icon: "mdi-language-html5" },
-      { name: "JavaScript", icon: "mdi-language-javascript" },
+      { name: "Google Cloud Platform", icon: "mdi-google-cloud" },
+      { name: "Amazon AWS", icon: "mdi-aws" },
+      { name: "Microsoft Azure", icon: "mdi-microsoft-azure" },
     ],
   },
-  {
-    title: "backend",
-    icon: "mdi-server",
-    color: "green-lighten-1",
-    gradient: "linear-gradient(135deg, #81c784 0%, #66bb6a 100%)",
+    {
+    title: "Containers & Orchestration",
+    icon: "mdi-kubernetes",
+    accent: "#8E24AA",
+    gradient: "linear-gradient(135deg, #AB47BC 0%, #8E24AA 100%)",
+    chipColor: "purple-lighten-1",
     skills: [
-      { name: "ASP.NET Core", icon: "mdi-dot-net" },
-      { name: "C#", icon: "mdi-language-csharp" },
-      { name: "Node.js", icon: "mdi-nodejs" },
-    ],
-  },
-  {
-    title: "database",
-    icon: "mdi-database",
-    color: "orange-lighten-1",
-    gradient: "linear-gradient(135deg, #ff9800 0%, #f57c00 100%)",
-    skills: [
-      { name: "SQL Server", icon: "mdi-database" },
-      { name: "PostgreSQL", icon: "mdi-database" },
-      { name: "MySQL", icon: "mdi-database" },
-      { name: "MongoDB", icon: "mdi-database" },
-      { name: "Redis", icon: "mdi-database" },
-    ],
-  },
-  {
-    title: "devops",
-    icon: "mdi-hammer-wrench",
-    color: "teal-lighten-1",
-    gradient: "linear-gradient(135deg, #26a69a 0%, #00897b 100%)",
-    skills: [
-      { name: "Git", icon: "mdi-git" },
-      { name: "Azure DevOps", icon: "mdi-microsoft-azure-devops" },
-      { name: "Docker", icon: "mdi-docker" },
       { name: "Kubernetes", icon: "mdi-kubernetes" },
-      { name: "CI/CD", icon: "mdi-autorenew" },
-      { name: "Azure", icon: "mdi-microsoft-azure" },
-      { name: "AWS", icon: "mdi-aws" },
-      { name: "GCP", icon: "mdi-google-cloud" },
+      { name: "Docker", icon: "mdi-docker" },
+      { name: "Docker Swarm", icon: "mdi-docker" },
+      { name: "Microservices", icon: "mdi-layers" },
     ],
   },
   {
-    title: "tools",
-    icon: "mdi-tools",
-    color: "purple-lighten-1",
-    gradient: "linear-gradient(135deg, #ab47bc 0%, #8e24aa 100%)",
+    title: "DevOps & Automation",
+    icon: "mdi-cog-sync",
+    featured: true,
+    accent: "#43A047",
+    gradient: "linear-gradient(135deg, #66BB6A 0%, #388E3C 100%)",
+    chipColor: "green-lighten-1",
     skills: [
-      { name: "Swagger / OpenAPI", icon: "mdi-api" },
-      { name: "REST API", icon: "mdi-api" },
-      { name: "Entity Framework", icon: "mdi-database-cog" },
-      { name: "Microservices", icon: "mdi-layers" },
-      { name: "WebSocket / SignalR", icon: "mdi-signal" },
+      { name: "Terraform", icon: "mdi-wrench-outline" },
+      { name: "Terragrunt", icon: "mdi-file-tree" },
+      { name: "Linux", icon: "mdi-linux" },
+      { name: "Proxmox", icon: "mdi-server" },
+      { name: "Azure DevOps", icon: "mdi-microsoft-azure-devops" },
+      { name: "GitLab", icon: "mdi-gitlab" },
+      { name: "GitHub Actions", icon: "mdi-github" },
     ],
   },
+  {
+    title: "Programming & Scripting",
+    icon: "mdi-code-braces",
+    accent: "#FB8C00",
+    gradient: "linear-gradient(135deg, #FFA726 0%, #FB8C00 100%)",
+    chipColor: "orange-lighten-1",
+    skills: [
+      { name: "C#", icon: "mdi-language-csharp" },
+      { name: "ASP.NET Core", icon: "mdi-dot-net" },
+      { name: "Vue.js 3", icon: "mdi-vuejs" },
+      { name: "Vuetify", icon: "mdi-vuetify" },
+      { name: "TypeScript", icon: "mdi-language-typescript" },
+      { name: "Python", icon: "mdi-language-python" },
+      { name: "Bash", icon: "mdi-console" },
+    ],
+  }
+];
+
+const additionalTechnologies = [
+  { name: 'Entity Framework', icon: 'mdi-database-cog' },
+  { name: 'WebSocket / SignalR', icon: 'mdi-signal' },
+  { name: "SQL Server", icon: "mdi-database" },
+  { name: "PostgreSQL", icon: "mdi-database" },
+  { name: "MySQL", icon: "mdi-database" },
+  { name: "MongoDB", icon: "mdi-database" },
+  { name: "Redis", icon: "mdi-database" },
+  { name: 'Database Management', icon: 'mdi-database' },
+  { name: 'SQL', icon: 'mdi-database' },
+  { name: 'NoSQL', icon: 'mdi-database' },
+  { name: 'Firebase', icon: 'mdi-google-cloud' },
+  { name: 'Git', icon: 'mdi-git' },
+  { name: 'Angular', icon: 'mdi-angular' },
 ];
 </script>
 
@@ -103,7 +112,7 @@ const skillCategories: SkillCategory[] = [
           <h1 class="text-h2 font-weight-bold mb-4">
             {{ t("views.main.skills.sectionTitle") }}
           </h1>
-          
+
           <!-- Texte d'introduction inspirant -->
           <p class="introduction-text text-body1 text-grey-darken-1 mb-6 font-weight-500">
             {{ t("views.main.skills.introduction") }}
@@ -120,56 +129,68 @@ const skillCategories: SkillCategory[] = [
       </v-col>
     </v-row>
 
-    <!-- Sections par catégories -->
-    <v-row class="px-4 px-sm-8">
-      <v-col cols="12" class="mb-12">
-        <div
-          v-for="(category, idx) in skillCategories"
-          :key="category.title"
-          class="mb-12"
-          :style="{ 
-            animation: `slideUp 0.6s ease-out backwards`,
-            animationDelay: `${idx * 0.1}s`
-          }"
-        >
-          <!-- Titre catégorie -->
-          <div class="category-title-section mb-6">
-            <div class="category-title-wrapper">
-              <v-icon 
-                :icon="category.icon" 
-                :color="category.color"
-                size="32"
-                class="mr-3"
-              ></v-icon>
-              <h2 class="text-h5 font-weight-bold">
-                {{ t(`views.main.skills.${category.title}`) }}
-              </h2>
-            </div>
-            <v-divider :color="category.color" class="mt-3 mx-auto" style="max-width: 300px;"></v-divider>
-          </div>
-
-          <!-- Liste des technologies -->
-          <div class="skills-list-wrapper">
-            <div
-              v-for="(skill, itemIdx) in category.skills"
-              :key="skill.name"
-              class="skill-item-simple"
-              :style="{ 
-                animation: `slideIn 0.4s ease-out backwards`,
-                animationDelay: `${itemIdx * 0.05}s`
-              }"
-            >
-              <div class="skill-icon-box" v-if="skill.icon">
-                <v-icon 
-                  :icon="skill.icon"
-                  :color="category.color"
-                  size="36"
-                ></v-icon>
+    <v-row justify="center">
+      <v-col cols="12" md="10" lg="10">
+        <div class="technical-grid">
+          <v-card
+            v-for="category in skillCategories"
+            :key="category.title"
+            class="technical-card"
+            :class="{ 'technical-card--featured': category.featured }"
+            elevation="0"
+          >
+            <v-card-text class="pa-6">
+              <div class="technical-card-header mb-5">
+                <div class="technical-title-wrap">
+                  <div class="technical-icon" :style="{ background: category.gradient || 'linear-gradient(135deg, #66bb6a 0%, #43a047 100%)' }">
+                    <v-icon :icon="category.icon" size="22" color="white"></v-icon>
+                  </div>
+                  <h2 class="text-h6 font-weight-bold ma-0">
+                    {{ category.title }}
+                  </h2>
+                </div>
               </div>
-              <div v-else class="skill-icon-placeholder"></div>
-              <p class="skill-label">{{ skill.name }}</p>
-            </div>
-          </div>
+
+              <div class="skills-mini-grid">
+                <v-sheet
+                  v-for="skill in category.skills"
+                  :key="skill.name"
+                  class="skill-mini-card"
+                  rounded="lg"
+                  :style="{ borderColor: category.accent || 'var(--line)' }"
+                >
+                  <v-icon
+                    v-if="skill.icon"
+                    :icon="skill.icon"
+                    size="18"
+                    :color="category.accent || 'green-darken-1'"
+                    class="mr-2"
+                  ></v-icon>
+                  {{ skill.name }}
+                </v-sheet>
+              </div>
+            </v-card-text>
+          </v-card>
+        </div>
+      </v-col>
+    </v-row>
+
+    <!-- Additional Technologies -->
+    <v-row justify="center" class="mt-10">
+      <v-col cols="12" md="10" lg="8" class="text-center">
+        <h3 class="text-h5 font-weight-bold mb-4">Additional Technologies</h3>
+        <div class="additional-tech">
+          <v-chip
+            v-for="tech in additionalTechnologies"
+            :key="tech.name"
+            class="ma-2"
+            variant="outlined"
+            color="grey lighten-3"
+            size="small"
+          >
+            <v-icon v-if="tech.icon" :icon="tech.icon" size="16" class="mr-2"></v-icon>
+            {{ tech.name }}
+          </v-chip>
         </div>
       </v-col>
     </v-row>
@@ -178,7 +199,7 @@ const skillCategories: SkillCategory[] = [
 
 <style scoped>
 .skills-section {
-  background: white;
+  background: transparent;
   position: relative;
 }
 
@@ -195,129 +216,80 @@ const skillCategories: SkillCategory[] = [
   letter-spacing: 0.3px;
 }
 
-.category-title-section {
-  animation: fadeIn 0.6s ease-out;
+.technical-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
 }
 
-.category-title-wrapper {
+.technical-card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.technical-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+}
+
+.technical-card-header {
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.technical-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.technical-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
   justify-content: center;
+  box-shadow: 0 8px 16px rgba(15, 29, 20, 0.08);
 }
 
-.skills-list-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  padding: 16px 0;
-  justify-content: center;
-  align-items: center;
+.technical-card--featured {
+  box-shadow: 0 16px 40px rgba(0,0,0,0.06);
 }
 
-.skill-item-simple {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  text-align: center;
-  transition: all 0.3s ease;
+.skills-mini-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
 }
 
-/* .skill-item-simple:hover {
-  transform: translateY(-8px);
-} */
-
-.skill-icon-box {
+.skill-mini-card {
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, #ffffff 0%, #f8fcf8 100%);
+  border-radius: 10px;
+  min-height: 48px;
+  padding: 0.55rem 0.7rem;
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(135deg, rgba(129, 199, 132, 0.08) 0%, rgba(102, 187, 106, 0.08) 100%);
-  border-radius: 12px;
-  transition: all 0.3s ease;
+  font-weight: 600;
+  color: var(--ink);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.skill-item-simple:hover .skill-icon-box {
-  background: linear-gradient(135deg, rgba(129, 199, 132, 0.16) 0%, rgba(102, 187, 106, 0.16) 100%);
-  box-shadow: 0 8px 16px rgba(129, 199, 132, 0.12);
-  transform: scale(1.08);
-}
-
-.skill-icon-placeholder {
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(135deg, rgba(129, 199, 132, 0.06) 0%, rgba(102, 187, 106, 0.06) 100%);
-  border-radius: 12px;
-}
-
-.skill-label {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: #333;
-  margin: 0;
-  word-break: break-word;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+.skill-mini-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(56, 142, 60, 0.12);
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .skills-list-wrapper {
-    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-    gap: 16px;
-  }
-
-  .skill-icon-box {
-    width: 50px;
-    height: 50px;
-  }
-
-  .skill-label {
-    font-size: 0.8rem;
+  .technical-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -326,14 +298,25 @@ const skillCategories: SkillCategory[] = [
     font-size: 0.95rem;
   }
 
-  .skills-list-wrapper {
-    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
-    gap: 12px;
+  .technical-card .v-card-text {
+    padding: 1rem !important;
   }
 
-  .skill-icon-box {
-    width: 45px;
-    height: 45px;
+  .skills-mini-grid {
+    grid-template-columns: 1fr;
   }
+}
+
+.additional-tech {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.additional-tech .v-chip {
+  border-radius: 999px;
+  background: rgba(245,245,245,0.8);
+  color: var(--ink);
 }
 </style>

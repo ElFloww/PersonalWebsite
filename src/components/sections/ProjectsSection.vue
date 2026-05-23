@@ -534,7 +534,7 @@ const openProjectDetail = (project: Project) => {
 
 <style scoped>
 .projects-section {
-    background: linear-gradient(135deg, #f5f5f5 0%, #fafafa 100%);
+    background: transparent;
     position: relative;
 }
 
@@ -561,9 +561,9 @@ const openProjectDetail = (project: Project) => {
 }
 
 .project-card:hover {
-    transform: translateY(-12px) scale(1.02);
-    box-shadow: 0 20px 60px rgba(129, 199, 132, 0.3) !important;
-    border-color: rgba(129, 199, 132, 0.4);
+    transform: translateY(-10px) scale(1.01);
+    box-shadow: var(--shadow-card) !important;
+    border-color: rgba(47, 109, 78, 0.08);
 }
 
 :deep(.project-card .v-card-text) {
@@ -619,14 +619,13 @@ const openProjectDetail = (project: Project) => {
     bottom: 1rem;
     left: 50%;
     transform: translateX(-50%);
-    background: white;
-    backdrop-filter: blur(10px);
-    color: rgba(0, 0, 0, 0.8);
-    padding: 0.5rem 1.5rem;
-    border-radius: 20px;
+    background: var(--surface);
+    color: var(--ink);
+    padding: 0.45rem 1.25rem;
+    border-radius: 18px;
     font-size: 0.875rem;
     font-weight: 600;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 16px rgba(15, 29, 20, 0.06);
 }
 
 .project-logo-badge {

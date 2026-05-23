@@ -24,47 +24,52 @@ const scrollToSection = (sectionId: string) => {
 </script>
 
 <template>
-    <v-navigation-drawer :model-value="modelValue" @update:model-value="emit('update:modelValue', $event)"
-        temporary location="right">
+    <v-navigation-drawer
+        :model-value="modelValue"
+        @update:model-value="emit('update:modelValue', $event)"
+        temporary
+        location="right"
+        class="site-drawer"
+    >
         <v-list nav>
             <v-list-item @click="scrollToSection('about')">
                 <template v-slot:prepend>
-                    <v-icon>mdi-account</v-icon>
+                    <v-icon color="primary">mdi-account</v-icon>
                 </template>
                 <v-list-item-title>{{ t('components.shared.appBar.about') }}</v-list-item-title>
             </v-list-item>
 
             <v-list-item @click="scrollToSection('experience')">
                 <template v-slot:prepend>
-                    <v-icon>mdi-briefcase</v-icon>
+                    <v-icon color="primary">mdi-briefcase</v-icon>
                 </template>
                 <v-list-item-title>{{ t('components.shared.appBar.experience') }}</v-list-item-title>
             </v-list-item>
 
             <v-list-item @click="scrollToSection('education')">
                 <template v-slot:prepend>
-                    <v-icon>mdi-school</v-icon>
+                    <v-icon color="primary">mdi-school</v-icon>
                 </template>
                 <v-list-item-title>{{ t('components.shared.appBar.education') }}</v-list-item-title>
             </v-list-item>
 
             <v-list-item @click="scrollToSection('skills')">
                 <template v-slot:prepend>
-                    <v-icon>mdi-code-tags</v-icon>
+                    <v-icon color="primary">mdi-code-tags</v-icon>
                 </template>
                 <v-list-item-title>{{ t('components.shared.appBar.skills') }}</v-list-item-title>
             </v-list-item>
 
             <v-list-item @click="scrollToSection('projects')">
                 <template v-slot:prepend>
-                    <v-icon>mdi-rocket-launch</v-icon>
+                    <v-icon color="primary">mdi-rocket-launch</v-icon>
                 </template>
                 <v-list-item-title>{{ t('components.shared.appBar.projects') }}</v-list-item-title>
             </v-list-item>
 
             <v-list-item @click="scrollToSection('contact')">
                 <template v-slot:prepend>
-                    <v-icon>mdi-email</v-icon>
+                    <v-icon color="primary">mdi-email</v-icon>
                 </template>
                 <v-list-item-title>{{ t('components.shared.appBar.contact') }}</v-list-item-title>
             </v-list-item>
