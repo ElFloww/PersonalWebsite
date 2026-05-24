@@ -106,7 +106,7 @@ const resetForm = () => {
                     :rules="nameRules"
                     variant="outlined"
                     color="green-darken-1"
-                    bg-color="white"
+                    bg-color="surface"
                     density="comfortable"
                     hide-details="auto"
                     required
@@ -121,7 +121,7 @@ const resetForm = () => {
                     :rules="emailRules"
                     variant="outlined"
                     color="green-darken-1"
-                    bg-color="white"
+                    bg-color="surface"
                     density="comfortable"
                     hide-details="auto"
                     type="email"
@@ -137,7 +137,7 @@ const resetForm = () => {
                     :rules="subjectRules"
                     variant="outlined"
                     color="green-darken-1"
-                    bg-color="white"
+                    bg-color="surface"
                     density="comfortable"
                     hide-details="auto"
                     required
@@ -152,7 +152,7 @@ const resetForm = () => {
                     :rules="messageRules"
                     variant="outlined"
                     color="green-darken-1"
-                    bg-color="white"
+                    bg-color="surface"
                     rows="5"
                     hide-details="auto"
                     no-resize

@@ -18,6 +18,20 @@
     --radius-md: 14px;
 }
 
+html.dark-theme {
+    --accent: #5cb884;
+    --accent-strong: #74b291;
+    --accent-soft: #1a2e22;
+    --accent-soft-2: #142219;
+    --surface: #121212;
+    --surface-muted: #1e1e1e;
+    --ink: #e0e0e0;
+    --ink-muted: #a0a0a0;
+    --line: #2c2c2c;
+    --shadow-soft: 0 10px 28px rgba(0, 0, 0, 0.5);
+    --shadow-card: 0 18px 45px rgba(0, 0, 0, 0.6);
+}
+
 * {
     box-sizing: border-box;
 }
@@ -34,7 +48,14 @@ body {
     background:
         radial-gradient(1200px 600px at 10% -10%, rgba(74, 143, 104, 0.12), transparent 55%),
         radial-gradient(900px 500px at 90% 0%, rgba(74, 143, 104, 0.08), transparent 60%),
-        #ffffff;
+        var(--surface);
+}
+
+html.dark-theme body {
+    background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(74, 143, 104, 0.15), transparent 55%),
+        radial-gradient(900px 500px at 90% 0%, rgba(74, 143, 104, 0.1), transparent 60%),
+        #0a0a0a;
 }
 
 .v-application {
@@ -173,6 +194,10 @@ a:hover {
     border-bottom: 1px solid var(--line);
 }
 
+html.dark-theme .site-app-bar {
+    background: rgba(18, 18, 18, 0.86) !important;
+}
+
 .site-app-bar .v-btn {
     font-weight: 500;
 }
@@ -258,6 +283,10 @@ a:hover {
     background: rgba(255, 255, 255, 0.75) !important;
     backdrop-filter: blur(12px);
     border: 1px solid var(--line);
+}
+
+html.dark-theme .glass-card {
+    background: rgba(18, 18, 18, 0.75) !important;
 }
 
 .neon-glow {

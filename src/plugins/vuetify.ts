@@ -21,6 +21,19 @@ const Vuetify = createVuetify({
 					line: '#e3efe7',
 				},
 			},
+			floraDark: {
+				dark: true,
+				colors: {
+					primary: '#5cb884',
+					primaryLight: '#74b291',
+					primarySoft: '#1a2e22',
+					surface: '#121212',
+					background: '#0a0a0a',
+					ink: '#e0e0e0',
+					muted: '#1e1e1e',
+					line: '#2c2c2c',
+				},
+			},
 		},
 	},
 })

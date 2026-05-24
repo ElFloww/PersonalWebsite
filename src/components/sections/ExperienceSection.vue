@@ -606,7 +606,7 @@ const showDetails = (exp: Experience) => {
 .dialog-panel {
   border: 1px solid var(--line);
   border-radius: 14px;
-  background: #fff;
+  background: var(--surface);
   padding: 1.15rem;
   box-shadow: var(--shadow-soft);
 }
@@ -700,7 +700,7 @@ const showDetails = (exp: Experience) => {
 
 .skill-mini-card {
   border: 1px solid var(--line);
-  background: linear-gradient(180deg, #ffffff 0%, #f8fcf8 100%);
+  background: linear-gradient(180deg, var(--surface) 0%, var(--surface-muted) 100%);
   border-radius: 10px;
   min-height: 48px;
   height: auto;
@@ -731,7 +731,7 @@ const showDetails = (exp: Experience) => {
 
 .additional-tech .v-chip {
   border-radius: 999px;
-  background: rgba(245,245,245,0.8);
+  background: var(--surface-muted);
   color: var(--ink);
 }
 

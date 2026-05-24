@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
 import { i18n } from '@/plugins/i18n';
+import { useAppTheme } from '@/composables/useAppTheme';
 
 const { t } = useI18n();
+const { isDark, toggleTheme } = useAppTheme();
 
 const props = defineProps<{
     modelValue: boolean;
@@ -77,7 +79,15 @@ const scrollToSection = (sectionId: string) => {
             <v-divider class="my-3"></v-divider>
 
             <v-list-item>
-                <div class="d-flex justify-center ga-2">
+                <div class="d-flex justify-center align-center ga-2">
+                    <v-btn icon flat :ripple="false" size="small" @click="toggleTheme">
+                        <v-icon size="24" :color="isDark ? 'amber' : 'blue-grey-darken-2'">
+                            {{ isDark ? 'mdi-weather-sunny' : 'mdi-weather-night' }}
+                        </v-icon>
+                    </v-btn>
+
+                    <v-divider vertical thickness="2" class="mx-2" style="height: 24px; align-self: center;"></v-divider>
+
                     <v-btn icon flat :ripple="false" size="small" @click="changeLang('en')">
                         <img src="@/assets/images/en.svg" width="28" :alt="t('components.shared.icons.en.alt')" />
                     </v-btn>
