@@ -1,4 +1,4 @@
-﻿{
+{
   "components": {
     "shared": {
       "icons": {
@@ -22,7 +22,11 @@
         "education": "Formation",
         "skills": "Compétences",
         "projects": "Projets",
-        "contact": "Contact"
+        "contact": "Contact",
+        "downloadCv": "CV PDF"
+      },
+      "visitCounter": {
+        "visits": "visites"
       }
     }
   },
@@ -31,29 +35,22 @@
       "profil": {
         "title": "Florent Dubut",
         "yearsOld": "ans",
-        "description": "Développeur Backend .NET | C#"
+        "description": "Ingénieur logiciel | Backend .NET & DevOps"
       },
       "presentation": {
         "title": "👋 Bonjour, moi c'est Florent",
-        "subtitle": "Développeur Backend .NET",
-        "seekingJobBanner": "🟢 Disponible en CDI dès septembre 2026 — Marseille · Aix-en-Provence · Toulon",
-        "locationBadge": "Actuellement à Amiens — Retour en Provence en septembre 2026",
-        "firstParagraph1": "Originaire de Nogent-le-Rotrou, au cœur du Perche normand, j'ai grandi entouré de nature et d'une curiosité grandissante pour la technologie.",
-        "firstParagraph2": "Tout a commencé vers 14 ans avec la découverte de Python : une vraie révélation. La spécialité NSI au lycée n'a fait qu'amplifier cette passion.",
-        "firstParagraph3": "J'ai ensuite construit mes bases à Amiens avec un BUT Informatique à l'IUT, avant de pousser plus loin avec un Master Cloud Computing & Mobility à l'INSSET de Saint-Quentin — une formation exigeante que j'ai vécu pleinement en alternance chez Orange Business.",
-        "secondParagraph": "Je suis développeur Backend spécialisé en .NET & C#. Mon terrain de jeu : des APIs RESTful propres, une clean architecture rigoureuse, SQL Server, et des injections de dépendances bien pensées. Je fais aussi du front en Vue.js — ce qui me donne une double vision utile pour documenter mes APIs avec précision. Mais c'est côté backend que je m'épanouis vraiment.",
+        "subtitle": "Ingénieur logiciel spécialisé backend .NET et DevOps",
+        "seekingJobBanner": "CDI recherché en région PACA à partir de septembre 2026 — Toulon · Marseille · Aix-en-Provence",
+        "locationBadge": "Toulon, France",
+        "firstParagraph1": "Passionné par l'architecture logicielle, je suis aujourd'hui ingénieur logiciel avec une forte dominante Backend (.NET/C#) et DevOps.",
+        "firstParagraph2": "J'ai construit mon socle technique à travers un BUT Informatique puis un Master Cloud Computing à l'INSSET, une formation entièrement réalisée en alternance chez Orange Business.",
+        "firstParagraph3": "Concevoir des APIs et des architectures propres est ce qui m'anime au quotidien.",
+        "secondParagraph": "J'aborde mes projets avec une vision complète du cycle de vie logiciel : du développement backend pur, jusqu'à l'automatisation des déploiements grâce à une bonne culture DevOps et Cloud (CI/CD, conteneurisation). Ma connaissance de Vue.js vient compléter cette approche en me donnant la vision globale nécessaire pour collaborer efficacement avec les équipes front.",
         "philosophyTitle": "Mon approche",
         "philosophyText": "Avant de taper la moindre ligne de code, je m'assure d'avoir parfaitement compris le besoin métier et l'objectif final. Je conçois d'abord l'architecture de la base de données et les contrats d'API, puis je développe brique par brique avec un code propre, testable et maintenable. Face à un bug, pas de pansement — je remonte à la source, je corrige la faille et j'écris un test pour ne plus jamais y revenir.",
-        "valuesTitle": "Ce qui me guide",
-        "values": {
-          "knowledgeSharing": "Partage de connaissances & code reviews bienveillantes pour progresser",
-          "documentation": "Documentation soignée (Swagger, README) pour faciliter le travail et la maintenance",
-          "pragmatism": "Rigueur & pragmatisme : comprendre avant de coder, corriger à la source",
-          "continuousImprovement": "Amélioration continue — techniquement et humainement"
-        },
         "goalTitle": "Mon objectif",
-        "goalText": "À la fin de mes études, en septembre 2026, je rentre en Provence — ma famille y est, et c'est là que j'envisage de construire la suite de ma carrière. Je cherche un CDI dans le développement logiciel à Marseille, Aix-en-Provence ou Toulon, idéalement orienté backend, au sein d'une équipe où la qualité du code et la bonne entente comptent autant que la technique.",
-        "goalCTA": "CDI à Marseille · Aix-en-Provence · Toulon — dès sept. 2026",
+        "goalText": "À la fin de mes études, en septembre 2026, je rentre en Provence pour me rapprocher de ma famille et y construire la suite de ma carrière.\n\nAyant développé une solide expertise et une forte appétence pour l'écosystème Microsoft et l'automatisation, je recherche activement un CDI en tant que Développeur .NET ou Ingénieur DevOps.\n\nMon objectif est d'intégrer une équipe technique stimulante sur Toulon, Aix-en-Provence ou Marseille, au sein de laquelle je pourrai concevoir des architectures backend robustes, fiabiliser les infrastructures via le CI/CD et m'investir sur des projets ambitieux où la qualité du code prime.",
+        "goalCTA": "Recherche CDI .NET / DevOps (Toulon, Aix, Marseille) — dès sept. 2026",
         "interestsTitle": "Passions & centres d'intérêt",
         "passions": {
           "sport": {
@@ -74,17 +71,25 @@
           },
           "music": {
             "title": "Musique",
-            "description": "Ma playlist tourne autour des classiques français et des vieilles âmes : Dalida, Joe Dassin, Christophe... Des voix et des mélodies qui ont quelque chose d'inépuisable. La musique, c'est mon meilleur mode de déconnexion."
+            "description": "J'écoute du rap comme Damso, mais aussi des sons latinos comme Bad Bunny et des classiques français comme Dalida, Joe Dassin ou Christophe, selon mes humeurs. La musique est mon meilleur mode de déconnexion."
           }
         }
       },
       "professionalExperience": {
         "title": "💼 Expériences professionnelles",
-        "sectionTitle": "Expériences Professionnelles",
-        "sectionDescription": "Mon parcours professionnel et mes missions",
+        "sectionTitle": "Expérience Professionnelle",
+        "sectionDescription": "Développement d'une expertise par la pratique de l'ingénierie logicielle, du cloud et de l'automatisation DevOps.",
         "learnMore": "En savoir plus",
         "missionsAndAchievements": "Missions et réalisations",
+        "contextTitle": "Contexte",
+        "stackTitle": "Stack Technique",
+        "additionalTechnologies": "Autres technologies",
         "close": "Fermer",
+        "contractType": {
+          "stage": "Stage",
+          "cdd": "CDD",
+          "alternance": "Alternance"
+        },
         "first": {
           "date": "avril 2023 - mai 2023",
           "title": "Développeur Full-Stack .NET / Vue.js — Stage",
@@ -120,8 +125,8 @@
           "title": "Consultant .NET & TypeScript Full-Stack — Alternance",
           "company": "Orange Business — Amiens",
           "shortDesc": "Consultant alternant avec prise en charge de projets complets et montée en responsabilité.",
-          "content": "Évolution vers un poste de consultant alternant. Prise en charge de projets complets et montée en responsabilité sur l'architecture et les déploiements. Consultant sur les technologies Microsoft et JavaScript au sein d'une équipe Agile. Développement et maintenance d'APIs REST en ASP.NET Core (clean architecture, CQRS), développement front-end avec Vue.js 3 et Angular sur des applications métier.",
-          "tech": "C# · ASP.NET Core (.NET 6/.NET 8) · Angular · Vue.js 3 · TypeScript · SQL Server · Entity Framework Core · API REST / SOAP · API Whisper (IA) · Docker · Azure DevOps · Méthode Agile (Scrum)",
+          "content": "Évolution vers un poste de consultant alternant. Prise en charge de projets complets et montée en responsabilité sur l'architecture et les déploiements. Consultant sur les technologies Microsoft et JavaScript au sein d'une équipe Agile. Développement et maintenance d'APIs REST en ASP.NET Core (clean architecture, CQRS), développement front-end avec Vue.js 3 et Angular sur des applications métier. En parallèle, forte implication DevOps : d'abord sur Azure DevOps, puis plus récemment sur GitLab CI/CD avec des déploiements sur AWS pilotés via Terraform et Terragrunt.",
+          "tech": "C# · ASP.NET Core (.NET 6/.NET 8) · Angular · Vue.js 3 · TypeScript · SQL Server · Entity Framework Core · API REST / SOAP · API Whisper (IA) · Docker · Azure DevOps · GitLab CI · AWS · Terraform · Terragrunt · Méthode Agile (Scrum)",
           "details": [
             "Finalisation et déploiement d'applications (migration vers .NET 8)",
             "Conception complète d'applications métier : modélisation de bases de données, spécifications techniques, développement complet (back-end .NET 8, front Angular/Vue.js) et intégration d'APIs",
@@ -129,7 +134,8 @@
             "Modernisation d'applications legacy : refonte d'architecture, réécriture avec technologies modernes, modules d'import/export Excel et logiques complexes",
             "Maintenance évolutive et refactoring de code sur applications critiques",
             "Participation active aux rituels Agile (Daily, Weekly, revues de code)",
-            "Mise en place et maintenance de pipelines CI/CD via Azure DevOps",
+            "Mise en place et maintenance de pipelines CI/CD via Azure DevOps, puis migration vers GitLab CI/CD",
+            "Déploiement d'infrastructures cloud sur AWS via Infrastructure as Code (Terraform + Terragrunt)",
             "Accompagnement et mentorat d'autres développeurs"
           ]
         }
@@ -137,9 +143,12 @@
       "education": {
         "title": "🎓 Education",
         "sectionTitle": "Parcours Académique",
-        "sectionDescription": "Formations, diplômes et engagements",
+        "sectionDescription": "Acquisition d'un socle théorique et pratique solide en ingénierie logicielle, systèmes et architectures cloud.",
         "viewProgram": "Voir le programme",
         "modulesAndSkills": "Modules et compétences",
+        "otherSkills": "Autres compétences",
+        "parcours": "Parcours",
+        "additionalTechnologies": "Autres technologies",
         "close": "Fermer",
         "first": {
           "date": "2021 - 2024",
@@ -184,8 +193,7 @@
             "Spécialisation Cloud & Microservices",
             "Architecture & Infrastructure pratiques",
             "DevOps & Stratégies déploiement",
-            "Développement mobile & SaaS",
-            "Réalisé en alternance Orange Business"
+            "Développement mobile & SaaS"          
           ],
           "modules": [
             "Infrastructures Cloud (IaaS/PaaS) : déploiement et administration sur Azure, AWS et Google Cloud",
@@ -207,16 +215,28 @@
       },
       "contact": {
         "title": "✉️ Contact",
-        "description": "Vous pouvez me contacter par email à l'adresse suivante :",
+        "sectionTitle": "Contact",
+        "sectionDescription": "Prêt à discuter d'infrastructure cloud, d'automatisation DevOps ou de potentielles opportunités ? J'adorerais échanger avec vous !",
+        "contactInfo": "Informations de contact",
+        "emailLabel": "Email",
+        "locationLabel": "Localisation",
+        "locationValue": "Toulon, Aix, Marseille",
+        "availabilityLabel": "Disponibilité",
+        "availabilityValue": "Ouvert aux opportunités (CDI)",
+        "connectWithMe": "Retrouvez-moi",
         "downloadCv": "Télécharger mon CV"
       },
       "contactForm": {
-        "title": "Envoyez-moi un message",
+        "title": "Envoyez un message",
         "name": "Nom",
+        "namePlaceholder": "Votre nom complet",
         "email": "Email",
+        "emailPlaceholder": "votre.email{'@'}exemple.com",
         "subject": "Sujet",
+        "subjectPlaceholder": "De quoi s'agit-il ?",
         "message": "Message",
-        "send": "Envoyer",
+        "messagePlaceholder": "Parlez-moi de votre projet, d'une opportunité, ou venez juste dire bonjour !",
+        "send": "Envoyer le message",
         "reset": "Réinitialiser",
         "nameRequired": "Le nom est requis",
         "nameMinLength": "Le nom doit contenir au moins 2 caractères",
@@ -232,12 +252,24 @@
         "title": "💻 Compétences techniques",
         "sectionTitle": "Compétences Techniques",
         "sectionDescription": "Technologies et outils maîtrisés",
-        "introduction": "Grâce à mes compétences, je conçois et développe des applications web et des outils digitaux sur mesure, alignés sur les besoins des utilisateurs et les objectifs des entreprises, avec une architecture évolutive, automatisée, maintenable et performante.",
+        "introduction": "Expertise technique axée sur le développement backend, les pratiques DevOps et les infrastructures cloud modernes.",
         "frontend": "Frontend",
         "backend": "Backend",
         "database": "Bases de données",
         "devops": "DevOps & Infrastructure",
-        "tools": "Autres outils"
+        "tools": "Autres outils",
+        "additionalTechnologies": "Autres technologies"
+      },
+      "about": {
+        "statsXp": "Années d'XP",
+        "statsProjects": "Projets réalisés",
+        "statsTechnologies": "Technologies",
+        "pillarBackendTitle": "Backend .NET",
+        "pillarBackendDesc": "APIs REST en Clean Architecture (C#, ASP.NET Core), CQRS avec MediatR, Entity Framework, SQL Server.",
+        "pillarDevOpsTitle": "DevOps & Cloud",
+        "pillarDevOpsDesc": "CI/CD via Azure DevOps & GitLab, conteneurisation Docker, IaC avec Terraform/Terragrunt sur AWS/Azure/GCP.",
+        "pillarVisionTitle": "Vision produit",
+        "pillarVisionDesc": "Conception de bout en bout : de la modélisation BDD aux contrats API, avec un code propre, testable et maintenable."
       },
       "stats": {
         "years": "Années",
@@ -249,16 +281,18 @@
       },
       "projects": {
         "title": "🚀 Projets",
-        "sectionTitle": "Mes Réalisations",
-        "sectionDescription": "Projets et applications développés",
+        "sectionTitle": "Projets Phares",
+        "sectionDescription": "Des projets clés illustrant mon expertise en infrastructure cloud, architectures événementielles et développement.",
         "viewProject": "Voir le projet",
         "sourceCode": "Code source",
         "details": "Détails",
+        "descriptionTitle": "Description",
         "contextTitle": "Contexte",
         "conceptTitle": "Le Concept",
         "missionsTitle": "Mes Missions & Réalisations Techniques",
         "challengesTitle": "Défis Relevés & Enseignements",
-        "technologiesTitle": "Technologies & Outils",
+        "technologiesTitle": "Stack Technique",
+        "additionalTechnologies": "Autres technologies",
         "close": "Fermer",
         "code": "Code",
         "visit": "Visiter",
@@ -388,7 +422,59 @@
           "portfolio": {
             "title": "Portfolio Personnel",
             "shortDescription": "Site web personnel développé avec Vue.js et Vuetify, présentant mon parcours, mes compétences et mes projets.",
-            "description": "Site web personnel développé avec Vue.js et Vuetify, présentant mon parcours, mes compétences et mes projets. C'est le même site que je développe en ce moment."
+            "description": "Site web personnel développé avec Vue.js et Vuetify, présentant mon parcours, mes compétences et mes projets."
+          },
+          "homelab": {
+            "title": "HomeLab — Serveur Personnel",
+            "shortDescription": "Reconversion d'un ancien PC en serveur personnel : virtualisation Proxmox, réseau sécurisé IPFire, VPN WireGuard et hébergement de services self-hosted.",
+            "description": "Reconversion d'un ancien PC en serveur hébergeant une infrastructure complète : hyperviseur Proxmox, pare-feu IPFire, VPN WireGuard, reverse proxy NGINX et une dizaine de services self-hosted (Jellyfin, Nextcloud, Immich, Pterodactyl…), le tout sécurisé en RAID.",
+            "period": "2025 — Présent",
+            "context": "Projet personnel né d'une double volonté : prendre le contrôle total de mes données et approfondir mes compétences en administration système, virtualisation et sécurité réseau acquises en cours. Plutôt que de laisser un ancien PC prendre la poussière, je l'ai transformé en véritable serveur personnel.",
+            "roles": "Administrateur système · Architecte réseau · Ingénieur DevOps",
+            "concept": "Un homelab complet piloté par Proxmox VE comme hyperviseur central, avec un réseau interne entièrement segmenté et sécurisé par IPFire (pare-feu/routeur). Les données sont protégées par un RAID pour tolérance aux pannes. L'accès distant est sécurisé via WireGuard VPN, et tous les services sont exposés proprement via NGINX Proxy Manager avec certificats SSL automatiques.",
+            "missions": {
+              "infrastructure": {
+                "heading": "Infrastructure & Virtualisation (Proxmox)",
+                "items": [
+                  "Installation et configuration de Proxmox VE comme hyperviseur principal sur un PC reconverti",
+                  "Création et gestion de VMs et conteneurs LXC pour isoler chaque service de manière indépendante",
+                  "Mise en place d'un RAID pour la redondance des données et la tolérance aux pannes disque"
+                ]
+              },
+              "network": {
+                "heading": "Réseau & Sécurité",
+                "items": [
+                  "Déploiement d'IPFire comme pare-feu et routeur pour segmenter et sécuriser le réseau interne",
+                  "Configuration d'un VPN WireGuard pour un accès chiffré et sécurisé depuis l'extérieur",
+                  "Mise en place de NGINX Proxy Manager comme reverse proxy centralisé avec SSL/TLS automatique (Let's Encrypt)"
+                ]
+              },
+              "services": {
+                "heading": "Services Self-Hosted",
+                "items": [
+                  "Jellyfin : serveur multimédia pour la gestion et le streaming de films et séries",
+                  "Nextcloud : cloud personnel pour le stockage et la synchronisation de fichiers",
+                  "Immich : gestion, organisation et sauvegarde de la photothèque personnelle",
+                  "Pterodactyl + Wings : panel d'administration de serveurs de jeux multi-instances"
+                ]
+              }
+            },
+            "challenges": {
+              "security": {
+                "heading": "Sécurité & Isolation des Services",
+                "items": [
+                  "Segmentation réseau stricte via IPFire pour éviter toute communication non autorisée entre services",
+                  "Gestion des certificats SSL/TLS et exposition sécurisée des services publics via reverse proxy"
+                ]
+              },
+              "reliability": {
+                "heading": "Fiabilité & Maintenance",
+                "items": [
+                  "Mise en place du RAID pour garantir la continuité de service en cas de défaillance d'un disque",
+                  "Surveillance et mise à jour régulière de chaque service pour maintenir la stabilité et la sécurité globale"
+                ]
+              }
+            }
           }
         }
       }

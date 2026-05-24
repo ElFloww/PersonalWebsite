@@ -52,7 +52,7 @@ const experienceYears = Number.parseFloat(
   ).toFixed(0),
 );
 
-const targetValues = [experienceYears, 15, 25];
+const targetValues = [experienceYears, 5, 25];
 
 const animateValue = (
   index: number,
@@ -95,41 +95,45 @@ onMounted(() => {
 </script>
 
 <template>
-  <v-container id="stats-section" fluid class="stats-section pa-0">
-    <div class="stats-wrapper py-16">
+  <v-container id="stats-section" fluid class="stats-section">
+    <div class="stats-wrapper">
       <v-row justify="center" align="center">
-        <v-col
-          v-for="(stat, index) in stats"
-          :key="index"
-          cols="12"
-          sm="6"
-          md="4"
-        >
-          <div class="stat-card" :style="{ animationDelay: `${index * 0.1}s` }">
-            <div
-              class="stat-icon-wrapper"
-              :style="{ background: stat.gradient }"
+        <v-col cols="12" md="10">
+          <v-row justify="center" align="center">
+            <v-col
+              v-for="(stat, index) in stats"
+              :key="index"
+              cols="12"
+              sm="6"
+              md="4"
             >
-              <v-icon
-                :icon="stat.icon"
-                size="48"
-                color="white"
-                class="floating"
-              ></v-icon>
-            </div>
-            <div class="stat-content">
-              <div class="stat-number gradient-text">
-                {{ stat.value }}{{ stat.suffix }}
+              <div class="stat-card" :style="{ animationDelay: `${index * 0.1}s` }">
+                <div
+                  class="stat-icon-wrapper"
+                  :style="{ background: stat.gradient }"
+                >
+                  <v-icon
+                    :icon="stat.icon"
+                    size="48"
+                    color="white"
+                    class="floating"
+                  ></v-icon>
+                </div>
+                <div class="stat-content">
+                  <div class="stat-number gradient-text">
+                    {{ stat.value }}{{ stat.suffix }}
+                  </div>
+                  <div class="stat-label">
+                    {{ t(`views.main.stats.${stat.label}`) }}
+                  </div>
+                  <div class="stat-sublabel">
+                    {{ t(`views.main.stats.${stat.sublabel}`) }}
+                  </div>
+                </div>
+                <div class="stat-bg" :style="{ background: stat.gradient }"></div>
               </div>
-              <div class="stat-label">
-                {{ t(`views.main.stats.${stat.label}`) }}
-              </div>
-              <div class="stat-sublabel">
-                {{ t(`views.main.stats.${stat.sublabel}`) }}
-              </div>
-            </div>
-            <div class="stat-bg" :style="{ background: stat.gradient }"></div>
-          </div>
+            </v-col>
+          </v-row>
         </v-col>
       </v-row>
     </div>
@@ -138,9 +142,9 @@ onMounted(() => {
 
 <style scoped>
 .stats-section {
-  background: white;
+  background: transparent;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .stats-wrapper {
@@ -149,96 +153,78 @@ onMounted(() => {
 }
 
 .stat-card {
-  background: white;
-  border-radius: 20px;
-  padding: 2rem;
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 1.75rem;
   text-align: center;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  animation: scaleIn 0.6s ease-out backwards;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.32s ease, box-shadow 0.32s ease;
+  animation: fadeUp 0.6s ease-out backwards;
 }
 
 .stat-card:hover {
-  transform: translateY(-20px) scale(1.05);
-  box-shadow: 0 20px 60px rgba(129, 199, 132, 0.3);
-}
-
-.stat-card:hover .stat-bg {
-  opacity: 0.1;
-  transform: scale(1.5);
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-card);
 }
 
 .stat-icon-wrapper {
-  width: 100px;
-  height: 100px;
+  width: 84px;
+  height: 84px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 1.5rem;
+  margin: 0 auto 1rem;
   position: relative;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-}
-
-.stat-icon-wrapper::before {
-  content: "";
-  position: absolute;
-  inset: -5px;
-  border-radius: 50%;
-  border: 3px dashed rgba(129, 199, 132, 0.3);
-  animation: pulse 3s infinite;
-}
-
-.stat-content {
-  position: relative;
-  z-index: 2;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.06);
 }
 
 .stat-number {
-  font-size: 4rem;
-  font-weight: 900;
+  font-size: 2.6rem;
+  font-weight: 800;
   line-height: 1;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.35rem;
+  color: var(--ink);
 }
 
 .stat-label {
-  font-size: 1.5rem;
+  font-size: 1.15rem;
   font-weight: 700;
-  color: #333;
-  margin-bottom: 0.25rem;
+  color: var(--ink);
+  margin-bottom: 0.2rem;
 }
 
 .stat-sublabel {
-  font-size: 1.1rem;
-  color: #666;
+  font-size: 1rem;
+  color: var(--ink-muted);
   font-weight: 500;
 }
 
 .stat-bg {
   position: absolute;
-  bottom: -50%;
-  right: -50%;
-  width: 300px;
-  height: 300px;
+  bottom: -30%;
+  right: -30%;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
-  opacity: 0.05;
-  transition: all 0.5s ease;
+  opacity: 0.06;
+  transition: all 0.4s ease;
   pointer-events: none;
 }
 
 @media (max-width: 600px) {
   .stat-number {
-    font-size: 3rem;
+    font-size: 2.2rem;
   }
 
   .stat-label {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .stat-sublabel {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 }
 </style>
