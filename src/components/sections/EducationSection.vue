@@ -3,6 +3,7 @@ import { ref } from "vue";
 import { useI18n } from "vue-i18n";
 import upjvLogo from "@/assets/images/logo_upjv.png";
 import inssetLogo from "@/assets/images/logo_insset.png";
+import { getToolIcon } from "@/utils/techIcons";
 
 const { t, tm, locale } = useI18n();
 
@@ -294,7 +295,7 @@ const showDetails = (edu: Education) => {
             <section class="dialog-panel">
               <h3 class="panel-title d-flex align-center mb-3">
                 <v-icon :color="selectedEducation.color" icon="mdi-text-box-outline" class="mr-2"></v-icon>
-                Parcours
+                {{ t('views.main.education.parcours') }}
               </h3>
 
               <div v-if="selectedEducation.key === 'first'" class="dialog-copy-stack">
@@ -341,7 +342,7 @@ const showDetails = (edu: Education) => {
                           rounded="lg"
                           :style="{ borderColor: category.accent || 'var(--line)' }"
                         >
-                          <v-icon :color="category.accent || selectedEducation.color" icon="mdi-check-circle" size="18" class="mr-2"></v-icon>
+                          <v-icon :color="category.accent || selectedEducation.color" :icon="getToolIcon(skill)" size="18" class="mr-2"></v-icon>
                           {{ skill }}
                         </v-sheet>
                       </div>
@@ -351,7 +352,7 @@ const showDetails = (edu: Education) => {
 
                 <div v-if="selectedEducation.additionalTechnologies && selectedEducation.additionalTechnologies.length > 0" class="mt-6">
                   <h4 class="text-subtitle-1 font-weight-bold mb-3 d-flex align-center">
-                    Additional Technologies
+                    {{ t('views.main.education.additionalTechnologies') }}
                   </h4>
                   <div class="additional-tech">
                     <v-chip

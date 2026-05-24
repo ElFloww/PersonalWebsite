@@ -3,8 +3,10 @@ import { computed, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 import tuuuurImage from '@/assets/images/tuuuur.png';
 import kairosImage from '@/assets/images/kairos.png';
+import homelabImage from '@/assets/images/homelab.png';
 import tuuuurLogo from '@/assets/images/tuuuur_logo.png';
 import kairosLogo from '@/assets/images/kairos_logo.png';
+import { getToolIcon } from '@/utils/techIcons';
 
 const { t, locale } = useI18n();
 
@@ -151,6 +153,94 @@ const projects = computed<Project[]>(() => {
                 }
             ]
         },
+                {
+            title: t('views.main.projects.items.homelab.title'),
+            shortDescription: t('views.main.projects.items.homelab.shortDescription'),
+            description: t('views.main.projects.items.homelab.description'),
+            period: t('views.main.projects.items.homelab.period'),
+            contexte: t('views.main.projects.items.homelab.context'),
+            roles: t('views.main.projects.items.homelab.roles'),
+            concept: t('views.main.projects.items.homelab.concept'),
+            technologies: ['Proxmox', 'IPFire', 'WireGuard', 'NGINX Proxy Manager', 'Jellyfin', 'Nextcloud', 'Immich', 'Pterodactyl', 'RAID'],
+            techCategories: [
+                {
+                    category: "Virtualisation & Hyperviseur",
+                    icon: "mdi-server-network",
+                    color: "#E65100",
+                    gradient: "linear-gradient(135deg, #FF7043 0%, #E64A19 100%)",
+                    tools: ["Proxmox VE", "VMs & LXC"]
+                },
+                {
+                    category: "Réseau & Sécurité",
+                    icon: "mdi-wan",
+                    color: "#C62828",
+                    gradient: "linear-gradient(135deg, #EF5350 0%, #C62828 100%)",
+                    tools: ["IPFire", "WireGuard", "NGINX Proxy Manager", "SSL/TLS"]
+                },
+                {
+                    category: "Services Self-Hosted",
+                    icon: "mdi-apps",
+                    color: "#6A1B9A",
+                    gradient: "linear-gradient(135deg, #AB47BC 0%, #6A1B9A 100%)",
+                    tools: ["Jellyfin", "Nextcloud", "Immich", "Pterodactyl"]
+                },
+                {
+                    category: "Stockage & Redondance",
+                    icon: "mdi-harddisk",
+                    color: "#1565C0",
+                    gradient: "linear-gradient(135deg, #42A5F5 0%, #1565C0 100%)",
+                    tools: ["RAID"]
+                }
+            ],
+            image: 'homelab',
+            color: 'teal-darken-1',
+            colorHex: '#00897B',
+            gradient: 'linear-gradient(135deg, #26A69A 0%, #00796B 100%)',
+            icon: 'mdi-server-network',
+            missions: [
+                {
+                    heading: t('views.main.projects.items.homelab.missions.infrastructure.heading'),
+                    items: [
+                        t('views.main.projects.items.homelab.missions.infrastructure.items.0'),
+                        t('views.main.projects.items.homelab.missions.infrastructure.items.1'),
+                        t('views.main.projects.items.homelab.missions.infrastructure.items.2'),
+                    ]
+                },
+                {
+                    heading: t('views.main.projects.items.homelab.missions.network.heading'),
+                    items: [
+                        t('views.main.projects.items.homelab.missions.network.items.0'),
+                        t('views.main.projects.items.homelab.missions.network.items.1'),
+                        t('views.main.projects.items.homelab.missions.network.items.2'),
+                    ]
+                },
+                {
+                    heading: t('views.main.projects.items.homelab.missions.services.heading'),
+                    items: [
+                        t('views.main.projects.items.homelab.missions.services.items.0'),
+                        t('views.main.projects.items.homelab.missions.services.items.1'),
+                        t('views.main.projects.items.homelab.missions.services.items.2'),
+                        t('views.main.projects.items.homelab.missions.services.items.3'),
+                    ]
+                }
+            ],
+            challenges: [
+                {
+                    heading: t('views.main.projects.items.homelab.challenges.security.heading'),
+                    items: [
+                        t('views.main.projects.items.homelab.challenges.security.items.0'),
+                        t('views.main.projects.items.homelab.challenges.security.items.1'),
+                    ]
+                },
+                {
+                    heading: t('views.main.projects.items.homelab.challenges.reliability.heading'),
+                    items: [
+                        t('views.main.projects.items.homelab.challenges.reliability.items.0'),
+                        t('views.main.projects.items.homelab.challenges.reliability.items.1'),
+                    ]
+                }
+            ]
+        },
         {
             title: t('views.main.projects.items.kairos.title'),
             shortDescription: t('views.main.projects.items.kairos.shortDescription'),
@@ -268,6 +358,7 @@ const getProjectImage = (imageName: string | undefined) => {
     const imageMap: { [key: string]: string } = {
         'tuuuur': tuuuurImage,
         'kairos': kairosImage,
+        'homelab': homelabImage,
     };
     return imageMap[imageName] || '';
 };
@@ -502,7 +593,7 @@ const openProjectDetail = (project: Project) => {
                             <section v-if="selectedProject.techCategories" class="dialog-panel dialog-panel--soft">
                                 <h3 class="panel-title d-flex align-center mb-4">
                                     <v-icon :color="selectedProject.color" icon="mdi-code-tags" class="mr-2"></v-icon>
-                                    Stack Technique
+                                    {{ t('views.main.projects.technologiesTitle') }}
                                 </h3>
                                 <div class="education-categories-grid">
                                     <v-card
@@ -528,7 +619,7 @@ const openProjectDetail = (project: Project) => {
                                                     rounded="lg"
                                                     :style="{ borderColor: category.color }"
                                                 >
-                                                    <v-icon :color="category.color" icon="mdi-check-circle" size="18" class="mr-2"></v-icon>
+                                                    <v-icon :color="category.color" :icon="getToolIcon(tool)" size="18" class="mr-2"></v-icon>
                                                     {{ tool }}
                                                 </v-sheet>
                                             </div>
@@ -538,7 +629,7 @@ const openProjectDetail = (project: Project) => {
                                 
                                 <div v-if="selectedProject.additionalTechnologies && selectedProject.additionalTechnologies.length > 0" class="mt-6">
                                     <h4 class="text-subtitle-1 font-weight-bold mb-3 d-flex align-center">
-                                        Additional Technologies
+                                        {{ t('views.main.projects.additionalTechnologies') }}
                                     </h4>
                                     <div class="additional-tech">
                                         <v-chip
@@ -558,7 +649,7 @@ const openProjectDetail = (project: Project) => {
                             <section v-else-if="selectedProject.technologies" class="dialog-panel dialog-panel--soft">
                                 <h3 class="panel-title d-flex align-center mb-4">
                                     <v-icon :color="selectedProject.color" icon="mdi-code-tags" class="mr-2"></v-icon>
-                                    Stack Technique
+                                    {{ t('views.main.projects.technologiesTitle') }}
                                 </h3>
                                 <div class="skills-mini-grid">
                                     <v-sheet
@@ -568,7 +659,7 @@ const openProjectDetail = (project: Project) => {
                                         rounded="lg"
                                         :style="{ borderColor: selectedProject.colorHex || 'var(--line)' }"
                                     >
-                                        <v-icon :color="selectedProject.colorHex || selectedProject.color" icon="mdi-check-circle" size="18" class="mr-2"></v-icon>
+                                        <v-icon :color="selectedProject.colorHex || selectedProject.color" :icon="getToolIcon(tech)" size="18" class="mr-2"></v-icon>
                                         {{ tech }}
                                     </v-sheet>
                                 </div>

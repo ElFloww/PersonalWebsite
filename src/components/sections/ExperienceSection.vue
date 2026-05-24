@@ -2,6 +2,7 @@
 import { ref } from "vue";
 import { useI18n } from "vue-i18n";
 import orangeLogo from "@/assets/images/logo_orange.svg";
+import { getToolIcon } from "@/utils/techIcons";
 
 const { t, tm } = useI18n();
 
@@ -38,11 +39,18 @@ const experiences: Experience[] = [
     logo: orangeLogo,
     technologies: [
       {
-        category: "Programming & Scripting",
-        icon: "mdi-code-braces",
-        color: "#FB8C00",
-        gradient: "linear-gradient(135deg, #FFA726 0%, #FB8C00 100%)",
-        tools: ["C#", "TypeScript", "JavaScript", "ASP.NET Core (.NET 6/.NET 8)", "Vue.js 3", "Angular", "Vuetify"],
+        category: "Cloud & IaC",
+        icon: "mdi-cloud-outline",
+        color: "#1976D2",
+        gradient: "linear-gradient(135deg, #42A5F5 0%, #1565C0 100%)",
+        tools: ["AWS", "Terraform", "Terragrunt"],
+      },
+      {
+        category: "DevOps & Automation",
+        icon: "mdi-cog-sync",
+        color: "#43A047",
+        gradient: "linear-gradient(135deg, #66BB6A 0%, #388E3C 100%)",
+        tools: ["Azure DevOps", "GitLab CI", "CI/CD", "Git"],
       },
       {
         category: "Containers & Orchestration",
@@ -52,12 +60,12 @@ const experiences: Experience[] = [
         tools: ["Docker"],
       },
       {
-        category: "DevOps & Automation",
-        icon: "mdi-cog-sync",
-        color: "#43A047",
-        gradient: "linear-gradient(135deg, #66BB6A 0%, #388E3C 100%)",
-        tools: ["Azure DevOps", "CI/CD", "Git"],
-      },
+        category: "Programming & Scripting",
+        icon: "mdi-code-braces",
+        color: "#FB8C00",
+        gradient: "linear-gradient(135deg, #FFA726 0%, #FB8C00 100%)",
+        tools: ["C#", "TypeScript", "JavaScript", "ASP.NET Core (.NET 6/.NET 8)", "Vue.js 3", "Angular", "Vuetify"],
+      }
     ],
     additionalTechnologies: [
       "Entity Framework Core",
@@ -319,7 +327,7 @@ const showDetails = (exp: Experience) => {
             <section class="dialog-panel">
               <h3 class="panel-title d-flex align-center mb-3">
                 <v-icon :color="selectedExperience.color" icon="mdi-lightbulb-on-outline" class="mr-2"></v-icon>
-                Contexte
+                {{ t('views.main.professionalExperience.contextTitle') }}
               </h3>
               <p class="panel-text">
                 {{ t(`views.main.professionalExperience.${selectedExperience.key}.content`) }}
@@ -346,7 +354,7 @@ const showDetails = (exp: Experience) => {
             <section class="dialog-panel dialog-panel--soft">
               <h3 class="panel-title d-flex align-center mb-4">
                 <v-icon :color="selectedExperience.color" icon="mdi-code-tags" class="mr-2"></v-icon>
-                Stack Technique
+                {{ t('views.main.professionalExperience.stackTitle') }}
               </h3>
 
               <div class="education-categories-grid mt-4">
@@ -373,7 +381,7 @@ const showDetails = (exp: Experience) => {
                         rounded="lg"
                         :style="{ borderColor: category.color }"
                       >
-                        <v-icon :color="category.color" icon="mdi-check-circle" size="18" class="mr-2"></v-icon>
+                        <v-icon :color="category.color" :icon="getToolIcon(tool)" size="18" class="mr-2"></v-icon>
                         {{ tool }}
                       </v-sheet>
                     </div>
@@ -383,7 +391,7 @@ const showDetails = (exp: Experience) => {
 
               <div v-if="selectedExperience.additionalTechnologies && selectedExperience.additionalTechnologies.length > 0" class="mt-6">
                 <h4 class="text-subtitle-1 font-weight-bold mb-3 d-flex align-center">
-                  Additional Technologies
+                  {{ t('views.main.professionalExperience.additionalTechnologies') }}
                 </h4>
                 <div class="additional-tech">
                   <v-chip

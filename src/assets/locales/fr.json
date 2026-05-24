@@ -1,4 +1,4 @@
-﻿{
+{
   "components": {
     "shared": {
       "icons": {
@@ -77,6 +77,9 @@
         "sectionDescription": "Développement d'une expertise par la pratique de l'ingénierie logicielle, du cloud et de l'automatisation DevOps.",
         "learnMore": "En savoir plus",
         "missionsAndAchievements": "Missions et réalisations",
+        "contextTitle": "Contexte",
+        "stackTitle": "Stack Technique",
+        "additionalTechnologies": "Autres technologies",
         "close": "Fermer",
         "first": {
           "date": "avril 2023 - mai 2023",
@@ -113,8 +116,8 @@
           "title": "Consultant .NET & TypeScript Full-Stack — Alternance",
           "company": "Orange Business — Amiens",
           "shortDesc": "Consultant alternant avec prise en charge de projets complets et montée en responsabilité.",
-          "content": "Évolution vers un poste de consultant alternant. Prise en charge de projets complets et montée en responsabilité sur l'architecture et les déploiements. Consultant sur les technologies Microsoft et JavaScript au sein d'une équipe Agile. Développement et maintenance d'APIs REST en ASP.NET Core (clean architecture, CQRS), développement front-end avec Vue.js 3 et Angular sur des applications métier.",
-          "tech": "C# · ASP.NET Core (.NET 6/.NET 8) · Angular · Vue.js 3 · TypeScript · SQL Server · Entity Framework Core · API REST / SOAP · API Whisper (IA) · Docker · Azure DevOps · Méthode Agile (Scrum)",
+          "content": "Évolution vers un poste de consultant alternant. Prise en charge de projets complets et montée en responsabilité sur l'architecture et les déploiements. Consultant sur les technologies Microsoft et JavaScript au sein d'une équipe Agile. Développement et maintenance d'APIs REST en ASP.NET Core (clean architecture, CQRS), développement front-end avec Vue.js 3 et Angular sur des applications métier. En parallèle, forte implication DevOps : d'abord sur Azure DevOps, puis plus récemment sur GitLab CI/CD avec des déploiements sur AWS pilotés via Terraform et Terragrunt.",
+          "tech": "C# · ASP.NET Core (.NET 6/.NET 8) · Angular · Vue.js 3 · TypeScript · SQL Server · Entity Framework Core · API REST / SOAP · API Whisper (IA) · Docker · Azure DevOps · GitLab CI · AWS · Terraform · Terragrunt · Méthode Agile (Scrum)",
           "details": [
             "Finalisation et déploiement d'applications (migration vers .NET 8)",
             "Conception complète d'applications métier : modélisation de bases de données, spécifications techniques, développement complet (back-end .NET 8, front Angular/Vue.js) et intégration d'APIs",
@@ -122,7 +125,8 @@
             "Modernisation d'applications legacy : refonte d'architecture, réécriture avec technologies modernes, modules d'import/export Excel et logiques complexes",
             "Maintenance évolutive et refactoring de code sur applications critiques",
             "Participation active aux rituels Agile (Daily, Weekly, revues de code)",
-            "Mise en place et maintenance de pipelines CI/CD via Azure DevOps",
+            "Mise en place et maintenance de pipelines CI/CD via Azure DevOps, puis migration vers GitLab CI/CD",
+            "Déploiement d'infrastructures cloud sur AWS via Infrastructure as Code (Terraform + Terragrunt)",
             "Accompagnement et mentorat d'autres développeurs"
           ]
         }
@@ -134,6 +138,8 @@
         "viewProgram": "Voir le programme",
         "modulesAndSkills": "Modules et compétences",
         "otherSkills": "Autres compétences",
+        "parcours": "Parcours",
+        "additionalTechnologies": "Autres technologies",
         "close": "Fermer",
         "first": {
           "date": "2021 - 2024",
@@ -263,7 +269,8 @@
         "conceptTitle": "Le Concept",
         "missionsTitle": "Mes Missions & Réalisations Techniques",
         "challengesTitle": "Défis Relevés & Enseignements",
-        "technologiesTitle": "Technologies & Outils",
+        "technologiesTitle": "Stack Technique",
+        "additionalTechnologies": "Autres technologies",
         "close": "Fermer",
         "code": "Code",
         "visit": "Visiter",
@@ -394,6 +401,58 @@
             "title": "Portfolio Personnel",
             "shortDescription": "Site web personnel développé avec Vue.js et Vuetify, présentant mon parcours, mes compétences et mes projets.",
             "description": "Site web personnel développé avec Vue.js et Vuetify, présentant mon parcours, mes compétences et mes projets."
+          },
+          "homelab": {
+            "title": "HomeLab — Serveur Personnel",
+            "shortDescription": "Reconversion d'un ancien PC en serveur de production : virtualisation Proxmox, réseau sécurisé IPFire, VPN WireGuard et hébergement de services self-hosted.",
+            "description": "Reconversion d'un ancien PC en serveur hébergeant une infrastructure complète : hyperviseur Proxmox, pare-feu IPFire, VPN WireGuard, reverse proxy NGINX et une dizaine de services self-hosted (Jellyfin, Nextcloud, Immich, Pterodactyl…), le tout sécurisé en RAID.",
+            "period": "2025 — Présent",
+            "context": "Projet personnel né d'une double volonté : prendre le contrôle total de mes données et approfondir mes compétences en administration système, virtualisation et sécurité réseau acquises en cours. Plutôt que de laisser un ancien PC prendre la poussière, je l'ai transformé en véritable serveur personnel.",
+            "roles": "Administrateur système · Architecte réseau · Ingénieur DevOps",
+            "concept": "Un homelab complet piloté par Proxmox VE comme hyperviseur central, avec un réseau interne entièrement segmenté et sécurisé par IPFire (pare-feu/routeur). Les données sont protégées par un RAID pour tolérance aux pannes. L'accès distant est sécurisé via WireGuard VPN, et tous les services sont exposés proprement via NGINX Proxy Manager avec certificats SSL automatiques.",
+            "missions": {
+              "infrastructure": {
+                "heading": "Infrastructure & Virtualisation (Proxmox)",
+                "items": [
+                  "Installation et configuration de Proxmox VE comme hyperviseur principal sur un PC reconverti",
+                  "Création et gestion de VMs et conteneurs LXC pour isoler chaque service de manière indépendante",
+                  "Mise en place d'un RAID pour la redondance des données et la tolérance aux pannes disque"
+                ]
+              },
+              "network": {
+                "heading": "Réseau & Sécurité",
+                "items": [
+                  "Déploiement d'IPFire comme pare-feu et routeur pour segmenter et sécuriser le réseau interne",
+                  "Configuration d'un VPN WireGuard pour un accès chiffré et sécurisé depuis l'extérieur",
+                  "Mise en place de NGINX Proxy Manager comme reverse proxy centralisé avec SSL/TLS automatique (Let's Encrypt)"
+                ]
+              },
+              "services": {
+                "heading": "Services Self-Hosted",
+                "items": [
+                  "Jellyfin : serveur multimédia pour la gestion et le streaming de films et séries",
+                  "Nextcloud : cloud personnel pour le stockage et la synchronisation de fichiers",
+                  "Immich : gestion, organisation et sauvegarde de la photothèque personnelle",
+                  "Pterodactyl + Wings : panel d'administration de serveurs de jeux multi-instances"
+                ]
+              }
+            },
+            "challenges": {
+              "security": {
+                "heading": "Sécurité & Isolation des Services",
+                "items": [
+                  "Segmentation réseau stricte via IPFire pour éviter toute communication non autorisée entre services",
+                  "Gestion des certificats SSL/TLS et exposition sécurisée des services publics via reverse proxy"
+                ]
+              },
+              "reliability": {
+                "heading": "Fiabilité & Maintenance",
+                "items": [
+                  "Mise en place du RAID pour garantir la continuité de service en cas de défaillance d'un disque",
+                  "Surveillance et mise à jour régulière de chaque service pour maintenir la stabilité et la sécurité globale"
+                ]
+              }
+            }
           }
         }
       }

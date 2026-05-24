@@ -17,7 +17,7 @@ const experienceYears = Number.parseFloat(
 
 const stats = [
     { value: experienceYears + "+", label: "Années d'XP" },
-    { value: "3+", label: "Projets réalisés" },
+    { value: "5+", label: "Projets réalisés" },
     { value: "25+", label: "Technologies" },
 ];
 
