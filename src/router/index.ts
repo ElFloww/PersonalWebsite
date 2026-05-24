@@ -1,5 +1,6 @@
 import PageNameEnum from '@/core/types/enums/pageNameEnum.ts'
 import { i18n } from '../plugins/i18n'
+import { trackVisit } from '@/services/visitTracker'
 
 import {
 	createRouter,
@@ -15,12 +16,27 @@ const router = createRouter({
 			path: '/',
 			name: PageNameEnum.MAIN,
 			component: () =>
-				import(/* webpackChunkName: "projects" */ '@/views/Main.vue'),
+				import(/* webpackChunkName: "main" */ '@/views/Main.vue'),
 			meta: {
 				name: t('routes.main'),
 			},
-		}
+		},
+		{
+			path: '/a9f3k2',
+			name: PageNameEnum.ADMIN_VISITS,
+			component: () =>
+				import(/* webpackChunkName: "admin" */ '@/views/AdminVisits.vue'),
+			meta: {
+				name: 'Admin',
+			},
+		},
 	],
 })
 
+// Track visit on first navigation
+router.afterEach(() => {
+	trackVisit()
+})
+
 export default router
+

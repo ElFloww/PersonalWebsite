@@ -3,8 +3,10 @@ import { computed, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 import tuuuurImage from '@/assets/images/tuuuur.png';
 import kairosImage from '@/assets/images/kairos.png';
+import homelabImage from '@/assets/images/homelab.png';
 import tuuuurLogo from '@/assets/images/tuuuur_logo.png';
 import kairosLogo from '@/assets/images/kairos_logo.png';
+import { getToolIcon } from '@/utils/techIcons';
 
 const { t, locale } = useI18n();
 
@@ -13,15 +15,26 @@ interface ProjectDetail {
     items: string[];
 }
 
+interface ProjectTechCategory {
+    category: string;
+    icon: string;
+    color: string;
+    gradient: string;
+    tools: string[];
+}
+
 interface Project {
     title: string;
     description: string;
     shortDescription?: string;
     period?: string;
     technologies: string[];
+    techCategories?: ProjectTechCategory[];
+    additionalTechnologies?: string[];
     image?: string;
     logo?: string;
     logoZoom?: number;
+    logoBackground?: string;
     link?: string;
     github?: string;
     color: string;
@@ -49,6 +62,30 @@ const projects = computed<Project[]>(() => {
             roles: t('views.main.projects.items.tuuuur.roles'),
             concept: t('views.main.projects.items.tuuuur.concept'),
             technologies: ['C#', '.NET Core', 'Vue.js', 'Flutter', 'SignalR', 'SQL Server', 'Redis', 'GCP', 'Terraform'],
+            techCategories: [
+                {
+                    category: "Cloud Platforms",
+                    icon: "mdi-cloud-outline",
+                    color: "#1976D2",
+                    gradient: "linear-gradient(135deg, #2196F3 0%, #1565C0 100%)",
+                    tools: ["Google Cloud Platform"]
+                },
+                {
+                    category: "DevOps & Automation",
+                    icon: "mdi-cog-sync",
+                    color: "#43A047",
+                    gradient: "linear-gradient(135deg, #66BB6A 0%, #388E3C 100%)",
+                    tools: ["Terraform", "CI/CD", "GitHub Actions"]
+                },
+                {
+                    category: "Programming & Scripting",
+                    icon: "mdi-code-braces",
+                    color: "#FB8C00",
+                    gradient: "linear-gradient(135deg, #FFA726 0%, #FB8C00 100%)",
+                    tools: ["C#", ".NET Core", "Vue.js", "Flutter"]
+                }
+            ],
+            additionalTechnologies: ["SignalR", "SQL Server", "Redis"],
             image: 'tuuuur',
             logo: 'tuuuur',
             logoZoom: 1,
@@ -116,6 +153,94 @@ const projects = computed<Project[]>(() => {
                 }
             ]
         },
+                {
+            title: t('views.main.projects.items.homelab.title'),
+            shortDescription: t('views.main.projects.items.homelab.shortDescription'),
+            description: t('views.main.projects.items.homelab.description'),
+            period: t('views.main.projects.items.homelab.period'),
+            contexte: t('views.main.projects.items.homelab.context'),
+            roles: t('views.main.projects.items.homelab.roles'),
+            concept: t('views.main.projects.items.homelab.concept'),
+            technologies: ['Proxmox', 'IPFire', 'WireGuard', 'NGINX Proxy Manager', 'Jellyfin', 'Nextcloud', 'Immich', 'Pterodactyl', 'RAID'],
+            techCategories: [
+                {
+                    category: "Virtualisation & Hyperviseur",
+                    icon: "mdi-server-network",
+                    color: "#E65100",
+                    gradient: "linear-gradient(135deg, #FF7043 0%, #E64A19 100%)",
+                    tools: ["Proxmox VE", "VMs & LXC"]
+                },
+                {
+                    category: "Réseau & Sécurité",
+                    icon: "mdi-wan",
+                    color: "#C62828",
+                    gradient: "linear-gradient(135deg, #EF5350 0%, #C62828 100%)",
+                    tools: ["IPFire", "WireGuard", "NGINX Proxy Manager", "SSL/TLS"]
+                },
+                {
+                    category: "Services Self-Hosted",
+                    icon: "mdi-apps",
+                    color: "#6A1B9A",
+                    gradient: "linear-gradient(135deg, #AB47BC 0%, #6A1B9A 100%)",
+                    tools: ["Jellyfin", "Nextcloud", "Immich", "Pterodactyl"]
+                },
+                {
+                    category: "Stockage & Redondance",
+                    icon: "mdi-harddisk",
+                    color: "#1565C0",
+                    gradient: "linear-gradient(135deg, #42A5F5 0%, #1565C0 100%)",
+                    tools: ["RAID"]
+                }
+            ],
+            image: 'homelab',
+            color: 'teal-darken-1',
+            colorHex: '#00897B',
+            gradient: 'linear-gradient(135deg, #26A69A 0%, #00796B 100%)',
+            icon: 'mdi-server-network',
+            missions: [
+                {
+                    heading: t('views.main.projects.items.homelab.missions.infrastructure.heading'),
+                    items: [
+                        t('views.main.projects.items.homelab.missions.infrastructure.items.0'),
+                        t('views.main.projects.items.homelab.missions.infrastructure.items.1'),
+                        t('views.main.projects.items.homelab.missions.infrastructure.items.2'),
+                    ]
+                },
+                {
+                    heading: t('views.main.projects.items.homelab.missions.network.heading'),
+                    items: [
+                        t('views.main.projects.items.homelab.missions.network.items.0'),
+                        t('views.main.projects.items.homelab.missions.network.items.1'),
+                        t('views.main.projects.items.homelab.missions.network.items.2'),
+                    ]
+                },
+                {
+                    heading: t('views.main.projects.items.homelab.missions.services.heading'),
+                    items: [
+                        t('views.main.projects.items.homelab.missions.services.items.0'),
+                        t('views.main.projects.items.homelab.missions.services.items.1'),
+                        t('views.main.projects.items.homelab.missions.services.items.2'),
+                        t('views.main.projects.items.homelab.missions.services.items.3'),
+                    ]
+                }
+            ],
+            challenges: [
+                {
+                    heading: t('views.main.projects.items.homelab.challenges.security.heading'),
+                    items: [
+                        t('views.main.projects.items.homelab.challenges.security.items.0'),
+                        t('views.main.projects.items.homelab.challenges.security.items.1'),
+                    ]
+                },
+                {
+                    heading: t('views.main.projects.items.homelab.challenges.reliability.heading'),
+                    items: [
+                        t('views.main.projects.items.homelab.challenges.reliability.items.0'),
+                        t('views.main.projects.items.homelab.challenges.reliability.items.1'),
+                    ]
+                }
+            ]
+        },
         {
             title: t('views.main.projects.items.kairos.title'),
             shortDescription: t('views.main.projects.items.kairos.shortDescription'),
@@ -124,10 +249,28 @@ const projects = computed<Project[]>(() => {
             contexte: t('views.main.projects.items.kairos.context'),
             roles: t('views.main.projects.items.kairos.roles'),
             concept: t('views.main.projects.items.kairos.concept'),
-            technologies: ['TypeScript', 'Vue.js', 'Flutter', 'Node.js', 'PostgreSQL', 'JWT'],
+            technologies: ['Vue.js', 'JavaScript', 'Python', 'MariaDB', 'CI/CD'],
+            techCategories: [
+                {
+                    category: "Programming & Scripting",
+                    icon: "mdi-code-braces",
+                    color: "#FB8C00",
+                    gradient: "linear-gradient(135deg, #FFA726 0%, #FB8C00 100%)",
+                    tools: ["Vue.js", "JavaScript", "Python"]
+                },
+                {
+                    category: "DevOps & Automation",
+                    icon: "mdi-cog-sync",
+                    color: "#43A047",
+                    gradient: "linear-gradient(135deg, #66BB6A 0%, #388E3C 100%)",
+                    tools: ["CI/CD"]
+                }
+            ],
+            additionalTechnologies: ["MariaDB"],
             image: 'kairos',
             logo: 'kairos',
             logoZoom: 2,
+            logoBackground: '#000000',
             link: 'http://kairos.florent-dubut.fr/',
             github: 'https://github.com/SAE5-Kairos',
             color: 'blue',
@@ -186,7 +329,16 @@ const projects = computed<Project[]>(() => {
             title: t('views.main.projects.items.portfolio.title'),
             shortDescription: t('views.main.projects.items.portfolio.shortDescription'),
             description: t('views.main.projects.items.portfolio.description'),
-            technologies: ['Vue.js', 'Vuetify', 'TypeScript', 'Vite'],
+            technologies: ['Vue.js 3', 'Vuetify 3', 'TypeScript', 'Vite'],
+            techCategories: [
+                {
+                    category: "Programming & Scripting",
+                    icon: "mdi-code-braces",
+                    color: "#FB8C00",
+                    gradient: "linear-gradient(135deg, #FFA726 0%, #FB8C00 100%)",
+                    tools: ["TypeScript", "Vue.js 3", "Vuetify 3", "Vite"]
+                }
+            ],
             github: 'https://github.com/florentdubut/florent-dubut.fr',
             link: 'https://florent-dubut.fr',
             color: 'green-lighten-1',
@@ -206,6 +358,7 @@ const getProjectImage = (imageName: string | undefined) => {
     const imageMap: { [key: string]: string } = {
         'tuuuur': tuuuurImage,
         'kairos': kairosImage,
+        'homelab': homelabImage,
     };
     return imageMap[imageName] || '';
 };
@@ -235,10 +388,12 @@ const openProjectDetail = (project: Project) => {
             <v-col cols="12" class="text-center">
                 <div class="title-container">
                     <v-icon icon="mdi-lightbulb-on" size="56" color="green-lighten-1" class="mb-4"></v-icon>
-                    <h1 class="text-h2 font-weight-bold mb-3">
+                    <h1 class="text-h2 font-weight-bold mb-4">
                         {{ t('views.main.projects.sectionTitle') }}
                     </h1>
-                    <p class="text-h6 text-grey-darken-1">{{ t('views.main.projects.sectionDescription') }}</p>
+                    <p class="introduction-text text-body1 text-grey-darken-1 mb-6 font-weight-500">
+                        {{ t('views.main.projects.sectionDescription') }}
+                    </p>
                 </div>
                 <v-divider class="mx-auto my-4" color="green-lighten-1" :thickness="4" width="100" style="border-radius: 4px;"></v-divider>
             </v-col>
@@ -354,179 +509,215 @@ const openProjectDetail = (project: Project) => {
         </v-row>
 
         <!-- Detail Dialog -->
-        <v-dialog 
-            v-model="showDetailDialog" 
-            max-width="1000px" 
-            scrollable
-            persistent
-            transition="dialog-transition"
-        >
-            <v-card v-if="selectedProject" color="white" class="project-detail-modal">
-                <!-- Header with gradient background -->
-                <div class="project-detail-header" :style="{ background: selectedProject.gradient }">
-                    <button 
-                        class="close-btn"
-                        @click="showDetailDialog = false"
-                    >
-                        ✕
-                    </button>
-                    
-                    <div class="header-content">
-                        <div class="header-top">
-                            <div class="header-title-section">
-                                <h2 class="project-title">
-                                    {{ selectedProject.title }}
-                                </h2>
-                                <div v-if="selectedProject.period" class="header-period">
-                                    <v-icon icon="mdi-calendar-range" size="18" class="mr-2"></v-icon>
-                                    <span class="period-text">{{ selectedProject.period }}</span>
-                                </div>
-                            </div>
+        <v-dialog v-model="showDetailDialog" max-width="940">
+            <v-card v-if="selectedProject" class="detailed-dialog project-dialog">
+                <div class="dialog-accent" :style="{ background: selectedProject.gradient }"></div>
+
+                <div class="dialog-header">
+                    <div class="dialog-header-main">
+                        <div class="project-logo-dialog" v-if="selectedProject.logo || selectedProject.icon" :style="selectedProject.logo ? { background: selectedProject.logoBackground || 'var(--surface)' } : { background: selectedProject.gradient, border: 'none' }">
+                            <img
+                                v-if="selectedProject.logo"
+                                :src="getProjectLogo(selectedProject.logo)"
+                                :alt="selectedProject.title"
+                                class="project-logo-img-dialog"
+                                :style="{ transform: `scale(${selectedProject.logoZoom || 1})` }"
+                            />
+                            <v-icon v-else :icon="selectedProject.icon" size="32" color="white"></v-icon>
                         </div>
 
-                        <div class="header-bottom">
+                        <div class="dialog-heading-copy">
+                            <p class="dialog-kicker mb-2" :style="{ color: selectedProject.colorHex || 'var(--ink)', background: selectedProject.colorHex ? `${selectedProject.colorHex}15` : 'rgba(0,0,0,0.05)' }">
+                                {{ selectedProject.period || 'Projet' }}
+                            </p>
+                            <h2 class="text-h5 font-weight-bold mb-1">
+                                {{ selectedProject.title }}
+                            </h2>
+                            <p v-if="selectedProject.roles" class="dialog-company text-subtitle-2 mb-0">
+                                {{ selectedProject.roles }}
+                            </p>
                         </div>
                     </div>
+
+                    <v-btn
+                        icon="mdi-close"
+                        variant="text"
+                        density="comfortable"
+                        class="dialog-close"
+                        @click="showDetailDialog = false"
+                    ></v-btn>
                 </div>
 
-                <v-card-text class="pa-8">
-                    <!-- Project logo section -->
-                    <div v-if="selectedProject.logo" class="project-logo-section-inline mb-6">
-                        <img 
-                            :src="getProjectLogo(selectedProject.logo)" 
-                            :alt="`${selectedProject.title} logo`"
-                            class="project-logo-display"
-                            :style="{
-                                transform: `scale(${selectedProject.logoZoom || 1})`
-                            }"
-                        >
+                <v-card-text class="dialog-body pa-6 pt-2">
+                    <div class="dialog-meta mb-6">
+                        <v-chip v-if="selectedProject.period" :color="selectedProject.color" variant="tonal" size="small">
+                            <v-icon icon="mdi-calendar-outline" start size="small"></v-icon>
+                            {{ selectedProject.period }}
+                        </v-chip>
+                        <v-chip v-if="selectedProject.github" :color="selectedProject.color" variant="tonal" size="small" @click="openLink(selectedProject.github!)" style="cursor: pointer;">
+                            <v-icon icon="mdi-github" start size="small"></v-icon>
+                            {{ t('views.main.projects.code') }}
+                        </v-chip>
+                        <v-chip v-if="selectedProject.link" :color="selectedProject.color" variant="tonal" size="small" @click="openLink(selectedProject.link!)" style="cursor: pointer;">
+                            <v-icon icon="mdi-open-in-new" start size="small"></v-icon>
+                            {{ t('views.main.projects.visit') }}
+                        </v-chip>
                     </div>
 
-                    <!-- Short description -->
-                    <div class=" mb-6">
-                        <p class="text-body-1 font-weight-medium" style="line-height: 1.8; color: rgba(0,0,0,0.8);">
-                            {{ selectedProject.description }}
-                        </p>
-                    </div>
+                    <div class="dialog-grid" :class="{ 'dialog-grid--single': !selectedProject.missions && !selectedProject.challenges }">
+                        <div class="dialog-grid-left">
+                            <section class="dialog-panel mb-4">
+                                <h3 class="panel-title d-flex align-center mb-3">
+                                    <v-icon :color="selectedProject.color" icon="mdi-text-box-outline" class="mr-2"></v-icon>
+                                    {{ t('views.main.projects.descriptionTitle') }}
+                                </h3>
+                                <p class="panel-text">{{ selectedProject.description }}</p>
 
-                    <v-divider class="my-6 opacity-30"></v-divider>
+                                <template v-if="selectedProject.contexte">
+                                    <h3 class="panel-title d-flex align-center mt-6 mb-3">
+                                        <v-icon :color="selectedProject.color" icon="mdi-information-outline" class="mr-2"></v-icon>
+                                        {{ t('views.main.projects.contextTitle') }}
+                                    </h3>
+                                    <p class="panel-text">{{ selectedProject.contexte }}</p>
+                                </template>
 
-                    <!-- Contexte -->
-                    <div v-if="selectedProject.contexte" class="mb-6">
-                        <div class="d-flex align-center mb-3">
-                            <v-icon icon="mdi-information" :color="selectedProject.color" class="mr-2"></v-icon>
-                            <h3 class="text-h6 font-weight-bold mb-0">{{ t('views.main.projects.contextTitle') }}</h3>
-                        </div>
-                        <p class="text-body-2 ml-8" style="line-height: 1.8;">{{ selectedProject.contexte }}</p>
-                    </div>
+                                <template v-if="selectedProject.concept">
+                                    <h3 class="panel-title d-flex align-center mt-6 mb-3">
+                                        <v-icon :color="selectedProject.color" icon="mdi-lightbulb-on-outline" class="mr-2"></v-icon>
+                                        {{ t('views.main.projects.conceptTitle') }}
+                                    </h3>
+                                    <p class="panel-text">{{ selectedProject.concept }}</p>
+                                </template>
+                            </section>
 
-                    <!-- Concept -->
-                    <div v-if="selectedProject.concept" class="mb-6">
-                        <div class="d-flex align-center mb-3">
-                            <v-icon icon="mdi-lightbulb-on" :color="selectedProject.color" class="mr-2"></v-icon>
-                            <h3 class="text-h6 font-weight-bold mb-0">{{ t('views.main.projects.conceptTitle') }}</h3>
-                        </div>
-                        <p class="text-body-2 ml-8" style="line-height: 1.8;">{{ selectedProject.concept }}</p>
-                    </div>
-
-                    <v-divider v-if="selectedProject.missions || selectedProject.challenges" class="my-6 opacity-30"></v-divider>
-
-                    <!-- Missions & Challenges -->
-                    <div v-if="selectedProject.missions || selectedProject.challenges" class="detail-sections mb-6">
-                        <!-- Missions -->
-                        <div v-if="selectedProject.missions" class="mb-4">
-                            <div class="d-flex align-center mb-4">
-                                <v-icon icon="mdi-target" :color="selectedProject.color" class="mr-3"></v-icon>
-                                <h3 class="text-h6 font-weight-bold mb-0">{{ t('views.main.projects.missionsTitle') }}</h3>
-                            </div>
-                            <div class="pl-6">
-                                <div v-for="(mission, idx) in selectedProject.missions" :key="idx" class="mb-4">
-                                    <div class="d-flex align-center mb-2">
-                                        <div class="mission-marker" :style="{ backgroundColor: selectedProject.colorHex }"></div>
-                                        <h4 class="font-weight-bold mb-0">{{ mission.heading }}</h4>
-                                    </div>
-                                    <ul class="ml-7">
-                                        <li v-for="(item, itemIdx) in mission.items" :key="itemIdx" class="text-body-2 mb-2">
-                                            {{ item }}
-                                        </li>
-                                    </ul>
+                            <section v-if="selectedProject.techCategories" class="dialog-panel dialog-panel--soft">
+                                <h3 class="panel-title d-flex align-center mb-4">
+                                    <v-icon :color="selectedProject.color" icon="mdi-code-tags" class="mr-2"></v-icon>
+                                    {{ t('views.main.projects.technologiesTitle') }}
+                                </h3>
+                                <div class="education-categories-grid">
+                                    <v-card
+                                        v-for="category in selectedProject.techCategories"
+                                        :key="category.category"
+                                        class="technical-card mb-4"
+                                        elevation="0"
+                                    >
+                                        <v-card-text class="pa-4">
+                                            <div class="technical-card-header mb-4">
+                                                <div class="technical-title-wrap">
+                                                    <div class="technical-icon" :style="{ background: category.gradient }">
+                                                        <v-icon :icon="category.icon" size="20" color="white"></v-icon>
+                                                    </div>
+                                                    <h4 class="text-subtitle-1 font-weight-bold ma-0">{{ category.category }}</h4>
+                                                </div>
+                                            </div>
+                                            <div class="skills-mini-grid">
+                                                <v-sheet
+                                                    v-for="tool in category.tools"
+                                                    :key="tool"
+                                                    class="skill-mini-card"
+                                                    rounded="lg"
+                                                    :style="{ borderColor: category.color }"
+                                                >
+                                                    <v-icon :color="category.color" :icon="getToolIcon(tool)" size="18" class="mr-2"></v-icon>
+                                                    {{ tool }}
+                                                </v-sheet>
+                                            </div>
+                                        </v-card-text>
+                                    </v-card>
                                 </div>
-                            </div>
-                        </div>
-
-                        <!-- Challenges -->
-                        <div v-if="selectedProject.challenges">
-                            <div class="d-flex align-center mb-4">
-                                <v-icon icon="mdi-rocket" :color="selectedProject.color" class="mr-3"></v-icon>
-                                <h3 class="text-h6 font-weight-bold mb-0">{{ t('views.main.projects.challengesTitle') }}</h3>
-                            </div>
-                            <div class="pl-6">
-                                <div v-for="(challenge, idx) in selectedProject.challenges" :key="idx" class="mb-4">
-                                    <div class="d-flex align-center mb-2">
-                                        <div class="challenge-marker" :style="{ backgroundColor: selectedProject.colorHex }"></div>
-                                        <h4 class="font-weight-bold mb-0">{{ challenge.heading }}</h4>
+                                
+                                <div v-if="selectedProject.additionalTechnologies && selectedProject.additionalTechnologies.length > 0" class="mt-6">
+                                    <h4 class="text-subtitle-1 font-weight-bold mb-3 d-flex align-center">
+                                        {{ t('views.main.projects.additionalTechnologies') }}
+                                    </h4>
+                                    <div class="additional-tech">
+                                        <v-chip
+                                            v-for="tech in selectedProject.additionalTechnologies"
+                                            :key="tech"
+                                            class="ma-1"
+                                            variant="outlined"
+                                            color="grey-darken-1"
+                                            size="small"
+                                        >
+                                            {{ tech }}
+                                        </v-chip>
                                     </div>
-                                    <ul class="ml-7">
-                                        <li v-for="(item, itemIdx) in challenge.items" :key="itemIdx" class="text-body-2 mb-2">
-                                            {{ item }}
-                                        </li>
-                                    </ul>
                                 </div>
-                            </div>
+                            </section>
+                            
+                            <section v-else-if="selectedProject.technologies" class="dialog-panel dialog-panel--soft">
+                                <h3 class="panel-title d-flex align-center mb-4">
+                                    <v-icon :color="selectedProject.color" icon="mdi-code-tags" class="mr-2"></v-icon>
+                                    {{ t('views.main.projects.technologiesTitle') }}
+                                </h3>
+                                <div class="skills-mini-grid">
+                                    <v-sheet
+                                        v-for="tech in selectedProject.technologies"
+                                        :key="tech"
+                                        class="skill-mini-card"
+                                        rounded="lg"
+                                        :style="{ borderColor: selectedProject.colorHex || 'var(--line)' }"
+                                    >
+                                        <v-icon :color="selectedProject.colorHex || selectedProject.color" :icon="getToolIcon(tech)" size="18" class="mr-2"></v-icon>
+                                        {{ tech }}
+                                    </v-sheet>
+                                </div>
+                            </section>
                         </div>
-                    </div>
 
-                    <v-divider class="my-6 opacity-30"></v-divider>
+                        <div v-if="selectedProject.missions || selectedProject.challenges" class="dialog-grid-right">
+                            <section class="dialog-panel h-100">
+                                <template v-if="selectedProject.missions">
+                                    <h3 class="panel-title d-flex align-center mb-4">
+                                        <v-icon :color="selectedProject.color" icon="mdi-target" class="mr-2"></v-icon>
+                                        {{ t('views.main.projects.missionsTitle') }}
+                                    </h3>
+                                    <div class="dialog-copy-stack mb-6">
+                                        <div v-for="(mission, idx) in selectedProject.missions" :key="idx" class="mb-4">
+                                            <h4 class="font-weight-bold text-subtitle-2 mb-2 d-flex align-center" style="color: var(--ink)">
+                                                <v-icon :color="selectedProject.colorHex || selectedProject.color" icon="mdi-chevron-right-box" size="18" class="mr-2"></v-icon>
+                                                {{ mission.heading }}
+                                            </h4>
+                                            <v-list density="compact" bg-color="transparent" class="mission-list pa-0">
+                                                <v-list-item v-for="(item, itemIdx) in mission.items" :key="itemIdx" class="px-0 mb-2 pb-1">
+                                                    <template #prepend>
+                                                        <v-icon :color="selectedProject.colorHex || selectedProject.color" icon="mdi-arrow-right-circle" size="20" class="mr-3"></v-icon>
+                                                    </template>
+                                                    <v-list-item-title class="text-body-2 mission-text">{{ item }}</v-list-item-title>
+                                                </v-list-item>
+                                            </v-list>
+                                        </div>
+                                    </div>
+                                </template>
 
-                    <!-- Technologies -->
-                    <div class="tech-section">
-                        <div class="d-flex align-center mb-4">
-                            <v-icon icon="mdi-tools" :color="selectedProject.color" class="mr-2"></v-icon>
-                            <h3 class="text-h6 font-weight-bold mb-0">{{ t('views.main.projects.technologiesTitle') }}</h3>
-                        </div>
-                        <div class="tech-chips-container">
-                            <v-chip
-                                v-for="tech in selectedProject.technologies"
-                                :key="tech"
-                                size="small"
-                                :color="selectedProject.color"
-                                variant="outlined"
-                                class="mr-2 mb-2"
-                                :text-color="selectedProject.color"
-                            >
-                                {{ tech }}
-                            </v-chip>
+                                <template v-if="selectedProject.challenges">
+                                    <v-divider v-if="selectedProject.missions" class="mb-6"></v-divider>
+                                    <h3 class="panel-title d-flex align-center mb-4">
+                                        <v-icon :color="selectedProject.color" icon="mdi-rocket-launch-outline" class="mr-2"></v-icon>
+                                        {{ t('views.main.projects.challengesTitle') }}
+                                    </h3>
+                                    <div class="dialog-copy-stack">
+                                        <div v-for="(challenge, idx) in selectedProject.challenges" :key="idx" class="mb-4">
+                                            <h4 class="font-weight-bold text-subtitle-2 mb-2 d-flex align-center" style="color: var(--ink)">
+                                                <v-icon :color="selectedProject.colorHex || selectedProject.color" icon="mdi-alert-decagram-outline" size="18" class="mr-2"></v-icon>
+                                                {{ challenge.heading }}
+                                            </h4>
+                                            <v-list density="compact" bg-color="transparent" class="mission-list pa-0">
+                                                <v-list-item v-for="(item, itemIdx) in challenge.items" :key="itemIdx" class="px-0 mb-2 pb-1">
+                                                    <template #prepend>
+                                                        <v-icon :color="selectedProject.colorHex || selectedProject.color" icon="mdi-lightning-bolt-circle" size="20" class="mr-3"></v-icon>
+                                                    </template>
+                                                    <v-list-item-title class="text-body-2 mission-text">{{ item }}</v-list-item-title>
+                                                </v-list-item>
+                                            </v-list>
+                                        </div>
+                                    </div>
+                                </template>
+                            </section>
                         </div>
                     </div>
                 </v-card-text>
-
-                <!-- Actions footer -->
-                <v-card-actions class="pa-6 d-flex justify-end gap-2 border-t">
-                    <v-btn
-                        variant="text"
-                        @click="showDetailDialog = false"
-                    >
-                        {{ t('views.main.projects.close') }}
-                    </v-btn>
-                    <v-btn
-                        v-if="selectedProject.github"
-                        :color="selectedProject.color"
-                        variant="outlined"
-                        prepend-icon="mdi-github"
-                        @click="openLink(selectedProject.github!)"
-                    >
-                        {{ t('views.main.projects.code') }}
-                    </v-btn>
-                    <v-btn
-                        v-if="selectedProject.link"
-                        :color="selectedProject.color"
-                        variant="flat"
-                        prepend-icon="mdi-open-in-new"
-                        @click="openLink(selectedProject.link!)"
-                    >
-                        {{ t('views.main.projects.visit') }}
-                    </v-btn>
-                </v-card-actions>
             </v-card>
         </v-dialog>
     </v-container>
@@ -534,7 +725,7 @@ const openProjectDetail = (project: Project) => {
 
 <style scoped>
 .projects-section {
-    background: linear-gradient(135deg, #f5f5f5 0%, #fafafa 100%);
+    background: transparent;
     position: relative;
 }
 
@@ -561,9 +752,9 @@ const openProjectDetail = (project: Project) => {
 }
 
 .project-card:hover {
-    transform: translateY(-12px) scale(1.02);
-    box-shadow: 0 20px 60px rgba(129, 199, 132, 0.3) !important;
-    border-color: rgba(129, 199, 132, 0.4);
+    transform: translateY(-10px) scale(1.01);
+    box-shadow: var(--shadow-card) !important;
+    border-color: rgba(47, 109, 78, 0.08);
 }
 
 :deep(.project-card .v-card-text) {
@@ -575,7 +766,7 @@ const openProjectDetail = (project: Project) => {
     width: 100%;
     aspect-ratio: 16 / 9;
     overflow: hidden;
-    background: #f0f0f0;
+    background: var(--surface-muted);
 }
 
 .project-image {
@@ -619,14 +810,13 @@ const openProjectDetail = (project: Project) => {
     bottom: 1rem;
     left: 50%;
     transform: translateX(-50%);
-    background: white;
-    backdrop-filter: blur(10px);
-    color: rgba(0, 0, 0, 0.8);
-    padding: 0.5rem 1.5rem;
-    border-radius: 20px;
+    background: var(--surface);
+    color: var(--ink);
+    padding: 0.45rem 1.25rem;
+    border-radius: 18px;
     font-size: 0.875rem;
     font-weight: 600;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 16px rgba(15, 29, 20, 0.06);
 }
 
 .project-logo-badge {
@@ -672,268 +862,258 @@ const openProjectDetail = (project: Project) => {
     opacity: 0.6;
 }
 
-.project-detail-header {
-    padding: 3rem 2.5rem;
-    position: relative;
-    color: white;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+.project-dialog {
+    background: var(--surface);
+    box-shadow: var(--shadow-card);
+    border-radius: 14px;
     overflow: hidden;
 }
 
-.project-detail-header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle at 100% 0%, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-    pointer-events: none;
+.dialog-accent {
+    height: 6px;
 }
 
-.close-btn {
-    position: absolute;
-    top: 50%;
-    right: 1.5rem;
-    transform: translateY(-50%);
-    width: 44px;
-    height: 44px;
-    border: none;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
-    border-radius: 50%;
+.dialog-header {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 10;
-}
-
-.close-btn:hover {
-    background: rgba(255, 255, 255, 0.35);
-}
-
-.header-content {
-    position: relative;
-    z-index: 2;
-}
-
-.header-top {
-    margin-bottom: 0;
-}
-
-.header-title-section {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: space-between;
     gap: 2rem;
-    width: 100%;
-    flex-wrap: nowrap;
+    padding: 1.25rem 1.5rem 0.5rem;
 }
 
-.project-title {
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin: 0;
-    color: white;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    letter-spacing: -0.5px;
-    white-space: nowrap;
-}
-
-.header-period {
-    display: inline-flex;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    padding: 0.75rem 1.5rem;
-    border-radius: 50px;
-    font-weight: 600;
-    color: white;
-    border: 1.5px solid rgba(255, 255, 255, 0.4);
-    white-space: nowrap;
-    font-size: 1rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s ease;
-}
-
-.period-text {
-    font-weight: 700;
-    letter-spacing: 0.5px;
-}
-
-.header-bottom {
+.dialog-header-main {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 2rem;
-    padding-top: 0;
+    gap: 1rem;
+    min-width: 0;
 }
 
-.header-roles {
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: rgba(255, 255, 255, 0.85);
-    margin: 0;
-    flex: 1;
-    letter-spacing: 0.3px;
-}
-
-.header-period {
-    display: inline-flex;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    padding: 0.5rem 1.25rem;
-    border-radius: 50px;
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    white-space: nowrap;
-}
-
-.period-chip {
-    background: rgba(255, 255, 255, 0.25) !important;
-    backdrop-filter: blur(10px);
-    border: 1.5px solid rgba(255, 255, 255, 0.5) !important;
-    color: white !important;
-    font-weight: 600;
-}
-
-.project-logo-section {
-    width: 100%;
-    padding: 3rem 2.5rem;
-    background: linear-gradient(135deg, #f5f5f5 0%, #fafafa 100%);
+.project-logo-dialog {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow-soft);
+    border-radius: 10px;
+    padding: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 280px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    flex: 0 0 auto;
+    width: 64px;
+    height: 64px;
 }
 
-.project-logo-section-inline {
-    width: 100%;
-    padding: 2rem 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.project-logo-display {
-    max-width: 240px;
-    max-height: 240px;
-    width: auto;
-    height: auto;
+.project-logo-img-dialog {
+    max-height: 48px;
+    max-width: 48px;
     object-fit: contain;
-    filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.1));
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.project-logo-section:hover .project-logo-display {
-    filter: drop-shadow(0 12px 32px rgba(0, 0, 0, 0.15));
-    transform: translateY(-4px);
+.dialog-heading-copy {
+    min-width: 0;
 }
 
-.description-section {
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.01) 100%);
-    padding: 1.5rem;
-    border-radius: 12px;
-    border-left: 4px solid currentColor;
+.dialog-kicker {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.3rem 0.65rem;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
-.info-section {
-    padding: 0;
+.dialog-company {
+    color: var(--ink-muted);
 }
 
-.detail-sections {
+.dialog-close {
+    margin-top: -0.15rem;
+}
+
+.dialog-body {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
 }
 
-.detail-block {
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    border-radius: 12px;
-    padding: 1.25rem;
-    background: white;
-}
-
-.mission-item,
-.challenge-item {
-    padding: 1rem;
-    background: rgba(0, 0, 0, 0.02);
-    border-radius: 8px;
-    border-left: 3px solid currentColor;
-}
-
-.mission-marker,
-.challenge-marker {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    margin-right: 0.75rem;
-}
-
-.tech-section {
-    padding: 0;
-}
-
-.tech-chips-container {
+.dialog-meta {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.75rem;
-}
-
-:deep(.tech-chips-container .v-chip) {
-    border-width: 2px;
-    font-weight: 500;
-}
-
-.border-t {
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-.gap-2 {
     gap: 0.5rem;
 }
 
-.gap-3 {
+.dialog-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
     gap: 1rem;
 }
 
-ul {
-    list-style: none;
-    padding-left: 0;
+.dialog-grid--single {
+    grid-template-columns: 1fr;
 }
 
-li {
-    position: relative;
-    padding-left: 1.5rem;
+.dialog-panel {
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--surface);
+    padding: 1.15rem;
+    box-shadow: var(--shadow-soft);
 }
 
-li:before {
-    content: "▪";
-    position: absolute;
-    left: 0;
-    color: currentColor;
-    opacity: 0.6;
+.dialog-panel--soft {
+    background: var(--surface-muted);
 }
 
-.project-detail-modal {
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2) !important;
+.panel-title {
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: var(--ink);
 }
 
-:deep(.project-detail-modal .v-card-text) {
-    background: #fafafa;
+.panel-text {
+    line-height: 1.8;
+    color: var(--ink-muted);
+    font-size: 0.96rem;
+}
+
+.dialog-copy-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.mission-list {
+    border-radius: 8px;
+}
+
+.mission-list .v-list-item {
+    border-radius: 8px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.mission-list .v-list-item:last-child {
+    border-bottom: none;
+}
+
+.mission-text {
+    white-space: normal;
+    line-height: 1.65;
+    color: var(--ink);
+}
+
+.skills-mini-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 0.65rem;
+}
+
+.skill-mini-card {
+    border: 1px solid var(--line);
+    background: linear-gradient(180deg, var(--surface) 0%, var(--surface-muted) 100%);
+    border-radius: 10px;
+    min-height: 48px;
+    height: auto;
+    padding: 0.55rem 0.7rem;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 0.88rem;
+    color: var(--ink);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.25;
+}
+
+.skill-mini-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-soft);
+}
+
+.education-categories-grid {
+    display: flex;
+    flex-direction: column;
+}
+
+.technical-card {
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--surface);
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.technical-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card);
+}
+
+.technical-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.technical-title-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.technical-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.additional-tech {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+
+.additional-tech .v-chip {
+    border-radius: 999px;
+    background: var(--surface-muted);
+    color: var(--ink);
+}
+
+.dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
 }
 
 @media (max-width: 960px) {
     .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .dialog-header {
+        padding-inline: 1rem;
+    }
+    
+    .dialog-header-main {
+        align-items: flex-start;
+    }
+    
+    .dialog-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .dialog-panel {
+        padding: 1rem;
+    }
+
+    .skills-mini-grid {
         grid-template-columns: 1fr;
     }
 }
