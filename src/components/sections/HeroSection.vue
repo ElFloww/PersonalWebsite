@@ -67,17 +67,16 @@ const scrollToSection = (sectionId: string) => {
                 <!-- Colonne droite : Texte + CTA -->
                 <v-col cols="12" md="7" lg="6" class="hero-col-text">
                     <div class="hero-text-block">
-                        <!-- Tag catégorie -->
-                        <div class="hero-tag animate-tag">
-                            <span class="tag-dot"></span>
-                            <span>{{ t('views.main.profil.description') }}</span>
-                        </div>
-
                         <!-- Nom -->
                         <h1 class="hero-name animate-title">
                             <span class="gradient-text">Florent</span><br />
                             Dubut
                         </h1>
+
+                        <!-- Job Title -->
+                        <h2 class="hero-job-title animate-tag">
+                            {{ t('views.main.profil.description') }}
+                        </h2>
 
                         <!-- Sous-titre -->
                         <p class="hero-subtitle animate-subtitle">
@@ -233,7 +232,9 @@ const scrollToSection = (sectionId: string) => {
     font-size: 0.78rem;
     font-weight: 600;
     color: #2e7d52;
-    white-space: nowrap;
+    white-space: normal;
+    text-align: center;
+    max-width: 340px;
     backdrop-filter: blur(8px);
 }
 
@@ -309,23 +310,14 @@ const scrollToSection = (sectionId: string) => {
     gap: 1.5rem;
 }
 
-/* Tag */
-.hero-tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.85rem;
+/* Job Title */
+.hero-job-title {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
     font-weight: 600;
     color: var(--accent-strong);
-    letter-spacing: 0.3px;
-}
-
-.tag-dot {
-    width: 6px;
-    height: 6px;
-    background: var(--accent);
-    border-radius: 50%;
-    flex-shrink: 0;
+    letter-spacing: -0.01em;
+    margin-top: -0.5rem;
+    margin-bottom: 0;
 }
 
 /* Nom */
@@ -345,6 +337,7 @@ const scrollToSection = (sectionId: string) => {
     line-height: 1.8;
     color: var(--ink-muted);
     max-width: 520px;
+    min-height: 90px;
     margin: 0;
 }
 
