@@ -297,10 +297,12 @@ const openProjectDetail = (project: Project) => {
             <v-col cols="12" class="text-center">
                 <div class="title-container">
                     <v-icon icon="mdi-lightbulb-on" size="56" color="green-lighten-1" class="mb-4"></v-icon>
-                    <h1 class="text-h2 font-weight-bold mb-3">
+                    <h1 class="text-h2 font-weight-bold mb-4">
                         {{ t('views.main.projects.sectionTitle') }}
                     </h1>
-                    <p class="text-h6 text-grey-darken-1">{{ t('views.main.projects.sectionDescription') }}</p>
+                    <p class="introduction-text text-body1 text-grey-darken-1 mb-6 font-weight-500">
+                        {{ t('views.main.projects.sectionDescription') }}
+                    </p>
                 </div>
                 <v-divider class="mx-auto my-4" color="green-lighten-1" :thickness="4" width="100" style="border-radius: 4px;"></v-divider>
             </v-col>

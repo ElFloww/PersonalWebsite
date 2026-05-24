@@ -158,10 +158,10 @@ const showDetails = (exp: Experience) => {
             color="green-lighten-1"
             class="mb-4"
           ></v-icon>
-          <h1 class="text-h2 font-weight-bold mb-3">
+          <h1 class="text-h2 font-weight-bold mb-4">
             {{ t("views.main.professionalExperience.sectionTitle") }}
           </h1>
-          <p class="text-h6 text-grey-darken-1">
+          <p class="introduction-text text-body1 text-grey-darken-1 mb-6 font-weight-500">
             {{ t("views.main.professionalExperience.sectionDescription") }}
           </p>
         </div>

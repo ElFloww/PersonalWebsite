@@ -323,5 +323,11 @@ const additionalTechnologies = [
   border-radius: 999px;
   background: rgba(245,245,245,0.8);
   color: var(--ink);
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.additional-tech .v-chip:hover {
+  transform: scale(1.1);
 }
 </style>

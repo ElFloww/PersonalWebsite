@@ -8,6 +8,7 @@ import EducationSection from '@/components/sections/EducationSection.vue';
 import SkillsSection from '@/components/sections/SkillsSection.vue';
 import ProjectsSection from '@/components/sections/ProjectsSection.vue';
 import ContactForm from '@/components/sections/ContactForm.vue';
+import SectionDivider from '@/components/shared/SectionDivider.vue';
 import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n();
@@ -25,27 +26,27 @@ const { t } = useI18n();
         <!-- Section Statistiques -->
         <!-- <StatsSection /> -->
 
-        <v-divider :thickness="2" opacity="0.2"></v-divider>
+        <SectionDivider />
 
         <!-- Section Expérience -->
         <ExperienceSection />
 
-        <v-divider :thickness="2" opacity="0.2"></v-divider>
+        <SectionDivider />
 
         <!-- Section Formation -->
         <EducationSection />
 
-        <v-divider :thickness="2" opacity="0.2"></v-divider>
+        <SectionDivider />
 
         <!-- Section Compétences -->
         <SkillsSection />
 
-        <v-divider :thickness="2" opacity="0.2"></v-divider>
+        <SectionDivider />
 
         <!-- Section Projets -->
         <ProjectsSection />
 
-        <v-divider :thickness="2" opacity="0.2"></v-divider>
+        <SectionDivider />
 
         <!-- Section Contact -->
         <v-container id="contact" fluid class="contact-section pa-5 py-16">
