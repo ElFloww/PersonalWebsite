@@ -4,8 +4,21 @@ import { getAllVisits, type VisitRecord } from '@/services/visitTracker';
 
 // ─── State ───────────────────────────────────────────────────────────────────
 const visits     = ref<VisitRecord[]>([]);
-const loading    = ref(true);
+const loading    = ref(false);
 const refreshing = ref(false);
+
+const isAuthenticated = ref(false);
+const passwordInput = ref('');
+const passwordError = ref('');
+
+function login() {
+  if (passwordInput.value === import.meta.env.VITE_ADMIN_PASSWORD) {
+    isAuthenticated.value = true;
+    load();
+  } else {
+    passwordError.value = 'Mot de passe incorrect';
+  }
+}
 
 // ─── Filters ─────────────────────────────────────────────────────────────────
 const searchIP         = ref('');
@@ -29,8 +42,6 @@ async function load(isRefresh = false) {
   loading.value = false;
   refreshing.value = false;
 }
-onMounted(() => load());
-
 // ─── Filter Options ───────────────────────────────────────────────────────────
 const browserOptions  = computed(() => [...new Set(visits.value.map(v => v.browser))].filter(Boolean).sort());
 const osOptions       = computed(() => [...new Set(visits.value.map(v => v.os))].filter(Boolean).sort());
@@ -171,7 +182,27 @@ const barColors = ['#4a8f68','#2f6d4e','#6aab88','#3b82f6','#8b5cf6','#f59e0b','
 </script>
 
 <template>
-  <div class="adm">
+  <div v-if="!isAuthenticated" class="auth-wrapper">
+    <div class="auth-card">
+      <div class="adm-badge mb-4">ACCÈS RESTREINT</div>
+      <h1 class="adm-title mb-6">Authentification</h1>
+      <v-text-field
+        v-model="passwordInput"
+        type="password"
+        label="Mot de passe"
+        variant="outlined"
+        density="compact"
+        @keyup.enter="login"
+        :error-messages="passwordError"
+        bg-color="transparent"
+      ></v-text-field>
+      <button class="adm-btn adm-btn--primary w-100 mt-2" @click="login">
+        Accéder
+      </button>
+    </div>
+  </div>
+
+  <div v-else class="adm">
 
     <!-- ══════════ HEADER ══════════ -->
     <div class="adm-header">
@@ -494,6 +525,26 @@ const barColors = ['#4a8f68','#2f6d4e','#6aab88','#3b82f6','#8b5cf6','#f59e0b','
 </template>
 
 <style scoped>
+.auth-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 72px);
+  background: var(--background);
+  padding: 1rem;
+}
+
+.auth-card {
+  background: var(--surface);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow-card);
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid var(--line);
+  text-align: center;
+}
+
 /* ── ROOT ── */
 .adm {
   min-height: 100vh;
@@ -538,7 +589,7 @@ const barColors = ['#4a8f68','#2f6d4e','#6aab88','#3b82f6','#8b5cf6','#f59e0b','
 }
 .adm-btn--primary:hover:not(:disabled) { background: var(--accent-strong); transform: translateY(-1px); }
 .adm-btn--outline {
-  background: #fff; color: var(--accent-strong);
+  background: var(--surface); color: var(--accent-strong);
   border: 1.5px solid var(--line);
   box-shadow: var(--shadow-soft);
 }
@@ -562,7 +613,7 @@ const barColors = ['#4a8f68','#2f6d4e','#6aab88','#3b82f6','#8b5cf6','#f59e0b','
 
 /* ── CARD ── */
 .dash-card {
-  background: #fff;
+  background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-soft);
@@ -590,7 +641,7 @@ const barColors = ['#4a8f68','#2f6d4e','#6aab88','#3b82f6','#8b5cf6','#f59e0b','
 @media (max-width: 680px)  { .kpi-grid { grid-template-columns: repeat(2,1fr); } }
 
 .kpi {
-  background: #fff;
+  background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-soft);
