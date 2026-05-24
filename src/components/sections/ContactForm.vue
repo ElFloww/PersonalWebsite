@@ -93,95 +93,96 @@ const resetForm = () => {
 </script>
 
 <template>
-    <v-card elevation="2" class="pa-6 contact-card">
-        <v-card-title class="text-h5 mb-4">
+    <v-card elevation="6" class="pa-8 glass-card h-100">
+        <h3 class="text-h5 font-weight-bold text-ink mb-6">
             {{ t('views.main.contactForm.title') }}
-        </v-card-title>
-        <v-card-text>
-            <v-form ref="formRef" @submit.prevent="submit">
-                <v-row>
-                    <v-col cols="12" md="6">
-                        <v-text-field
-                            v-model="form.name"
-                            :label="t('views.main.contactForm.name')"
-                            :rules="nameRules"
-                            prepend-inner-icon="mdi-account"
-                            variant="outlined"
-                            color="green-lighten-1"
-                            required
-                        ></v-text-field>
-                    </v-col>
-                    <v-col cols="12" md="6">
-                        <v-text-field
-                            v-model="form.email"
-                            :label="t('views.main.contactForm.email')"
-                            :rules="emailRules"
-                            prepend-inner-icon="mdi-email"
-                            variant="outlined"
-                            color="green-lighten-1"
-                            type="email"
-                            required
-                        ></v-text-field>
-                    </v-col>
-                    <v-col cols="12">
-                        <v-text-field
-                            v-model="form.subject"
-                            :label="t('views.main.contactForm.subject')"
-                            :rules="subjectRules"
-                            prepend-inner-icon="mdi-tag-outline"
-                            variant="outlined"
-                            color="green-lighten-1"
-                            required
-                        ></v-text-field>
-                    </v-col>
-                    <v-col cols="12">
-                        <v-textarea
-                            v-model="form.message"
-                            :label="t('views.main.contactForm.message')"
-                            :rules="messageRules"
-                            prepend-inner-icon="mdi-message-text"
-                            variant="outlined"
-                            color="green-lighten-1"
-                            rows="5"
-                            required
-                        ></v-textarea>
-                    </v-col>
-                </v-row>
-            </v-form>
-        </v-card-text>
-        <v-card-actions class="px-6 pb-6">
-            <v-spacer></v-spacer>
+        </h3>
+        <v-form ref="formRef" @submit.prevent="submit" class="contact-form-wrapper">
+            <div class="mb-5">
+                <label class="d-block text-subtitle-2 font-weight-medium text-grey-darken-2 mb-2">{{ t('views.main.contactForm.name') }} *</label>
+                <v-text-field
+                    v-model="form.name"
+                    :placeholder="t('views.main.contactForm.namePlaceholder')"
+                    :rules="nameRules"
+                    variant="outlined"
+                    color="green-darken-1"
+                    bg-color="white"
+                    density="comfortable"
+                    hide-details="auto"
+                    required
+                ></v-text-field>
+            </div>
+
+            <div class="mb-5">
+                <label class="d-block text-subtitle-2 font-weight-medium text-grey-darken-2 mb-2">{{ t('views.main.contactForm.email') }} *</label>
+                <v-text-field
+                    v-model="form.email"
+                    :placeholder="t('views.main.contactForm.emailPlaceholder')"
+                    :rules="emailRules"
+                    variant="outlined"
+                    color="green-darken-1"
+                    bg-color="white"
+                    density="comfortable"
+                    hide-details="auto"
+                    type="email"
+                    required
+                ></v-text-field>
+            </div>
+
+            <div class="mb-5">
+                <label class="d-block text-subtitle-2 font-weight-medium text-grey-darken-2 mb-2">{{ t('views.main.contactForm.subject') }} *</label>
+                <v-text-field
+                    v-model="form.subject"
+                    :placeholder="t('views.main.contactForm.subjectPlaceholder')"
+                    :rules="subjectRules"
+                    variant="outlined"
+                    color="green-darken-1"
+                    bg-color="white"
+                    density="comfortable"
+                    hide-details="auto"
+                    required
+                ></v-text-field>
+            </div>
+
+            <div class="mb-6">
+                <label class="d-block text-subtitle-2 font-weight-medium text-grey-darken-2 mb-2">{{ t('views.main.contactForm.message') }} *</label>
+                <v-textarea
+                    v-model="form.message"
+                    :placeholder="t('views.main.contactForm.messagePlaceholder')"
+                    :rules="messageRules"
+                    variant="outlined"
+                    color="green-darken-1"
+                    bg-color="white"
+                    rows="5"
+                    hide-details="auto"
+                    no-resize
+                    required
+                ></v-textarea>
+            </div>
+
             <v-btn
                 color="green-lighten-1"
-                size="large"
+                size="x-large"
                 variant="flat"
                 @click="submit"
                 :loading="loading"
+                class="w-100 font-weight-medium rounded-lg submit-btn"
             >
+                <v-icon icon="mdi-send" class="mr-2 send-icon" size="20"></v-icon>
                 {{ t('views.main.contactForm.send') }}
             </v-btn>
-        </v-card-actions>
+        </v-form>
     </v-card>
 </template>
 
 <style scoped>
-.contact-card {
-    background: var(--surface);
-    border-radius: 12px;
-    box-shadow: var(--shadow-soft);
-    border: 1px solid var(--line);
+.contact-form-wrapper :deep(.v-field) {
+    border-radius: 8px;
+    border-color: rgba(0,0,0,0.1);
 }
 
-.contact-card .v-card-title {
-    color: var(--ink);
-}
-
-.contact-card .v-text-field,
-.contact-card .v-textarea {
-    --v-theme-primary: var(--accent);
-}
-
-.contact-card .v-btn {
-    --v-theme-primary: var(--accent);
+.submit-btn {
+    text-transform: none;
+    letter-spacing: normal;
 }
 </style>
