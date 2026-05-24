@@ -1,4 +1,4 @@
-﻿{
+{
   "components": {
     "shared": {
       "icons": {
@@ -22,7 +22,11 @@
         "education": "Education",
         "skills": "Skills",
         "projects": "Projects",
-        "contact": "Contact"
+        "contact": "Contact",
+        "downloadCv": "PDF Resume"
+      },
+      "visitCounter": {
+        "visits": "visits"
       }
     }
   },
@@ -31,197 +35,207 @@
       "profil": {
         "title": "Florent Dubut",
         "yearsOld": "years old",
-        "description": "Backend Developer .NET | C#"
+        "description": "Software Engineer | Backend .NET & DevOps"
       },
       "presentation": {
-        "title": "👋 Hi, I'm Florent",
-        "subtitle": "Backend .NET Developer — future Provençal seeking a permanent position",
-        "seekingJobBanner": "Available for a permanent position from September 2026 — Toulon · Aix-en-Provence · Marseille",
-        "locationBadge": "Currently in Amiens — Moving to Provence in September 2026",
-        "firstParagraph1": "Originally from Nogent-le-Rotrou, in the heart of Normandy's Perche region, I grew up surrounded by nature and a growing curiosity for technology.",
-        "firstParagraph2": "It all started at age 14 with the discovery of Python — a true revelation. The Computer Science elective in high school only amplified that passion.",
-        "firstParagraph3": "I then built my foundation in Amiens with a Bachelor's degree in Computer Science at the IUT, before going further with a Master's in Cloud Computing & Mobility at INSSET in Saint-Quentin — a demanding program that I fully embraced as an apprentice at Orange Business.",
-        "secondParagraph": "I'm a Backend Developer specialized in .NET & C#. My playground: clean RESTful APIs, solid clean architecture, SQL Server, and well-thought-out dependency injection. I also do front-end work with Vue.js — which gives me a useful dual perspective for documenting my APIs precisely. But backend is where I truly thrive.",
-        "philosophyTitle": "My approach",
-        "philosophyText": "Before writing a single line of code, I make sure I fully understand the business need and the end goal. I start by designing the database architecture and API contracts, then build brick by brick, keeping code clean, testable, and maintainable. When a bug hits, no band-aids — I trace it to the root, fix the flaw, and write a test to make sure it never comes back.",
-        "goalTitle": "My objective",
-        "goalText": "Upon completing my Master's degree and work-study program in September 2026, I am relocating back to Provence to be closer to my family and build the next chapter of my career.\n\nHaving developed a strong expertise and passion for the Microsoft ecosystem and automation, I am actively seeking a permanent position as a .NET Developer or DevOps Engineer.\n\nMy goal is to join a challenging tech team in Toulon, Aix-en-Provence, or Marseille, where I can design robust backend architectures, streamline deployments via CI/CD, and contribute to ambitious projects where code quality is paramount.",
-        "goalCTA": "Seeking .NET / DevOps CDI (Toulon, Aix, Marseille) — from Sept. 2026",
-        "interestsTitle": "Passions & interests",
+        "title": "👋 Hello, I'm Florent",
+        "subtitle": "Software Engineer specialized in .NET backend and DevOps",
+        "seekingJobBanner": "Seeking a permanent position (CDI) in the PACA region starting September 2026 — Toulon · Marseille · Aix-en-Provence",
+        "locationBadge": "Toulon, France",
+        "firstParagraph1": "Passionate about software architecture, I am currently a software engineer with a strong focus on Backend (.NET/C#) and DevOps.",
+        "firstParagraph2": "I built my technical foundation through an IT University Diploma (BUT) followed by a Master's in Cloud Computing at INSSET, a program entirely completed as an apprentice at Orange Business.",
+        "firstParagraph3": "Designing APIs and clean architectures is what drives me on a daily basis.",
+        "secondParagraph": "I approach my projects with a comprehensive view of the software lifecycle: from pure backend development to deployment automation, thanks to a solid DevOps and Cloud culture (CI/CD, containerization). My knowledge of Vue.js complements this approach by giving me the overall vision needed to collaborate effectively with frontend teams.",
+        "philosophyTitle": "My Approach",
+        "philosophyText": "Before typing a single line of code, I make sure to fully understand the business needs and the final goal. I design the database architecture and API contracts first, then build it block by block with clean, testable, and maintainable code. When facing a bug, I don't use a band-aid — I trace it to its source, fix the flaw, and write a test to ensure it never comes back.",
+        "goalTitle": "My Goal",
+        "goalText": "At the end of my studies, in September 2026, I will return to Provence to be closer to my family and build the next steps of my career there.\n\nHaving developed a solid expertise and a strong affinity for the Microsoft ecosystem and automation, I am actively seeking a permanent role as a .NET Developer or DevOps Engineer.\n\nMy goal is to join a stimulating technical team in Toulon, Aix-en-Provence, or Marseille, where I can design robust backend architectures, ensure infrastructure reliability through CI/CD, and contribute to ambitious projects where code quality is paramount.",
+        "goalCTA": "Seeking .NET / DevOps CDI (Toulon, Aix, Marseille) — starting Sept. 2026",
+        "interestsTitle": "Passions & Interests",
         "passions": {
           "sport": {
-            "title": "Sport",
-            "description": "Running, cycling, hiking — endurance sports have taught me discipline and perseverance, qualities just as essential on a trail as on an ambitious project."
+            "title": "Sports",
+            "description": "Swimming, running, cycling, hiking... endurance sports taught me discipline and perseverance, two qualities as essential on a trail as they are on an ambitious project."
           },
           "videoGames": {
             "title": "Video Games",
-            "description": "Big fan of management and strategy games — Cities Skylines, Football Manager, Civilization... A way of thinking in terms of systems, optimization and long-term consequences."
+            "description": "A big fan of management and strategy games — Transport Fever, Cities Skylines, Minecraft... A way to think in terms of systems, optimization, and long-term effects."
           },
           "reading": {
             "title": "Reading",
-            "description": "Personal development, entrepreneurship, psychology... Always looking for new perspectives and methods to improve, both professionally and personally."
+            "description": "Personal development, a few novels... Always seeking new perspectives and methods to improve, both at work and in life."
           },
           "cooking": {
             "title": "Cooking",
-            "description": "Cooking is creating. A bit of technique, a lot of improvisation — and the pleasure of sharing the result with the people around you."
+            "description": "Cooking is creating. A bit of technique, a lot of improvisation — and the joy of sharing the result with loved ones (and eating well along the way)."
           },
           "music": {
             "title": "Music",
-            "description": "I escape into classics from the 60s through the 90s — Beatles, Bowie, Queen, Dire Straits, Pink Floyd — as well as today's music. Music is my best way to disconnect."
+            "description": "I listen to rap like Damso, but also Latin tracks like Bad Bunny and French classics like Dalida, Joe Dassin, or Christophe, depending on my mood. Music is my best way to disconnect."
           }
         }
       },
       "professionalExperience": {
         "title": "💼 Professional Experience",
         "sectionTitle": "Professional Experience",
-        "sectionDescription": "Developing expertise through hands-on practice in software engineering, cloud computing, and DevOps automation.",
+        "sectionDescription": "Developing expertise through hands-on practice in software engineering, cloud, and DevOps automation.",
         "learnMore": "Learn more",
-        "missionsAndAchievements": "Missions & achievements",
+        "missionsAndAchievements": "Missions & Achievements",
+        "contextTitle": "Context",
+        "stackTitle": "Tech Stack",
+        "additionalTechnologies": "Additional technologies",
         "close": "Close",
+        "contractType": {
+          "stage": "Internship",
+          "cdd": "Fixed-Term",
+          "alternance": "Apprenticeship"
+        },
         "first": {
           "date": "April 2023 - May 2023",
           "title": "Full-Stack .NET / Vue.js Developer — Internship",
           "company": "Orange Business — Amiens",
-          "shortDesc": "Immersion with the Microsoft development team for my first steps in professional software development.",
-          "content": "End-of-year internship during my 2nd year of BUT in Computer Science. Immersion with the Microsoft development team for my first professional steps. Deep dive into object-oriented programming and the modern .NET ecosystem. Integrated into a team of consultants, I discovered the .NET Core world in real conditions.",
+          "shortDesc": "Immersion in the Microsoft development team for my first steps in a corporate environment.",
+          "content": "End-of-2nd-year IT BUT internship. Immersion in the Microsoft development team for my first steps in a corporate environment. In-depth discovery of object-oriented programming and the modern .NET ecosystem. Integrated into a team of consultants, I discovered the .NET Core universe in real-world conditions.",
           "tech": "C# · ASP.NET Core (.NET 6) · Vue.js · Vuetify · AngularJS · SQL Server · Entity Framework Core · Dependency Injection · AutoMapper",
           "details": [
-            "Initialization of an internationalization optimization application. Full development of a REST API (.NET 6) and the back office in Vue.js (Vuetify)",
-            "Skill development in architectural best practices (Clean Architecture) and code industrialization (Git, Pipelines, Code reviews)",
+            "Initialization of an application for optimizing internationalization. Full development of a REST API (.NET 6) and the backoffice in Vue.js (Vuetify)",
+            "Skill-building in best architectural practices (Clean Architecture) and code industrialization (Git, Pipelines, Code reviews)",
             "Learning the .NET Core ecosystem and mastering object-oriented programming",
             "Use of modern patterns and integration into an Agile team"
           ]
         },
         "second": {
           "date": "June 2023 - August 2023",
-          "title": "Back-end .NET API Developer — Fixed-term Contract",
+          "title": "Back-end .NET API Developer — Fixed-Term Contract",
           "company": "Orange Business — Amiens",
-          "shortDesc": "Direct follow-up to the spring internship to accelerate Traducto project development.",
-          "content": "Following my internship, I was hired on a fixed-term contract to accelerate the Traducto project development and strengthen the technical quality of the solution. I continued and extended the initial project by developing a new clean architecture API and an web back office. Strong skill development in software quality culture.",
+          "shortDesc": "Direct continuation of the internship to accelerate the development of the Traducto project.",
+          "content": "Following my internship, extension with a fixed-term contract to accelerate the development of the Traducto project and reinforce the technical quality of the solution. I continued and expanded the initial project by developing a new API using clean architecture as well as a management web backoffice. Strong skill improvement on software quality culture.",
           "tech": "C# · ASP.NET Core (.NET 6) · Clean Architecture · CQRS (MediatR) · xUnit · FluentValidation · Azure DevOps · Swagger",
           "details": [
-            "API development in Clean Architecture with modern technologies (ASP.NET Core .NET 6, C#, MediatR)",
-            "Software quality assurance: unit and integration tests (xUnit) with 80% coverage target, reduction of duplicate code and proactive elimination of code smells",
-            "Complete technical documentation with Swagger / OpenAPI",
+            "API development in Clean Architecture using modern technologies (ASP.NET Core .NET 6, C#, MediatR)",
+            "Software quality assurance: unit and integration testing (xUnit) with an 80% coverage goal, reducing duplicated code, and proactively eliminating code smells",
+            "Comprehensive technical documentation with Swagger / OpenAPI",
             "Version control and CI/CD pipelines via Git and Azure DevOps",
             "Active code reviews with the team to improve maintainability",
-            "Development of the web management back office"
+            "Development of the management web backoffice"
           ]
         },
         "third": {
           "date": "September 2023 - Present",
-          "title": "Full-Stack .NET & TypeScript Consultant — Apprenticeship",
+          "title": ".NET & TypeScript Full-Stack Consultant — Apprenticeship",
           "company": "Orange Business — Amiens",
-          "shortDesc": "Consultant apprentice taking ownership of complete projects with increased responsibility.",
-          "content": "Evolution to an apprentice consultant position. Taking ownership of complete projects and increasing responsibility for architecture and deployments. Consultant on Microsoft and JavaScript technologies within an Agile team. Development and maintenance of REST APIs in ASP.NET Core (clean architecture, CQRS), front-end development with Vue.js 3 and Angular on business applications.",
-          "tech": "C# · ASP.NET Core (.NET 6/.NET 8) · Angular · Vue.js 3 · TypeScript · SQL Server · Entity Framework Core · REST / SOAP APIs · Whisper AI API · Docker · Azure DevOps · Agile (Scrum)",
+          "shortDesc": "Apprentice consultant managing complete projects and taking on increasing architectural responsibilities.",
+          "content": "Evolution into an apprentice consultant role. Taking charge of complete projects and increasing responsibility over architecture and deployments. Consultant on Microsoft and JavaScript technologies within an Agile team. Development and maintenance of REST APIs in ASP.NET Core (clean architecture, CQRS), front-end development with Vue.js 3 and Angular on business applications. Simultaneously, strong DevOps involvement: initially on Azure DevOps, then more recently on GitLab CI/CD with AWS deployments managed via Terraform and Terragrunt.",
+          "tech": "C# · ASP.NET Core (.NET 6/.NET 8) · Angular · Vue.js 3 · TypeScript · SQL Server · Entity Framework Core · REST / SOAP APIs · Whisper API (AI) · Docker · Azure DevOps · GitLab CI · AWS · Terraform · Terragrunt · Agile Methodology (Scrum)",
           "details": [
-            "Application finalization and deployment (migration to .NET 8)",
-            "Complete business application design: database modeling, technical specifications, full development (back-end .NET 8, front Angular/Vue.js) and APIs integration",
-            "Creation of innovative tools with artificial intelligence integration (OpenAI Whisper)",
-            "Modernization of legacy applications: architecture redesign, rewrite with modern technologies, Excel import/export modules and complex logic",
-            "Evolutionary maintenance and code refactoring on critical applications",
-            "Active participation in Agile ceremonies (Daily, Weekly, code reviews)",
-            "Implementation and maintenance of CI/CD pipelines via Azure DevOps",
-            "Mentoring and coaching of other developers"
+            "Finalization and deployment of applications (migration to .NET 8)",
+            "Full design of business applications: database modeling, technical specifications, full development (.NET 8 back-end, Angular/Vue.js front) and API integration",
+            "Creation of innovative tools integrating artificial intelligence (OpenAI Whisper)",
+            "Modernization of legacy applications: architectural redesign, rewriting with modern technologies, Excel import/export modules, and complex logics",
+            "Evolutive maintenance and code refactoring on critical applications",
+            "Active participation in Agile rituals (Daily, Weekly, code reviews)",
+            "Implementation and maintenance of CI/CD pipelines via Azure DevOps, then migration to GitLab CI/CD",
+            "Deployment of cloud infrastructures on AWS via Infrastructure as Code (Terraform + Terragrunt)",
+            "Coaching and mentoring other developers"
           ]
         }
       },
       "education": {
         "title": "🎓 Education",
         "sectionTitle": "Academic Background",
-        "sectionDescription": "Building a solid theoretical and practical foundation in software engineering, systems, and cloud architectures.",
-        "viewProgram": "View program",
+        "sectionDescription": "Acquisition of a solid theoretical and practical foundation in software engineering, systems, and cloud architectures.",
+        "viewProgram": "View the program",
         "modulesAndSkills": "Modules and skills",
         "otherSkills": "Other skills",
+        "parcours": "Pathway",
+        "additionalTechnologies": "Additional technologies",
         "close": "Close",
         "first": {
           "date": "2021 - 2024",
-          "title": "Bachelor in Computer Science (BUT)",
-          "school": "IUT — Université de Picardie Jules Verne, Amiens",
-          "parcours": "Track: Application Development — design, development, validation",
-          "content1": "Intensive three-year university technology program covering the complete software development lifecycle. The first two years focused on technical foundations (algorithms, OOP, databases, software architecture), followed by a third year as an apprentice at Orange Business.",
-          "content2": "Rigorous mastery of algorithms, object-oriented programming (C#, Java, Python, C++, PHP), software design (UML, ERD, design patterns) and application of best practices. Strong emphasis on code quality through writing unit and integration tests. Solid fundamentals in networking (TCP/IP) and Linux server administration.",
-          "content3": "Elected student representative on the IUT Amiens Council. Active participation in council meetings, representation of student interests, and contribution to academic direction. Development of strong communication, leadership, and decision-making process skills.",
+          "title": "BUT in Computer Science",
+          "school": "IUT of University of Picardie Jules Verne — Amiens",
+          "parcours": "Pathway: Application realization — design, development, validation",
+          "content1": "Intensive 3-year technological university degree covering the entire software development lifecycle. The first two years focused on technical foundations (algorithms, OOP, databases, software architecture), followed by a 3rd year apprenticeship at Orange Business.",
+          "content2": "Rigorous mastery of algorithms, object-oriented programming (C#, Java, Python, C++, PHP), software design (UML, CDM, design patterns), and application of best practices. Strong focus on software quality with unit and integration testing. Solid foundation in networking (TCP/IP) and Linux server administration.",
+          "content3": "Elected student representative to the IUT of Amiens Board. Active participation in meetings, defending student interests, and contributing to educational orientations. Developed strong skills in communication, leadership, and navigating decision-making processes.",
           "content4": "",
           "highlights": [
-            "Track: Application Development",
-            "3rd year as apprentice at Orange Business",
+            "Pathway: Application realization",
+            "3rd-year apprenticeship at Orange Business",
             "Elected student representative",
             "Solid foundations & architectures",
             "Complete software lifecycle"
           ],
           "modules": [
             "Algorithms & data structures: rigorous mastery of foundations",
-            "Object-oriented programming: Java, Python, C#, C++, PHP with real applications",
-            "Software design: UML, ERD, design patterns and architectural best practices",
-            "Relational databases: SQL Server, PostgreSQL and transactions",
-            "NoSQL databases: concepts and modern implementations",
-            "Full-stack web development: HTML, CSS, JavaScript, PHP and frameworks",
-            "Heavy software development: desktop applications and systems",
+            "Object-oriented programming: Java, Python, C#, C++, PHP with real-world applications",
+            "Software design: UML, CDM, design patterns, and architectural best practices",
+            "Relational databases: SQL Server, PostgreSQL, and transactions",
+            "NoSQL databases: modern concepts and implementations",
+            "Fullstack web development: HTML, CSS, JavaScript, PHP, and frameworks",
+            "Heavy software development: desktop and system applications",
             "Software quality: unit tests, integration tests, code coverage",
-            "Agile project management: Scrum, sprints and iterative methodologies",
+            "Agile project management: Scrum, sprints, and iterative methodologies",
             "Networks & systems: TCP/IP, Linux administration, infrastructure basics",
-            "Apprenticeship at Orange Business: professional immersion and practical application",
-            "Student engagement: student representative on the IUT Council, leadership and advocacy"
+            "Orange Business apprenticeship: professional immersion and practical application",
+            "Student involvement: student representative on the IUT Board, leadership, and advocacy"
           ]
         },
         "second": {
           "date": "2023 - 2025",
           "title": "Master's — Cloud Computing and Mobility",
-          "school": "INSSET — Université de Picardie Jules Verne, Saint-Quentin",
-          "content": "Advanced Bac+5 program focused on Cloud architectures, DevOps practices, and distributed systems, completed as an apprentice at Orange Business.",
-          "content1": "Advanced Bac+5 program in Cloud architectures, DevOps, and distributed systems. Rigorous and modern curriculum aligned with current industry challenges. Completed as an apprentice at Orange Business, it combines solid theoretical teaching with immediate practical application to develop engineers capable of designing and deploying scalable and resilient Cloud infrastructures.",
-          "content2": "In-depth specialization in Cloud infrastructure (IaaS/PaaS) across Azure, AWS, and Google Cloud environments. Mastery of Infrastructure as Code (Terraform, ARM Templates), advanced containerization and orchestration with Docker and Kubernetes (Swarm, K8s), and Cloud-native and microservices architecture design. Learning of Cloud network architecture, virtualization, and advanced DevOps practices with complex CI/CD pipelines and automation.",
-          "content3": "Development of SaaS-mode applications, creation of cross-platform and native mobile applications (iOS, Android) connected to the Cloud, Big Data and Cloud Data Management, Cloud environment security and audit, Internet of Things (IoT), and Artificial Intelligence integration. Final project: designing and developing a competitive trivia game (Tuuuur) applying Cloud architectural principles.",
+          "school": "INSSET — University of Picardie Jules Verne, Saint-Quentin",
+          "content": "Advanced Master's degree focused on Cloud architectures, the DevOps ecosystem, and distributed systems, completed as an apprentice at Orange Business.",
+          "content1": "Advanced Master's degree in Cloud architectures, DevOps, and distributed systems. A modern and demanding program aligned with current industry challenges. Completed as an apprentice at Orange Business, it combines rigorous teaching with immediate practice to train engineers capable of designing and deploying scalable, resilient Cloud infrastructures.",
+          "content2": "In-depth specialization in Cloud infrastructures (IaaS/PaaS) on Azure, AWS, and Google Cloud environments. Mastery of Infrastructure as Code (Terraform, ARM Templates), advanced containerization and orchestration with Docker and Kubernetes (Swarm, K8s), and design of Cloud-native and microservice architectures. Learning Cloud network architecture, virtualization, and advanced DevOps practices with complex CI/CD pipelines and automation.",
+          "content3": "Development of SaaS applications, creation of cross-platform and native (iOS, Android) cloud-connected mobile apps, Big Data database management, Cloud Data Management, security and auditing of Cloud environments, Internet of Things (IoT), and Artificial Intelligence integration. Final year project: design and development of a competitive general knowledge game (Tuuuur) applying Cloud architectural principles.",
           "highlights": [
             "Cloud & Microservices Specialization",
-            "Architecture & Infrastructure Hands-On",
+            "Practical Architecture & Infrastructure",
             "DevOps & Deployment Strategies",
-            "Mobile Development & SaaS",
-            "Completed as apprenticeship at Orange Business"
+            "Mobile & SaaS Development"
           ],
           "modules": [
-            "Cloud Infrastructures (IaaS/PaaS): deployment and administration on Azure, AWS and Google Cloud",
-            "Cloud Network Architecture: design, optimization and best practices on GCP and AWS",
-            "Infrastructure as Code: Terraform, ARM Templates, virtualization and automated provisioning",
-            "Containerization & Orchestration: Docker, Kubernetes (Swarm, K8s) and Cloud-native patterns",
-            "DevOps & Culture: complex CI/CD pipelines, Azure DevOps, GitLab CI, automated deployments and monitoring",
-            "Microservices Architecture: design of distributed and event-driven architectures",
-            "Internet of Things (IoT): connectivity, protocols and device integration to the Cloud",
-            "Virtualization: hypervisors, virtual machines and resource abstraction",
-            "Advanced CI/CD: complex pipelines, Azure DevOps, GitLab CI and automated deployments",
-            "Mobile Development: cross-platform and native applications (iOS, Android) connected to Cloud",
-            "Cloud Security: environment audit, secrets management, compliance",
+            "Cloud Infrastructures (IaaS/PaaS): deployment and administration on Azure, AWS, and Google Cloud",
+            "Cloud network architecture: design, optimization, and best practices on GCP and AWS",
+            "Infrastructure as Code: Terraform, ARM Templates, virtualization, and automated provisioning",
+            "Containerization & orchestration: Docker, Kubernetes (Swarm, K8s), and Cloud-native patterns",
+            "DevOps & Culture: complex CI/CD pipelines, Azure DevOps, GitLab CI, automated deployments, and monitoring",
+            "Microservices architecture: design of distributed and event-driven architectures",
+            "Internet of Things (IoT): connectivity, protocols, and integration of devices into the Cloud",
+            "Virtualization: hypervisors, virtual machines, and resource abstraction",
+            "Advanced CI/CD: complex pipelines, Azure DevOps, GitLab CI, and automated deployments",
+            "Mobile development: cross-platform and native (iOS, Android) applications connected to the Cloud",
+            "Cloud Security: environment auditing, secret management, compliance",
             "Big Data & Cloud Data Management: distributed data management",
-            "Integrated Artificial Intelligence: IA services integration at Cloud scale",
-            "End-of-year project Tuuuur: competitive trivia game (development, architecture, gameplay)"
+            "Integrated Artificial Intelligence: integrating AI services at a Cloud scale",
+            "Tuuuur final year project: competitive general knowledge game (development, architecture, gameplay)"
           ]
         }
       },
       "contact": {
         "title": "✉️ Contact",
-        "sectionTitle": "Get In Touch",
-        "sectionDescription": "Ready to discuss cloud infrastructure, DevOps automation, or potential opportunities? I'd love to hear from you!",
+        "sectionTitle": "Contact",
+        "sectionDescription": "Ready to discuss cloud infrastructure, DevOps automation, or potential opportunities? I'd love to connect!",
         "contactInfo": "Contact Information",
         "emailLabel": "Email",
         "locationLabel": "Location",
         "locationValue": "Toulon, Aix, Marseille",
         "availabilityLabel": "Availability",
-        "availabilityValue": "Open to new opportunities (CDI)",
-        "connectWithMe": "Connect With Me",
-        "downloadCv": "Download my resume"
+        "availabilityValue": "Open to opportunities (Permanent/CDI)",
+        "connectWithMe": "Connect with me",
+        "downloadCv": "Download my Resume"
       },
       "contactForm": {
         "title": "Send a Message",
         "name": "Name",
         "namePlaceholder": "Your full name",
         "email": "Email",
-        "emailPlaceholder": "your.email@example.com",
+        "emailPlaceholder": "your.email{'@'}example.com",
         "subject": "Subject",
-        "subjectPlaceholder": "What's this about?",
+        "subjectPlaceholder": "What is this about?",
         "message": "Message",
-        "messagePlaceholder": "Tell me about your project, opportunity, or just say hello!",
+        "messagePlaceholder": "Tell me about your project, an opportunity, or just say hi!",
         "send": "Send Message",
         "reset": "Reset",
         "nameRequired": "Name is required",
@@ -231,19 +245,31 @@
         "subjectRequired": "Subject is required",
         "messageRequired": "Message is required",
         "messageMinLength": "Message must be at least 10 characters",
-        "successMessage": "Message sent successfully! I will reply soon.",
-        "errorMessage": "Error sending message. Please try again."
+        "successMessage": "Message sent successfully! I'll get back to you soon.",
+        "errorMessage": "Error sending the message. Please try again."
       },
       "skills": {
         "title": "💻 Technical Skills",
         "sectionTitle": "Technical Skills",
-        "sectionDescription": "Mastered technologies and tools",
+        "sectionDescription": "Technologies and tools I have mastered",
         "introduction": "Technical expertise focused on backend development, DevOps practices, and modern cloud infrastructures.",
         "frontend": "Frontend",
         "backend": "Backend",
         "database": "Databases",
         "devops": "DevOps & Infrastructure",
-        "tools": "Other tools"
+        "tools": "Other Tools",
+        "additionalTechnologies": "Additional technologies"
+      },
+      "about": {
+        "statsXp": "Years of XP",
+        "statsProjects": "Completed projects",
+        "statsTechnologies": "Technologies",
+        "pillarBackendTitle": ".NET Backend",
+        "pillarBackendDesc": "REST APIs in Clean Architecture (C#, ASP.NET Core), CQRS with MediatR, Entity Framework, SQL Server.",
+        "pillarDevOpsTitle": "DevOps & Cloud",
+        "pillarDevOpsDesc": "CI/CD via Azure DevOps & GitLab, Docker containerization, IaC with Terraform/Terragrunt on AWS/Azure/GCP.",
+        "pillarVisionTitle": "Product Vision",
+        "pillarVisionDesc": "End-to-end design: from database modeling to API contracts, ensuring clean, testable, and maintainable code."
       },
       "stats": {
         "years": "Years",
@@ -256,122 +282,124 @@
       "projects": {
         "title": "🚀 Projects",
         "sectionTitle": "Featured Projects",
-        "sectionDescription": "Key projects illustrating my expertise in modern cloud infrastructure, event-driven architectures, and development.",
-        "viewProject": "View project",
-        "sourceCode": "Source code",
+        "sectionDescription": "Key projects illustrating my expertise in cloud infrastructure, event-driven architectures, and development.",
+        "viewProject": "View Project",
+        "sourceCode": "Source Code",
         "details": "Details",
+        "descriptionTitle": "Description",
         "contextTitle": "Context",
-        "conceptTitle": "Concept",
+        "conceptTitle": "The Concept",
         "missionsTitle": "My Missions & Technical Achievements",
-        "challengesTitle": "Challenges Faced & Learnings",
-        "technologiesTitle": "Technologies & Tools",
+        "challengesTitle": "Challenges Met & Lessons Learned",
+        "technologiesTitle": "Tech Stack",
+        "additionalTechnologies": "Additional technologies",
         "close": "Close",
         "code": "Code",
         "visit": "Visit",
         "items": {
           "tuuuur": {
             "title": "Tuuuur",
-            "shortDescription": "Cross-Platform Quiz Application (Web & Mobile) - Master's Cloud Computing project.",
-            "description": "Tuuuur is a cross-platform quiz application designed to combine entertainment, learning, and competition with multiplayer rooms and competitive duels.",
+            "shortDescription": "Cross-platform Quiz Application (Web & Mobile) - Cloud Computing Master's Project.",
+            "description": "Tuuuur is a cross-platform quiz app designed to combine entertainment, learning, and competition through multiplayer lobbies and competitive duels.",
             "period": "2025 - 2026",
-            "context": "Thematic project completed as part of the Master's program in Cloud Computing & Mobility (UPJV). Team: project carried out by 3 members with Gael Grosset and Killian Lefrancois.",
-            "roles": "Project Lead, Designer, Cloud Architect (GCP) and Back-End / Database Developer.",
-            "concept": "Tuuuur offers multiplayer rooms (generated via QR code), competitive 1v1 duels (with health points and multipliers), and a solo training mode.",
+            "context": "Thematic project carried out as part of the Cloud Computing & Mobility Master's degree (UPJV). Team: 3-person project with Gaël Grosset and Killian Lefrancois.",
+            "roles": "Project Manager, Designer, Cloud Architect (GCP) and Back-End / DB Developer.",
+            "concept": "Tuuuur features multiplayer lobbies (generated via QR Code), 1v1 competitive duels (with health points and multipliers), as well as a solo practice mode.",
             "missions": {
               "projectManagement": {
-                "heading": "Project Management & Design (Project Lead)",
+                "heading": "Management & Design (Project Manager)",
                 "items": [
-                  "Led the team, distributed tasks, and managed the project end-to-end using Agile practices (Scrum sprints)",
-                  "Wrote the specifications and designed the technical architecture"
+                  "Team leadership, task distribution, and overall project management using Agile methodology (Scrum sprints)",
+                  "Drafting the specifications and technical modeling of the architecture"
                 ]
               },
               "backend": {
                 "heading": "Back-End Architecture (C# .NET)",
                 "items": [
-                  "Designed and developed a robust REST API based on Clean Architecture principles",
-                  "Ensured modular code for long-term maintainability"
+                  "Design and development of a robust REST API based on Clean Architecture principles",
+                  "Ensuring code modularity for optimal maintenance"
                 ]
               },
               "realtime": {
                 "heading": "Real-Time Synchronization (SignalR)",
                 "items": [
-                  "Implemented WebSockets via SignalR to provide low-latency bidirectional communication",
-                  "Synchronized quiz questions for all players in the same room in real time",
-                  "Handled 1v1 match interactions in real time"
+                  "Implementation of WebSockets via SignalR to ensure ultra-low latency bi-directional communication",
+                  "Synchronizing questions for all players in a lobby simultaneously",
+                  "Managing 1v1 face-offs in real time"
                 ]
               },
               "database": {
                 "heading": "Databases (SQL Server & Redis)",
                 "items": [
-                  "Designed and managed SQL Server persistence for complex data (user profiles, history, Elo ranking)",
-                  "Integrated Redis for caching and ultra-fast matchmaking optimization",
-                  "Stored active sessions for better resilience"
+                  "Modeling and managing SQL Server for complex data persistence (user profiles, history, Elo rating calculation)",
+                  "Integrating Redis for cache management and ultra-fast matchmaking optimization",
+                  "Storing active sessions for optimal resilience"
                 ]
               },
               "cloud": {
-                "heading": "Cloud & DevOps Architecture (GCP & Terraform)",
+                "heading": "Cloud Architecture & DevOps (GCP & Terraform)",
                 "items": [
-                  "Designed a scalable infrastructure on Google Cloud Platform (GCP)",
-                  "Fully automated deployments using Infrastructure as Code (IaC) with Terraform",
-                  "Ensured security and reproducibility across environments"
+                  "Designing a scalable infrastructure on Google Cloud Platform (GCP)",
+                  "Full automation of deployments using Infrastructure as Code (IaC) with Terraform",
+                  "Ensuring security and reproducibility of environments"
                 ]
               }
             },
             "challenges": {
               "algorithmic": {
-                "heading": "Algorithms & Fairness",
+                "heading": "Algorithmics & Fairness",
                 "items": [
-                  "Built business logic to match themes fairly between players",
-                  "Implemented the survival system (decreasing health points)",
-                  "Implemented an Elo-based ranking algorithm for dynamic user ranking"
+                  "Developing business logic for 'matching' themes between players",
+                  "Implementing the survival system (diminishing health points)",
+                  "Implementing the Elo algorithm to dynamically rank users"
                 ]
               },
               "performance": {
                 "heading": "Performance",
                 "items": [
-                  "Ensured the API and databases (SQL + Redis) can handle many simultaneous connections",
-                  "Guaranteed synchronization consistency between web and mobile applications"
+                  "Ensuring the API and databases (SQL + Redis) handle the load of multiple simultaneous connections",
+                  "Guaranteeing desynchronization between web and mobile applications"
                 ]
               }
             }
           },
           "kairos": {
             "title": "Kairos",
-            "shortDescription": "Schedule Management Application - Final-year SAE 6 project.",
-            "description": "Kairos is a complete application (Web and Mobile) dedicated to managing university schedules, developed as a final-year project.",
+            "shortDescription": "Schedule Management Application - Final Year Project SAE 6.",
+            "description": "Kairos is a comprehensive application (Web and Mobile) dedicated to managing university schedules, developed as a final year project.",
             "period": "2023 - 2024",
-            "context": "Final-year project (SAE 6) focused on continuous improvement of an existing application, carried out within the Computer Science department of IUT Amiens. Team: project delivered by 4 collaborators (with Gael Grosset, Killian Lefrancois and Enzo Pinchon).",
-            "roles": "Project Lead, Database Designer, API Developer and Real Data Integration Engineer.",
-            "concept": "The goal of this final development phase (SAE 6) was to deliver critical improvements to the existing product: API hardening, user experience optimization, and full codebase refactoring to ensure long-term sustainability.",
+            "context": "Final year project (SAE 6) focused on continuous improvement of an existing application, conducted within the IT department of the IUT of Amiens. Team: 4 collaborators (with Gaël Grosset, Killian Lefrancois, and Enzo Pinchon).",
+            "roles": "Project Manager, Database Designer, API Developer, and Real Data Integrator.",
+            "concept": "The goal of this final development phase (SAE 6) was to bring critical improvements to the existing system: API security, user experience optimization, and a complete code refactoring to ensure long-term sustainability.",
             "missions": {
               "projectManagement": {
-                "heading": "Project Leadership & Management",
+                "heading": "Project Management & Leadership",
                 "items": [
-                  "Coordinated the team to overcome initial project challenges",
-                  "Established open communication to adapt to different apprenticeship schedules and keep productivity high"
+                  "Team coordination to overcome initial challenges",
+                  "Setting up open communication to adapt to our different work environments (apprenticeships) and maintain productivity"
                 ]
               },
               "database": {
                 "heading": "Design & Database",
                 "items": [
-                  "Updated and corrected the conceptual data model (MCD)",
-                  "Performed deep database table refactoring to improve maintainability",
-                  "Data engineering: created, formatted, and injected real datasets based on actual IUT Amiens schedules"
+                  "Updating and fixing the Conceptual Data Model (CDM)",
+                  "In-depth refactoring of database tables to improve maintainability",
+                  "Data Engineering: Creating, formatting, and injecting real datasets based on actual IUT of Amiens schedules"
                 ]
               },
               "backend": {
                 "heading": "API Development (Back-End)",
                 "items": [
-                  "Developed and secured the API with decorators validating request authenticity",
-                  "Handled error cases thoroughly (missing token, unauthorized access, expired or invalid token)",
-                  "Cleaned up code and renamed functions to reduce complexity"
+                  "Developing and securing the API by implementing decorators verifying request authenticity",
+                  "Meticulous error handling (missing token, unauthorized, expired or invalid token)",
+                  "Code cleanup and function renaming to reduce complexity"
                 ]
               },
               "frontend": {
                 "heading": "Front-End Development",
                 "items": [
-                  "Provided targeted support on the Web front-end to ensure smooth API integration",
-                  "Fixed specific bugs and improved user experience flow"
+                  "Occasional support on the Web Front-End to ensure connection with the API",
+                  "Resolving specific bugs and smoothing out the user experience"
                 ]
               }
             },
@@ -379,22 +407,74 @@
               "reliability": {
                 "heading": "Reliability & Testing",
                 "items": [
-                  "Ran extensive tests to ensure final product reliability after large-scale refactoring"
+                  "Conducting numerous tests to ensure the final product worked flawlessly after the massive refactoring"
                 ]
               },
               "teamwork": {
                 "heading": "Team Cohesion",
                 "items": [
-                  "Maintained balance between project requirements and professional responsibilities",
-                  "Turned initial concerns into strong collective motivation"
+                  "Maintaining balance between project demands and our professional lives",
+                  "Transforming our initial worries into strong collective motivation"
                 ]
               }
             }
           },
           "portfolio": {
             "title": "Personal Portfolio",
-            "shortDescription": "Personal website built with Vue.js and Vuetify, showcasing my background, skills, and projects.",
-            "description": "Personal website built with Vue.js and Vuetify, showcasing my background, skills, and projects."
+            "shortDescription": "Personal website developed with Vue.js and Vuetify, showcasing my journey, skills, and projects.",
+            "description": "Personal website developed with Vue.js and Vuetify, showcasing my journey, skills, and projects."
+          },
+          "homelab": {
+            "title": "HomeLab — Personal Server",
+            "shortDescription": "Repurposing an old PC into a production server: Proxmox virtualization, IPFire secure network, WireGuard VPN, and self-hosted services.",
+            "description": "Repurposing an old PC into a server hosting a complete infrastructure: Proxmox hypervisor, IPFire firewall, WireGuard VPN, NGINX reverse proxy, and a dozen self-hosted services (Jellyfin, Nextcloud, Immich, Pterodactyl...), all secured via RAID.",
+            "period": "2025 — Present",
+            "context": "Personal project born from a dual desire: to take full control of my data and to deepen my system administration, virtualization, and network security skills learned in class. Rather than letting an old PC collect dust, I transformed it into a genuine personal server.",
+            "roles": "System Administrator · Network Architect · DevOps Engineer",
+            "concept": "A complete homelab driven by Proxmox VE as the central hypervisor, with an internal network fully segmented and secured by IPFire (firewall/router). Data is protected by RAID for fault tolerance. Remote access is secured via a WireGuard VPN, and all services are cleanly exposed through NGINX Proxy Manager with automatic SSL certificates.",
+            "missions": {
+              "infrastructure": {
+                "heading": "Infrastructure & Virtualization (Proxmox)",
+                "items": [
+                  "Installing and configuring Proxmox VE as the main hypervisor on a repurposed PC",
+                  "Creating and managing VMs and LXC containers to isolate each service independently",
+                  "Setting up a RAID for data redundancy and disk fault tolerance"
+                ]
+              },
+              "network": {
+                "heading": "Network & Security",
+                "items": [
+                  "Deploying IPFire as a firewall and router to segment and secure the internal network",
+                  "Configuring a WireGuard VPN for encrypted and secure access from the outside",
+                  "Setting up NGINX Proxy Manager as a centralized reverse proxy with automatic SSL/TLS (Let's Encrypt)"
+                ]
+              },
+              "services": {
+                "heading": "Self-Hosted Services",
+                "items": [
+                  "Jellyfin: media server for managing and streaming movies and series",
+                  "Nextcloud: personal cloud for file storage and synchronization",
+                  "Immich: managing, organizing, and backing up personal photo libraries",
+                  "Pterodactyl + Wings: administration panel for multi-instance game servers"
+                ]
+              }
+            },
+            "challenges": {
+              "security": {
+                "heading": "Security & Service Isolation",
+                "items": [
+                  "Strict network segmentation via IPFire to prevent any unauthorized communication between services",
+                  "SSL/TLS certificate management and secure exposure of public services via reverse proxy"
+                ]
+              },
+              "reliability": {
+                "heading": "Reliability & Maintenance",
+                "items": [
+                  "Implementing RAID to guarantee service continuity in the event of a disk failure",
+                  "Regularly monitoring and updating each service to maintain overall stability and security"
+                ]
+              }
+            }
           }
         }
       }
