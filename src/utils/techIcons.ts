@@ -115,7 +115,6 @@ export const TECH_ICONS: Record<string, string> = {
   'Scrum': 'mdi-refresh',
   'Méthode Agile (Scrum)': 'mdi-sync',
   'Revues de code': 'mdi-code-review',
-  'Proxmox': 'mdi-server',
 };
 
 /**
