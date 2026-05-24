@@ -30,6 +30,11 @@ const router = createRouter({
 				name: 'Admin',
 			},
 		},
+		{
+			path: '/:pathMatch(.*)*',
+			name: PageNameEnum.NOTFOUND || 'NotFound',
+			redirect: '/',
+		},
 	],
 })
 
