@@ -3,7 +3,6 @@ import { ref } from 'vue';
 import Footer from '@/components/shared/Footer.vue';
 import AppBar from '@/components/shared/AppBar.vue';
 import NavigationDrawer from '@/components/shared/NavigationDrawer.vue';
-import ScrollToTop from '@/components/shared/ScrollToTop.vue';
 
 const drawer = ref(false);
 </script>
@@ -18,6 +17,5 @@ const drawer = ref(false);
       </router-view>
     </v-main>
     <Footer />
-    <ScrollToTop />
   </v-app>
 </template>
