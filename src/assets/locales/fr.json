@@ -22,7 +22,11 @@
         "education": "Formation",
         "skills": "Compétences",
         "projects": "Projets",
-        "contact": "Contact"
+        "contact": "Contact",
+        "downloadCv": "CV PDF"
+      },
+      "visitCounter": {
+        "visits": "visites"
       }
     }
   },
@@ -81,6 +85,11 @@
         "stackTitle": "Stack Technique",
         "additionalTechnologies": "Autres technologies",
         "close": "Fermer",
+        "contractType": {
+          "stage": "Stage",
+          "cdd": "CDD",
+          "alternance": "Alternance"
+        },
         "first": {
           "date": "avril 2023 - mai 2023",
           "title": "Développeur Full-Stack .NET / Vue.js — Stage",
@@ -222,7 +231,7 @@
         "name": "Nom",
         "namePlaceholder": "Votre nom complet",
         "email": "Email",
-        "emailPlaceholder": "votre.email@exemple.com",
+        "emailPlaceholder": "votre.email{'@'}exemple.com",
         "subject": "Sujet",
         "subjectPlaceholder": "De quoi s'agit-il ?",
         "message": "Message",
@@ -248,7 +257,19 @@
         "backend": "Backend",
         "database": "Bases de données",
         "devops": "DevOps & Infrastructure",
-        "tools": "Autres outils"
+        "tools": "Autres outils",
+        "additionalTechnologies": "Autres technologies"
+      },
+      "about": {
+        "statsXp": "Années d'XP",
+        "statsProjects": "Projets réalisés",
+        "statsTechnologies": "Technologies",
+        "pillarBackendTitle": "Backend .NET",
+        "pillarBackendDesc": "APIs REST en Clean Architecture (C#, ASP.NET Core), CQRS avec MediatR, Entity Framework, SQL Server.",
+        "pillarDevOpsTitle": "DevOps & Cloud",
+        "pillarDevOpsDesc": "CI/CD via Azure DevOps & GitLab, conteneurisation Docker, IaC avec Terraform/Terragrunt sur AWS/Azure/GCP.",
+        "pillarVisionTitle": "Vision produit",
+        "pillarVisionDesc": "Conception de bout en bout : de la modélisation BDD aux contrats API, avec un code propre, testable et maintenable."
       },
       "stats": {
         "years": "Années",
@@ -265,6 +286,7 @@
         "viewProject": "Voir le projet",
         "sourceCode": "Code source",
         "details": "Détails",
+        "descriptionTitle": "Description",
         "contextTitle": "Contexte",
         "conceptTitle": "Le Concept",
         "missionsTitle": "Mes Missions & Réalisations Techniques",

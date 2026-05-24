@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
+import { useI18n } from 'vue-i18n';
 import { getTotalVisitCount } from '@/services/visitTracker';
 
+const { t } = useI18n();
 const count = ref<number | null>(null);
 const visible = ref(false);
 
@@ -19,7 +21,7 @@ onMounted(async () => {
       <span class="visit-counter__icon">👁</span>
       <span class="visit-counter__label">
         <span class="visit-counter__number">{{ count.toLocaleString('fr-FR') }}</span>
-        <span class="visit-counter__text">visites</span>
+        <span class="visit-counter__text">{{ t('components.shared.visitCounter.visits') }}</span>
       </span>
     </div>
   </Transition>

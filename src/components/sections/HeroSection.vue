@@ -114,7 +114,7 @@ const scrollToSection = (sectionId: string) => {
                                 target="_blank"
                             >
                                 <v-icon start>mdi-file-download-outline</v-icon>
-                                CV PDF
+                                {{ t('components.shared.appBar.downloadCv') }}
                             </v-btn>
                         </div>
 
@@ -146,7 +146,7 @@ const scrollToSection = (sectionId: string) => {
                                 <v-icon size="20">mdi-email-outline</v-icon>
                             </a>
                             <span class="social-divider"></span>
-                            <span class="social-hint">Retrouvez-moi</span>
+                            <span class="social-hint">{{ t('views.main.contact.connectWithMe') }}</span>
                         </div>
                     </div>
                 </v-col>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, computed } from "vue";
 import { useI18n } from "vue-i18n";
 import orangeLogo from "@/assets/images/logo_orange.svg";
 import { getToolIcon } from "@/utils/techIcons";
@@ -11,7 +11,7 @@ interface Experience {
   color: string;
   gradient: string;
   logo?: string;
-  contractType: "Stage" | "CDD" | "Alternance";
+  contractTypeKey: 'stage' | 'cdd' | 'alternance';
   contractIcon: string;
   technologies: {
     category: string;
@@ -29,12 +29,12 @@ const getExperienceDetails = (experienceKey: string): string[] => {
   return Array.isArray(details) ? (details as string[]) : [];
 };
 
-const experiences: Experience[] = [
+const experiences = computed<Experience[]>(() => [
   {
-    key: "third",
-    color: "green-lighten-1",
-    contractType: "Alternance",
-    contractIcon: "mdi-handshake",
+    key: 'third',
+    color: 'green-lighten-1',
+    contractTypeKey: 'alternance',
+    contractIcon: 'mdi-handshake',
     gradient: "linear-gradient(135deg, #81c784 0%, #4caf50 100%)",
     logo: orangeLogo,
     technologies: [
@@ -81,10 +81,10 @@ const experiences: Experience[] = [
     ]
   },
   {
-    key: "second",
-    color: "blue-lighten-1",
-    contractType: "CDD",
-    contractIcon: "mdi-file-document-outline",
+    key: 'second',
+    color: 'blue-lighten-1',
+    contractTypeKey: 'cdd',
+    contractIcon: 'mdi-file-document-outline',
     gradient: "linear-gradient(135deg, #42a5f5 0%, #1e88e5 100%)",
     logo: orangeLogo,
     technologies: [
@@ -114,10 +114,10 @@ const experiences: Experience[] = [
     ]
   },
   {
-    contractType: "Stage",
-    contractIcon: "mdi-school",
-    key: "first",
-    color: "purple-lighten-1",
+    contractTypeKey: 'stage',
+    contractIcon: 'mdi-school',
+    key: 'first',
+    color: 'purple-lighten-1',
     gradient: "linear-gradient(135deg, #ab47bc 0%, #8e24aa 100%)",
     logo: orangeLogo,
     technologies: [
@@ -144,7 +144,7 @@ const experiences: Experience[] = [
       "AutoMapper"
     ]
   },
-];
+]);
 
 const selectedExperience = ref<Experience | null>(null);
 const dialog = ref(false);
@@ -206,7 +206,7 @@ const showDetails = (exp: Experience) => {
 
                   <v-chip :color="exp.color" variant="outlined" size="small">
                     <v-icon :icon="exp.contractIcon" start size="small"></v-icon>
-                    {{ exp.contractType }}
+                    {{ t(`views.main.professionalExperience.contractType.${exp.contractTypeKey}`) }}
                   </v-chip>
                 </div>
 
@@ -292,7 +292,7 @@ const showDetails = (exp: Experience) => {
             </div>
 
             <div class="dialog-heading-copy">
-              <p class="dialog-kicker mb-2">{{ selectedExperience.contractType }}</p>
+              <p class="dialog-kicker mb-2">{{ t(`views.main.professionalExperience.contractType.${selectedExperience.contractTypeKey}`) }}</p>
               <h2 class="text-h5 font-weight-bold mb-1">
                 {{ t(`views.main.professionalExperience.${selectedExperience.key}.title`) }}
               </h2>
@@ -319,7 +319,7 @@ const showDetails = (exp: Experience) => {
             </v-chip>
             <v-chip :color="selectedExperience.color" variant="tonal" size="small">
               <v-icon :icon="selectedExperience.contractIcon" start size="small"></v-icon>
-              {{ selectedExperience.contractType }}
+              {{ t(`views.main.professionalExperience.contractType.${selectedExperience.contractTypeKey}`) }}
             </v-chip>
           </div>
 

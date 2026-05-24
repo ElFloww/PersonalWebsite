@@ -1,4 +1,4 @@
-﻿<script setup lang="ts">
+<script setup lang="ts">
 import { useI18n } from "vue-i18n";
 
 const { t } = useI18n();
@@ -178,7 +178,7 @@ const additionalTechnologies = [
     <!-- Additional Technologies -->
     <v-row justify="center" class="mt-10">
       <v-col cols="12" md="10" lg="8" class="text-center">
-        <h3 class="text-h5 font-weight-bold mb-4">Additional Technologies</h3>
+        <h3 class="text-h5 font-weight-bold mb-4">{{ t('views.main.skills.additionalTechnologies') }}</h3>
         <div class="additional-tech">
           <v-chip
             v-for="tech in additionalTechnologies"

@@ -15,38 +15,35 @@ const experienceYears = Number.parseFloat(
     ).toFixed(0),
 );
 
-const stats = [
-    { value: experienceYears + "+", label: "Années d'XP" },
-    { value: "5+", label: "Projets réalisés" },
-    { value: "25+", label: "Technologies" },
-];
+const stats = computed(() => [
+    { value: experienceYears + '+', label: t('views.main.about.statsXp') },
+    { value: '3+', label: t('views.main.about.statsProjects') },
+    { value: '25+', label: t('views.main.about.statsTechnologies') },
+]);
 
-const pillars = [
+const pillars = computed(() => [
     {
-        icon: "mdi-server",
-        color: "green",
-        gradient: "linear-gradient(135deg, #a5d6a7 0%, #66bb6a 100%)",
-        title: "Backend .NET",
-        description:
-            "APIs REST en Clean Architecture (C#, ASP.NET Core), CQRS avec MediatR, Entity Framework, SQL Server.",
+        icon: 'mdi-server',
+        color: 'green',
+        gradient: 'linear-gradient(135deg, #a5d6a7 0%, #66bb6a 100%)',
+        title: t('views.main.about.pillarBackendTitle'),
+        description: t('views.main.about.pillarBackendDesc'),
     },
     {
-        icon: "mdi-infinity",
-        color: "blue",
-        gradient: "linear-gradient(135deg, #90caf9 0%, #42a5f5 100%)",
-        title: "DevOps & Cloud",
-        description:
-            "CI/CD via Azure DevOps, containerisation Docker, orchestration Kubernetes, IaC avec Terraform sur GCP/Azure/AWS.",
+        icon: 'mdi-infinity',
+        color: 'blue',
+        gradient: 'linear-gradient(135deg, #90caf9 0%, #42a5f5 100%)',
+        title: t('views.main.about.pillarDevOpsTitle'),
+        description: t('views.main.about.pillarDevOpsDesc'),
     },
     {
-        icon: "mdi-eye-outline",
-        color: "purple",
-        gradient: "linear-gradient(135deg, #ce93d8 0%, #ab47bc 100%)",
-        title: "Vision produit",
-        description:
-            "Conception de bout en bout : de la modélisation BDD aux contrats API, avec un code propre, testable et maintenable.",
+        icon: 'mdi-eye-outline',
+        color: 'purple',
+        gradient: 'linear-gradient(135deg, #ce93d8 0%, #ab47bc 100%)',
+        title: t('views.main.about.pillarVisionTitle'),
+        description: t('views.main.about.pillarVisionDesc'),
     },
-];
+]);
 
 const passions = [
     { icon: "mdi-run-fast", key: "sport", color: "orange" },

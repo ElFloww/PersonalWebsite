@@ -569,7 +569,7 @@ const openProjectDetail = (project: Project) => {
                             <section class="dialog-panel mb-4">
                                 <h3 class="panel-title d-flex align-center mb-3">
                                     <v-icon :color="selectedProject.color" icon="mdi-text-box-outline" class="mr-2"></v-icon>
-                                    Description
+                                    {{ t('views.main.projects.descriptionTitle') }}
                                 </h3>
                                 <p class="panel-text">{{ selectedProject.description }}</p>
 
