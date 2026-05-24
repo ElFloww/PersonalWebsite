@@ -426,7 +426,7 @@
           },
           "homelab": {
             "title": "HomeLab — Serveur Personnel",
-            "shortDescription": "Reconversion d'un ancien PC en serveur de production : virtualisation Proxmox, réseau sécurisé IPFire, VPN WireGuard et hébergement de services self-hosted.",
+            "shortDescription": "Reconversion d'un ancien PC en serveur personnel : virtualisation Proxmox, réseau sécurisé IPFire, VPN WireGuard et hébergement de services self-hosted.",
             "description": "Reconversion d'un ancien PC en serveur hébergeant une infrastructure complète : hyperviseur Proxmox, pare-feu IPFire, VPN WireGuard, reverse proxy NGINX et une dizaine de services self-hosted (Jellyfin, Nextcloud, Immich, Pterodactyl…), le tout sécurisé en RAID.",
             "period": "2025 — Présent",
             "context": "Projet personnel né d'une double volonté : prendre le contrôle total de mes données et approfondir mes compétences en administration système, virtualisation et sécurité réseau acquises en cours. Plutôt que de laisser un ancien PC prendre la poussière, je l'ai transformé en véritable serveur personnel.",

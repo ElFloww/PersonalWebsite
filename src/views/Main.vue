@@ -23,9 +23,6 @@ const { t } = useI18n();
         <!-- Section À propos -->
         <AboutSection />
 
-        <!-- Section Statistiques -->
-        <!-- <StatsSection /> -->
-
         <SectionDivider />
 
         <!-- Section Expérience -->

@@ -17,7 +17,7 @@ const experienceYears = Number.parseFloat(
 
 const stats = computed(() => [
     { value: experienceYears + '+', label: t('views.main.about.statsXp') },
-    { value: '3+', label: t('views.main.about.statsProjects') },
+    { value: '5+', label: t('views.main.about.statsProjects') },
     { value: '25+', label: t('views.main.about.statsTechnologies') },
 ]);
 
