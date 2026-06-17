@@ -28,8 +28,8 @@ const scrollToSection = (sectionId: string) => {
 <template>
     <section class="hero-section">
         <!-- Orbs décoratifs -->
-        <div class="hero-orb hero-orb--top-left"></div>
-        <div class="hero-orb hero-orb--bottom-right"></div>
+        <!-- <div class="hero-orb hero-orb--top-left"></div>
+        <div class="hero-orb hero-orb--bottom-right"></div> -->
 
         <v-container fluid class="hero-container">
             <v-row align="center" justify="center" class="hero-row fill-height">
@@ -38,10 +38,10 @@ const scrollToSection = (sectionId: string) => {
                 <v-col cols="12" md="5" lg="4" class="d-flex justify-center justify-md-end hero-col-photo">
                     <div class="photo-wrapper animate-photo">
                         <!-- Badge disponibilité -->
-                        <div class="availability-badge">
+                        <!-- <div class="availability-badge">
                             <span class="pulse-dot"></span>
                             <span class="badge-text">{{ t('views.main.presentation.seekingJobBanner').replace('🟢 ', '').split('—')[0].trim() }}</span>
-                        </div>
+                        </div> -->
 
                         <!-- Photo -->
                         <div class="photo-ring">
@@ -56,10 +56,10 @@ const scrollToSection = (sectionId: string) => {
                                 <v-icon start size="small">mdi-cake-variant</v-icon>
                                 {{ age }} {{ t('views.main.profil.yearsOld') }}
                             </v-chip>
-                            <v-chip color="blue-grey" variant="tonal" size="small" class="chip-info">
+                            <!-- <v-chip color="blue-grey" variant="tonal" size="small" class="chip-info">
                                 <v-icon start size="small">mdi-map-marker-outline</v-icon>
                                 {{ t('views.main.presentation.locationBadge') }}
-                            </v-chip>
+                            </v-chip> -->
                         </div>
                     </div>
                 </v-col>
@@ -265,10 +265,10 @@ const scrollToSection = (sectionId: string) => {
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.photo-ring:hover {
+/* .photo-ring:hover {
     box-shadow: 0 32px 72px rgba(74, 143, 104, 0.3), 0 0 0 8px rgba(74, 143, 104, 0.12);
     transform: translateY(-4px);
-}
+} */
 
 .photo-inner {
     width: 100%;
