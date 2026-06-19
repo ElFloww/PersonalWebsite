@@ -155,6 +155,6 @@ Tous droits réservés © 2024 Florent Dubut
 
 **Florent Dubut**
 
-- Email: contact@florent-dubut.fr
+- Email: florent.dubut@gmail.com
 - LinkedIn: [Florent Dubut](https://www.linkedin.com/in/florent-dubut)
 - GitHub: [@florentdubut](https://github.com/florentdubut)

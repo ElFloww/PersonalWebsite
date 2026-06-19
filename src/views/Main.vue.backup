@@ -56,8 +56,8 @@ const { t } = useI18n();
                     <v-row justify="center" class="mb-5">
                         <v-col cols="12" class="text-center">
                             <p class="text-h6">{{ t('views.main.contact.description') }}</p>
-                            <a href="mailto:contact@florent-dubut.fr" class="text-green-lighten-1 text-h6">
-                                contact@florent-dubut.fr
+                            <a href="mailto:florent.dubut@gmail.com" class="text-green-lighten-1 text-h6">
+                                florent.dubut@gmail.com
                             </a>
                         </v-col>
                     </v-row>
@@ -207,8 +207,8 @@ const { t } = useI18n();
                 <v-row justify="center" class="mb-5">
                     <v-col cols="12" class="text-center">
                         <p class="text-h6">{{ t('views.main.contact.description') }}</p>
-                        <a href="mailto:contact@florent-dubut.fr" class="text-green-lighten-1 text-h6">
-                            contact@florent-dubut.fr
+                        <a href="mailto:florent.dubut@gmail.com" class="text-green-lighten-1 text-h6">
+                            florent.dubut@gmail.com
                         </a>
                     </v-col>
                 </v-row>
