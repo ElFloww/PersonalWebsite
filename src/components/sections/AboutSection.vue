@@ -5,7 +5,7 @@ import { useI18n } from "vue-i18n";
 const { t } = useI18n();
 
 // 🔁 Mettre à false pour masquer la bannière "en recherche d'emploi"
-const seekingJob = true;
+const seekingJob = false;
 
 const experienceStart = new Date("2023-04-01");
 const experienceYears = Number.parseFloat(

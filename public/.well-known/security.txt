@@ -1,4 +1,4 @@
-Contact: mailto:contact@florent-dubut.fr
+Contact: mailto:florent.dubut@gmail.com
 Expires: 2027-03-29T00:00:00.000Z
 Preferred-Languages: en, fr
 Canonical: https://florent-dubut.fr/.well-known/security.txt

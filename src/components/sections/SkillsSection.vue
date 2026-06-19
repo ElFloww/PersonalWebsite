@@ -185,8 +185,8 @@ const additionalTechnologies = [
             :key="tech.name"
             class="ma-2"
             variant="outlined"
-            color="grey lighten-3"
             size="small"
+            style="border-color: var(--line);"
           >
             <v-icon v-if="tech.icon" :icon="tech.icon" size="16" class="mr-2"></v-icon>
             {{ tech.name }}
@@ -270,7 +270,7 @@ const additionalTechnologies = [
 
 .skill-mini-card {
   border: 1px solid var(--line);
-  background: linear-gradient(180deg, #ffffff 0%, #f8fcf8 100%);
+  background: linear-gradient(180deg, var(--surface) 0%, var(--surface-muted) 100%);
   border-radius: 10px;
   min-height: 48px;
   height: auto;
@@ -321,8 +321,8 @@ const additionalTechnologies = [
 
 .additional-tech .v-chip {
   border-radius: 999px;
-  background: rgba(245,245,245,0.8);
-  color: var(--ink);
+  background: var(--surface-muted);
+  color: var(--ink) !important;
   transition: transform 0.3s ease;
   cursor: default;
 }
