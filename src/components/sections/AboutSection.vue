@@ -190,7 +190,7 @@ const passions = [
                 </v-row>
 
                 <!-- Objectif CDI -->
-                <v-row class="mb-8">
+                <!-- <v-row class="mb-8">
                     <v-col cols="12">
                         <v-card elevation="4" class="pa-6 goal-card">
                             <h3
@@ -212,7 +212,7 @@ const passions = [
                             </v-chip>
                         </v-card>
                     </v-col>
-                </v-row>
+                </v-row> -->
 
                 <!-- Passions -->
                 <v-row>
