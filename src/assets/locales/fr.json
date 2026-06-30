@@ -35,21 +35,21 @@
       "profil": {
         "title": "Florent Dubut",
         "yearsOld": "ans",
-        "description": "Ingénieur logiciel | Backend .NET & DevOps"
+        "description": "Développeur Full-Stack .NET & DevOps"
       },
       "presentation": {
         "title": "👋 Bonjour, moi c'est Florent",
-        "subtitle": "Ingénieur logiciel spécialisé backend .NET et DevOps",
+        "subtitle": "Développeur Full-Stack .NET & DevOps",
         "seekingJobBanner": "CDI recherché en région PACA à partir de septembre 2026 — Toulon · Marseille · Aix-en-Provence",
         "locationBadge": "Toulon, France",
-        "firstParagraph1": "Passionné par l'architecture logicielle, je suis aujourd'hui ingénieur logiciel avec une forte dominante Backend (.NET/C#) et DevOps.",
+        "firstParagraph1": "Passionné par l'architecture logicielle, je suis aujourd'hui Développeur Full-Stack .NET & DevOps.",
         "firstParagraph2": "J'ai construit mon socle technique à travers un BUT Informatique puis un Master Cloud Computing à l'INSSET, une formation entièrement réalisée en alternance chez Orange Business.",
         "firstParagraph3": "Concevoir des APIs et des architectures propres est ce qui m'anime au quotidien.",
         "secondParagraph": "J'aborde mes projets avec une vision complète du cycle de vie logiciel : du développement backend pur, jusqu'à l'automatisation des déploiements grâce à une bonne culture DevOps et Cloud (CI/CD, conteneurisation). Ma connaissance de Vue.js vient compléter cette approche en me donnant la vision globale nécessaire pour collaborer efficacement avec les équipes front.",
         "philosophyTitle": "Mon approche",
         "philosophyText": "Avant de taper la moindre ligne de code, je m'assure d'avoir parfaitement compris le besoin métier et l'objectif final. Je conçois d'abord l'architecture de la base de données et les contrats d'API, puis je développe brique par brique avec un code propre, testable et maintenable. Face à un bug, pas de pansement — je remonte à la source, je corrige la faille et j'écris un test pour ne plus jamais y revenir.",
         "goalTitle": "Mon objectif",
-        "goalText": "À la fin de mes études, en septembre 2026, je rentre en Provence pour me rapprocher de ma famille et y construire la suite de ma carrière.\n\nAyant développé une solide expertise et une forte appétence pour l'écosystème Microsoft et l'automatisation, je recherche activement un CDI en tant que Développeur .NET ou Ingénieur DevOps.\n\nMon objectif est d'intégrer une équipe technique stimulante sur Toulon, Aix-en-Provence ou Marseille, au sein de laquelle je pourrai concevoir des architectures backend robustes, fiabiliser les infrastructures via le CI/CD et m'investir sur des projets ambitieux où la qualité du code prime.",
+        "goalText": "À la fin de mes études, en septembre 2026, je rentre en Provence pour me rapprocher de ma famille et y construire la suite de ma carrière.\n\nAyant développé une solide expertise et une forte appétence pour l'écosystème Microsoft et l'automatisation, je recherche activement un CDI en tant que Développeur Full-Stack .NET & DevOps.\n\nMon objectif est d'intégrer une équipe technique stimulante sur Toulon, Aix-en-Provence ou Marseille, au sein de laquelle je pourrai concevoir des architectures backend robustes, fiabiliser les infrastructures via le CI/CD et m'investir sur des projets ambitieux où la qualité du code prime.",
         "goalCTA": "Recherche CDI .NET / DevOps (Toulon, Aix, Marseille) — dès sept. 2026",
         "interestsTitle": "Passions & centres d'intérêt",
         "passions": {

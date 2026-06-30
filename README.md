@@ -1,6 +1,6 @@
 # florent-dubut.fr
 
-Site web personnel de Florent Dubut - Développeur Full Stack
+Site web personnel de Florent Dubut - Développeur Full-Stack .NET & DevOps
 
 ## 🚀 Technologies
 

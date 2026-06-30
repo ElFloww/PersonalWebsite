@@ -35,21 +35,21 @@
       "profil": {
         "title": "Florent Dubut",
         "yearsOld": "years old",
-        "description": "Software Engineer | Backend .NET & DevOps"
+        "description": "Full-Stack .NET Developer & DevOps"
       },
       "presentation": {
         "title": "👋 Hello, I'm Florent",
-        "subtitle": "Software Engineer specialized in .NET backend and DevOps",
+        "subtitle": "Full-Stack .NET Developer & DevOps",
         "seekingJobBanner": "Seeking a permanent position (CDI) in the PACA region starting September 2026 — Toulon · Marseille · Aix-en-Provence",
         "locationBadge": "Toulon, France",
-        "firstParagraph1": "Passionate about software architecture, I am currently a software engineer with a strong focus on Backend (.NET/C#) and DevOps.",
+        "firstParagraph1": "Passionate about software architecture, I am currently a Full-Stack .NET Developer & DevOps.",
         "firstParagraph2": "I built my technical foundation through an IT University Diploma (BUT) followed by a Master's in Cloud Computing at INSSET, a program entirely completed as an apprentice at Orange Business.",
         "firstParagraph3": "Designing APIs and clean architectures is what drives me on a daily basis.",
         "secondParagraph": "I approach my projects with a comprehensive view of the software lifecycle: from pure backend development to deployment automation, thanks to a solid DevOps and Cloud culture (CI/CD, containerization). My knowledge of Vue.js complements this approach by giving me the overall vision needed to collaborate effectively with frontend teams.",
         "philosophyTitle": "My Approach",
         "philosophyText": "Before typing a single line of code, I make sure to fully understand the business needs and the final goal. I design the database architecture and API contracts first, then build it block by block with clean, testable, and maintainable code. When facing a bug, I don't use a band-aid — I trace it to its source, fix the flaw, and write a test to ensure it never comes back.",
         "goalTitle": "My Goal",
-        "goalText": "At the end of my studies, in September 2026, I will return to Provence to be closer to my family and build the next steps of my career there.\n\nHaving developed a solid expertise and a strong affinity for the Microsoft ecosystem and automation, I am actively seeking a permanent role as a .NET Developer or DevOps Engineer.\n\nMy goal is to join a stimulating technical team in Toulon, Aix-en-Provence, or Marseille, where I can design robust backend architectures, ensure infrastructure reliability through CI/CD, and contribute to ambitious projects where code quality is paramount.",
+        "goalText": "At the end of my studies, in September 2026, I will return to Provence to be closer to my family and build the next steps of my career there.\n\nHaving developed a solid expertise and a strong affinity for the Microsoft ecosystem and automation, I am actively seeking a permanent role as a Full-Stack .NET Developer & DevOps.\n\nMy goal is to join a stimulating technical team in Toulon, Aix-en-Provence, or Marseille, where I can design robust backend architectures, ensure infrastructure reliability through CI/CD, and contribute to ambitious projects where code quality is paramount.",
         "goalCTA": "Seeking .NET / DevOps CDI (Toulon, Aix, Marseille) — starting Sept. 2026",
         "interestsTitle": "Passions & Interests",
         "passions": {
