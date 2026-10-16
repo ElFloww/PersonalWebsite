@@ -24,9 +24,6 @@
         "projects": "Projects",
         "contact": "Contact",
         "downloadCv": "PDF Resume"
-      },
-      "visitCounter": {
-        "visits": "visits"
       }
     }
   },
