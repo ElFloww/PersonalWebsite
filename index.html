@@ -1,24 +1,39 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="fr">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XVSYT8PB6V"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XVSYT8PB6V');
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Florent Dubut – Développeur Full-Stack .NET &amp; DevOps</title>
-    <meta name="description" content="Portfolio de Florent Dubut, Développeur Full-Stack .NET &amp; DevOps, avec un Master en Cloud Computing &amp; Mobilité. Découvrez son parcours, ses projets et sa recherche de CDI en PACA à partir de septembre 2026." />
+    <title>Florent Dubut – Ingénieur développeur Full-Stack .NET</title>
+    <meta name="description" content="Portfolio de Florent Dubut, Ingénieur développeur Full-Stack .NET chez Orange Business, Master en Cloud Computing &amp; Mobilité. Découvrez son parcours, ses compétences et ses projets." />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
     <link rel="icon" href="/favicon.png" sizes="256x256" type="image/png" />
     <link rel="apple-touch-icon" href="/favicon-192x192.png" />
     <link rel="manifest" href="/manifest.json" />
-    <meta name="theme-color" content="#4CAF50" />
+    <link rel="canonical" href="https://florent-dubut.fr/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Florent Dubut" />
+    <meta property="og:title" content="Florent Dubut – Ingénieur développeur Full-Stack .NET" />
+    <meta property="og:description" content="Portfolio de Florent Dubut, Ingénieur développeur Full-Stack .NET chez Orange Business." />
+    <meta property="og:url" content="https://florent-dubut.fr/" />
+    <meta property="og:image" content="https://florent-dubut.fr/favicon-512x512.png" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Manrope:wght@400;500;600;700&display=swap" />
+    <meta name="theme-color" content="#2f6d4e" />
+    <script>
+      // Apply the saved theme before first paint to avoid a white flash
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          var dark = t === 'dark' || t === 'floraDark' || (!t && matchMedia('(prefers-color-scheme: dark)').matches);
+          if (dark) document.documentElement.classList.add('dark');
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <div id="app"></div>

@@ -23,7 +23,16 @@
         "skills": "Compétences",
         "projects": "Projets",
         "contact": "Contact",
-        "downloadCv": "CV PDF"
+        "downloadCv": "CV PDF",
+        "certifications": "Certifications"
+      },
+      "cookieConsent": {
+        "title": "Mesure d’audience",
+        "description": "J’utilise Google Analytics pour comprendre comment le site est consulté. Rien n’est collecté sans votre accord.",
+        "privacyLink": "Politique de confidentialité de Google",
+        "reject": "Refuser",
+        "accept": "Accepter",
+        "manage": "Cookies"
       }
     }
   },
@@ -32,14 +41,14 @@
       "profil": {
         "title": "Florent Dubut",
         "yearsOld": "ans",
-        "description": "Développeur Full-Stack .NET & DevOps"
+        "description": "Ingénieur développeur Full-Stack .NET"
       },
       "presentation": {
         "title": "👋 Bonjour, moi c'est Florent",
         "subtitle": "Développeur Full-Stack .NET & DevOps",
         "seekingJobBanner": "CDI recherché en région PACA à partir de septembre 2026 — Toulon · Marseille · Aix-en-Provence",
         "locationBadge": "Toulon, France",
-        "firstParagraph1": "Passionné par l'architecture logicielle, je suis aujourd'hui Développeur Full-Stack .NET & DevOps.",
+        "firstParagraph1": "Passionné par l’architecture logicielle, je suis Ingénieur développeur Full-Stack .NET chez Orange Business.",
         "firstParagraph2": "J'ai construit mon socle technique à travers un BUT Informatique puis un Master Cloud Computing à l'INSSET, une formation entièrement réalisée en alternance chez Orange Business.",
         "firstParagraph3": "Concevoir des APIs et des architectures propres est ce qui m'anime au quotidien.",
         "secondParagraph": "J'aborde mes projets avec une vision complète du cycle de vie logiciel : du développement backend pur, jusqu'à l'automatisation des déploiements grâce à une bonne culture DevOps et Cloud (CI/CD, conteneurisation). Ma connaissance de Vue.js vient compléter cette approche en me donnant la vision globale nécessaire pour collaborer efficacement avec les équipes front.",
@@ -70,7 +79,8 @@
             "title": "Musique",
             "description": "J'écoute du rap comme Damso, mais aussi des sons latinos comme Bad Bunny et des classiques français comme Dalida, Joe Dassin ou Christophe, selon mes humeurs. La musique est mon meilleur mode de déconnexion."
           }
-        }
+        },
+        "ai": "Développement assisté par IA selon les projets (Claude Code, GitHub Copilot)."
       },
       "professionalExperience": {
         "title": "💼 Expériences professionnelles",
@@ -85,7 +95,8 @@
         "contractType": {
           "stage": "Stage",
           "cdd": "CDD",
-          "alternance": "Alternance"
+          "alternance": "Alternance",
+          "cdi": "CDI"
         },
         "first": {
           "date": "avril 2023 - mai 2023",
@@ -118,7 +129,7 @@
           ]
         },
         "third": {
-          "date": "septembre 2023 - aujourd'hui",
+          "date": "septembre 2023 - août 2026",
           "title": "Consultant .NET & TypeScript Full-Stack — Alternance",
           "company": "Orange Business — Amiens",
           "shortDesc": "Consultant alternant avec prise en charge de projets complets et montée en responsabilité.",
@@ -135,6 +146,15 @@
             "Déploiement d'infrastructures cloud sur AWS via Infrastructure as Code (Terraform + Terragrunt)",
             "Accompagnement et mentorat d'autres développeurs"
           ]
+        },
+        "fourth": {
+          "date": "septembre 2026 - aujourd’hui",
+          "title": "Ingénieur développeur Full-Stack .NET — CDI",
+          "company": "Orange Business",
+          "shortDesc": "Poursuite chez Orange Business après l’alternance. Développement assisté par IA selon les projets (Claude Code, GitHub Copilot).",
+          "tech": "C# · .NET · Claude Code · GitHub Copilot",
+          "content": "",
+          "details": []
         }
       },
       "education": {
@@ -190,7 +210,7 @@
             "Spécialisation Cloud & Microservices",
             "Architecture & Infrastructure pratiques",
             "DevOps & Stratégies déploiement",
-            "Développement mobile & SaaS"          
+            "Développement mobile & SaaS"
           ],
           "modules": [
             "Infrastructures Cloud (IaaS/PaaS) : déploiement et administration sur Azure, AWS et Google Cloud",
@@ -213,7 +233,7 @@
       "contact": {
         "title": "✉️ Contact",
         "sectionTitle": "Contact",
-        "sectionDescription": "Prêt à discuter d'infrastructure cloud, d'automatisation DevOps ou de potentielles opportunités ? J'adorerais échanger avec vous !",
+        "sectionDescription": "Une question sur mon parcours, un projet ou un échange technique ? Écrivez-moi.",
         "contactInfo": "Informations de contact",
         "emailLabel": "Email",
         "locationLabel": "Localisation",
@@ -243,7 +263,7 @@
         "messageRequired": "Le message est requis",
         "messageMinLength": "Le message doit contenir au moins 10 caractères",
         "successMessage": "Message envoyé avec succès ! Je vous répondrai bientôt.",
-        "errorMessage": "Erreur lors de l'envoi du message. Veuillez réessayer."
+        "errorMessage": "Erreur lors de l’envoi du message. Réessayez ou écrivez-moi directement à florent.dubut@gmail.com."
       },
       "skills": {
         "title": "💻 Compétences techniques",
@@ -255,7 +275,16 @@
         "database": "Bases de données",
         "devops": "DevOps & Infrastructure",
         "tools": "Autres outils",
-        "additionalTechnologies": "Autres technologies"
+        "additionalTechnologies": "Autres technologies",
+        "groups": {
+          "programming": "Programmation & scripts",
+          "cloud": "Plateformes cloud",
+          "devops": "DevOps & automatisation",
+          "containers": "Conteneurs & orchestration",
+          "data": "Données & outils",
+          "ai": "Développement assisté par IA"
+        },
+        "aiTag": "Développement assisté par IA"
       },
       "about": {
         "statsXp": "Années d'XP",
@@ -292,7 +321,7 @@
         "additionalTechnologies": "Autres technologies",
         "close": "Fermer",
         "code": "Code",
-        "visit": "Visiter",
+        "visit": "Voir la démo",
         "items": {
           "tuuuur": {
             "title": "Tuuuur",
@@ -418,8 +447,8 @@
           },
           "portfolio": {
             "title": "Portfolio Personnel",
-            "shortDescription": "Site web personnel développé avec Vue.js et Vuetify, présentant mon parcours, mes compétences et mes projets.",
-            "description": "Site web personnel développé avec Vue.js et Vuetify, présentant mon parcours, mes compétences et mes projets."
+            "shortDescription": "Site web personnel développé avec Vue.js et Tailwind CSS, présentant mon parcours, mes compétences et mes projets.",
+            "description": "Site web personnel développé avec Vue.js et Tailwind CSS, présentant mon parcours, mes compétences et mes projets."
           },
           "homelab": {
             "title": "HomeLab — Serveur Personnel",
@@ -474,6 +503,58 @@
             }
           }
         }
+      },
+      "hero": {
+        "available": "CDI dès septembre 2026 · PACA",
+        "places": "Toulon · Marseille · Aix-en-Provence",
+        "contact": "Me contacter",
+        "photoAlt": "Portrait de Florent Dubut",
+        "summary": "Chez Orange Business depuis avril 2023, en CDI depuis septembre 2026.",
+        "outcome": "APIs C# en Clean Architecture, CI/CD Azure DevOps et GitLab, déploiements AWS avec Terraform."
+      },
+      "ui": {
+        "openMenu": "Ouvrir le menu",
+        "closeMenu": "Fermer le menu",
+        "theme": "Changer de thème",
+        "backToTop": "Retour en haut",
+        "hideDetails": "Masquer le détail",
+        "mainNav": "Navigation principale",
+        "sending": "Envoi en cours…",
+        "role": "Rôle",
+        "language": "Langue",
+        "skip": "Aller au contenu",
+        "manageCookies": "Cookies",
+        "themeDark": "Passer au thème sombre",
+        "themeLight": "Passer au thème clair",
+        "skillsLegend": "Mis en avant : utilisé en entreprise chez Orange Business",
+        "meta": "Florent Dubut – Ingénieur développeur Full-Stack .NET",
+        "more": "autres",
+        "metaDescription": "Portfolio de Florent Dubut, Ingénieur développeur Full-Stack .NET chez Orange Business, Master en Cloud Computing & Mobilité. Découvrez son parcours, ses compétences et ses projets."
+      },
+      "certifications": {
+        "sectionTitle": "Certifications",
+        "issuer": "Certificates.dev",
+        "title": "Certified Mid-Level Vue.js Developer",
+        "issued": "Émise en octobre 2026",
+        "expires": "Expire en octobre 2029",
+        "idLabel": "Identifiant du diplôme",
+        "verify": "Vérifier la certification",
+        "inProgressTitle": "En préparation",
+        "inProgressTag": "En préparation",
+        "planned": [
+          {
+            "title": "AI-200",
+            "issuer": "Microsoft"
+          },
+          {
+            "title": "AI-900 : Azure AI Fundamentals",
+            "issuer": "Microsoft"
+          },
+          {
+            "title": "Terraform Associate",
+            "issuer": "HashiCorp"
+          }
+        ]
       }
     }
   },

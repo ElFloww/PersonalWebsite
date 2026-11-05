@@ -1,0 +1,14 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "fraunces",
+        "createdAt": "2026-11-03T22:09:01.574Z",
+        "reason": "user confirmed: keep Fraunces + Manrope, part of the existing brand"
+      }
+    ]
+  }
+}

@@ -1,5 +1,6 @@
 import PageNameEnum from '@/core/types/enums/pageNameEnum.ts'
 import { i18n } from '../plugins/i18n'
+import Main from '@/views/Main.vue'
 
 import {
 	createRouter,
@@ -14,8 +15,7 @@ const router = createRouter({
 		{
 			path: '/',
 			name: PageNameEnum.MAIN,
-			component: () =>
-				import(/* webpackChunkName: "main" */ '@/views/Main.vue'),
+			component: Main,
 			meta: {
 				name: t('routes.main'),
 			},

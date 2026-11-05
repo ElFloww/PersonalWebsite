@@ -1,45 +1,25 @@
-import { useTheme } from 'vuetify';
-import { computed } from 'vue';
+import { ref } from 'vue'
+
+const isDark = ref(false)
+
+const apply = (dark: boolean) => {
+    isDark.value = dark
+    document.documentElement.classList.toggle('dark', dark)
+}
 
 export function useAppTheme() {
-    const theme = useTheme();
-
-    const isDark = computed(() => theme.global.name.value === 'floraDark');
-
     const initTheme = () => {
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'floraDark' || savedTheme === 'flora') {
-            theme.global.name.value = savedTheme;
-            if (savedTheme === 'floraDark') {
-                document.documentElement.classList.add('dark-theme');
-            }
-        } else {
-            // Match system preference
-            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-            if (prefersDark) {
-                theme.global.name.value = 'floraDark';
-                document.documentElement.classList.add('dark-theme');
-            }
-        }
-    };
+        const saved = localStorage.getItem('theme')
+        // 'floraDark' / 'flora' are the values stored by the previous version
+        if (saved === 'dark' || saved === 'floraDark') return apply(true)
+        if (saved === 'light' || saved === 'flora') return apply(false)
+        apply(window.matchMedia?.('(prefers-color-scheme: dark)').matches ?? false)
+    }
 
     const toggleTheme = () => {
-        const currentlyDark = theme.global.name.value === 'floraDark';
-        const newTheme = currentlyDark ? 'flora' : 'floraDark';
-        theme.global.name.value = newTheme;
-        localStorage.setItem('theme', newTheme);
-        
-        if (newTheme === 'floraDark') {
-            document.documentElement.classList.add('dark-theme');
-        } else {
-            document.documentElement.classList.remove('dark-theme');
-        }
-    };
+        apply(!isDark.value)
+        localStorage.setItem('theme', isDark.value ? 'dark' : 'light')
+    }
 
-    return {
-        theme,
-        isDark,
-        initTheme,
-        toggleTheme
-    };
+    return { isDark, initTheme, toggleTheme }
 }

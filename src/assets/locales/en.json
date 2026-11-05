@@ -23,7 +23,16 @@
         "skills": "Skills",
         "projects": "Projects",
         "contact": "Contact",
-        "downloadCv": "PDF Resume"
+        "downloadCv": "PDF Resume",
+        "certifications": "Certifications"
+      },
+      "cookieConsent": {
+        "title": "Audience measurement",
+        "description": "I use Google Analytics to understand how the site is used. Nothing is collected without your consent.",
+        "privacyLink": "Google privacy policy",
+        "reject": "Decline",
+        "accept": "Accept",
+        "manage": "Cookies"
       }
     }
   },
@@ -32,14 +41,14 @@
       "profil": {
         "title": "Florent Dubut",
         "yearsOld": "years old",
-        "description": "Full-Stack .NET Developer & DevOps"
+        "description": "Full-Stack .NET Software Engineer"
       },
       "presentation": {
         "title": "👋 Hello, I'm Florent",
         "subtitle": "Full-Stack .NET Developer & DevOps",
         "seekingJobBanner": "Seeking a permanent position (CDI) in the PACA region starting September 2026 — Toulon · Marseille · Aix-en-Provence",
         "locationBadge": "Toulon, France",
-        "firstParagraph1": "Passionate about software architecture, I am currently a Full-Stack .NET Developer & DevOps.",
+        "firstParagraph1": "Passionate about software architecture, I am a Full-Stack .NET Software Engineer at Orange Business.",
         "firstParagraph2": "I built my technical foundation through an IT University Diploma (BUT) followed by a Master's in Cloud Computing at INSSET, a program entirely completed as an apprentice at Orange Business.",
         "firstParagraph3": "Designing APIs and clean architectures is what drives me on a daily basis.",
         "secondParagraph": "I approach my projects with a comprehensive view of the software lifecycle: from pure backend development to deployment automation, thanks to a solid DevOps and Cloud culture (CI/CD, containerization). My knowledge of Vue.js complements this approach by giving me the overall vision needed to collaborate effectively with frontend teams.",
@@ -70,7 +79,8 @@
             "title": "Music",
             "description": "I listen to rap like Damso, but also Latin tracks like Bad Bunny and French classics like Dalida, Joe Dassin, or Christophe, depending on my mood. Music is my best way to disconnect."
           }
-        }
+        },
+        "ai": "AI-assisted development depending on the project (Claude Code, GitHub Copilot)."
       },
       "professionalExperience": {
         "title": "💼 Professional Experience",
@@ -85,7 +95,8 @@
         "contractType": {
           "stage": "Internship",
           "cdd": "Fixed-Term",
-          "alternance": "Apprenticeship"
+          "alternance": "Apprenticeship",
+          "cdi": "Permanent"
         },
         "first": {
           "date": "April 2023 - May 2023",
@@ -118,7 +129,7 @@
           ]
         },
         "third": {
-          "date": "September 2023 - Present",
+          "date": "September 2023 - August 2026",
           "title": ".NET & TypeScript Full-Stack Consultant — Apprenticeship",
           "company": "Orange Business — Amiens",
           "shortDesc": "Apprentice consultant managing complete projects and taking on increasing architectural responsibilities.",
@@ -135,6 +146,15 @@
             "Deployment of cloud infrastructures on AWS via Infrastructure as Code (Terraform + Terragrunt)",
             "Coaching and mentoring other developers"
           ]
+        },
+        "fourth": {
+          "date": "September 2026 - Present",
+          "title": "Full-Stack .NET Software Engineer — Permanent contract",
+          "company": "Orange Business",
+          "shortDesc": "Continuing at Orange Business after the work-study programme. AI-assisted development depending on the project (Claude Code, GitHub Copilot).",
+          "tech": "C# · .NET · Claude Code · GitHub Copilot",
+          "content": "",
+          "details": []
         }
       },
       "education": {
@@ -213,7 +233,7 @@
       "contact": {
         "title": "✉️ Contact",
         "sectionTitle": "Contact",
-        "sectionDescription": "Ready to discuss cloud infrastructure, DevOps automation, or potential opportunities? I'd love to connect!",
+        "sectionDescription": "A question about my background, a project or a technical exchange? Write to me.",
         "contactInfo": "Contact Information",
         "emailLabel": "Email",
         "locationLabel": "Location",
@@ -243,7 +263,7 @@
         "messageRequired": "Message is required",
         "messageMinLength": "Message must be at least 10 characters",
         "successMessage": "Message sent successfully! I'll get back to you soon.",
-        "errorMessage": "Error sending the message. Please try again."
+        "errorMessage": "Error while sending the message. Try again or write to me directly at florent.dubut@gmail.com."
       },
       "skills": {
         "title": "💻 Technical Skills",
@@ -255,7 +275,16 @@
         "database": "Databases",
         "devops": "DevOps & Infrastructure",
         "tools": "Other Tools",
-        "additionalTechnologies": "Additional technologies"
+        "additionalTechnologies": "Additional technologies",
+        "groups": {
+          "programming": "Programming & Scripting",
+          "cloud": "Cloud Platforms",
+          "devops": "DevOps & Automation",
+          "containers": "Containers & Orchestration",
+          "data": "Data & Tools",
+          "ai": "AI-assisted development"
+        },
+        "aiTag": "AI-assisted development"
       },
       "about": {
         "statsXp": "Years of XP",
@@ -292,7 +321,7 @@
         "additionalTechnologies": "Additional technologies",
         "close": "Close",
         "code": "Code",
-        "visit": "Visit",
+        "visit": "Live demo",
         "items": {
           "tuuuur": {
             "title": "Tuuuur",
@@ -418,8 +447,8 @@
           },
           "portfolio": {
             "title": "Personal Portfolio",
-            "shortDescription": "Personal website developed with Vue.js and Vuetify, showcasing my journey, skills, and projects.",
-            "description": "Personal website developed with Vue.js and Vuetify, showcasing my journey, skills, and projects."
+            "shortDescription": "Personal website developed with Vue.js and Tailwind CSS, showcasing my journey, skills, and projects.",
+            "description": "Personal website developed with Vue.js and Tailwind CSS, showcasing my journey, skills, and projects."
           },
           "homelab": {
             "title": "HomeLab — Personal Server",
@@ -474,6 +503,58 @@
             }
           }
         }
+      },
+      "hero": {
+        "available": "Permanent role from September 2026 · PACA",
+        "places": "Toulon · Marseille · Aix-en-Provence",
+        "contact": "Get in touch",
+        "photoAlt": "Portrait of Florent Dubut",
+        "summary": "At Orange Business since April 2023, on a permanent contract since September 2026.",
+        "outcome": "C# APIs in Clean Architecture, CI/CD on Azure DevOps and GitLab, AWS deployments with Terraform."
+      },
+      "ui": {
+        "openMenu": "Open menu",
+        "closeMenu": "Close menu",
+        "theme": "Toggle theme",
+        "backToTop": "Back to top",
+        "hideDetails": "Hide details",
+        "mainNav": "Main navigation",
+        "sending": "Sending…",
+        "role": "Role",
+        "language": "Language",
+        "skip": "Skip to content",
+        "manageCookies": "Cookies",
+        "themeDark": "Switch to dark theme",
+        "themeLight": "Switch to light theme",
+        "skillsLegend": "Highlighted: used in production at Orange Business",
+        "meta": "Florent Dubut – Full-Stack .NET Software Engineer",
+        "more": "more",
+        "metaDescription": "Portfolio of Florent Dubut, Full-Stack .NET software engineer at Orange Business, Master’s in Cloud Computing & Mobility. Discover his background, skills and projects."
+      },
+      "certifications": {
+        "sectionTitle": "Certifications",
+        "issuer": "Certificates.dev",
+        "title": "Certified Mid-Level Vue.js Developer",
+        "issued": "Issued October 2026",
+        "expires": "Expires October 2029",
+        "idLabel": "Credential ID",
+        "verify": "Verify credential",
+        "inProgressTitle": "In progress",
+        "inProgressTag": "In progress",
+        "planned": [
+          {
+            "title": "AI-200",
+            "issuer": "Microsoft"
+          },
+          {
+            "title": "AI-900: Azure AI Fundamentals",
+            "issuer": "Microsoft"
+          },
+          {
+            "title": "Terraform Associate",
+            "issuer": "HashiCorp"
+          }
+        ]
       }
     }
   },
