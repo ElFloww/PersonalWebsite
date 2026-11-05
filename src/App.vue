@@ -1,27 +1,25 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
-import { useAppTheme } from '@/composables/useAppTheme';
-import Footer from '@/components/shared/Footer.vue';
-import AppBar from '@/components/shared/AppBar.vue';
-import NavigationDrawer from '@/components/shared/NavigationDrawer.vue';
+import { onMounted } from 'vue'
+import { useAppTheme } from '@/composables/useAppTheme'
+import AppBar from '@/components/shared/AppBar.vue'
+import Footer from '@/components/shared/Footer.vue'
+import ScrollToTop from '@/components/shared/ScrollToTop.vue'
+import CookieConsent from '@/components/shared/CookieConsent.vue'
 
-const drawer = ref(false);
-const { initTheme } = useAppTheme();
+const { initTheme } = useAppTheme()
 
-onMounted(() => {
-    initTheme();
-});
+onMounted(initTheme)
 </script>
 
 <template>
-  <v-app id="app" class="min-h-screen d-flex flex-column justify-between">
-    <AppBar @toggle-drawer="drawer = !drawer" />
-    <NavigationDrawer v-model="drawer" />
-    <v-main class="flex-grow-1">
-      <router-view :key="$route.fullPath" v-slot="{ Component }">
-        <component :is="Component" />
-      </router-view>
-    </v-main>
+  <div id="app" class="flex min-h-screen flex-col">
+    <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-full focus:bg-brand focus:px-5 focus:py-2 focus:font-bold focus:text-onaccent">{{ $t('views.main.ui.skip') }}</a>
+    <AppBar />
+    <main id="main" tabindex="-1" class="flex-1 outline-none">
+      <router-view />
+    </main>
     <Footer />
-  </v-app>
+    <ScrollToTop />
+    <CookieConsent />
+  </div>
 </template>
