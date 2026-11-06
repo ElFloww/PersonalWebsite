@@ -18,8 +18,8 @@ const details = (key: string) => (tm(`${base(key)}.details`) as unknown[]).map((
 const allStack = (key: string) => t(`${base(key)}.tech`).split(' · ')
 const stack = (key: string) => allStack(key).slice(0, 7)
 const hidden = (key: string) => Math.max(0, allStack(key).length - 7)
-const highlights = (key: string) => details(key).slice(0, 3)
-const rest = (key: string) => details(key).slice(3)
+const highlights = (key: string) => details(key).slice(0, 4)
+const rest = (key: string) => details(key).slice(4)
 const title = (key: string) => t(`${base(key)}.title`).split(' — ')[0]
 </script>
 
@@ -45,7 +45,7 @@ const title = (key: string) => t(`${base(key)}.title`).split(' — ')[0]
               <span class="tag !py-0.5 !text-[0.8rem]">{{ t(`views.main.professionalExperience.contractType.${job.contract}`) }}</span>
             </p>
 
-            <p class="measure mt-4 mb-0 text-[1.05rem]">{{ t(`${base(job.key)}.shortDesc`) }}</p>
+            <p v-if="t(`${base(job.key)}.shortDesc`)" class="measure mt-4 mb-0 text-[1.05rem]">{{ t(`${base(job.key)}.shortDesc`) }}</p>
 
             <ul v-if="highlights(job.key).length" class="measure mt-5 mb-0 list-disc space-y-1.5 pl-5 text-[1.02rem] text-ink marker:text-brand">
               <li v-for="(d, i) in highlights(job.key)" :key="i">{{ d }}</li>
