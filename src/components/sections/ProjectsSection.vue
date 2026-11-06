@@ -4,13 +4,14 @@ import SectionHeader from '@/components/shared/SectionHeader.vue'
 import Icon from '@/components/ui/Icon.vue'
 import tuuuurImage from '@/assets/images/tuuuur.webp'
 import kairosImage from '@/assets/images/kairos.webp'
-import homelabImage from '@/assets/images/homelab.webp'
+import HomelabDiagram from '@/components/ui/HomelabDiagram.vue'
 
 const { t, tm, rt } = useI18n()
 
 interface Project {
   key: string
   image?: string
+  diagram?: boolean
   stack: string[]
   link?: string
   github?: string
@@ -19,8 +20,8 @@ interface Project {
 
 const projects: Project[] = [
   { key: 'tuuuur', image: tuuuurImage, detailed: true, stack: ['C#', '.NET Core', 'Vue.js', 'Flutter', 'SignalR', 'SQL Server', 'Redis', 'GCP', 'Terraform'], github: 'https://github.com/TuuuurProject' },
-  { key: 'homelab', image: homelabImage, detailed: true, stack: ['Proxmox', 'IPFire', 'WireGuard', 'NGINX Proxy Manager', 'Jellyfin', 'Nextcloud', 'Immich', 'Pterodactyl', 'RAID'] },
-  { key: 'kairos', image: kairosImage, detailed: true, stack: ['Vue.js', 'JavaScript', 'Python', 'MariaDB', 'CI/CD'], github: 'https://github.com/SAE5-Kairos' },
+  { key: 'homelab', diagram: true, detailed: true, stack: ['Proxmox', 'OPNsense', 'WireGuard', 'NGINX Proxy Manager', 'Jellyfin', 'Nextcloud', 'Immich', 'Pterodactyl', 'RAID'] },
+  { key: 'kairos', image: kairosImage, detailed: true, stack: ['Vue.js', 'JavaScript', 'MariaDB', 'CI/CD'], github: 'https://github.com/SAE5-Kairos' },
   { key: 'portfolio', detailed: false, stack: ['Vue.js 3', 'TypeScript', 'Tailwind CSS', 'Vite'], link: 'https://florent-dubut.fr' },
 ]
 
@@ -45,18 +46,23 @@ const blocks = (path: string): Block[] =>
       <ol class="m-0 mt-14 flex list-none flex-col gap-16 p-0">
         <li v-for="(p, i) in projects" :key="p.key">
           <article class="grid items-start gap-8 lg:grid-cols-12 lg:gap-12">
+            <HomelabDiagram
+              v-if="p.diagram"
+              class="aspect-video w-full rounded-2xl border border-line shadow-[var(--shadow-card)] lg:col-span-6 lg:row-start-1"
+              :class="i % 2 ? 'lg:col-start-7' : 'lg:col-start-1'"
+            />
             <img
-              v-if="p.image"
+              v-else-if="p.image"
               :src="p.image"
               :alt="t(`${base(p.key)}.title`)"
               width="960"
               height="540"
               loading="lazy"
-              class="aspect-video w-full rounded-2xl border border-line object-cover shadow-[var(--shadow-card)] lg:col-span-6"
-              :class="i % 2 ? 'lg:order-2' : ''"
+              class="aspect-video w-full rounded-2xl border border-line object-cover shadow-[var(--shadow-card)] lg:col-span-6 lg:row-start-1"
+              :class="i % 2 ? 'lg:col-start-7' : 'lg:col-start-1'"
             />
 
-            <div :class="p.image ? 'lg:col-span-6' : 'lg:col-span-12'">
+            <div class="lg:row-start-1" :class="p.image || p.diagram ? ['lg:col-span-6', i % 2 ? 'lg:col-start-1' : 'lg:col-start-7'] : 'lg:col-span-12'">
               <h3 class="m-0 text-[clamp(1.75rem,3vw,2.4rem)] font-bold">{{ t(`${base(p.key)}.title`) }}</h3>
               <p v-if="p.detailed" class="mt-2 mb-0 text-[0.95rem] font-semibold text-ink">
                 <span class="text-brand">{{ t(`${base(p.key)}.period`) }}</span> · {{ t(`${base(p.key)}.roles`) }}
@@ -78,7 +84,7 @@ const blocks = (path: string): Block[] =>
 
             </div>
 
-      <details v-if="p.detailed" class="group lg:col-span-12">
+      <details v-if="p.detailed" class="group lg:col-span-12 lg:row-start-2">
         <summary class="inline-flex min-h-11 cursor-pointer list-none items-center gap-2 font-bold text-brand [&::-webkit-details-marker]:hidden">
           <span class="grid size-6 place-items-center rounded-full border border-current transition-transform duration-300 group-open:rotate-180"><Icon name="chevron" :size="14" /></span>
           <span class="group-open:hidden">{{ t('views.main.projects.details') }}</span>

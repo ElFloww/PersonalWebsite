@@ -41,22 +41,22 @@
       "profil": {
         "title": "Florent Dubut",
         "yearsOld": "ans",
-        "description": "Ingénieur développeur Full-Stack .NET"
+        "description": "Développeur Full-Stack .NET"
       },
       "presentation": {
         "title": "👋 Bonjour, moi c'est Florent",
-        "subtitle": "Développeur Full-Stack .NET & DevOps",
+        "subtitle": "Développeur Full-Stack .NET",
         "seekingJobBanner": "CDI recherché en région PACA à partir de septembre 2026 — Toulon · Marseille · Aix-en-Provence",
         "locationBadge": "Toulon, France",
-        "firstParagraph1": "Passionné par l’architecture logicielle, je suis Ingénieur développeur Full-Stack .NET chez Orange Business.",
+        "firstParagraph1": "Passionné par l’architecture logicielle, je suis développeur Full-Stack .NET chez Orange Business.",
         "firstParagraph2": "J'ai construit mon socle technique à travers un BUT Informatique puis un Master Cloud Computing à l'INSSET, une formation entièrement réalisée en alternance chez Orange Business.",
         "firstParagraph3": "Concevoir des APIs et des architectures propres est ce qui m'anime au quotidien.",
         "secondParagraph": "J'aborde mes projets avec une vision complète du cycle de vie logiciel : du développement backend pur, jusqu'à l'automatisation des déploiements grâce à une bonne culture DevOps et Cloud (CI/CD, conteneurisation). Ma connaissance de Vue.js vient compléter cette approche en me donnant la vision globale nécessaire pour collaborer efficacement avec les équipes front.",
         "philosophyTitle": "Mon approche",
         "philosophyText": "Avant de taper la moindre ligne de code, je m'assure d'avoir parfaitement compris le besoin métier et l'objectif final. Je conçois d'abord l'architecture de la base de données et les contrats d'API, puis je développe brique par brique avec un code propre, testable et maintenable. Face à un bug, pas de pansement — je remonte à la source, je corrige la faille et j'écris un test pour ne plus jamais y revenir.",
         "goalTitle": "Mon objectif",
-        "goalText": "À la fin de mes études, en septembre 2026, je rentre en Provence pour me rapprocher de ma famille et y construire la suite de ma carrière.\n\nAyant développé une solide expertise et une forte appétence pour l'écosystème Microsoft et l'automatisation, je recherche activement un CDI en tant que Développeur Full-Stack .NET & DevOps.\n\nMon objectif est d'intégrer une équipe technique stimulante sur Toulon, Aix-en-Provence ou Marseille, au sein de laquelle je pourrai concevoir des architectures backend robustes, fiabiliser les infrastructures via le CI/CD et m'investir sur des projets ambitieux où la qualité du code prime.",
-        "goalCTA": "Recherche CDI .NET / DevOps (Toulon, Aix, Marseille) — dès sept. 2026",
+        "goalText": "À la fin de mes études, en septembre 2026, je rentre en Provence pour me rapprocher de ma famille et y construire la suite de ma carrière.\n\nAyant développé une solide expertise et une forte appétence pour l'écosystème Microsoft et l'automatisation, je recherche activement un CDI en tant que Développeur Full-Stack .NET.\n\nMon objectif est d'intégrer une équipe technique stimulante sur Toulon, Aix-en-Provence ou Marseille, au sein de laquelle je pourrai concevoir des architectures backend robustes, fiabiliser les infrastructures via le CI/CD et m'investir sur des projets ambitieux où la qualité du code prime.",
+        "goalCTA": "Recherche CDI .NET (Toulon, Aix, Marseille) — dès sept. 2026",
         "interestsTitle": "Passions & centres d'intérêt",
         "passions": {
           "sport": {
@@ -100,25 +100,25 @@
         },
         "first": {
           "date": "avril 2023 - mai 2023",
-          "title": "Développeur Full-Stack .NET / Vue.js — Stage",
+          "title": "Développeur Full-Stack .NET — Stage",
           "company": "Orange Business — Amiens",
           "shortDesc": "Immersion dans l'équipe de développement Microsoft pour mes premiers pas en entreprise.",
-          "content": "Stage de fin de 2ème année de BUT Informatique. Immersion dans l'équipe de développement Microsoft pour mes premiers pas en entreprise. Découverte approfondie de la programmation orientée objet et de l'écosystème .NET moderne. Intégré dans une équipe de consultants, j'ai découvert l'univers .NET Core en conditions réelles.",
+          "content": "Stage de fin de 2ème année de BUT Informatique. Immersion dans l'équipe de développement Microsoft pour mes premiers pas en entreprise. Découverte approfondie de la programmation orientée objet et de l'écosystème .NET moderne. Intégré dans l'équipe de développement, j'ai découvert l'univers .NET Core en conditions réelles.",
           "tech": "C# · ASP.NET Core (.NET 6) · Vue.js · Vuetify · AngularJS · SQL Server · Entity Framework Core · Injection de dépendances · AutoMapper",
           "details": [
             "Initialisation d'une application d'optimisation de l'internationalisation. Développement complet d'une API REST (.NET 6) et du backoffice en Vue.js (Vuetify)",
             "Montée en compétences en bonnes pratiques d'architecture (Clean Architecture) et industrialisation du code (Git, Pipelines, Revues de code)",
             "Apprentissage de l'écosystème .NET Core et maîtrise de la programmation orientée objet",
-            "Utilisation de patterns modernes et intégration dans une équipe Agile"
+            "Utilisation de patterns modernes et intégration dans l'équipe de développement"
           ]
         },
         "second": {
           "date": "juin 2023 - août 2023",
-          "title": "Développeur Back-end API .NET — CDD",
+          "title": "Développeur Full-Stack .NET — CDD",
           "company": "Orange Business — Amiens",
-          "shortDesc": "Suite directe du stage pour accélérer le développement du projet Traducto.",
-          "content": "Suite à mon stage, prolongement en CDD pour accélérer le développement du projet Traducto et renforcer la qualité technique de la solution. J'ai poursuivi et étendu le projet initial en développant une nouvelle API en clean architecture ainsi qu'un backoffice web de gestion. Forte montée en compétences sur la culture de la qualité logicielle.",
-          "tech": "C# · ASP.NET Core (.NET 6) · Clean Architecture · CQRS (MediatR) · xUnit · FluentValidation · Azure DevOps · Swagger",
+          "shortDesc": "Suite directe du stage pour accélérer le développement de l'outil de gestion de l'internationalisation des projets.",
+          "content": "Suite à mon stage, prolongement en CDD pour accélérer le développement de l'outil de gestion de l'internationalisation des projets et renforcer la qualité technique de la solution. J'ai poursuivi et étendu le projet initial en développant une nouvelle API en clean architecture ainsi qu'un backoffice web de gestion. Forte montée en compétences sur la culture de la qualité logicielle.",
+          "tech": "C# · ASP.NET Core (.NET 6) · Clean Architecture · MediatR · xUnit · FluentValidation · Azure DevOps · Swagger",
           "details": [
             "Développement d'API en Clean Architecture avec technologies modernes (ASP.NET Core .NET 6, C#, MediatR)",
             "Assurance qualité logicielle : tests unitaires et d'intégration (xUnit) avec objectif de 80% de couverture, réduction du code dupliqué et élimination proactive des code smells",
@@ -130,31 +130,35 @@
         },
         "third": {
           "date": "septembre 2023 - août 2026",
-          "title": "Consultant .NET & TypeScript Full-Stack — Alternance",
+          "title": "Développeur Full-Stack .NET — Alternance",
           "company": "Orange Business — Amiens",
-          "shortDesc": "Consultant alternant avec prise en charge de projets complets et montée en responsabilité.",
-          "content": "Évolution vers un poste de consultant alternant. Prise en charge de projets complets et montée en responsabilité sur l'architecture et les déploiements. Consultant sur les technologies Microsoft et JavaScript au sein d'une équipe Agile. Développement et maintenance d'APIs REST en ASP.NET Core (clean architecture, CQRS), développement front-end avec Vue.js 3 et Angular sur des applications métier. En parallèle, forte implication DevOps : d'abord sur Azure DevOps, puis plus récemment sur GitLab CI/CD avec des déploiements sur AWS pilotés via Terraform et Terragrunt.",
-          "tech": "C# · ASP.NET Core (.NET 6/.NET 8) · Angular · Vue.js 3 · TypeScript · SQL Server · Entity Framework Core · API REST / SOAP · API Whisper (IA) · Docker · Azure DevOps · GitLab CI · AWS · Terraform · Terragrunt · Méthode Agile (Scrum)",
+          "shortDesc": "Alternant avec prise en charge de projets complets et montée en responsabilité.",
+          "content": "Évolution au sein de l'équipe. Prise en charge de projets complets et montée en responsabilité sur l'architecture et les déploiements. Développement sur les technologies Microsoft et JavaScript. Développement et maintenance d'APIs REST en ASP.NET Core (clean architecture), développement front-end avec Vue.js 3 et Angular sur des applications métier. En parallèle, forte implication DevOps : d'abord sur Azure DevOps, puis plus récemment sur GitLab CI/CD avec des déploiements sur AWS pilotés via Terraform et Terragrunt.",
+          "tech": "C# · ASP.NET Core (.NET 6/.NET 8) · Angular · Vue.js 3 · TypeScript · SQL Server · Entity Framework Core · API REST / SOAP · Microservices · Docker · Azure DevOps · GitLab CI · AWS · Terraform · Terragrunt",
           "details": [
-            "Finalisation et déploiement d'applications (migration vers .NET 8)",
+            "Migration de 2 applications vers .NET 8",
+            "DevOps sur une application en microservices déployée sur AWS avec Terraform et Terragrunt",
             "Conception complète d'applications métier : modélisation de bases de données, spécifications techniques, développement complet (back-end .NET 8, front Angular/Vue.js) et intégration d'APIs",
-            "Création d'outils innovants avec intégration d'intelligence artificielle (OpenAI Whisper)",
             "Modernisation d'applications legacy : refonte d'architecture, réécriture avec technologies modernes, modules d'import/export Excel et logiques complexes",
             "Maintenance évolutive et refactoring de code sur applications critiques",
-            "Participation active aux rituels Agile (Daily, Weekly, revues de code)",
+            "Participation active aux rituels d'équipe (Daily, Weekly, revues de code)",
             "Mise en place et maintenance de pipelines CI/CD via Azure DevOps, puis migration vers GitLab CI/CD",
-            "Déploiement d'infrastructures cloud sur AWS via Infrastructure as Code (Terraform + Terragrunt)",
             "Accompagnement et mentorat d'autres développeurs"
           ]
         },
         "fourth": {
           "date": "septembre 2026 - aujourd’hui",
-          "title": "Ingénieur développeur Full-Stack .NET — CDI",
+          "title": "Développeur Full-Stack .NET — CDI",
           "company": "Orange Business",
-          "shortDesc": "Poursuite chez Orange Business après l’alternance. Développement assisté par IA selon les projets (Claude Code, GitHub Copilot).",
-          "tech": "C# · .NET · Claude Code · GitHub Copilot",
+          "shortDesc": "",
+          "tech": "C# · .NET · Angular · .NET MAUI · Claude Code · GitHub Copilot",
           "content": "",
-          "details": []
+          "details": [
+            "Application interne de gestion du personnel (front Angular et API .NET)",
+            "Outils de migration de données (SQL, Excel, CSV, etc.)",
+            "Applications industrielles pour de grands groupes",
+            "Développement assisté par IA (Claude Code, GitHub Copilot)"
+          ]
         }
       },
       "education": {
@@ -173,7 +177,7 @@
           "school": "IUT de l'Université de Picardie Jules Verne — Amiens",
           "parcours": "Parcours : Réalisation d'applications — conception, développement, validation",
           "content1": "Formation universitaire technologique intensive sur 3 ans couvrant l'ensemble du cycle de vie du développement logiciel. Les deux premières années axées sur les fondations techniques (algorithmique, POO, bases de données, architecture logicielle), suivies d'une 3ème année en alternance chez Orange Business.",
-          "content2": "Maîtrise rigoureuse de l'algorithmique, de la programmation orientée objet (C#, Java, Python, C++, PHP), de la conception logicielle (UML, MCD, design patterns) et application des bonnes pratiques. Forte sensibilisation à la qualité logicielle avec écriture de tests unitaires et d'intégration. Bases solides en réseaux (TCP/IP) et administration de serveurs Linux.",
+          "content2": "Maîtrise rigoureuse de l'algorithmique, de la programmation orientée objet (C#, Java, C++, PHP), de la conception logicielle (UML, MCD, design patterns) et application des bonnes pratiques. Forte sensibilisation à la qualité logicielle avec écriture de tests unitaires et d'intégration. Bases solides en réseaux (TCP/IP) et administration de serveurs Linux.",
           "content3": "Élu représentant étudiant au Conseil de l'IUT d'Amiens. Participation active aux réunions, défense des intérêts des étudiants et contribution aux orientations pédagogiques. Développement de fortes compétences en communication, leadership et navigation dans les processus décisionnels.",
           "content4": "",
           "highlights": [
@@ -185,26 +189,26 @@
           ],
           "modules": [
             "Algorithmique & structures de données : maîtrise rigoureuse des fondations",
-            "Programmation orientée objet : Java, Python, C#, C++, PHP avec applications réelles",
+            "Programmation orientée objet : Java, C#, C++, PHP avec applications réelles",
             "Conception logicielle : UML, MCD, design patterns et bonnes pratiques architecture",
             "Bases de données relationnelles : SQL Server, PostgreSQL et transactions",
             "Bases de données NoSQL : concepts et implémentations modernes",
             "Développement web fullstack : HTML, CSS, JavaScript, PHP et frameworks",
             "Développement logiciel lourd : applications desktop et systèmes",
             "Qualité logicielle : tests unitaires, tests d'intégration, couverture de code",
-            "Gestion de projets Agile : Scrum, sprints et méthodologies itératives",
+            "Gestion de projet en équipe et méthodologies itératives",
             "Réseaux & systèmes : TCP/IP, administration Linux, bases d'infrastructure",
             "Stage alternance Orange Business : immersion professionnelle et mise en pratique",
             "Engagement étudiant : représentant étudiant au Conseil de l'IUT, leadership et défense des intérêts"
           ]
         },
         "second": {
-          "date": "2023 - 2025",
+          "date": "2024 - 2026",
           "title": "Master — Cloud Computing and Mobility",
           "school": "INSSET — Université de Picardie Jules Verne, Saint-Quentin",
           "content": "Formation de pointe de niveau Bac+5 orientée sur les architectures Cloud, l'écosystème DevOps et les systèmes distribués, réalisée en alternance chez Orange Business.",
           "content1": "Formation de pointe Bac+5 en architectures Cloud, DevOps et systèmes distribués. Programme moderne et exigeant, aligné sur les défis industriels actuels. Réalisée en alternance chez Orange Business, elle conjugue enseignements rigoureux et pratique immédiate pour former des ingénieurs capables de concevoir et déployer des infrastructures Cloud scalables et résilientes.",
-          "content2": "Spécialisation approfondie dans les infrastructures Cloud (IaaS/PaaS) sur les environnements Azure, AWS et Google Cloud. Maîtrise de l'Infrastructure as Code (Terraform, ARM Templates), de la containerisation et orchestration avancée avec Docker et Kubernetes (Swarm, K8s), et conception d'architectures Cloud-native et microservices. Apprentissage de l'architecture réseau Cloud, de la virtualisation, et des pratiques DevOps avancées avec pipelines CI/CD complexes et automation.",
+          "content2": "Spécialisation approfondie dans les infrastructures Cloud (IaaS/PaaS) sur les environnements Azure, AWS et Google Cloud. Maîtrise de l'Infrastructure as Code (Terraform, ARM Templates), de la containerisation et orchestration avancée avec Docker et Docker Swarm, et conception d'architectures Cloud-native et microservices. Apprentissage de l'architecture réseau Cloud, de la virtualisation, et des pratiques DevOps avancées avec pipelines CI/CD complexes et automation.",
           "content3": "Développement d'applications en mode SaaS, création d'applications mobiles cross-platform et natives (iOS, Android) connectées au Cloud, gestion des bases de données Big Data, Cloud Data Management, sécurité et audit des environnements Cloud, Internet of Things (IoT) et intégration de l'Intelligence Artificielle. Projet de fin d'année : conception et développement d'un jeu de culture générale compétitif (Tuuuur) appliquant les principes architecturaux Cloud.",
           "highlights": [
             "Spécialisation Cloud & Microservices",
@@ -216,7 +220,7 @@
             "Infrastructures Cloud (IaaS/PaaS) : déploiement et administration sur Azure, AWS et Google Cloud",
             "Architecture réseau Cloud : design, optimisation et bonnes pratiques sur GCP et AWS",
             "Infrastructure as Code : Terraform, ARM Templates, virtualisation et provisioning automatisé",
-            "Containerisation & orchestration : Docker, Kubernetes (Swarm, K8s) et patterns Cloud-native",
+            "Containerisation & orchestration : Docker, Docker Swarm et patterns Cloud-native",
             "DevOps & Culture : pipelines CI/CD complexes, Azure DevOps, GitLab CI, déploiements automatisés et monitoring",
             "Architecture microservices : conception d'architectures distribuées et événementielles",
             "Internet of Things (IoT) : connectivité, protocoles et intégration des appareils au Cloud",
@@ -237,7 +241,7 @@
         "contactInfo": "Informations de contact",
         "emailLabel": "Email",
         "locationLabel": "Localisation",
-        "locationValue": "France",
+        "locationValue": "PACA · Aix, Marseille, Toulon",
         "availabilityLabel": "Disponibilité",
         "availabilityValue": "Ouvert aux opportunités (CDI)",
         "connectWithMe": "Retrouvez-moi",
@@ -291,7 +295,7 @@
         "statsProjects": "Projets réalisés",
         "statsTechnologies": "Technologies",
         "pillarBackendTitle": "Backend .NET",
-        "pillarBackendDesc": "APIs REST en Clean Architecture (C#, ASP.NET Core), CQRS avec MediatR, Entity Framework, SQL Server.",
+        "pillarBackendDesc": "APIs REST en Clean Architecture (C#, ASP.NET Core), MediatR, Entity Framework, SQL Server.",
         "pillarDevOpsTitle": "DevOps & Cloud",
         "pillarDevOpsDesc": "CI/CD via Azure DevOps & GitLab, conteneurisation Docker, IaC avec Terraform/Terragrunt sur AWS/Azure/GCP.",
         "pillarVisionTitle": "Vision produit",
@@ -335,7 +339,7 @@
               "projectManagement": {
                 "heading": "Pilotage & Conception (Chef de Projet)",
                 "items": [
-                  "Animation de l'équipe, distribution des tâches et pilotage global du projet en méthode Agile (sprints Scrum)",
+                  "Animation de l'équipe, distribution des tâches et pilotage global du projet en équipe de trois",
                   "Rédaction du cahier des charges et modélisation technique de l'architecture"
                 ]
               },
@@ -452,12 +456,12 @@
           },
           "homelab": {
             "title": "HomeLab — Serveur Personnel",
-            "shortDescription": "Reconversion d'un ancien PC en serveur personnel : virtualisation Proxmox, réseau sécurisé IPFire, VPN WireGuard et hébergement de services self-hosted.",
-            "description": "Reconversion d'un ancien PC en serveur hébergeant une infrastructure complète : hyperviseur Proxmox, pare-feu IPFire, VPN WireGuard, reverse proxy NGINX et une dizaine de services self-hosted (Jellyfin, Nextcloud, Immich, Pterodactyl…), le tout sécurisé en RAID.",
+            "shortDescription": "Reconversion d'un ancien PC en serveur personnel : virtualisation Proxmox, réseau sécurisé OPNsense, VPN WireGuard et hébergement de services self-hosted.",
+            "description": "Reconversion d'un ancien PC en serveur hébergeant une infrastructure complète : hyperviseur Proxmox, pare-feu OPNsense, VPN WireGuard, reverse proxy NGINX et une dizaine de services self-hosted (Jellyfin, Nextcloud, Immich, Pterodactyl…), le tout sécurisé en RAID.",
             "period": "2025 — Présent",
             "context": "Projet personnel né d'une double volonté : prendre le contrôle total de mes données et approfondir mes compétences en administration système, virtualisation et sécurité réseau acquises en cours. Plutôt que de laisser un ancien PC prendre la poussière, je l'ai transformé en véritable serveur personnel.",
-            "roles": "Administrateur système · Architecte réseau · Ingénieur DevOps",
-            "concept": "Un homelab complet piloté par Proxmox VE comme hyperviseur central, avec un réseau interne entièrement segmenté et sécurisé par IPFire (pare-feu/routeur). Les données sont protégées par un RAID pour tolérance aux pannes. L'accès distant est sécurisé via WireGuard VPN, et tous les services sont exposés proprement via NGINX Proxy Manager avec certificats SSL automatiques.",
+            "roles": "Administrateur système · Architecte réseau",
+            "concept": "Un homelab complet piloté par Proxmox VE comme hyperviseur central, avec un réseau interne entièrement segmenté et sécurisé par OPNsense (pare-feu/routeur). Les données sont protégées par un RAID pour tolérance aux pannes. L'accès distant est sécurisé via WireGuard VPN, et tous les services sont exposés proprement via NGINX Proxy Manager avec certificats SSL automatiques.",
             "missions": {
               "infrastructure": {
                 "heading": "Infrastructure & Virtualisation (Proxmox)",
@@ -470,7 +474,7 @@
               "network": {
                 "heading": "Réseau & Sécurité",
                 "items": [
-                  "Déploiement d'IPFire comme pare-feu et routeur pour segmenter et sécuriser le réseau interne",
+                  "Déploiement d'OPNsense comme pare-feu et routeur pour segmenter et sécuriser le réseau interne",
                   "Configuration d'un VPN WireGuard pour un accès chiffré et sécurisé depuis l'extérieur",
                   "Mise en place de NGINX Proxy Manager comme reverse proxy centralisé avec SSL/TLS automatique (Let's Encrypt)"
                 ]
@@ -489,7 +493,7 @@
               "security": {
                 "heading": "Sécurité & Isolation des Services",
                 "items": [
-                  "Segmentation réseau stricte via IPFire pour éviter toute communication non autorisée entre services",
+                  "Segmentation réseau stricte via OPNsense pour éviter toute communication non autorisée entre services",
                   "Gestion des certificats SSL/TLS et exposition sécurisée des services publics via reverse proxy"
                 ]
               },
@@ -502,15 +506,18 @@
               }
             }
           }
-        }
+        },
+        "homelabAlt": "Schéma du homelab : Internet, pare-feu OPNsense, reverse proxy NGINX et VPN WireGuard, puis hyperviseur Proxmox hébergeant Jellyfin, Nextcloud, Immich et Pterodactyl, sur disques en RAID.",
+        "homelabFirewall": "Pare-feu",
+        "homelabRaid": "Tolérance aux pannes"
       },
       "hero": {
         "available": "CDI dès septembre 2026 · PACA",
-        "places": "Toulon · Marseille · Aix-en-Provence",
+        "places": "PACA · Aix, Marseille, Toulon",
         "contact": "Me contacter",
         "photoAlt": "Portrait de Florent Dubut",
         "summary": "Chez Orange Business depuis avril 2023, en CDI depuis septembre 2026.",
-        "outcome": "APIs C# en Clean Architecture, CI/CD Azure DevOps et GitLab, déploiements AWS avec Terraform."
+        "outcome": "C#, ASP.NET Core, Vue.js, Angular : APIs en Clean Architecture et applications métier pour de grands groupes."
       },
       "ui": {
         "openMenu": "Ouvrir le menu",
@@ -527,9 +534,9 @@
         "themeDark": "Passer au thème sombre",
         "themeLight": "Passer au thème clair",
         "skillsLegend": "Mis en avant : utilisé en entreprise chez Orange Business",
-        "meta": "Florent Dubut – Ingénieur développeur Full-Stack .NET",
+        "meta": "Florent Dubut – Développeur Full-Stack .NET",
         "more": "autres",
-        "metaDescription": "Portfolio de Florent Dubut, Ingénieur développeur Full-Stack .NET chez Orange Business, Master en Cloud Computing & Mobilité. Découvrez son parcours, ses compétences et ses projets."
+        "metaDescription": "Florent Dubut est développeur Full-Stack .NET chez Orange Business, titulaire d'un Master en Cloud Computing & Mobilité."
       },
       "certifications": {
         "sectionTitle": "Certifications",
