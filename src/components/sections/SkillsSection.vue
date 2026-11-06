@@ -4,13 +4,13 @@ import SectionHeader from '@/components/shared/SectionHeader.vue'
 
 const { t } = useI18n()
 
-const core = new Set(['C#', 'ASP.NET Core', 'TypeScript', 'Vue.js 3', 'Angular', 'SQL Server', 'Entity Framework', 'Docker', 'Azure DevOps', 'GitLab', 'Terraform', 'Terragrunt', 'Amazon AWS'])
+const core = new Set(['C#', 'ASP.NET Core', 'TypeScript', 'Vue.js 3', 'Angular', 'SQL Server', 'Entity Framework', 'Docker', 'Azure DevOps', 'GitLab'])
 
 const groups: { key: string; skills: string[] }[] = [
-  { key: 'programming', skills: ['C#', 'ASP.NET Core', 'Blazor', 'MAUI', 'TypeScript', 'Vue.js 3', 'Angular', 'Python', 'Bash'] },
+  { key: 'programming', skills: ['C#', 'ASP.NET Core', 'TypeScript', 'Vue.js 3', 'Angular', 'Bash', 'Blazor', 'MAUI'] },
   { key: 'cloud', skills: ['Google Cloud Platform', 'Amazon AWS', 'Microsoft Azure'] },
   { key: 'devops', skills: ['Terraform', 'Terragrunt', 'Azure DevOps', 'GitLab', 'GitHub Actions', 'Linux', 'Proxmox'] },
-  { key: 'containers', skills: ['Docker', 'Docker Swarm', 'Kubernetes', 'Microservices'] },
+  { key: 'containers', skills: ['Docker', 'Docker Swarm', 'Microservices'] },
   { key: 'data', skills: ['SQL Server', 'PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'Entity Framework', 'WebSocket / SignalR', 'Firebase', 'Git'] },
   { key: 'ai', skills: ['Claude Code', 'GitHub Copilot'] },
 ]
